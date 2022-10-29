@@ -80,7 +80,7 @@ function addLiquidity(
 | -------------- | ----------- | ----------------------------------------------------------------------------------------------------------------- |
 | `pool`         | `address`   | The address of the pool to exchange in. The pool must be registered in one of the Curve Factories.                |
 | `registry`     | `address`   | **⚠️ TODO**                                                                                                       |
-| `amounts`      | `uint256[]` | **⚠️ TODO**                                                                                                       |
+| `amounts`      | `uint256[]` | The amount of each token to add.                                                                                  |
 | `minAmountOut` | `uint256`   | The minimum amount to receive from the swap.                                                                      |
 | `fromMode`     | `From`      | Specifies what balance to receive the tokens from (see [Internal Balances](../../overview/internal-balances.md)). |
 | `toMode`       | `To`        | Specifies what balance to send the tokens to (see [Internal Balances](../../overview/internal-balances.md)).      |
