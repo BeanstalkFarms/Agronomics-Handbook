@@ -1,8 +1,9 @@
 # Subgraph
 
-### Endpoint
+### Default Endpoints
 
-* [https://graph.node.bean.money/subgraphs/name/beanstalk](https://graph.node.bean.money/subgraphs/name/beanstalk)
+* Beanstalk: [https://graph.node.bean.money/subgraphs/name/beanstalk](https://graph.node.bean.money/subgraphs/name/beanstalk)
+* Bean: [https://graph.node.bean.money/subgraphs/name/bean](https://graph.node.bean.money/subgraphs/name/bean)
 
 ### Video Walkthrough
 
