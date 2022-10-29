@@ -90,48 +90,48 @@ function addLiquidity(
 ```solidity
 function removeLiquidity(
     address pool,
+    address registry,
     uint256 amountIn,
     uint256[] calldata minAmountsOut,
-    bool stable,
     LibTransfer.From fromMode,
     LibTransfer.To toMode
-) external payable;
+) external payable nonReentrant
 ```
 
-`removeLiquidity` removes liquidity from a pool on Curve in exchange for equal amounts of all  tokens in the liquidity pool. The farmer burns their LP tokens in the process.&#x20;
+`removeLiquidity()` removes liquidity from a pool on Curve in exchange for equal amounts of all  tokens in the liquidity pool. The Farmer burns their LP tokens in the process.&#x20;
 
-| Variable    | Type        |                                                                                                                   |
-| ----------- | ----------- | ----------------------------------------------------------------------------------------------------------------- |
-| `pool`      | `address`   | The address of the pool to exchange in. The pool must be registered in one of the Curve Factories                 |
-| `amountIn`  | `uint256`   | The amount of LP to remove                                                                                        |
-| `minAmount` | `uint256[]` | The minimum amount to receive in each of the tokens                                                               |
-| `stable`    | `pool`      | Whether `pool` is a stable or non-stable pool. This indicates which Curve Factory Beanstalk should use            |
-| `fromMode`  | `From`      | Specifies what balance to receive the tokens from (see [Internal Balances](../../overview/internal-balances.md)). |
-| `toMode`    | `To`        | Specifies what balance to sent the tokens to (see [Internal Balances](../../overview/internal-balances.md)).      |
+| Variable        | Type        |                                                                                                                   |
+| --------------- | ----------- | ----------------------------------------------------------------------------------------------------------------- |
+| `pool`          | `address`   | The address of the pool to exchange in. The pool must be registered in one of the Curve Factories.                |
+| `registry`      | `address`   | **⚠️ TODO**                                                                                                       |
+| `amountIn`      | `uint256`   | The amount of LP to remove.                                                                                       |
+| `minAmountsOut` | `uint256[]` | The minimum amount to receive in each of the tokens.                                                              |
+| `fromMode`      | `From`      | Specifies what balance to receive the tokens from (see [Internal Balances](../../overview/internal-balances.md)). |
+| `toMode`        | `To`        | Specifies what balance to sent the tokens to (see [Internal Balances](../../overview/internal-balances.md)).      |
 
 ### Remove Liquidity Imbalance&#x20;
 
 ```solidity
 function removeLiquidityImbalance(
     address pool,
+    address registry,
     uint256[] calldata amountsOut,
     uint256 maxAmountIn,
-    bool stable,
     LibTransfer.From fromMode,
     LibTransfer.To toMode
-) external payable;
+) external payable nonReentrant
 ```
 
-`removeLiquidityImbalance` removes liquidity from a pool on Curve in exchange for an unequal amounts of tokens in the liquidity pool. The farmer burns LP tokens in the process.
+`removeLiquidityImbalance()` removes liquidity from a pool on Curve in exchange for an unequal amounts of tokens in the liquidity pool. The Farmer burns LP tokens in the process.
 
-| Variable      | Type        |                                                                                                         |
-| ------------- | ----------- | ------------------------------------------------------------------------------------------------------- |
-| `pool`        | `address`   | The address of the pool to exchange in. The pool must be registered in one of the Curve Factories       |
-| `amountsOut`  | `uint256[]` | The amount of each token to receive                                                                     |
-| `maxAmountIn` | `uint256`   | The minimum amount to receive in each of the tokens                                                     |
-| `stable`      | `pool`      | Whether `pool` is a stable or non-stable pool. This indicates which Curve Factory Beanstalk should use  |
-| `fromMode`    | `From`      | See Internal Balances                                                                                   |
-| `toMode`      | `To`        | See Internal Balances                                                                                   |
+| Variable      | Type        |                                                                                                                   |
+| ------------- | ----------- | ----------------------------------------------------------------------------------------------------------------- |
+| `pool`        | `address`   | The address of the pool to exchange in. The pool must be registered in one of the Curve Factories.                |
+| `registry`    | `address`   | **⚠️ TODO**                                                                                                       |
+| `amountsOut`  | `uint256[]` | The amount of each token to receive.                                                                              |
+| `maxAmountIn` | `uint256`   | The max amount of LP tokens to burn.                                                                              |
+| `fromMode`    | `From`      | Specifies what balance to receive the tokens from (see [Internal Balances](../../overview/internal-balances.md)). |
+| `toMode`      | `To`        | Specifies what balance to send the tokens to (see [Internal Balances](../../overview/internal-balances.md)).      |
 
 ### Remove Liquidity One Token
 
@@ -144,23 +144,20 @@ function removeLiquidityOneToken(
     uint256 minAmountOut,
     LibTransfer.From fromMode,
     LibTransfer.To toMode
-) external payable nonReentrant;
+) external payable nonReentrant
 ```
 
 `removeLiquidityOneToken` removes liquidity from a pool on Curve in exchange for an amount of one token in the liquidity pool. The farmer burns LP tokens in the process.
 
-
-
-| Variable       | Type      |                                                                                                         |
-| -------------- | --------- | ------------------------------------------------------------------------------------------------------- |
-| `pool`         | `address` | The address of the pool to exchange in. The pool must be registered in one of the Curve Factories       |
-| `registry`     | `address` | **⚠️ TODO**                                                                                             |
-| `toToken`      | `address` | The token to receive in exchange for burning liquidity tokens                                           |
-| `amountIn`     | `uint256` | The amount of liquidity tokens to burn                                                                  |
-| `minAmountOut` | `uint256` | The minimum amount of the token to receive                                                              |
-| `stable`       | `pool`    | Whether `pool` is a stable or non-stable pool. This indicates which Curve Factory Beanstalk should use  |
-| `fromMode`     | `From`    | See Internal Balances                                                                                   |
-| `toMode`       | `To`      | See Internal Balances                                                                                   |
+| Variable       | Type      |                                                                                                                   |
+| -------------- | --------- | ----------------------------------------------------------------------------------------------------------------- |
+| `pool`         | `address` | The address of the pool to exchange in. The pool must be registered in one of the Curve Factories.                |
+| `registry`     | `address` | **⚠️ TODO**                                                                                                       |
+| `toToken`      | `address` | The token to receive in exchange for burning LP tokens.                                                           |
+| `amountIn`     | `uint256` | The amount of LP tokens to burn.                                                                                  |
+| `minAmountOut` | `uint256` | The minimum amount of the token to receive.                                                                       |
+| `fromMode`     | `From`    | Specifies what balance to receive the tokens from (see [Internal Balances](../../overview/internal-balances.md)). |
+| `toMode`       | `To`      | Specifies what balance to send the tokens to (see [Internal Balances](../../overview/internal-balances.md)).      |
 
 ## View Functions
 
