@@ -19,7 +19,7 @@ The contract code can be found below. Beanstalk is deployed at [`0xC1E088fC1323b
 
 If you have questions while browsing the Agronomics Handbook, [join the Beanstalk Discord](https://discord.gg/beanstalk) and ask in the **(#🪵・development)** channel! Check out the [Farmers' Almanac](https://docs.bean.money/) for non-technical documentation about Beanstalk. For comprehensive formulas behind Beanstalk's mechanics, check out the [whitepaper](https://bean.money/docs/beanstalk.pdf).
 
-Please share any feedback on the Agronomics Handbook in the **(#📜・docs-feedback)** channel in Discord and stay tuned for updates in **(#📜・docs-updates)**. You can submit a pull request to the Agronomics Handbook yourself **here (TODO)**.
+Please share any feedback on the Agronomics Handbook in the **(#📜・docs-feedback)** channel in Discord and stay tuned for updates in **(#📜・docs-updates)**. You can submit a pull request to the Agronomics Handbook yourself [**here**](https://github.com/BeanstalkFarms/Agronomics-Handbook).
 
 ### Links
 
