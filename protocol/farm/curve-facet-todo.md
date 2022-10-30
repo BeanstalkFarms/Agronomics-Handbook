@@ -51,7 +51,7 @@ function exchangeUnderlying(
 
 Slippage is tolerated on the amount out. This function verifies that the pool exists in the Curve Factory.
 
-| Variable       | Type      |                                                                                                                   |
+| Parameter      | Type      | Description                                                                                                       |
 | -------------- | --------- | ----------------------------------------------------------------------------------------------------------------- |
 | `pool`         | `address` | The address of the pool to exchange in. The pool must be registered in one of the Curve Factories.                |
 | `fromToken`    | `address` | The underlying token to swap from.                                                                                |
@@ -76,7 +76,7 @@ function addLiquidity(
 
 `addLiquidity()` adds tokens into a liquidity pool in exchange for LP tokens.
 
-| Variable       | Type        |                                                                                                                   |
+| Parameter      | Type        | Description                                                                                                       |
 | -------------- | ----------- | ----------------------------------------------------------------------------------------------------------------- |
 | `pool`         | `address`   | The address of the pool to exchange in. The pool must be registered in one of the Curve Factories.                |
 | `registry`     | `address`   | **⚠️ TODO**                                                                                                       |
@@ -100,7 +100,7 @@ function removeLiquidity(
 
 `removeLiquidity()` removes liquidity from a pool on Curve in exchange for equal amounts of all  tokens in the liquidity pool. The Farmer burns their LP tokens in the process.&#x20;
 
-| Variable        | Type        |                                                                                                                   |
+| Parameter       | Type        | Description                                                                                                       |
 | --------------- | ----------- | ----------------------------------------------------------------------------------------------------------------- |
 | `pool`          | `address`   | The address of the pool to exchange in. The pool must be registered in one of the Curve Factories.                |
 | `registry`      | `address`   | **⚠️ TODO**                                                                                                       |
@@ -124,7 +124,7 @@ function removeLiquidityImbalance(
 
 `removeLiquidityImbalance()` removes liquidity from a pool on Curve in exchange for an unequal amounts of tokens in the liquidity pool. The Farmer burns LP tokens in the process.
 
-| Variable      | Type        |                                                                                                                   |
+| Parameter     | Type        | Description                                                                                                       |
 | ------------- | ----------- | ----------------------------------------------------------------------------------------------------------------- |
 | `pool`        | `address`   | The address of the pool to exchange in. The pool must be registered in one of the Curve Factories.                |
 | `registry`    | `address`   | **⚠️ TODO**                                                                                                       |
@@ -149,7 +149,7 @@ function removeLiquidityOneToken(
 
 `removeLiquidityOneToken` removes liquidity from a pool on Curve in exchange for an amount of one token in the liquidity pool. The farmer burns LP tokens in the process.
 
-| Variable       | Type      |                                                                                                                   |
+| Parameter      | Type      | Description                                                                                                       |
 | -------------- | --------- | ----------------------------------------------------------------------------------------------------------------- |
 | `pool`         | `address` | The address of the pool to exchange in. The pool must be registered in one of the Curve Factories.                |
 | `registry`     | `address` | **⚠️ TODO**                                                                                                       |
