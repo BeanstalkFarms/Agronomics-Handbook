@@ -43,7 +43,9 @@ Beanstalk will mint 1 Unripe LP directly to the Silo for each BDV of Deposited L
 
 ### Fertilizer
 
-Fertilizer is an ERC-1155 issued for participation in the Barn Raise. Fertilizer entitles holders to a pro rata portion of 1/3 of Bean mints if the Fertilizer is Active. Fertilizer can be minted as long as the recapitalization target has not been reached. When Fertilizer is minted, it is minted at a given % Humidity and is immediately Active. Each Fertilizer entitles its holder up to `1 + humidity` Unfertilized Beans. Unfertilized Beans become Fertilized Bean when Beans are distributed to Fertilizer holders. When Fertilizer has no more corresponding Unfertilized Beans, it becomes Inactive and no longer receives Bean mints.&#x20;
+Fertilizer is an ERC-1155 issued for participation in the Barn Raise. Fertilizer entitles holders to a pro rata portion of 1/3 of Bean mints if the Fertilizer is Active. Fertilizer can be minted (become Active) as long as the recapitalization target has not been reached.&#x20;
+
+When Fertilizer is minted, it is minted at a given % Humidity and is immediately Active. Each Fertilizer entitles its holder up to `1 + humidity` Unfertilized Beans. Unfertilized Beans become Fertilized Beans when Beans are distributed to Fertilizer holders. When Fertilizer has no more corresponding Unfertilized Beans, it becomes Inactive and no longer receives Bean mints.&#x20;
 
 To track Active Fertilizer, Beanstalk has a global variable `s.bpf`, which is the cumulative fertilizer paid back at every season. Fertilizer is indexed by `endBpf = s.bpf + 1 + humidity` at the time of minting. This signals that once `s.bpf` reaches `endBpf`, the Fertilizer becomes inactive. Beanstalk sorts all non-zero Fertilizer Ids by `endBpf` in `s.endBpfs`. It stores this in a linked list where `s.fFirst` is the start of the list and `s.fLast` is the end of the list.&#x20;
 

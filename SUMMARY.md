@@ -34,7 +34,7 @@
 * [Farm](protocol/farm/README.md)
   * [Farm Facet](protocol/farm/farm-facet.md)
   * [Token Facet](protocol/farm/token-facet.md)
-  * [Curve Facet (todo)](protocol/farm/curve-facet-todo.md)
+  * [Curve Facet](protocol/farm/curve-facet.md)
 * [Diamond Management](protocol/diamond-management/README.md)
   * [Diamond Cut Facet](protocol/diamond-management/diamond-cut-facet.md)
   * [Diamond Loupe Facet](protocol/diamond-management/diamond-loupe-facet.md)

@@ -1,57 +1,19 @@
 # Terminology Discrepancies
 
-
-
-In the Beanstalk ecosystem, **Internal Balances** are referred to as **Farm Balances**. Similarly, **External Balances** (balances in the user's wallet) are referred to as **Circulating Balances**. See [Terminology Discrepancies](terminology-discrepancies.md).
-
-
+The Beanstalk codebase currently uses several terms that are out of date with the whitepaper, the Beanstalk UI, the Farmers' Almanac, etc. The following is a list of known outdated terminology used in the Beanstalk codebase and the associated proper terms.
 
 These discrepancies can be resolved in a future BIP.
 
-
-
-|   |   |   |
-| - | - | - |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-
-
-
-{% hint style="warning" %}
-In the Beanstalk ecosystem, **Weather** is referred to as **Temperature**. See [Terminology Discrepancies](terminology-discrepancies.md).
-{% endhint %}
-
-
-
-In the Beanstalk ecosystem,&#x20;
-
-* **Unfertilized Beans** are referred to as **Sprouts**;
-* **Fertilized Beans** are referred to as **Rinsable Sprouts** that can be **Rinsed**; and
-* **Underlying** assets are referred to as **Ripe** assets. &#x20;
-
-See [Terminology Discrepancies](terminology-discrepancies.md).
-
-
-
-
-
-
-
-* Weather vs Temp
-* Circulating vs External balance
-* Farm vs Internal Balance
-* Unfertilized Beans vs. Sprouts
-* claimFertilized -> Rinse
-* underlying -> Ripe
-
-
-
-* Earned Seeds&#x20;
-
-
-
-* update -> mow
-* Rain -> Oversaturated
-* Season of Plenty -> Flood
-* revitalized?
+| Beanstalk codebase                       | Beanstalk term      |
+| ---------------------------------------- | ------------------- |
+| Internal Balance                         | Farm Balance        |
+| External Balance                         | Circulating Balance |
+| Weather                                  | Temperature         |
+| Unfertilized Beans                       | Sprouts             |
+| Fertilized Beans                         | Rinsable Sprouts    |
+| Claim Fertilized                         | Rinse               |
+| Underlying assets (w.r.t. Unripe assets) | Ripe assets         |
+| Earned Seeds                             | Plantable Seeds     |
+| Update (w.r.t. Grown Stalk)              | Mow                 |
+| Rain                                     | Oversaturated       |
+| Season of Plenty                         | Flood               |

@@ -87,7 +87,7 @@ The Farm consists of 3 Facets:
 
 * ``[`FarmFacet`](farm/farm-facet.md) -> Contains the Farm function, which allows Farmers to call a string of functions together within Beanstalk.
 * ``[`TokenFacet`](farm/token-facet.md) -> Supports transferring assets between Internal and External Balances and between different accounts. Also, supports Wrap/Unwrap logic for ETH.
-* ``[`CurveFacet`](farm/curve-facet-todo.md) -> Provides an interface to exchange and add/remove liquidity on Curve directly through Beanstalk.
+* ``[`CurveFacet`](farm/curve-facet.md) -> Provides an interface to exchange and add/remove liquidity on Curve directly through Beanstalk.
 
 ### Diamond Management
 

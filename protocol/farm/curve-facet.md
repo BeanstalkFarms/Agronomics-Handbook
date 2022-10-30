@@ -1,4 +1,4 @@
-# Curve Facet (todo)
+# Curve Facet
 
 ## Call Functions
 
@@ -25,7 +25,7 @@ function exchange(
 | Parameter      | Type      | Description                                                                                                       |
 | -------------- | --------- | ----------------------------------------------------------------------------------------------------------------- |
 | `pool`         | `address` | The address of the pool to exchange in. The pool must be registered in one of the Curve Factories.                |
-| `registry`     | `address` | **⚠️ TODO**                                                                                                       |
+| `registry`     | `address` | The Curve Registry to query `pool` data from.                                                                     |
 | `fromToken`    | `address` | The token to swap from.                                                                                           |
 | `toToken`      | `address` | The token to swap to.                                                                                             |
 | `amountIn`     | `uint256` | The amount to swap from.                                                                                          |
@@ -79,7 +79,7 @@ function addLiquidity(
 | Parameter      | Type        | Description                                                                                                       |
 | -------------- | ----------- | ----------------------------------------------------------------------------------------------------------------- |
 | `pool`         | `address`   | The address of the pool to exchange in. The pool must be registered in one of the Curve Factories.                |
-| `registry`     | `address`   | **⚠️ TODO**                                                                                                       |
+| `registry`     | `address`   | The Curve Registry to query `pool` data from.                                                                     |
 | `amounts`      | `uint256[]` | The amount of each token to add.                                                                                  |
 | `minAmountOut` | `uint256`   | The minimum amount to receive from the swap.                                                                      |
 | `fromMode`     | `From`      | Specifies what balance to receive the tokens from (see [Internal Balances](../../overview/internal-balances.md)). |
@@ -103,7 +103,7 @@ function removeLiquidity(
 | Parameter       | Type        | Description                                                                                                       |
 | --------------- | ----------- | ----------------------------------------------------------------------------------------------------------------- |
 | `pool`          | `address`   | The address of the pool to exchange in. The pool must be registered in one of the Curve Factories.                |
-| `registry`      | `address`   | **⚠️ TODO**                                                                                                       |
+| `registry`      | `address`   | The Curve Registry to query `pool` data from.                                                                     |
 | `amountIn`      | `uint256`   | The amount of LP to remove.                                                                                       |
 | `minAmountsOut` | `uint256[]` | The minimum amount to receive in each of the tokens.                                                              |
 | `fromMode`      | `From`      | Specifies what balance to receive the tokens from (see [Internal Balances](../../overview/internal-balances.md)). |
@@ -127,7 +127,7 @@ function removeLiquidityImbalance(
 | Parameter     | Type        | Description                                                                                                       |
 | ------------- | ----------- | ----------------------------------------------------------------------------------------------------------------- |
 | `pool`        | `address`   | The address of the pool to exchange in. The pool must be registered in one of the Curve Factories.                |
-| `registry`    | `address`   | **⚠️ TODO**                                                                                                       |
+| `registry`    | `address`   | The Curve Registry to query `pool` data from.                                                                     |
 | `amountsOut`  | `uint256[]` | The amount of each token to receive.                                                                              |
 | `maxAmountIn` | `uint256`   | The max amount of LP tokens to burn.                                                                              |
 | `fromMode`    | `From`      | Specifies what balance to receive the tokens from (see [Internal Balances](../../overview/internal-balances.md)). |
@@ -152,7 +152,7 @@ function removeLiquidityOneToken(
 | Parameter      | Type      | Description                                                                                                       |
 | -------------- | --------- | ----------------------------------------------------------------------------------------------------------------- |
 | `pool`         | `address` | The address of the pool to exchange in. The pool must be registered in one of the Curve Factories.                |
-| `registry`     | `address` | **⚠️ TODO**                                                                                                       |
+| `registry`     | `address` | The Curve Registry to query `pool` data from.                                                                     |
 | `toToken`      | `address` | The token to receive in exchange for burning LP tokens.                                                           |
 | `amountIn`     | `uint256` | The amount of LP tokens to burn.                                                                                  |
 | `minAmountOut` | `uint256` | The minimum amount of the token to receive.                                                                       |
