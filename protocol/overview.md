@@ -6,7 +6,7 @@ Beanstalk can be broken down into 7 different Modules consisting of 16 Facets:
 * [Silo](silo/) (4 Facets)
 * [Field](field/) (2 Facets)&#x20;
 * [Market](market/) (3 Facets)
-* [Barn](barn-todo/) (2 Facets)
+* [Barn](barn/) (2 Facets)
 * [Farm](farm/) (3 Facets)
 * [Diamond Management](diamond-management/) (4 Facets)
 
@@ -76,8 +76,8 @@ Unfertilized Beans become Fertilized Beans that can be claimed (redeemed) for 1 
 
 The Barn consists of 2 Facets:
 
-* ``[`FertilizerFacet`](barn-todo/fertilizer-facet.md) -> Where Farmers buy Fertilizer with USDC and claim Beans earned from Fertilizer.
-* [`UnripeFacet`](barn-todo/unripe-facet.md) -> Allows Farmers to Chop Unripe assets into their underlying assets at a potential penalty.
+* ``[`FertilizerFacet`](barn/fertilizer-facet.md) -> Where Farmers buy Fertilizer with USDC and claim Beans earned from Fertilizer.
+* [`UnripeFacet`](barn/unripe-facet.md) -> Allows Farmers to Chop Unripe assets into their underlying assets at a potential penalty.
 
 ### Farm
 
