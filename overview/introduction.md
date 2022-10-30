@@ -6,7 +6,7 @@ Beanstalk's primary objective is to incentivize independent market participants 
 
 The stability of the Bean price relative to its peg is a function of the creditworthiness of Beanstalk—Beanstalk attracts lenders when the price of a Bean is below its peg to remove Beans from the supply and increase their price.&#x20;
 
-When the Bean price is too high, Beanstalk mints new Beans and distributed them to various ecosystem participants in a deterministic fashion. This inflation is [the positive carry](https://docs.bean.money/introduction/why-beanstalk#carrying-costs) that the Beanstalk economy is based on.&#x20;
+When the Bean price is too high, Beanstalk mints new Beans and distributes them to various ecosystem participants in a deterministic fashion. This inflation is [the positive carry](https://docs.bean.money/introduction/why-beanstalk#carrying-costs) that the Beanstalk economy is based on.&#x20;
 
 Beanstalk implements several novel mechanisms including a first-in-first-out (FIFO) [debt model](https://docs.bean.money/farm/field#pods) supplemented by [an on-chain order book](https://docs.bean.money/farm/market#the-pod-market), [a time-weighted staking structure](https://docs.bean.money/farm/silo#the-stalk-system) that increases the opportunity cost of withdrawing the longer an asset stays deposited in the DAO, and [a convert mechanism](https://docs.bean.money/peg-maintenance/convert) allowing participants to perform peg maintenance while receiving Bean seignorage.
 

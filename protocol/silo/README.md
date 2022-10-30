@@ -100,7 +100,7 @@ A Withdraw is in the following mapping:
 mapping(address => mapping(uint32 => uint256)) withdrawals;
 ```
 
-* The mapping is from token address to Season to amount
+* The mapping is from token address to Season to amount.
 
 #### Claim Withdrawal
 
