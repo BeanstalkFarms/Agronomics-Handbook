@@ -15,7 +15,7 @@ In the Beanstalk ecosystem, **Internal Balances** are referred to as **Farm Bala
 
 ### Transferring Internal / External Balances <a href="#transferring-internal-external-balances" id="transferring-internal-external-balances"></a>
 
-At any time, a user can transfer, add or remove ERC-20 tokens from their Internal Balance through the `transferToken` function in the [`TokenFacet`](../protocol/farm/token-facet.md).
+At any time, a user can transfer, add or remove ERC-20 tokens from their Internal Balance through the `transferToken()` function in the [`TokenFacet`](../protocol/depot/token-facet.md).
 
 ```solidity
 function transferToken(
@@ -41,7 +41,7 @@ enum To {
 * `EXTERNAL` Beanstalk will send tokens to the user's External Balance; and
 * `INTERNAL` Beanstalk will send tokens to the user's Internal Balance.
 
-Then call `sendToken` in [`LibTransfer`](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/libraries/Token/LibTransfer.sol) instead of directly calling the ERC-20 function `transferFrom`.
+Then call `sendToken()` in [`LibTransfer`](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/libraries/Token/LibTransfer.sol) instead of directly calling the ERC-20 function `transferFrom()`.
 
 ```solidity
 function sendToken(

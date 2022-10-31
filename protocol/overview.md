@@ -1,13 +1,13 @@
 # Overview
 
-Beanstalk can be broken down into 7 different Modules consisting of 16 Facets:
+Beanstalk can be broken down into 7 different Modules consisting of 17 Facets:
 
 * [Sun](sun/) (1 Facet)
 * [Silo](silo/) (4 Facets)
 * [Field](field/) (2 Facets)&#x20;
-* [Market](market/) (3 Facets)
 * [Barn](barn/) (2 Facets)
-* [Farm](farm/) (3 Facets)
+* [Market](market/) (1 Facet)
+* [Depot](overview.md#farm) (3 Facets)
 * [Diamond Management](diamond-management/) (4 Facets)
 
 ### Sun
@@ -20,7 +20,7 @@ The Sun consists of 1 Facet:
 
 ### Silo
 
-The Silo offers a passive yield opportunity in the form of Bean seigniorage to Farmers who Deposit Beans and other whitelisted assets. Upon Deposit in the Silo, Farmers receive Stalk and Seeds based on the Bean Denominated Value (BDV) Deposited, and asset Deposited.
+The Silo offers a passive yield opportunity in the form of Bean seigniorage to Farmers who Deposit Beans and other whitelisted assets. Upon Deposit in the Silo, Farmers receive Stalk and Seeds based on the Bean Denominated Value (BDV) Deposited and the asset Deposited.
 
 The Silo consists of 3 Facets:
 
@@ -31,7 +31,7 @@ The Silo consists of 3 Facets:
 
 ### Field
 
-The Field is Beanstalk's native credit facility. Anytime Beanstalk is willing to borrow Beans from the market, it issues Soil in the Field. Beans are Sown in exchange for Pods, the Beanstalk-native debt asset. Loans to Beanstalk are issued with a fixed interest rate, known as Weather, and an unknown maturity date.
+The Field is Beanstalk's native credit facility. Anytime Beanstalk is willing to borrow Beans from the market, it issues Soil in the Field. Beans are Sown in exchange for Pods, the Beanstalk-native debt asset. Loans to Beanstalk are issued with a fixed interest rate, known as the Weather, and an unknown maturity date.
 
 {% hint style="warning" %}
 In the Beanstalk ecosystem, **Weather** is referred to as **Temperature**. See [Terminology Discrepancies](../misc/terminology-discrepancies.md).
@@ -43,20 +43,6 @@ The Field consists of 2 Facets:
 
 * ``[`FieldFacet`](field/field-facet.md) -> Where Farmers Sow Beans into Pods and Harvest Pods into Beans.
 * ``[`FundraiserFacet`](field/fundraiser-facet.md) -> Where Farmers create and fund Fundraisers through Sowing non-Bean assets into Pods.
-
-### Market
-
-The Market will house various DEXs for zero fee trading. For now, there is only the Pod Market, but in the future there may be a zero fee AMM, a zero fee NFT marketplace, etc.
-
-Pods can be bought and sold in a decentralized, trustless fashion on [the Pod Market](https://docs.bean.money/farm/market#the-pod-market). The Pod Market creates liquidity for Pods through an on-chain order book.
-
-Sellers can List Pods or Fill open Pod Orders placed by buyers.&#x20;
-
-Buyers can Order Pods or Fill open Pod Listings places by sellers.
-
-The Market consists of 1 Facet:
-
-* ``[`MarketplaceFacet`](market/marketplace-facet.md) -> Contains the Pod Market where Farmers create, Fill and Cancel Pod Listings and Orders; as well as transfer Pods.
 
 ### Barn
 
@@ -79,15 +65,29 @@ The Barn consists of 2 Facets:
 * ``[`FertilizerFacet`](barn/fertilizer-facet.md) -> Where Farmers buy Fertilizer with USDC and claim Beans earned from Fertilizer.
 * [`UnripeFacet`](barn/unripe-facet.md) -> Allows Farmers to Chop Unripe assets into their underlying assets at a potential penalty.
 
-### Farm
+### Market
 
-The Farm allows Farmers to call multiple functions in a single transaction and use assets between different functions in a composable manner, all without the assets ever leaving Beanstalk (thanks to [Internal Balances](../overview/internal-balances.md)).
+The Market will house various DEXs for zero fee trading. For now, there is only the Pod Market, but in the future there may be a zero fee AMM, a zero fee NFT marketplace, etc.
 
-The Farm consists of 3 Facets:
+Pods can be bought and sold in a decentralized, trustless fashion on [the Pod Market](https://docs.bean.money/farm/market#the-pod-market). The Pod Market creates liquidity for Pods through an on-chain order book.
 
-* ``[`FarmFacet`](farm/farm-facet.md) -> Contains the Farm function, which allows Farmers to call a string of functions together within Beanstalk.
-* ``[`TokenFacet`](farm/token-facet.md) -> Supports transferring assets between Internal and External Balances and between different accounts. Also, supports Wrap/Unwrap logic for ETH.
-* ``[`CurveFacet`](farm/curve-facet.md) -> Provides an interface to exchange and add/remove liquidity on Curve directly through Beanstalk.
+Sellers can List Pods or Fill open Pod Orders placed by buyers.&#x20;
+
+Buyers can Order Pods or Fill open Pod Listings places by sellers.
+
+The Market consists of 1 Facet:
+
+* ``[`MarketplaceFacet`](market/marketplace-facet.md) -> Contains the Pod Market where Farmers create, Fill and Cancel Pod Listings and Orders, as well as transfer Pods.
+
+### Depot
+
+The Depot facilitates complex, gas-efficient transactions within Beanstalk and across the Ethereum network.
+
+The Depot consists of 3 Facets:
+
+* ``[`FarmFacet`](depot/farm-facet.md) -> Contains the `farm()` function, which allows Farmers to call a series of functions together within Beanstalk.
+* ``[`TokenFacet`](depot/token-facet.md) -> Supports transferring assets between Internal and External Balances and between different accounts. Also, supports Wrap/Unwrap logic for ETH.
+* ``[`CurveFacet`](depot/curve-facet.md) -> Provides an interface to exchange and add/remove liquidity on Curve directly through Beanstalk.
 
 ### Diamond Management
 

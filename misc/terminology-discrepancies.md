@@ -1,6 +1,6 @@
 # Terminology Discrepancies
 
-The Beanstalk codebase currently uses several terms that are out of date with the whitepaper, the Beanstalk UI, the Farmers' Almanac, etc. The following is a list of known outdated terminology used in the Beanstalk codebase and the associated proper terms.
+The Beanstalk codebase currently uses several terms that are out of date with the whitepaper, the Beanstalk UI, the Farmers' Almanac, etc. The following is a list of outdated terminology used in the Beanstalk codebase and the associated proper terms.
 
 These discrepancies can be resolved in a future BIP.
 

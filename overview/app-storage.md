@@ -10,4 +10,4 @@ AppStorage internal s;
 
 The `AppStorage` struct can be found in the [`AppStorage.sol`](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/AppStorage.sol) file.
 
-When adding new state variables, always add them to the end of the `AppStorage` struct to ensure consistent mapping of state variables to storage slots. When depreciating unnecessary state variables, either replace them with a different variable denoting that the state variable is depreciated or leave them as is.
+When adding new state variables, always add them to the end of the `AppStorage` struct to ensure consistent mapping of state variables to storage slots. When deprecating an unnecessary state variables, either replace it with a different variable denoting that the state variable is deprecated or leave it as is.

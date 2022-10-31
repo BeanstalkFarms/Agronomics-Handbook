@@ -11,7 +11,7 @@ function sunrise() external;
 `sunrise()` advances Beanstalk to the next Season. It can only be called if:
 
 * Beanstalk is not Paused; and
-* The number of Seasons that have occurred is less than the number of hours that have elapsed since Beanstalk was started (excluding time spent Paused).
+* The number of Seasons that have occurred is less than the number of hours that have elapsed since Beanstalk was deployed (excluding time spent Paused).
 
 ## View Functions <a href="#view-functions" id="view-functions"></a>
 

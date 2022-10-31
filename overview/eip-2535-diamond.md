@@ -6,7 +6,7 @@ All the Facets share a common storage through the [`AppStorage`](https://dev.to/
 
 Functionality is shared between Facets through internal Libraries.
 
-Understanding EIP-2535 will really help to understand Beanstalk. This page serves as a resource hub for EIP-2535.
+Understanding EIP-2535 really helps to understand Beanstalk. This page serves as a resource hub for EIP-2535.
 
 #### What is a Diamond?
 
@@ -23,7 +23,7 @@ Understanding EIP-2535 will really help to understand Beanstalk. This page serve
 #### Why use a Diamond?
 
 * [Ethereum's Maximum Contract Size Limit is Solved with the Diamond Standard](https://dev.to/mudgen/ethereum-s-maximum-contract-size-limit-is-solved-with-the-diamond-standard-2189)
-* [Beanstalk 🤝 EIP-2535](https://medium.com/beanstalkfarms/beanstalk-erc-2535-fd9e045cad71)
+* [Beanstalk 🤝 EIP-2535](https://bean.money/blog/beanstalk-eip-2535)
 * [Ethereum Diamonds Solve These Problems](https://dev.to/mudgen/ethereum-diamonds-solve-these-problems-3fmp)
 
 #### More Information on Diamonds

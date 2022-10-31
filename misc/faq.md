@@ -6,15 +6,15 @@ If you call the `sunrise()` function, MEV bots will front run your transaction b
 
 ### Where can I call functions directly on Beanstalk?
 
-Louper allows users to directly call functions in a contract that implements ERC-2535, as Etherscan does not yet support this. The Beanstalk contract on Louper can be found [here](https://louper.dev/diamond/0xc1e088fc1323b20bcbee9bd1b9fc9546db5624c5).
+Louper allows users to directly call functions in a contract that implements EIP-2535, as Etherscan does not yet support this. The Beanstalk contract on Louper can be found [here](https://louper.dev/diamond/0xc1e088fc1323b20bcbee9bd1b9fc9546db5624c5).
 
 ### Why do Beans only have 6 decimals?
 
-Solidity has a limit of \~10e77 for integers. Beanstalk is a complex protocol that does a lot of multiplication of big numbers which could potentially bring that upper integer limit into play, especially in the Flood functionality. Given that Bean is a stablecoin and 1 Bean is often priced at \~$1, then there is no need for an excessive amount of decimals. By reducing decimals to increase protocol security in the long run, Beanstalk is better set up for success. Note that USDC and Tether both have 6 decimals.
+Solidity has a limit of `~10e77` for integers. Beanstalk is a complex protocol that does a lot of multiplication of big numbers which could potentially bring that upper integer limit into play, especially in the Flood functionality. Given that Bean is a stablecoin and the the value peg is $1, there is no need for an excessive amount of decimals. By reducing decimals to increase protocol security in the long run, Beanstalk is better set up for success. Note that USDC and Tether both have 6 decimals.
 
-A lot of tokens have 18 decimals. Non-stable tokens have to be functional at any price that the token may be at any point in the future.
+A lot of tokens have 18 decimals. Non-stable tokens have to be functional at any possible price at any point in the future.
 
-Let's take the example of ETH. Let's say the ETH price is $4300. $0.01 is about 0.0000023. Thus, for ETH to be tradable at the cent level, it needs to have at least 7 decimals. Now fast forward 100 years and let's say ETH is worth $1,000,000,000. This would require ETH to have 11 decimals to be transacted at a cent level. Thus, it makes sense for ETH to have 18 decimals.
+Let's take the example of ETH and say that the ETH price is $4300. $0.01 is about 0.0000023 ETH. Thus, for ETH to be tradable at the cent level, it needs to have at least 7 decimals. Now fast forward 100 years and let's say (hypothetically) that ETH is worth $1,000,000,000. This would require ETH to have 11 decimals to be transacted at a cent level. Thus, it makes sense for ETH to have 18 decimals.
 
 In terms of gas cost, there is no difference between 6 and 18 decimals.
 
@@ -28,15 +28,19 @@ Beanstalk is actually a multi-facet proxy implementation called a Diamond. This 
 
 ### What are Roots?
 
-Roots were implemented in [BIP-0](https://github.com/BeanstalkFarms/Beanstalk-Governance-Proposals/blob/master/bip/bip-00-silo-refactor.md). Roots are an underlying accounting variable for Stalk in order to track how many Earned Beans a Farmer has earned. When a Farmer Deposits assets or farms Grown Stalk, they are given Roots proportional to the Stalk they receive: `newStalk * totalRoots / totalStalk`. When Beanstalk mints Beans, it increases `totalStalk` but not `totalRoots`. In effect, increasing the `stalk / root`. When a Farmer Mows their Grown Stalk, the ratio: `farmerStalk / farmerRoots = totalStalk / totalRoots` is restored. (In this formula `farmerStalk` is equal to the Stalk they have after the Mow.) `earnedStalk = farmerStalk - totalStalk / totalRoots * farmerRoots` (In this formula `farmerStalk` is equal to the Stalk they have before the Mow.) 1 Stalk = 1 Bean, so `earnedBeans = earnedStalk`.
+Roots were implemented in [BIP-0](https://github.com/BeanstalkFarms/Beanstalk-Governance-Proposals/blob/master/bip/bip-00-silo-refactor.md). Roots are an underlying accounting variable for Stalk in order to track how many Earned Beans a Farmer has earned. When a Farmer Deposits assets or Mows Grown Stalk, they are given Roots proportional to the Stalk they receive: `newStalk * totalRoots / totalStalk`.&#x20;
+
+When Beanstalk mints Beans, it increases `totalStalk` but not `totalRoots`, which in effect, increases `stalk / root`. When a Farmer Mows their Grown Stalk, the ratio: `farmerStalk / farmerRoots = totalStalk / totalRoots` is restored. (In this formula `farmerStalk` is equal to the Stalk they have after Mowing.)
+
+`earnedStalk = farmerStalk - totalStalk / totalRoots * farmerRoots` (In this formula `farmerStalk` is equal to the Stalk they have before the Mow.) 1 Stalk = 1 Bean, so `earnedBeans = earnedStalk`.
 
 ### Why build a zero fee AMM?
 
 From an engineering perspective, building a zero fee AMM is simpler than building an AMM with fees—you can simply skip the code that implements the fee when a swap occurs.
 
-From an economic perspective, the concept is that Silo yield is a sufficient enough incentive to attract liquidity providers and thus there is no need to charge a fee on swaps.
+From an economic perspective, the concept is that Silo yield is a sufficient enough incentive to attract and retain liquidity providers such that there is no need to charge a fee on swaps.
 
-Why is having zero fees important? Given that whether `deltaB < 0` or `deltaB > 0` is a defining data point in how Beanstalk's peg maintenance operates, any fee on swaps creates a serious inefficiency in Farmers' ability to arbitrage the peg. The BEAN:3CRV pool charges a 0.04% on swaps (including Convert). This means that buying or converting above the price of $0.9996 means you are paying more than $1 per Bean and selling/converting below $1.0004 means you are getting less than $1 per Bean. Any Farmer who is constantly arbitraging the price within this range is actually losing money overtime instead of making a profit (which they should be). For reference, the BEAN:ETH pool previously had a 0.3% fee, which created an even more extreme inefficiency in peg maintenance.
+Why is having zero fees important? Given that whether `deltaB < 0` or `deltaB > 0` is a defining data point in how Beanstalk's peg maintenance operates, any fee on swaps creates a serious inefficiency in Farmers' ability to arbitrage the peg. The BEAN:3CRV pool charges a 0.04% on swaps (including Convert). This means that buying or Converting above the price of $0.9996 means you are paying more than $1 per Bean and selling or Converting below $1.0004 means you are getting less than $1 per Bean. Any Farmer who is constantly arbitraging the price within this range is losing money overtime instead of making a profit (which they should be). For reference, the BEAN:ETH pool previously had a 0.3% fee, which created an even more extreme inefficiency in peg maintenance.
 
 In addition, Beanstalk can overtime become the primary liquidity provider for all of DeFi by providing the cheapest on-chain swaps between two non-Bean assets.
 
@@ -46,7 +50,7 @@ Plots function completely differently than both ERC-721 and ERC-1155. ERC-1155 d
 
 ### Why doesn't Fertilizer.sol have an `initialize()` function?
 
-When Fertilizer was originally deployed. It was deployed as the `FertilizerPreMint` contract, which has an `initialize()` function that calls `__Internallize_init` [here](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/fertilizer/FertilizerPreMint.sol#L39.). The `initialize()` function was run on deployment. When Beanstalk was Replanted, The Fertilizer proxy contract was upgraded to the `Fertilizer` contract found [here](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/fertilizer/Fertilizer.sol). This is the current implementation contract you see on Etherscan. There was no additional initialization needed as `__Internallize_init` was already executed. Thus, the `Fertilizer` contract has no need to have an external `initialize()` function.
+When Fertilizer was originally deployed. It was deployed as the `FertilizerPreMint.sol` contract, which has an `initialize()` function that calls `__Internallize_init` [here](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/fertilizer/FertilizerPreMint.sol#L39.). The `initialize()` function was run on deployment. When Beanstalk was Replanted, The Fertilizer proxy contract was upgraded to the `Fertilizer` contract found [here](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/fertilizer/Fertilizer.sol). This is the current implementation contract you see on Etherscan. There was no additional initialization needed as `__Internallize_init` was already executed. Thus, the `Fertilizer` contract has no need to have an external `initialize()` function.
 
 ### Why is the BDV of urBEAN3CRV lower than the BDV of urBEAN?
 
@@ -58,7 +62,7 @@ On October 25, 2022, we could see two numbers on the [Beanstalk Data Dashboard](
 
 This implies that 1 urBEAN3CRV will only ripen into 0.9891823 BEAN3CRV (i.e., not 1 BEAN3CRV) when Beanstalk is full recapitalized, assuming there are no Chops, no fees, deltaB = 0 and 1 BEAN3CRV = 1 BEAN. 1 urBEAN will ripen into 1 BEAN.
 
-There are numero us reasons for this discrepancy, but the most significant is that the deltaB **** > 0 when the exploit occurred, so the BDV of LP tokens at the time was less than 1.
+There are numerous reasons for this discrepancy, but the most significant is that the `deltaB`` `**``**` ``> 0` when the exploit occurred, so the BDV of LP tokens at the time was less than 1.
 
 ### Why are Beans minted for a Fundraiser just to later burn them?
 

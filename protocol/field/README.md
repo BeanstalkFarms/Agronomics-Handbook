@@ -4,7 +4,7 @@ The Field is Beanstalk's credit facility. Beanstalk relies on a decentralized se
 
 Anytime Beanstalk is willing to issue debt, there is Soil in the Field. Soil represents the number of Beans that Beanstalk is currently willing to borrow.
 
-Anytime there is Soil in Beanstalk, Farmers can Sow Beans in exchange for Pods. Pods are stored in Plots and placed at the end of the Pod Line.&#x20;
+Anytime there is Soil in the Field, Farmers can Sow Beans in exchange for Pods. Pods are stored in Plots and placed at the end of the Pod Line.&#x20;
 
 Pods become Harvestable on a First In, First Out (FIFO) basis when `deltaB > 0` over the course of a Season. Assuming there are Unharvestable Pods and Unfertilized Beans, 1/3 of Bean mints turn Pods into Harvestable Pods, which can be Harvested (redeemed) for Beans via the `harvest()` function. When a Plot is Harvested, it is deleted from storage.
 
