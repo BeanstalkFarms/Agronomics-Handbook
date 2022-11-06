@@ -13,7 +13,7 @@
 * [App Storage](overview/app-storage.md)
 * [Internal Balances](overview/internal-balances.md)
 
-## 🧑🌾 Protocol
+## 🧑🌾 🧑🌾 Protocol
 
 * [Overview](protocol/overview.md)
 * [Sun](protocol/sun/README.md)
@@ -23,7 +23,6 @@
   * [BDV Facet](protocol/silo/bdv-facet.md)
   * [Whitelist Facet](protocol/silo/whitelist-facet.md)
   * [Convert Facet](protocol/silo/convert-facet.md)
-  * [test - temporary](protocol/silo/test-temporary.md)
 * [Field](protocol/field/README.md)
   * [Field Facet](protocol/field/field-facet.md)
   * [Fundraiser Facet](protocol/field/fundraiser-facet.md)
