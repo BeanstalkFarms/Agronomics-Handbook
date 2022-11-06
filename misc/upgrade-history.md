@@ -1,5 +1,12 @@
 # Upgrade History
 
+* [Beanstalk Upgrades](#beanstalk-upgrades)
+* [Event Changes by Block](#event-changes-by-block)
+
+## Beanstalk Upgrades
+
+Select a block to view event changes.
+
 | Date       | Block                 | Transaction                                                                                        | Description                                                              | Commit                                                                                              | Event Added                                          | Event Removed | Re-emissions |
 |:-----------|:----------------------|:---------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------|:-----------------------------------------------------|:--------------|:-------------|
 | 8/6/2021   | 12974075              | [Link](https://etherscan.io/tx/0x40b23cea3aa6e1a7dd89bbcd24c67f6fa1f6d663d7609f14046cd6cf50b6ce86) | Beanstalk                                                                | [Link](https://github.com/BeanstalkFarms/Beanstalk/commit/ccce0fa18a83cc09f6a889c302b6e509230a486f) |                                                      |               |              |
@@ -21,7 +28,6 @@
 | 11/24/2021 | 13677028              | [Link](https://etherscan.io/tx/0x21c4cb2d156aa40c501663ea43c0fde816971c6d5359d417976466bdb829086f) | Unpause                                                                  |                                                                                                     |                                                      |               |              |
 |            |                       |                                                                                                    | [BIP-3](https://arweave.net/7pjSPpz8NOoqG4aFkB6M1rWn4tPzjr0o7Z41t4kPd9g) |                                                                                                     |                                                      |               |              |
 | 12/3/2021  | [13735230](#13735230) | [Link](https://etherscan.io/tx/0xfb5f6ffce822dd2446782eeffc450f1e5df4a96f486d9f6374c6b69d5bf1c617) | [BIP-4](https://arweave.net/Msk8Mbz7CPDN8vmQmMI8dtqCr4ydTZ8jN1jpPFqQ9lM) | [Link](https://github.com/BeanstalkFarms/Beanstalk/commit/76a6a450b721a82632f0fa8a9268e6e432c77142) | CreateFundraiser, FundFundraiser, CompleteFundraiser |               |              |
-
 
 ## Event Changes by Block
 
