@@ -49,3 +49,4 @@
 * [FAQ](misc/faq.md)
 * [Algorithm Explanations](misc/algorithm-explanations.md)
 * [Terminology Discrepancies](misc/terminology-discrepancies.md)
+* [Upgrade History](misc/upgrade-history.md)
