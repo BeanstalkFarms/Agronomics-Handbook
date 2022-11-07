@@ -118,7 +118,7 @@ Select a block to view event changes.
  
 ## Event Changes by Block
 
-### 13735230
+### 13735230 (BIP-4)
 
 **Added**
 
@@ -135,7 +135,7 @@ event FundFundraiser(address indexed account, uint32 indexed id, uint256 amount)
 event CompleteFundraiser(uint32 indexed id);
 ```
 
-### 13953949
+### 13953949 (BIP-9)
 
 **Added**
 
