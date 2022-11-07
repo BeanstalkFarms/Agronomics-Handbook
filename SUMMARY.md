@@ -13,7 +13,7 @@
 * [App Storage](overview/app-storage.md)
 * [Internal Balances](overview/internal-balances.md)
 
-## 🧑🌾 🧑🌾 Protocol
+## 🧑🌾 🧑🌾 🧑🌾 Protocol
 
 * [Overview](protocol/overview.md)
 * [Sun](protocol/sun/README.md)
