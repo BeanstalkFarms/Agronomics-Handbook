@@ -122,14 +122,28 @@ Select a block to view event changes.
 
 **Added**
 
+[protocol/contracts/farm/facets/FundraiserFacet.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/76a6a450b721a82632f0fa8a9268e6e432c77142#diff-e5c65362a91c184f5429eb76bc1ed90eab0c9fbd263924da9a3612b7f1c1769bR19)
 ```solidity
 event CreateFundraiser(uint32 indexed id, address fundraiser, address token, uint256 amount);
 ```
-
+[protocol/contracts/farm/facets/FundraiserFacet.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/76a6a450b721a82632f0fa8a9268e6e432c77142#diff-e5c65362a91c184f5429eb76bc1ed90eab0c9fbd263924da9a3612b7f1c1769bR20)
 ```solidity
 event FundFundraiser(address indexed account, uint32 indexed id, uint256 amount);
 ```
-
+[protocol/contracts/farm/facets/FundraiserFacet.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/76a6a450b721a82632f0fa8a9268e6e432c77142#diff-e5c65362a91c184f5429eb76bc1ed90eab0c9fbd263924da9a3612b7f1c1769bR21)
 ```solidity
 event CompleteFundraiser(uint32 indexed id);
+```
+
+### 13953949
+
+**Added**
+
+[protocol/contracts/farm/facets/SiloFacet/BeanSilo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/01db99d9576378ba2bbc5486e5d82947e2b7f588#diff-706e1592cb5c83940e3cf46c2cfd4984443865065378ee69c8b2f85f41cc2764R19)
+```solidity
+event BeanDeposit(address indexed account, uint256 season, uint256 beans);
+```
+[protocol/contracts/libraries/Silo/LibBeanSilo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/01db99d9576378ba2bbc5486e5d82947e2b7f588#diff-4b40c9d3c8f7e7ba66284a0abfd240a5980285dd3228fe91b04846629c02353fR19)
+```solidity
+event BeanDeposit(address indexed account, uint256 season, uint256 beans);
 ```
