@@ -22,8 +22,9 @@ All BIPs and their associated pull requests can be found in [the Beanstalk Gover
   * [ERC-20 Token Permits](https://github.com/BeanstalkFarms/Beanstalk/issues/115)
   * [Farm Facet V2](https://github.com/BeanstalkFarms/Beanstalk/issues/116)
 
-### BIP-28: Pod Market Price Functions
+### BIP-29: Pod Market Price Functions
 
+* [Snapshot](https://snapshot.org/#/beanstalkdao.eth/proposal/0x53c358af0fae50f888795c5f2272d50f8759b7702bf7dc2255a03f9fb22ccf45)
 * [Pull Request](https://github.com/BeanstalkFarms/Beanstalk/pull/87)
 * Relevant RFCs:
   * [Pod Market V2 (Price Functions)](https://github.com/BeanstalkFarms/Beanstalk/issues/88)
@@ -32,7 +33,7 @@ All BIPs and their associated pull requests can be found in [the Beanstalk Gover
 
 ### BIP-24: Fungible BDV Support
 
-* [Writeup](https://github.com/BeanstalkFarms/Beanstalk-Governance-Proposals/blob/master/bip/bip-24-fungible-bdv-support.md)
+* [Snapshot](https://snapshot.org/#/beanstalkdao.eth/proposal/0xc2d5d46e6504531e0d17253084cb8d1d0e2e43d6de078504825d0f7e66c50655)
 * [Pull Request](https://github.com/BeanstalkFarms/Beanstalk/pull/82)
 * Relevant RFCs:
   * [Fungible BDV Support](https://github.com/BeanstalkFarms/Beanstalk/issues/90)

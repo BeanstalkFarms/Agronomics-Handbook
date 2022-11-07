@@ -1,10 +1,10 @@
 # Videos
 
-### BIP-30: Sunrise Improvements Walkthrough
+### Sunrise Improvements Walkthrough
 
 {% embed url="https://www.youtube.com/watch?v=X2yAA2zwpEE" %}
 
-### BIP-29: Function Call Architecture V2 / Pipeline Walkthrough
+### Function Call Architecture V2 / Pipeline Walkthrough
 
 {% embed url="https://www.youtube.com/watch?v=ONRvZO7oloA" %}
 

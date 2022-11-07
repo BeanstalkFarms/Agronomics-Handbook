@@ -13,7 +13,7 @@
 * [App Storage](overview/app-storage.md)
 * [Internal Balances](overview/internal-balances.md)
 
-## 🧑🌾 🧑🌾 🧑🌾 Protocol
+## 🧑🌾 Protocol
 
 * [Overview](protocol/overview.md)
 * [Sun](protocol/sun/README.md)
@@ -46,7 +46,7 @@
 * [BIPs](misc/bips.md)
 * [Videos](misc/videos.md)
 * [Subgraph](misc/subgraph.md)
-* [FAQ](misc/faq.md)
-* [Algorithm Explanations](misc/algorithm-explanations.md)
-* [Terminology Discrepancies](misc/terminology-discrepancies.md)
 * [Upgrade History](misc/upgrade-history.md)
+* [Algorithm Explanations](misc/algorithm-explanations.md)
+* [FAQ](misc/faq.md)
+* [Terminology Discrepancies](misc/terminology-discrepancies.md)
