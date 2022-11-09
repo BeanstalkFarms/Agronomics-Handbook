@@ -2,7 +2,7 @@
 
 ### Who calls the `sunrise()` function?
 
-If you call the `sunrise()` function, MEV bots will front run your transaction by calling the function themselves as they can determine that they will get the Beans instead of you. As there are a number of bots playing the Sunrise game, the chances of getting a successful `sunrise()` call from clicking the Sunrise button on the UI are essentially zero.
+In theory, anyone is able to call the `sunrise()` function. In practice, MEV bots will front run your transaction by calling the function themselves as they can determine that they will get the Beans instead of you. As there are a number of bots playing the Sunrise game, the chances of getting a successful `sunrise()` call from clicking the Sunrise button on the UI are essentially zero.
 
 ### Where can I call functions directly on Beanstalk?
 
@@ -10,7 +10,7 @@ Louper allows users to directly call functions in a contract that implements EIP
 
 ### Why do Beans only have 6 decimals?
 
-Solidity has a limit of `~10e77` for integers. Beanstalk is a complex protocol that does a lot of multiplication of big numbers which could potentially bring that upper integer limit into play, especially in the Flood functionality. Given that Bean is a stablecoin and the the value peg is $1, there is no need for an excessive amount of decimals. By reducing decimals to increase protocol security in the long run, Beanstalk is better set up for success. Note that USDC and Tether both have 6 decimals.
+Solidity has a limit of `2^256 - 1 ~= 1e77` for integers. Beanstalk is a complex protocol that does a lot of multiplication of big numbers which could potentially bring that upper integer limit into play, especially in the Flood functionality. Given that Bean is a stablecoin and the the value peg is $1, there is no need for an excessive amount of decimals. By reducing decimals to increase protocol security in the long run, Beanstalk is better set up for success. Note that USDC and Tether both have 6 decimals.
 
 A lot of tokens have 18 decimals. Non-stable tokens have to be functional at any possible price at any point in the future.
 
@@ -46,7 +46,7 @@ In addition, Beanstalk can overtime become the primary liquidity provider for al
 
 ### Why aren't Pods / Plots implemented with an ERC standard?
 
-Plots function completely differently than both ERC-721 and ERC-1155. ERC-1155 definitely doesn't work for Plots/Pods as they are non-fungible. ERC-721 could work for Pods, but its hard to see how this would add value. ERC-721 tokens are non-divisible, so it would only allow entire Plots to be bought and sold on NFT marketplaces, which is far less efficient that the current Pod Market. Implementing Pods as ERC-721 would increase the cost of Sowing, Harvesting, Transferring, buying and selling.&#x20;
+Plots function completely differently than both ERC-721 and ERC-1155. ERC-1155 doesn't work for Plots/Pods as Pods require ordinality for FIFO harvesting. ERC-721 could work for Pods, but its hard to see how this would add value. ERC-721 tokens are non-divisible, so it would only allow entire Plots to be bought and sold on NFT marketplaces, which is far less efficient that the current Pod Market. Implementing Pods as ERC-721 would increase the cost of Sowing, Harvesting, Transferring, buying and selling.&#x20;
 
 ### Why doesn't Fertilizer.sol have an `initialize()` function?
 

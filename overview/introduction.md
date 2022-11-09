@@ -12,7 +12,7 @@ Beanstalk implements several novel mechanisms including a first-in-first-out (FI
 
 Beanstalk strives to create product market fit on both a technical and economic level. In order to service an entire ecosystem, Beanstalk needs to provide a cheap, composable and interoperable interface. However, as protocols become more sophisticated and blockspace more crowded, smart contract architecture complexity can quickly become overwhelming.&#x20;
 
-Beanstalk pioneers a path forward for devising more efficient and complex systems. Beanstalk is implemented in [Solidity](https://docs.soliditylang.org/) for intended use in the [EVM](https://ethereum.org/en/developers/docs/evm/). Beanstalk leverages [EIP-2535](https://eips.ethereum.org/EIPS/eip-2535) to minimize gas costs and complexity.
+Beanstalk pioneers a path forward for devising more efficient and complex systems. Beanstalk is implemented in [Solidity v0.7.6](https://docs.soliditylang.org/) for intended use in the [EVM](https://ethereum.org/en/developers/docs/evm/). Beanstalk leverages [EIP-2535](https://eips.ethereum.org/EIPS/eip-2535) to minimize gas costs and complexity.
 
 Beanstalk consists of 2 main contracts:
 
