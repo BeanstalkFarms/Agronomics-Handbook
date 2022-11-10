@@ -18,15 +18,11 @@ Fertilizer is minted with a given % Humidity. Humidity is dependent on the Seaso
 
 Each Fertilizer entitles its holder up to `1 + humidity` Unfertilized Beans. Unfertilized Beans become Fertilized Beans when Beans are distributed to Active Fertilizer holders. When Fertilizer has no more corresponding Unfertilized Beans, it becomes Used and no longer receives Bean mints.&#x20;
 
-{% hint style="danger" %}
-**The following paragraphs in particular need review. Notably, `s.endBpfs` seems to not exist anymore?**
-{% endhint %}
-
-To track Active Fertilizer, Beanstalk has a global variable `s.bpf`, which is the cumulative Beans Per Fertilizer (BPF) paid back over all Seasons. Fertilizer is indexed by `endBpf = s.bpf + 1 + humidity` at the time of minting. This indicates that once `s.bpf` reaches `endBpf`, the Fertilizer becomes Used. Beanstalk sorts all non-zero Fertilizer ids by `endBpf` in `s.endBpfs(?)`. This is stored in a linked list where `s.fFirst` is the start of the list and `s.fLast` is the end of the list.&#x20;
+To track Active Fertilizer, Beanstalk has a global variable `s.bpf`, which is the cumulative Beans Per Fertilizer (BPF) paid back over all Seasons. Fertilizer is indexed by `endBpf = s.bpf + 1 + humidity` at the time of minting. This indicates that once `s.bpf` reaches `endBpf`, the Fertilizer becomes Used. Beanstalk sorts all non-zero Fertilizer ids by `endBpf` in `s.nextFid`. This is stored in a linked list where `s.fFirst` is the start of the list and `s.fLast` is the end of the list.&#x20;
 
 Every Season, Beanstalk increments `s.bpf` by the number of new Bean mints distributed to Fertilizer holders divided by `s.activeFertilizer`. Note that Beanstalk integrates `s.bpf` over `s.activeFertilizer`—every time `s.bpf` reaches `s.fFirst`, `s.activeFertilizer` decreases by the supply of Fertilizer with an id of `s.fFirst`. The first item is then popped off the linked list and `s.fFirst` is set to the next item. When `s.fFirst == 0`, Beanstalk stops paying Beans to Fertilizer as all Fertilizer is either Used or Available (and thus `s.activeFertilizer == 0`).
 
-Fertilizer can be claimed via the `claimFertilizer()` function (it is also claimed automatically whenever Fertilizer is transferred). The Fertilizer contract stores the `lastBpf` value for each token id that the Farmer owns. When a Farmer claims Fertilizer, Beanstalk computes how many Beans have been Fertilized since the last time the Farmer Fertilized that id with: `min(s.bpf, s.endBpfs[id]) – lastBpf`. It then gives the Farmer that many Beans for each Fertilizer they have of that id.
+Fertilizer can be claimed via the `claimFertilizer()` function (it is also claimed automatically whenever Fertilizer is transferred). The Fertilizer contract stores the `lastBpf` value for each token id that the Farmer owns. When a Farmer claims Fertilizer, Beanstalk computes how many Beans have been Fertilized since the last time the Farmer Fertilized that id with: `min(s.bpf, s.nextFid[id]) – lastBpf`. It then gives the Farmer that many Beans for each Fertilizer they have of that id.
 
 #### Pre-Replant Fertilizer
 

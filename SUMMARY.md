@@ -12,6 +12,7 @@
 * [EIP-2535 Diamond](overview/eip-2535-diamond.md)
 * [App Storage](overview/app-storage.md)
 * [Internal Balances](overview/internal-balances.md)
+* [Permits and Approvals](overview/permits-and-approvals.md)
 
 ## 🧑🌾 Protocol
 
@@ -31,7 +32,7 @@
   * [Unripe Facet](protocol/barn/unripe-facet.md)
 * [Market](protocol/market/README.md)
   * [Marketplace Facet](protocol/market/marketplace-facet.md)
-* [Depot](protocol/depot/README.md)
+* [Farm](protocol/depot/README.md)
   * [Farm Facet](protocol/depot/farm-facet.md)
   * [Token Facet](protocol/depot/token-facet.md)
   * [Curve Facet](protocol/depot/curve-facet.md)

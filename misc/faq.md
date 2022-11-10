@@ -28,7 +28,7 @@ Beanstalk is actually a multi-facet proxy implementation called a Diamond. This 
 
 ### What are Roots?
 
-Roots were implemented in [BIP-0](https://github.com/BeanstalkFarms/Beanstalk-Governance-Proposals/blob/master/bip/bip-00-silo-refactor.md). Roots are an underlying accounting variable for Stalk in order to track how many Earned Beans a Farmer has earned. When a Farmer Deposits assets or Mows Grown Stalk, they are given Roots proportional to the Stalk they receive: `newStalk * totalRoots / totalStalk`.&#x20;
+Roots were implemented in [BIP-0](https://github.com/BeanstalkFarms/Beanstalk-Governance-Proposals/blob/master/bip/bip-00-silo-refactor.md). Roots are an underlying accounting variable for Stalk in order to track how many Earned Beans a Farmer has earned. When a Farmer Deposits assets or Mows Grown Stalk, they are given Roots proportional to the Stalk they receive: `newStalk * totalRoots / totalStalk`.
 
 When Beanstalk mints Beans, it increases `totalStalk` but not `totalRoots`, which in effect, increases `stalk / root`. When a Farmer Mows their Grown Stalk, the ratio: `farmerStalk / farmerRoots = totalStalk / totalRoots` is restored. (In this formula `farmerStalk` is equal to the Stalk they have after Mowing.)
 
@@ -46,7 +46,7 @@ In addition, Beanstalk can overtime become the primary liquidity provider for al
 
 ### Why aren't Pods / Plots implemented with an ERC standard?
 
-Plots function completely differently than both ERC-721 and ERC-1155. ERC-1155 doesn't work for Plots/Pods as Pods require ordinality for FIFO harvesting. ERC-721 could work for Pods, but its hard to see how this would add value. ERC-721 tokens are non-divisible, so it would only allow entire Plots to be bought and sold on NFT marketplaces, which is far less efficient that the current Pod Market. Implementing Pods as ERC-721 would increase the cost of Sowing, Harvesting, Transferring, buying and selling.&#x20;
+Plots function completely differently than both ERC-721 and ERC-1155. ERC-1155 doesn't work for Plots/Pods as Pods require ordinality for FIFO Harvesting. ERC-721 could work for Pods, but its hard to see how this would add value. ERC-721 tokens are non-divisible, so it would only allow entire Plots to be bought and sold on NFT marketplaces, which is far less efficient that the current Pod Market. Implementing Pods as ERC-721 would increase the cost of Sowing, Harvesting, Transferring, buying and selling.
 
 ### Why doesn't Fertilizer.sol have an `initialize()` function?
 
@@ -54,15 +54,15 @@ When Fertilizer was originally deployed. It was deployed as the `FertilizerPreMi
 
 ### Why is the BDV of urBEAN3CRV lower than the BDV of urBEAN?
 
-On October 25, 2022, we could see two numbers on the [Beanstalk Data Dashboard](https://beanstalk-dashboard.netlify.app/):&#x20;
+On October 25, 2022, we could see two numbers on the [Beanstalk Data Dashboard](https://beanstalk-dashboard.netlify.app/):
 
 * Underlying per urBEAN3CRV: `0.219823021543684162`
-* Underlying per urBEAN: `0.222227`&#x20;
-* Dividing the two numbers: `0.219823021543684162/0.222227 = 0.9891823`&#x20;
+* Underlying per urBEAN: `0.222227`
+* Dividing the two numbers: `0.219823021543684162/0.222227 = 0.9891823`
 
 This implies that 1 urBEAN3CRV will only ripen into 0.9891823 BEAN3CRV (i.e., not 1 BEAN3CRV) when Beanstalk is full recapitalized, assuming there are no Chops, no fees, deltaB = 0 and 1 BEAN3CRV = 1 BEAN. 1 urBEAN will ripen into 1 BEAN.
 
-There are numerous reasons for this discrepancy, but the most significant is that the `deltaB`` `**``**` ``> 0` when the exploit occurred, so the BDV of LP tokens at the time was less than 1.
+There are numerous reasons for this discrepancy, but the most significant is that the ` deltaB`` ` \*\*`` **` `` > 0\` when the exploit occurred, so the BDV of LP tokens at the time was less than 1.
 
 ### Why are Beans minted for a Fundraiser just to later burn them?
 
