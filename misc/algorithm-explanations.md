@@ -6,7 +6,7 @@
 
 **`if (s.recapitalized >= totalDollars) return 0;`** —
 
-A safe guard in case we end up in a situation where we raise too much. This is also possible if someone uses the `chop()` function at a penalty even after the full amount has been raised.
+A safe guard in case Beanstalk ends up in a situation where too much is raised. This is also possible if someone uses the `chop()` function at a penalty even after the full amount has been raised.
 
 **`return totalDollars.sub(s.recapitalized);`** —
 

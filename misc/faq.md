@@ -54,7 +54,7 @@ When Fertilizer was originally deployed. It was deployed as the `FertilizerPreMi
 
 ### Why is the BDV of urBEAN3CRV lower than the BDV of urBEAN?
 
-On October 25, 2022, we could see two numbers on the [Beanstalk Data Dashboard](https://beanstalk-dashboard.netlify.app/):
+On October 25, 2022, two values could be found on the [Beanstalk Data Dashboard](https://beanstalk-dashboard.netlify.app/):
 
 * Underlying per urBEAN3CRV: `0.219823021543684162`
 * Underlying per urBEAN: `0.222227`
