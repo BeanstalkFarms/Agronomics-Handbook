@@ -2,12 +2,14 @@
 
 ### Default Endpoints
 
-* Beanstalk: [https://graph.node.bean.money/subgraphs/name/beanstalk](https://graph.node.bean.money/subgraphs/name/beanstalk)
+* Beanstalk: [https://gateway.thegraph.com/api/\[api-key\]/subgraphs/id/R9rnzRuiyDybfDsZfoM7eA9w8WuHtZKbroGrgWwDw1d](https://gateway.thegraph.com/api/\[api-key]/subgraphs/id/R9rnzRuiyDybfDsZfoM7eA9w8WuHtZKbroGrgWwDw1d)
 * Bean: [https://graph.node.bean.money/subgraphs/name/bean](https://graph.node.bean.money/subgraphs/name/bean)
 
-### Video Walkthrough
+### Other Links
 
-* [Beanstalk UI Subgraph Usage](videos.md#beanstalk-ui-subgraph-usage)
+* [The Graph Subgraph Info](https://thegraph.com/explorer/subgraphs/R9rnzRuiyDybfDsZfoM7eA9w8WuHtZKbroGrgWwDw1d)
+* [Beanstalk Subgraph GitHub Repo](https://github.com/BeanstalkFarms/Beanstalk-Subgraph)
+* [Beanstalk UI Subgraph Usage Video Walkthrough](videos.md)
 
 ### Process
 
