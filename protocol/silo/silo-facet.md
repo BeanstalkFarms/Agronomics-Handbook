@@ -295,6 +295,7 @@ event DepositApproval(
 /**
  * Silo
  **/
+ 
 event Plant(
     address indexed account,
     uint256 beans
