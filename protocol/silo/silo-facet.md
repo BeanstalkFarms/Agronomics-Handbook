@@ -248,6 +248,7 @@ event AddDeposit(
     uint256 amount,
     uint256 bdv
 );
+
 event RemoveDeposits(
     address indexed account,
     address indexed token,
@@ -255,6 +256,7 @@ event RemoveDeposits(
     uint256[] amounts,
     uint256 amount
 );
+
 event RemoveDeposit(
     address indexed account,
     address indexed token,
@@ -268,12 +270,14 @@ event AddWithdrawal(
     uint32 season,
     uint256 amount
 );
+
 event RemoveWithdrawals(
     address indexed account,
     address indexed token,
     uint32[] seasons,
     uint256 amount
 );
+
 event RemoveWithdrawal(
     address indexed account,
     address indexed token,
