@@ -86,6 +86,36 @@ function decreaseDepositAllowance(
 ) public virtual nonReentrant returns (bool);
 ```
 
+### Permit
+
+```solidity
+function permitDeposits(
+    address owner,
+    address spender,
+    address[] calldata tokens,
+    uint256[] calldata values,
+    uint256 deadline,
+    uint8 v,
+    bytes32 r,
+    bytes32 s
+) external payable nonReentrant;
+
+function permitDeposit(
+    address owner,
+    address spender,
+    address token,
+    uint256 value,
+    uint256 deadline,
+    uint8 v,
+    bytes32 r,
+    bytes32 s
+) external payable nonReentrant;
+
+function depositPermitNonces(address owner) public view virtual returns (uint256);
+
+function depositPermitDomainSeparator() external view returns (bytes32);
+```
+
 ### Update
 
 ```solidity
@@ -196,6 +226,12 @@ function tokenSettings(
 ) external view returns (Storage.SiloSettings memory);
 
 function withdrawFreeze() public view returns (uint8);
+
+function depositAllowance(
+    address account,
+    address spender,
+    address token
+) public view virtual returns (uint256);
 ```
 
 ## Events
