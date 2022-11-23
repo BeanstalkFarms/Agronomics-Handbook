@@ -16,6 +16,16 @@ function createPodListing(
 ) external payable;
 ```
 
+| Parameter             | Type      | Description |
+|-----------------------|-----------|-------------|
+| `index`               | `uint256` |             |
+| `start`               | `uint256` |             |
+| `amount`              | `uint256` |             |
+| `pricePerPod`         | `uint24`  |             |
+| `maxHarvestableIndex` | `uint256` |             |
+| `minFillAmount`       | `uint256` |             |
+| `mode`                | `To`      |             |
+
 ```solidity
 function createPodListingV2(
     uint256 index,
@@ -28,6 +38,16 @@ function createPodListingV2(
 ) external payable;
 ```
 
+| Parameter             | Type      | Description |
+|-----------------------|-----------|-------------|
+| `index`               | `uint256` |             |
+| `start`               | `uint256` |             |
+| `amount`              | `uint256` |             |
+| `maxHarvestableIndex` | `uint256` |             |
+| `minFillAmount`       | `uint256` |             |
+| `pricingFunction`     | `bytes`   |             |
+| `mode`                | `To`      |             |
+
 ### Fill Pod Listing
 
 ```solidity
@@ -38,6 +58,12 @@ function fillPodListing(
 ) external payable;
 ```
 
+| Parameter    | Type         | Description |
+|--------------|--------------|-------------|
+| `l`          | `PodListing` |             |
+| `beanAmount` | `uint256`    |             |
+| `mode`       | `From`       |             |
+
 ```solidity
 function fillPodListingV2(
     PodListing calldata l,
@@ -46,6 +72,13 @@ function fillPodListingV2(
     LibTransfer.From mode
 ) external payable;
 ```
+
+| Parameter         | Type         | Description |
+|-------------------|--------------|-------------|
+| `l`               | `PodListing` |             |
+| `beanAmount`      | `uint256`    |             |
+| `pricingFunction` | `bytes`      |             |
+| `mode`            | `From`       |             |
 
 ```solidity
 function getAmountPodsFromFillListingV2(
@@ -56,11 +89,22 @@ function getAmountPodsFromFillListingV2(
 ) public pure returns (uint256 amount);
 ```
 
+| Parameter          | Type      | Description |
+|--------------------|-----------|-------------|
+| `placeInLine`      | `uint256` |             |
+| `podListingAmount` | `uint256` |             |
+| `fillBeanAmount`   | `uint256` |             |
+| `pricingFunction`  | `bytes`   |             |
+
 ### Cancel Pod Listing
 
 ```solidity
 function cancelPodListing(uint256 index) external payable;
 ```
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `index`   | `uint256` |             |
 
 ### Create Pod Order
 
@@ -74,6 +118,14 @@ function createPodOrder(
 ) external payable returns (bytes32 id);
 ```
 
+| Parameter        | Type      | Description |
+|------------------|-----------|-------------|
+| `beanAmount`     | `uint256` |             |
+| `pricePerPod`    | `uint24`  |             |
+| `maxPlaceInLine` | `uint256` |             |
+| `minFillAmount`  | `uint256` |             |
+| `mode`           | `From`    |             |
+
 ```solidity
 function createPodOrderV2(
     uint256 beanAmount,
@@ -83,6 +135,14 @@ function createPodOrderV2(
     LibTransfer.From mode
 ) external payable returns (bytes32 id);
 ```
+
+| Parameter         | Type      | Description |
+|-------------------|-----------|-------------|
+| `beanAmount`      | `uint256` |             |
+| `maxPlaceInLine`  | `uint256` |             |
+| `minFillAmount`   | `uint256` |             |
+| `pricingFunction` | `bytes`   |             |
+| `mode`            | `From`    |             |
 
 ### Fill Pod Order
 
@@ -96,6 +156,14 @@ function fillPodOrder(
 ) external payable;
 ```
 
+| Parameter | Type       | Description |
+|-----------|------------|-------------|
+| `o`       | `PodOrder` |             |
+| `index`   | `uint256`  |             |
+| `start`   | `uint256`  |             |
+| `amount`  | `uint256`  |             |
+| `mode`    | `To`       |             |
+
 ```solidity
 function fillPodOrderV2(
     PodOrder calldata o,
@@ -107,6 +175,15 @@ function fillPodOrderV2(
 ) external payable;
 ```
 
+| Parameter         | Type       | Description |
+|-------------------|------------|-------------|
+| `o`               | `PodOrder` |             |
+| `index`           | `uint256`  |             |
+| `start`           | `uint256`  |             |
+| `amount`          | `uint256`  |             |
+| `pricingFunction` | `bytes`    |             |
+| `mode`            | `To`       |             |
+
 ```solidity
 function getAmountBeansToFillOrderV2(
     uint256 placeInLine, 
@@ -114,6 +191,12 @@ function getAmountBeansToFillOrderV2(
     bytes calldata pricingFunction
 ) public pure returns (uint256 beanAmount);
 ```
+
+| Parameter             | Type      | Description |
+|-----------------------|-----------|-------------|
+| `placeInLine`         | `uint256` |             |
+| `amountPodsFromOrder` | `uint256` |             |
+| `pricingFunction`     | `bytes`   |             |
 
 ### Cancel Pod Order
 
@@ -126,6 +209,13 @@ function cancelPodOrder(
 ) external payable;
 ```
 
+| Parameter        | Type      | Description |
+|------------------|-----------|-------------|
+| `pricePerPod`    | `uint24`  |             |
+| `maxPlaceInLine` | `uint256` |             |
+| `minFillAmount`  | `uint256` |             |
+| `mode`           | `To`      |             |
+
 ```solidity
 function cancelPodOrderV2(
     uint256 maxPlaceInLine,
@@ -134,6 +224,13 @@ function cancelPodOrderV2(
     LibTransfer.To mode
 ) external payable;
 ```
+
+| Parameter         | Type      | Description |
+|-------------------|-----------|-------------|
+| `maxPlaceInLine`  | `uint256` |             |
+| `minFillAmount`   | `uint256` |             |
+| `pricingFunction` | `bytes`   |             |
+| `mode`            | `To`      |             |
 
 ### Transfer Plot
 
@@ -147,6 +244,14 @@ function transferPlot(
 ) external payable nonReentrant;
 ```
 
+| Parameter   | Type      | Description |
+|-------------|-----------|-------------|
+| `sender`    | `address` |             |
+| `recipient` | `address` |             |
+| `id`        | `uint256` |             |
+| `start`     | `uint256` |             |
+| `end`       | `uint256` |             |
+
 ### Approve Pods
 
 ```solidity
@@ -155,6 +260,11 @@ function approvePods(address spender, uint256 amount)
     payable
     nonReentrant;
 ```
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `spender` | `address` |             |
+| `amount`  | `uint256` |             |
 
 ## View Functions
 
