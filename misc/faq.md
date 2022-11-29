@@ -1,14 +1,14 @@
 # FAQ
 
-### Who calls the `sunrise()` function?
+### Who calls the `sunrise` function? <a href="#who-calls-sunrise" id="who-calls-sunrise"></a>
 
-In theory, anyone is able to call the `sunrise()` function. In practice, MEV bots will front run your transaction by calling the function themselves as they can determine that they will get the Beans instead of you. As there are a number of bots playing the Sunrise game, the chances of getting a successful `sunrise()` call from clicking the Sunrise button on the UI are essentially zero.
+In theory, anyone is able to call the `sunrise` function. In practice, MEV bots will front run your transaction by calling the function themselves as they can determine that they will get the Beans instead of you. As there are a number of bots playing the Sunrise game, the chances of getting a successful `sunrise` call from clicking the Sunrise button on the UI are essentially zero.
 
-### Where can I call functions directly on Beanstalk?
+### Where can I call functions directly on Beanstalk? <a href="#call-beanstalk-functions-with-louper" id="call-beanstalk-functions-with-louper"></a>
 
 Louper allows users to directly call functions in a contract that implements EIP-2535, as Etherscan does not yet support this. The Beanstalk contract on Louper can be found [here](https://louper.dev/diamond/0xc1e088fc1323b20bcbee9bd1b9fc9546db5624c5).
 
-### Why do Beans only have 6 decimals?
+### Why do Beans only have 6 decimals? <a href="#beans-6-decimals" id="beans-6-decimals"></a>
 
 Solidity has a limit of `2^256 - 1 ~= 1e77` for integers. Beanstalk is a complex protocol that does a lot of multiplication of big numbers which could potentially bring that upper integer limit into play, especially in the Flood functionality. Given that Bean is a stablecoin and the the value peg is $1, there is no need for an excessive amount of decimals. By reducing decimals to increase protocol security in the long run, Beanstalk is better set up for success. Note that USDC and Tether both have 6 decimals.
 
@@ -18,7 +18,7 @@ Let's take the example of ETH and say that the ETH price is $4300. $0.01 is abou
 
 In terms of gas cost, there is no difference between 6 and 18 decimals.
 
-### How are proxy contracts used to upgrade Beanstalk?
+### How are proxy contracts used to upgrade Beanstalk? <a href="#proxy-contract-upgrades" id="proxy-contract-upgrades"></a>
 
 Delegate calls in Solidity allow a smart contract to use functionality stored in another contract’s bytecode and apply it to its own memory.
 
@@ -44,15 +44,15 @@ Why is having zero fees important? Given that whether `deltaB < 0` or `deltaB > 
 
 In addition, Beanstalk can overtime become the primary liquidity provider for all of DeFi by providing the cheapest on-chain swaps between two non-Bean assets.
 
-### Why aren't Pods / Plots implemented with an ERC standard?
+### Why aren't Pods / Plots implemented with an ERC standard? <a href="#pods-plots-erc-721" id="pods-plots-erc-721"></a>
 
 Plots function completely differently than both ERC-721 and ERC-1155. ERC-1155 doesn't work for Plots/Pods as Pods require ordinality for FIFO Harvesting. ERC-721 could work for Pods, but its hard to see how this would add value. ERC-721 tokens are non-divisible, so it would only allow entire Plots to be bought and sold on NFT marketplaces, which is far less efficient that the current Pod Market. Implementing Pods as ERC-721 would increase the cost of Sowing, Harvesting, Transferring, buying and selling.
 
-### Why doesn't Fertilizer.sol have an `initialize()` function?
+### Why doesn't Fertilizer.sol have an `initialize` function? <a href="#fertilizer-initialize" id="fertilizer-initialize"></a>
 
-When Fertilizer was originally deployed. It was deployed as the `FertilizerPreMint.sol` contract, which has an `initialize()` function that calls `__Internallize_init` [here](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/fertilizer/FertilizerPreMint.sol#L39.). The `initialize()` function was run on deployment. When Beanstalk was Replanted, The Fertilizer proxy contract was upgraded to the `Fertilizer` contract found [here](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/fertilizer/Fertilizer.sol). This is the current implementation contract you see on Etherscan. There was no additional initialization needed as `__Internallize_init` was already executed. Thus, the `Fertilizer` contract has no need to have an external `initialize()` function.
+When Fertilizer was originally deployed. It was deployed as the `FertilizerPreMint.sol` contract, which has an `initialize` function that calls `__Internallize_init` [here](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/fertilizer/FertilizerPreMint.sol#L39.). The `initialize` function was run on deployment. When Beanstalk was Replanted, The Fertilizer proxy contract was upgraded to the `Fertilizer` contract found [here](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/fertilizer/Fertilizer.sol). This is the current implementation contract you see on Etherscan. There was no additional initialization needed as `__Internallize_init` was already executed. Thus, the `Fertilizer` contract has no need to have an external `initialize` function.
 
-### Why is the BDV of urBEAN3CRV lower than the BDV of urBEAN?
+### Why is the BDV of urBEAN3CRV lower than the BDV of urBEAN? <a href="#bdv-urbean3crv-urbean" id="bdv-urbean3crv-urbean"></a>
 
 On October 25, 2022, two values could be found on the [Beanstalk Data Dashboard](https://beanstalk-dashboard.netlify.app/):
 
@@ -64,7 +64,7 @@ This implies that 1 urBEAN3CRV will only ripen into 0.9891823 BEAN3CRV (i.e., no
 
 There are numerous reasons for this discrepancy, but the most significant is that the ` deltaB`` ` \*\*`` **` `` > 0\` when the exploit occurred, so the BDV of LP tokens at the time was less than 1.
 
-### Why are Beans minted for a Fundraiser just to later burn them?
+### Why are Beans minted for a Fundraiser just to later burn them? <a href="#beans-minted-fundraiser-burn" id="beans-minted-fundraiser-burn"></a>
 
 See [`FundraiserFacet.sol`](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/FundraiserFacet.sol#L57-L87).
 

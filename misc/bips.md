@@ -2,7 +2,7 @@
 
 All BIPs and their associated pull requests can be found in [the Beanstalk Governance Proposals repo](https://github.com/BeanstalkFarms/Beanstalk-Governance-Proposals/blob/master/bip). The following is a log of recent BIPs that have detailed RFCs associated with them.
 
-### BIP-XX: Sunrise Improvements
+### BIP-31: Sunrise Improvements
 
 * [Pull Request](https://github.com/BeanstalkFarms/Beanstalk/pull/133)
 * [Video Walkthrough](videos.md#bip-30-sunrise-improvements-walkthrough)
@@ -11,9 +11,10 @@ All BIPs and their associated pull requests can be found in [the Beanstalk Gover
   * [Sunrise Incentive Adjustment](https://github.com/BeanstalkFarms/Beanstalk/issues/132)
   * [gm](https://github.com/BeanstalkFarms/Beanstalk/issues/137)
 
-### BIP-XX: Function Call Architecture V2
+### BIP-30: Generalized Pipeline and ERC-20 and ERC-721 Permit Support
 
 * [Pull Request](https://github.com/BeanstalkFarms/Beanstalk/pull/103)
+* [Pipeline Whitepaper](https://evmpipeline.org/pipeline.pdf)
 * [Video Walkthrough](bips.md#undefined)
 * Relevant RFCs:
   * [Advanced Function Calls](https://github.com/BeanstalkFarms/Beanstalk/issues/112)

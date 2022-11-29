@@ -4,7 +4,7 @@
 
 {% embed url="https://www.youtube.com/watch?v=X2yAA2zwpEE" %}
 
-### Function Call Architecture V2 / Pipeline Walkthrough
+### Generalized Pipeline Walkthrough
 
 {% embed url="https://www.youtube.com/watch?v=ONRvZO7oloA" %}
 
