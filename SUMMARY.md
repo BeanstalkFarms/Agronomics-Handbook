@@ -1,9 +1,9 @@
 # Table of contents
 
 * [Agronomics Handbook](README.md)
-* [Farmers' Almanac](https://docs.bean.money/)
-* [Whitepaper](https://bean.money/docs/beanstalk.pdf)
-* [Contract Addresses](https://docs.bean.money/protocol-resources/contracts)
+* [Farmers' Almanac](https://docs.bean.money/almanac)
+* [Whitepaper](https://bean.money/beanstalk.pdf)
+* [Contract Addresses](https://docs.bean.money/almanac/protocol/contracts)
 
 ## 🌱 Overview
 

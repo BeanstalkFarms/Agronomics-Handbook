@@ -26,7 +26,7 @@ Fertilizer can be claimed via the `claimFertilizer()` function (it is also claim
 
 #### Pre-Replant Fertilizer
 
-Before Beanstalk was Replanted, Fertilizer was deployed as `FertilizerPreMint.sol`, which transferred USDC from the caller to [the Beanstalk Community Multisig (BCM) address](https://gnosis-safe.io/app/eth:0xa9bA2C40b263843C04d344727b954A545c81D043/transactions/queue) in exchange for Fertilizer. The Fertilizer was issued at the id `6_000_000` as the Humidity was 500% before Replant.
+Before Beanstalk was Replanted, Fertilizer was deployed as `FertilizerPreMint.sol`, which transferred USDC from the caller to [the Beanstalk Community Multisig (BCM) address](https://app.safe.global/eth:0xa9bA2C40b263843C04d344727b954A545c81D043) in exchange for Fertilizer. The Fertilizer was issued at the id `6_000_000` as the Humidity was 500% before Replant.
 
 When Beanstalk was Replanted, the BCM called the `addFertilizerOwner()` function that handled the process of adding liquidity to the BEAN:3CRV pool and minting new Beans for all of the Fertilizer minted prior to Replant.
 

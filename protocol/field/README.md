@@ -32,4 +32,4 @@ Farmers `fund()` Fundraisers by transferring the non-Bean stablecoin to Beanstal
 
 Once all of the Funds have been raised, the tokens are transferred to the payee address stored in the Fundraiser.
 
-You can find links to past BIPs that created Fundraisers [here](https://docs.bean.money/protocol-resources/fundraiser).
+You can find links to past BIPs that created Fundraisers [here](https://docs.bean.money/almanac/protocol/fundraiser).

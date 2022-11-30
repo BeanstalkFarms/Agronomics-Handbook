@@ -28,7 +28,7 @@ Beanstalk is actually a multi-facet proxy implementation called a Diamond. This 
 
 ### What are Roots?
 
-Roots were implemented in [BIP-0](https://github.com/BeanstalkFarms/Beanstalk-Governance-Proposals/blob/master/bip/bip-00-silo-refactor.md). Roots are an underlying accounting variable for Stalk in order to track how many Earned Beans a Farmer has earned. When a Farmer Deposits assets or Mows Grown Stalk, they are given Roots proportional to the Stalk they receive: `newStalk * totalRoots / totalStalk`.
+Roots were implemented in [BIP-0](https://bean.money/bip-0). Roots are an underlying accounting variable for Stalk in order to track how many Earned Beans a Farmer has earned. When a Farmer Deposits assets or Mows Grown Stalk, they are given Roots proportional to the Stalk they receive: `newStalk * totalRoots / totalStalk`.
 
 When Beanstalk mints Beans, it increases `totalStalk` but not `totalRoots`, which in effect, increases `stalk / root`. When a Farmer Mows their Grown Stalk, the ratio: `farmerStalk / farmerRoots = totalStalk / totalRoots` is restored. (In this formula `farmerStalk` is equal to the Stalk they have after Mowing.)
 

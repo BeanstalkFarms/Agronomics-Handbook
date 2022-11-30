@@ -14,7 +14,7 @@ A safe guard in case Beanstalk ends up in a situation where too much is raised. 
 
 ### **``**[**`checkForMaxDeltaB(...)`**](https://github.com/BeanstalkFarms/Beanstalk/blob/ddf3869bcdf7f7802eabe83d6abeebdfc7b8d1ab/protocol/contracts/libraries/Oracle/LibCurveOracle.sol#L152) <a href="#check-for-max-deltab" id="check-for-max-deltab"></a>
 
-See [EBIP-2](algorithm-explanations.md#remainingrecapitalization-...).
+See [EBIP-2](https://bean.money/ebip-2).
 
 It is assumed that if `|deltaB| > beanSupply / 100`, then manipulation occurred. This isn't always true, but the ramifications if `|deltaB| > beanSupply / 100` naturally are minimal as Beanstalk will simply mint fewer Beans/less Soil this Season.
 

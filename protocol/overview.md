@@ -26,7 +26,7 @@ The Silo consists of 3 Facets:
 
 * ``[`SiloFacet`](silo/silo-facet.md) -> Where Farmers Deposit, Withdraw, Claim and Transfer assets in/from the Silo.
 * ``[`BDVFacet`](silo/bdv-facet.md) -> Handles logic for retrieving the BDV of some amount of a whitelisted asset.
-* ``[`WhitelistFacet`](silo/whitelist-facet.md) -> Handles the addition and removal of tokens from the [Deposit Whitelist](https://docs.bean.money/farm/silo#deposit-whitelist).
+* ``[`WhitelistFacet`](silo/whitelist-facet.md) -> Handles the addition and removal of tokens from the [Deposit Whitelist](https://docs.bean.money/almanac/farm/silo#deposit-whitelist).
 * ``[`ConvertFacet`](silo/convert-facet.md) -> Where Farmers Convert a Deposit of a whitelisted asset to a Deposit of another whitelisted asset.
 
 ### Field
@@ -69,7 +69,7 @@ The Barn consists of 2 Facets:
 
 The Market will house various DEXs for zero fee trading. For now, there is only the Pod Market, but in the future there may be a zero fee AMM, a zero fee NFT marketplace, etc.
 
-Pods can be bought and sold in a decentralized, trustless fashion on [the Pod Market](https://docs.bean.money/farm/market#the-pod-market). The Pod Market creates liquidity for Pods through an on-chain order book.
+Pods can be bought and sold in a decentralized, trustless fashion on the [Pod Market](https://docs.bean.money/almanac/farm/market#the-pod-market). The Pod Market creates liquidity for Pods through an on-chain order book.
 
 Sellers can List Pods or Fill open Pod Orders placed by buyers.&#x20;
 
