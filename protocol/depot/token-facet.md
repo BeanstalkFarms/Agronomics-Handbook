@@ -2,7 +2,7 @@
 
 ## Call Functions
 
-### Approval
+### Approve Token
 
 ```solidity
 function approveToken(
@@ -12,11 +12,15 @@ function approveToken(
 ) external payable nonReentrant;
 ```
 
+WIP
+
 | Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `spender` | `address` |             |
-| `token`   | `IERC20`  |             |
-| `amount`  | `uint256` |             |
+| --------- | --------- | ----------- |
+| `spender` | `address` | WIP         |
+| `token`   | `IERC20`  | WIP         |
+| `amount`  | `uint256` | WIP         |
+
+### Increase Token Allowance
 
 ```solidity
 function increaseTokenAllowance(
@@ -26,11 +30,15 @@ function increaseTokenAllowance(
 ) public virtual nonReentrant returns (bool);
 ```
 
+WIP
+
 | Parameter    | Type      | Description |
-|--------------|-----------|-------------|
-| `spender`    | `address` |             |
-| `token`      | `IERC20`  |             |
-| `addedValue` | `uint256` |             |
+| ------------ | --------- | ----------- |
+| `spender`    | `address` | WIP         |
+| `token`      | `IERC20`  | WIP         |
+| `addedValue` | `uint256` | WIP         |
+
+### Token Allowance
 
 ```solidity
 function tokenAllowance(
@@ -40,11 +48,15 @@ function tokenAllowance(
 ) public view virtual returns (uint256);
 ```
 
+WIP
+
 | Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `account` | `address` |             |
-| `spender` | `address` |             |
-| `token`   | `IERC20`  |             |
+| --------- | --------- | ----------- |
+| `account` | `address` | WIP         |
+| `spender` | `address` | WIP         |
+| `token`   | `IERC20`  | WIP         |
+
+### Decrease Token Allowance
 
 ```solidity
 function decreaseTokenAllowance(
@@ -54,11 +66,15 @@ function decreaseTokenAllowance(
 ) public virtual nonReentrant returns (bool);
 ```
 
+WIP
+
 | Parameter         | Type      | Description |
-|-------------------|-----------|-------------|
-| `spender`         | `address` |             |
-| `token`           | `IERC20`  |             |
-| `subtractedValue` | `uint256` |             |
+| ----------------- | --------- | ----------- |
+| `spender`         | `address` | WIP         |
+| `token`           | `IERC20`  | WIP         |
+| `subtractedValue` | `uint256` | WIP         |
+
+### Permit Token
 
 ```solidity
 function permitToken(
@@ -73,18 +89,20 @@ function permitToken(
 ) external payable nonReentrant;
 ```
 
-| Parameter  | Type      | Description |
-|------------|-----------|-------------|
-| `owner`    | `address` |             |
-| `spender`  | `address` |             |
-| `token`    | `address` |             |
-| `value`    | `uint256` |             |
-| `deadline` | `uint256` |             |
-| `v`        | `uint8`   |             |
-| `r`        | `bytes32` |             |
-| `s`        | `bytes32` |             |
+WIP
 
-### Transfer Tokens
+| Parameter  | Type      | Description |
+| ---------- | --------- | ----------- |
+| `owner`    | `address` | WIP         |
+| `spender`  | `address` | WIP         |
+| `token`    | `address` | WIP         |
+| `value`    | `uint256` | WIP         |
+| `deadline` | `uint256` | WIP         |
+| `v`        | `uint8`   | WIP         |
+| `r`        | `bytes32` | WIP         |
+| `s`        | `bytes32` | WIP         |
+
+### Transfer Token
 
 ```solidity
 function transferToken(
@@ -96,15 +114,17 @@ function transferToken(
 ) external payable;
 ```
 
-`transferToken()` transfers an asset from a Farmer's Internal and/or External Balance to a Farmer's Internal or External Balance.
+Transfers an asset from a Farmer's Internal and/or External Balance to a Farmer's Internal or External Balance.
 
 | Parameter   | Type      | Description                                                                                                       |
-|-------------|-----------|-------------------------------------------------------------------------------------------------------------------|
+| ----------- | --------- | ----------------------------------------------------------------------------------------------------------------- |
 | `token`     | `IERC20`  | The token to be transferred.                                                                                      |
 | `recipient` | `address` | The recipient of the transferred tokens (can be `msg.sender`).                                                    |
 | `amount`    | `uint256` | The amount of tokens to be transferred.                                                                           |
 | `fromMode`  | `From`    | Specifies what balance to receive the tokens from (see [Internal Balances](../../overview/internal-balances.md)). |
 | `toMode`    | `To`      | Specifies what balance to send the tokens to (see [Internal Balances](../../overview/internal-balances.md)).      |
+
+### Transfer Internal Token From
 
 ```solidity
 function transferInternalTokenFrom(
@@ -116,39 +136,41 @@ function transferInternalTokenFrom(
 ) external payable nonReentrant;
 ```
 
+WIP
+
 | Parameter   | Type      | Description |
-|-------------|-----------|-------------|
-| `token`     | `IERC20`  |             |
-| `sender`    | `address` |             |
-| `recipient` | `address` |             |
-| `amount`    | `uint256` |             |
-| `toMode`    | `To`      |             |
+| ----------- | --------- | ----------- |
+| `token`     | `IERC20`  | WIP         |
+| `sender`    | `address` | WIP         |
+| `recipient` | `address` | WIP         |
+| `amount`    | `uint256` | WIP         |
+| `toMode`    | `To`      | WIP         |
 
 ### Wrap Ether
-
-`wrapEth()` wraps Ether into WETH.
 
 ```solidity
 function wrapEth(uint256 amount, LibTransfer.To mode) external payable;
 ```
 
+Wraps Ether into WETH.
+
 | Parameter | Type      | Description                                                                                                |
-|-----------|-----------|------------------------------------------------------------------------------------------------------------|
+| --------- | --------- | ---------------------------------------------------------------------------------------------------------- |
 | `amount`  | `uint256` | The amount of Ether to wrap into WETH. Must be `<= msg.value`.                                             |
 | `toMode`  | `To`      | Specifies what balance to send the WETH to (see [Internal Balances](../../overview/internal-balances.md)). |
 
 ### Unwrap Ether
 
-`unwrapEth()` unwraps WETH into Ether.
-
 ```solidity
 function unwrapEth(uint256 amount, LibTransfer.From mode) external payable;
 ```
 
-| Parameter  | Type      | Description                                                                                                      |
-|------------|-----------|------------------------------------------------------------------------------------------------------------------|
-| `amount`   | `uint256` | The amount of WETH to unwrap into Ether.                                                                         |
-| `fromMode` | `From`    | Specifies what balance to receive  the WETH from (see [Internal Balances](../../overview/internal-balances.md)). |
+Unwraps WETH into Ether.
+
+| Parameter  | Type      | Description                                                                                                     |
+| ---------- | --------- | --------------------------------------------------------------------------------------------------------------- |
+| `amount`   | `uint256` | The amount of WETH to unwrap into Ether.                                                                        |
+| `fromMode` | `From`    | Specifies what balance to receive the WETH from (see [Internal Balances](../../overview/internal-balances.md)). |
 
 ## View Functions
 

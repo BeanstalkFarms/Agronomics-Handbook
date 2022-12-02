@@ -22,13 +22,13 @@ To track Active Fertilizer, Beanstalk has a global variable `s.bpf`, which is th
 
 Every Season, Beanstalk increments `s.bpf` by the number of new Bean mints distributed to Fertilizer holders divided by `s.activeFertilizer`. Note that Beanstalk integrates `s.bpf` over `s.activeFertilizer`—every time `s.bpf` reaches `s.fFirst`, `s.activeFertilizer` decreases by the supply of Fertilizer with an id of `s.fFirst`. The first item is then popped off the linked list and `s.fFirst` is set to the next item. When `s.fFirst == 0`, Beanstalk stops paying Beans to Fertilizer as all Fertilizer is either Used or Available (and thus `s.activeFertilizer == 0`).
 
-Fertilizer can be claimed via the `claimFertilizer()` function (it is also claimed automatically whenever Fertilizer is transferred). The Fertilizer contract stores the `lastBpf` value for each token id that the Farmer owns. When a Farmer claims Fertilizer, Beanstalk computes how many Beans have been Fertilized since the last time the Farmer Fertilized that id with: `min(s.bpf, s.nextFid[id]) – lastBpf`. It then gives the Farmer that many Beans for each Fertilizer they have of that id.
+Fertilizer can be claimed via the `claimFertilizer` function (it is also claimed automatically whenever Fertilizer is transferred). The Fertilizer contract stores the `lastBpf` value for each token id that the Farmer owns. When a Farmer claims Fertilizer, Beanstalk computes how many Beans have been Fertilized since the last time the Farmer Fertilized that id with: `min(s.bpf, s.nextFid[id]) – lastBpf`. It then gives the Farmer that many Beans for each Fertilizer they have of that id.
 
 #### Pre-Replant Fertilizer
 
 Before Beanstalk was Replanted, Fertilizer was deployed as `FertilizerPreMint.sol`, which transferred USDC from the caller to [the Beanstalk Community Multisig (BCM) address](https://app.safe.global/eth:0xa9bA2C40b263843C04d344727b954A545c81D043) in exchange for Fertilizer. The Fertilizer was issued at the id `6_000_000` as the Humidity was 500% before Replant.
 
-When Beanstalk was Replanted, the BCM called the `addFertilizerOwner()` function that handled the process of adding liquidity to the BEAN:3CRV pool and minting new Beans for all of the Fertilizer minted prior to Replant.
+When Beanstalk was Replanted, the BCM called the `addFertilizerOwner` function that handled the process of adding liquidity to the BEAN:3CRV pool and minting new Beans for all of the Fertilizer minted prior to Replant.
 
 At the same time, the Fertilizer contract was upgraded to [`Fertilizer.sol`](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/FertilizerFacet.sol). This moved the `mintFertilizer()` functionality from the Fertilizer contract to Beanstalk itself. From this point forward, Beanstalk automatically adds new liquidity for Unripe LP holders and new Beans for Unripe Bean holders in the same transaction that Fertilizer is minted in.
 

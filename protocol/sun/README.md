@@ -1,6 +1,6 @@
 # Sun
 
-The Sun advances Beanstalk to the next Season through the `sunrise()` function in the [`SeasonFacet`](season-facet.md). Every time an hour passes, `sunrise()` can be called 1 more time.
+The Sun advances Beanstalk to the next Season through the `sunrise` function in the [`SeasonFacet`](season-facet.md). Every time an hour passes, `sunrise` can be called 1 more time.
 
 The Season Facet has [several subcontracts](https://github.com/BeanstalkFarms/Beanstalk/tree/master/protocol/contracts/farm/facets/SeasonFacet):
 

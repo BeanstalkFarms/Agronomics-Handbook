@@ -17,7 +17,7 @@ function exchange(
 ) external payable nonReentrant;
 ```
 
-`exchange()` swaps a token for another token in a Curve base, meta, plain or crypto pool. Slippage is tolerated on the amount out. It also verifies that the pool exists in the Curve Factory. This function does not support underlying tokens.
+Swaps a token for another token in a Curve base, meta, plain or crypto pool. Slippage is tolerated on the amount out. It also verifies that the pool exists in the Curve Factory. This function does not support underlying tokens.
 
 * The stable pair Curve Factory can be found at: [`0xB9fC157394Af804a3578134A6585C0dc9cc990d4`](https://etherscan.io/address/0xB9fC157394Af804a3578134A6585C0dc9cc990d4)&#x20;
 * The non-stable Curve factory can be found at: [`0x0959158b6040D32d04c301A72CBFD6b39E21c9AE`](https://etherscan.io/address/0x0959158b6040D32d04c301A72CBFD6b39E21c9AE)``
@@ -47,7 +47,7 @@ function exchangeUnderlying(
 ) external payable nonReentrant;
 ```
 
-`exchangeUnderlying()` swaps an underlying token for another underlying token in a Curve metapool. In a Curve metapool, one of the tokens is an LP token of another pool. Underlying tokens include the non-LP token in the pool as well as the tokens in the pool that the LP token belongs to. For example, in the [BEAN:3CRV metapool](https://curve.fi/factory/152), the underlying tokens are Bean, USDC, Tether and Dai.
+Swaps an underlying token for another underlying token in a Curve metapool. In a Curve metapool, one of the tokens is an LP token of another pool. Underlying tokens include the non-LP token in the pool as well as the tokens in the pool that the LP token belongs to. For example, in the [BEAN:3CRV metapool](https://curve.fi/factory/152), the underlying tokens are Bean, USDC, Tether and Dai.
 
 Slippage is tolerated on the amount out. This function verifies that the pool exists in the Curve Factory.
 
@@ -74,7 +74,7 @@ function addLiquidity(
 ) external payable nonReentrant;
 ```
 
-`addLiquidity()` adds tokens into a liquidity pool in exchange for LP tokens.
+Adds tokens into a liquidity pool on Curve in exchange for LP tokens.
 
 | Parameter      | Type        | Description                                                                                                       |
 | -------------- | ----------- | ----------------------------------------------------------------------------------------------------------------- |
@@ -98,7 +98,7 @@ function removeLiquidity(
 ) external payable nonReentrant;
 ```
 
-`removeLiquidity()` removes liquidity from a pool on Curve in exchange for equal amounts of all  tokens in the liquidity pool. The Farmer burns their LP tokens in the process.&#x20;
+Removes liquidity from a pool on Curve in exchange for equal amounts of all  tokens in the liquidity pool. The Farmer burns their LP tokens in the process.&#x20;
 
 | Parameter       | Type        | Description                                                                                                       |
 | --------------- | ----------- | ----------------------------------------------------------------------------------------------------------------- |
@@ -122,7 +122,7 @@ function removeLiquidityImbalance(
 ) external payable nonReentrant;
 ```
 
-`removeLiquidityImbalance()` removes liquidity from a pool on Curve in exchange for an unequal amounts of tokens in the liquidity pool. The Farmer burns LP tokens in the process.
+Removes liquidity from a pool on Curve in exchange for an unequal amounts of tokens in the liquidity pool. The Farmer burns LP tokens in the process.
 
 | Parameter     | Type        | Description                                                                                                       |
 | ------------- | ----------- | ----------------------------------------------------------------------------------------------------------------- |
@@ -147,7 +147,7 @@ function removeLiquidityOneToken(
 ) external payable nonReentrant;
 ```
 
-`removeLiquidityOneToken` removes liquidity from a pool on Curve in exchange for an amount of one token in the liquidity pool. The Farmer burns LP tokens in the process.
+Removes liquidity from a pool on Curve in exchange for an amount of one token in the liquidity pool. The Farmer burns LP tokens in the process.
 
 | Parameter      | Type      | Description                                                                                                       |
 | -------------- | --------- | ----------------------------------------------------------------------------------------------------------------- |

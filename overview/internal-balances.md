@@ -45,7 +45,7 @@ enum To {
 
 ### Transferring Internal / External Balances <a href="#transferring-internal-external-balances" id="transferring-internal-external-balances"></a>
 
-At any time, a user can transfer, add or remove ERC-20 tokens from their Internal Balance through the `transferToken()` function in the [`TokenFacet`](../protocol/depot/token-facet.md). `transferToken()` is a general transfer method that allows full control of the tokens start/end location (i.e internal to internal, internal to external, external to internal, external to external).
+At any time, a user can transfer, add or remove ERC-20 tokens from their Internal Balance through the `transferToken` function in the [`TokenFacet`](../protocol/depot/token-facet.md). `transferToken` is a general transfer method that allows full control of the tokens start/end location (i.e internal to internal, internal to external, external to internal, external to external).
 
 ```solidity
 function transferToken(
@@ -61,7 +61,7 @@ function transferToken(
 
 A function that sends ERC-20 tokens to users can implement Internal Balances by adding the `To` enum in [`LibTransfer`](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/libraries/Token/LibTransfer.sol) to a function's signature.
 
-Then call `sendToken()` in [`LibTransfer`](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/libraries/Token/LibTransfer.sol) instead of directly calling the ERC-20 function `transferFrom()`.
+Then call `sendToken` in [`LibTransfer`](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/libraries/Token/LibTransfer.sol) instead of directly calling the ERC-20 function `transferFrom`.
 
 ```solidity
 function sendToken(

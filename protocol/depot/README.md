@@ -7,4 +7,4 @@ The Farm also provides composable Beanstalk-native interfaces for other DeFi pro
 * WETH -> wrapping and unwrapping; and
 * Curve -> swapping and adding/removing liquidity.
 
-The Farm creates an interface to transfer ERC-20 tokens between Internal and External Balances, as well as between Farmers through the `transferToken()` function.
+The Farm creates an interface to transfer ERC-20 tokens between Internal and External Balances, as well as between Farmers through the `transferToken` function.

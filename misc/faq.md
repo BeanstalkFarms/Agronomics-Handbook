@@ -62,7 +62,7 @@ On October 25, 2022, two values could be found on the [Beanstalk Data Dashboard]
 
 This implies that 1 urBEAN3CRV will only ripen into 0.9891823 BEAN3CRV (i.e., not 1 BEAN3CRV) when Beanstalk is full recapitalized, assuming there are no Chops, no fees, deltaB = 0 and 1 BEAN3CRV = 1 BEAN. 1 urBEAN will ripen into 1 BEAN.
 
-There are numerous reasons for this discrepancy, but the most significant is that the ` deltaB`` ` \*\*`` **` `` > 0\` when the exploit occurred, so the BDV of LP tokens at the time was less than 1.
+There are numerous reasons for this discrepancy, but the most significant is that `deltaB > 0` when the exploit occurred, so the BDV of LP tokens at the time was less than 1.
 
 ### Why are Beans minted for a Fundraiser just to later burn them? <a href="#beans-minted-fundraiser-burn" id="beans-minted-fundraiser-burn"></a>
 

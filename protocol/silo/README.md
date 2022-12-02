@@ -42,8 +42,8 @@ Each Seed grows 0.0001 Stalk every Season. Stalk grown from Seeds is called Grow
 There are 3 types of Stalk:
 
 * Stalk -> Stalk stored in a Farmer’s account storage. Stalk is acquired by Depositing, Converting, Updating or Planting.
-* Earned Stalk -> A Farmer receives 1 Earned Stalk for each Earned Bean. Earned Stalk automatically compounds and receives a portion of Bean mints. Earned Stalk is claimed as part of the `plant()` function, which turns it into Stalk. Because it is considered active, Earned Stalk has already been minted and it is included in the `totalStalk()` and `balanceOfStalk()` counts. To the Farmer, Earned Stalk is no different from Stalk and just serves as an indicator of how much Stalk has been earned through Bean seignorage since the last `plant()` call.
-* Grown Stalk -> 0.0001 Grown Stalk is grown from every Seed each Season. Grown Stalk is **not** considered active and thus does not receive a pro rata portion of Bean mints. It is claimed via the `update()` function in Beanstalk, which turns it into Stalk. Because Grown Stalk is not active, Stalk isn’t minted until Grown Stalk is updated and thus Grown Stalk is **not** included in the `totalStalk()` and `balanceOfStalk()` counts.
+* Earned Stalk -> A Farmer receives 1 Earned Stalk for each Earned Bean. Earned Stalk automatically compounds and receives a portion of Bean mints. Earned Stalk is claimed as part of the `plant` function, which turns it into Stalk. Because it is considered active, Earned Stalk has already been minted and it is included in the `totalStalk` and `balanceOfStalk` counts. To the Farmer, Earned Stalk is no different from Stalk and just serves as an indicator of how much Stalk has been earned through Bean seignorage since the last `plant` call.
+* Grown Stalk -> 0.0001 Grown Stalk is grown from every Seed each Season. Grown Stalk is **not** considered active and thus does not receive a pro rata portion of Bean mints. It is claimed via the `update` function in Beanstalk, which turns it into Stalk. Because Grown Stalk is not active, Stalk isn’t minted until Grown Stalk is updated and thus Grown Stalk is **not** included in the `totalStalk` and `balanceOfStalk` counts.
 
 {% hint style="warning" %}
 In the Beanstalk ecosystem, **Update** (i.e., updating Grown Stalk) is referred to as **Mow** (i.e., Mowing Grown Stalk). See [Terminology Discrepancies](../../misc/terminology-discrepancies.md).
@@ -52,7 +52,7 @@ In the Beanstalk ecosystem, **Update** (i.e., updating Grown Stalk) is referred 
 There are 2 types of Seeds:
 
 * Seeds → Seeds stored in a Farmer’s account storage. Seeds are acquired by Depositing, Planting and in certain cases, Converting.&#x20;
-* Earned Seeds → A Farmer receives 2 Earned Seeds for each Earned Bean. Earned Seeds are **not** active. Earned Seeds can be claimed via the `plant()` function, which turns them into Seeds. Because Earned Seeds are **not** active, they are not included in the `totalSeeds()` or `balanceOfSeeds()` function.
+* Earned Seeds → A Farmer receives 2 Earned Seeds for each Earned Bean. Earned Seeds are **not** active. Earned Seeds can be claimed via the `plant` function, which turns them into Seeds. Because Earned Seeds are **not** active, they are not included in the `totalSeeds` or `balanceOfSeeds` function.
 
 {% hint style="warning" %}
 In the Beanstalk ecosystem, **Earned Seeds** are referred to as **Plantable Seeds**. See [Terminology Discrepancies](../../misc/terminology-discrepancies.md).
@@ -60,7 +60,7 @@ In the Beanstalk ecosystem, **Earned Seeds** are referred to as **Plantable Seed
 
 #### Deposit
 
-Farmers can deposit Whitelisted ERC-20 tokens in the Silo in exchange for Stalk and Seeds via the `deposit()` function. `deposit()` first calls the BDV function selector stored in Storage to calculate the BDV of the Deposit. It then distributes Stalk and Seeds to the Farmer based on the Stalk per BDV and Seeds per BDV.
+Farmers can deposit Whitelisted ERC-20 tokens in the Silo in exchange for Stalk and Seeds via the `deposit` function. `deposit` first calls the BDV function selector stored in Storage to calculate the BDV of the Deposit. It then distributes Stalk and Seeds to the Farmer based on the Stalk per BDV and Seeds per BDV.
 
 A Deposit is stored in the current Season to record at what Season the Seeds associated with the Deposit started accruing Grown Stalk. The total Seeds and Stalk associated with a Deposit can be calculated as:
 
@@ -86,7 +86,7 @@ struct Deposit {
 
 #### Withdraw
 
-Farmers can Withdraw any Deposit via the `withdrawDeposit()` or `withdrawDeposits()` functions. When a Farmer Withdraws, they specific the token, the Season(s) of the Deposit(s) and the corresponding amount(s) to Withdraw.
+Farmers can Withdraw any Deposit via the `withdrawDeposit` or `withdrawDeposits` functions. When a Farmer Withdraws, they specific the token, the Season(s) of the Deposit(s) and the corresponding amount(s) to Withdraw.
 
 In order to Withdraw a Deposit, a Farmer must burn all of the Stalk and Seeds associated with the Deposit.
 
@@ -104,11 +104,11 @@ mapping(address => mapping(uint32 => uint256)) withdrawals;
 
 #### Claim Withdrawal
 
-Farmers can Claim Withdrawals that have been unlocked via the `claimWithdrawal()` and `claimWithdrawals()` functions. A Withdrawal is Claimable if the current Season is greater than or equal to the Season of the Withdrawal. A Withdrawal is Claimed by specifying the token and Season(s) of the Withdrawals to Claim. When a Withdrawals is Claimed, the Withdrawal is deleted and the Farmer receives the corresponding amount of the underlying token.
+Farmers can Claim Withdrawals that have been unlocked via the `claimWithdrawal` and `claimWithdrawals` functions. A Withdrawal is Claimable if the current Season is greater than or equal to the Season of the Withdrawal. A Withdrawal is Claimed by specifying the token and Season(s) of the Withdrawals to Claim. When a Withdrawals is Claimed, the Withdrawal is deleted and the Farmer receives the corresponding amount of the underlying token.
 
 #### Convert
 
-Farmers can Convert one asset on the Deposit Whitelist (Token A) to another asset on the Deposit Whitelist (Token B) if Converting from Token A to Token B is on the Convert Whitelist. `convert()` takes in a `convertData` payload that stores the encoded Convert data payload. Convert data is encoded so that different Convert types can have different parameters as necessary. However, each Convert type must specify at least the Convert type and the amount to Convert. Farmers must also specify the Season(s) of Deposits and corresponding amounts to Convert.
+Farmers can Convert one asset on the Deposit Whitelist (Token A) to another asset on the Deposit Whitelist (Token B) if Converting from Token A to Token B is on the Convert Whitelist. `convert` takes in a `convertData` payload that stores the encoded Convert data payload. Convert data is encoded so that different Convert types can have different parameters as necessary. However, each Convert type must specify at least the Convert type and the amount to Convert. Farmers must also specify the Season(s) of Deposits and corresponding amounts to Convert.
 
 Convert does 3 main actions:
 
@@ -124,8 +124,8 @@ Grown Stalk is preserved during Convert and the Season that Converted assets are
 depositSeason = currentSeason - (grownStalk / depositSeeds)
 ```
 
-Converts may have a maximize amount that can be converted from Token A to Token B. For instance, Deposited Beans can only be converted into Deposited BEAN:3CRV LP tokens if the price in the BEAN:3CRV pool is greater than $1 after the Convert. This can be retrieved via the `getMaxAmountIn()` function.
+Converts may have a maximize amount that can be converted from Token A to Token B. For instance, Deposited Beans can only be converted into Deposited BEAN:3CRV LP tokens if the price in the BEAN:3CRV pool is greater than $1 after the Convert. This can be retrieved via the `getMaxAmountIn` function.
 
-The `getAmountOut()` function returns the expected output amount of a given Convert.
+The `getAmountOut` function returns the expected output amount of a given Convert.
 
 New Converts can be approved via adding new Convert types to `LibConvertData` and adding the Convert case to `LibConvert`.

@@ -16,7 +16,7 @@ The Sun handles moving time forward in Beanstalk. It advances Beanstalk to the n
 
 The Sun consists of 1 Facet:
 
-* ``[`SeasonFacet`](sun/season-facet.md) -> Contains the `sunrise()` function.
+* ``[`SeasonFacet`](sun/season-facet.md) -> Contains the `sunrise` function.
 
 ### Silo
 
@@ -85,7 +85,7 @@ The Farm allows Farmers to call multiple functions in a single transaction and u
 
 The Farm consists of 3 Facets:
 
-* ``[`FarmFacet`](depot/farm-facet.md) -> Contains the `farm()` function, which allows Farmers to call a series of functions together within Beanstalk.
+* ``[`FarmFacet`](depot/farm-facet.md) -> Contains the `farm` function, which allows Farmers to call a series of functions together within Beanstalk.
 * ``[`TokenFacet`](depot/token-facet.md) -> Supports transferring assets between Internal and External Balances and between different accounts. Also, supports Wrap/Unwrap logic for ETH.
 * ``[`CurveFacet`](depot/curve-facet.md) -> Provides an interface to exchange and add/remove liquidity on Curve directly through Beanstalk.
 
