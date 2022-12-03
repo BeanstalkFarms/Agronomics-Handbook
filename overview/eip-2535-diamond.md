@@ -2,9 +2,7 @@
 
 The Beanstalk contract is a Diamond – a multi-facet proxy defined in [EIP-2535](https://eips.ethereum.org/EIPS/eip-2535) that can implement functionality from numerous different Facet contracts.&#x20;
 
-All the Facets share a common storage through the [`AppStorage`](https://dev.to/mudgen/appstorage-pattern-for-state-variables-in-solidity-3lki) pattern.&#x20;
-
-Functionality is shared between Facets through internal Libraries.
+All the Facets share a common storage through the [`AppStorage`](https://dev.to/mudgen/appstorage-pattern-for-state-variables-in-solidity-3lki) pattern. Functionality is shared between Facets through internal Libraries.
 
 Understanding EIP-2535 really helps to understand Beanstalk. This page serves as a resource hub for EIP-2535.
 
@@ -28,5 +26,6 @@ Understanding EIP-2535 really helps to understand Beanstalk. This page serves as
 
 #### More Information on Diamonds
 
+* [Beanstalk on Louper, The Ethereum Diamond Inspector](https://louper.dev/diamond/0xc1e088fc1323b20bcbee9bd1b9fc9546db5624c5)
 * [EIP-2535 Diamonds Discord](https://discord.gg/kQewPw2)
 * [Nick Mudge <> Publius Podcast](https://www.youtube.com/watch?v=3-RUl12lPnI)
