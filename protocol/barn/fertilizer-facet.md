@@ -10,6 +10,11 @@ function claimFertilized(uint256[] calldata ids, LibTransfer.To mode)
     payable;
 ```
 
+| Parameter | Type        | Description |
+|-----------|-------------|-------------|
+| `ids`     | `uint256[]` |             |
+| `mode`    | `To`        |             |
+
 ### Mint Fertilizer
 
 ```solidity
@@ -19,6 +24,12 @@ function mintFertilizer(
     LibTransfer.From mode
 ) external payable;
 ```
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `amount`  | `uint128` |             |
+| `minLP`   | `uint256` |             |
+| `mode`    | `From`    |             |
 
 ### Add Fertilizer Owner
 
@@ -30,11 +41,22 @@ function addFertilizerOwner(
 ) external payable;
 ```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `id`      | `uint128` |             |
+| `amount`  | `uint128` |             |
+| `minLP`   | `uint256` |             |
+
 ### Pay Fertilizer
 
 ```solidity
 function payFertilizer(address account, uint256 amount) external payable
 ```
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` |             |
+| `amount`  | `uint256` |             |
 
 ## View Functions
 
