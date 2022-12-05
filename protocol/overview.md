@@ -1,6 +1,6 @@
 # Overview
 
-Beanstalk can be broken down into 8 different Modules consisting of 17 Facets:
+Beanstalk can be broken down into 7 different Modules consisting of 17 Facets:
 
 * [Sun](sun/) (1 Facet)
 * [Silo](silo/) (4 Facets)
@@ -8,7 +8,7 @@ Beanstalk can be broken down into 8 different Modules consisting of 17 Facets:
 * [Barn](barn/) (2 Facets)
 * [Market](market/) (1 Facet)
 * [Farm](depot/) (3 Facets)
-* [Diamond Management](diamond-management/) (4 Facets)
+* [Diamond](diamond/) (4 Facets)
 
 ### Sun
 
@@ -89,13 +89,13 @@ The Farm consists of 3 Facets:
 * ``[`TokenFacet`](depot/token-facet.md) -> Supports transferring assets between Internal and External Balances and between different accounts. Also, supports Wrap/Unwrap logic for ETH.
 * ``[`CurveFacet`](depot/curve-facet.md) -> Provides an interface to exchange and add/remove liquidity on Curve directly through Beanstalk.
 
-### Diamond Management
+### Diamond
 
-Diamond Management controls and manages the Beanstalk contract by providing functionality to upgrade and view supported functions in Beanstalk. It also controls what address owns the Beanstalk contract.
+The Diamond Module controls and manages the Beanstalk contract by providing functionality to upgrade and view supported functions in Beanstalk. It also controls what address owns the Beanstalk contract.
 
-Diamond Management consists of 4 Facets:
+The Diamond Module consists of 4 Facets:
 
-* ``[`DiamondCutFacet`](diamond-management/diamond-cut-facet.md) -> Provides functionality for the owner to add/remove/change functions within the Beanstalk contract.
-* ``[`DiamondLoupeFacet`](diamond-management/diamond-loupe-facet.md) -> Allows Farmers to see the available functions within Beanstalk.
-* ``[`OwnershipFacet`](diamond-management/ownership-facet.md) -> Manages who owns Beanstalk.
-* ``[`PauseFacet`](diamond-management/pause-facet.md) -> Allows the owner of Beanstalk to Pause/Unpause Beanstalk.
+* ``[`DiamondCutFacet`](diamond/diamond-cut-facet.md) -> Provides functionality for the owner to add/remove/change functions within the Beanstalk contract.
+* ``[`DiamondLoupeFacet`](diamond/diamond-loupe-facet.md) -> Allows Farmers to see the available functions within Beanstalk.
+* ``[`OwnershipFacet`](diamond/ownership-facet.md) -> Manages who owns Beanstalk.
+* ``[`PauseFacet`](diamond/pause-facet.md) -> Allows the owner of Beanstalk to Pause/Unpause Beanstalk.

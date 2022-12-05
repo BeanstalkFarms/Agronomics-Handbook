@@ -9,6 +9,7 @@ These discrepancies can be resolved in a future BIP.
 | Internal Balance                         | Farm Balance        |
 | External Balance                         | Circulating Balance |
 | Weather                                  | Temperature         |
+| Marketplace                              | Pod Market          |
 | Unfertilized Beans                       | Sprouts             |
 | Fertilized Beans                         | Rinsable Sprouts    |
 | Claim Fertilized                         | Rinse               |
@@ -17,3 +18,10 @@ These discrepancies can be resolved in a future BIP.
 | Update (w.r.t. Grown Stalk)              | Mow                 |
 | Rain                                     | Oversaturated       |
 | Season of Plenty                         | Flood               |
+
+The following discrepancies are in the [Beanstalk Subgraph](../subgraph/overview.md).
+
+| Beanstalk Subgraph | Beanstalk term |
+| ------------------ | -------------- |
+| Plantable Stalk    | Earned Stalk   |
+| Pod Marketplace    | Pod Market     |

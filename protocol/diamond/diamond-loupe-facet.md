@@ -6,7 +6,7 @@
 None
 ```
 
-## View Functions
+### View Functions
 
 ```solidity
 function facets() external view override returns (Facet[] memory facets_);
@@ -33,7 +33,7 @@ function supportsInterface(bytes4 _interfaceId)
     external 
     view 
     override 
-    returns (bool):
+    returns (bool);
 ```
 
 ## Events

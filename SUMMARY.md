@@ -14,7 +14,7 @@
 * [Internal Balances](overview/internal-balances.md)
 * [Permits and Approvals](overview/permits-and-approvals.md)
 
-## 🪴 Protocol
+## 🧑🌾 Protocol
 
 * [Overview](protocol/overview.md)
 * [Sun](protocol/sun/README.md)
@@ -36,17 +36,23 @@
   * [Farm Facet](protocol/depot/farm-facet.md)
   * [Token Facet](protocol/depot/token-facet.md)
   * [Curve Facet](protocol/depot/curve-facet.md)
-* [Diamond Management](protocol/diamond-management/README.md)
-  * [Diamond Cut Facet](protocol/diamond-management/diamond-cut-facet.md)
-  * [Diamond Loupe Facet](protocol/diamond-management/diamond-loupe-facet.md)
-  * [Ownership Facet](protocol/diamond-management/ownership-facet.md)
-  * [Pause Facet](protocol/diamond-management/pause-facet.md)
+* [Diamond](protocol/diamond/README.md)
+  * [Diamond Cut Facet](protocol/diamond/diamond-cut-facet.md)
+  * [Diamond Loupe Facet](protocol/diamond/diamond-loupe-facet.md)
+  * [Ownership Facet](protocol/diamond/ownership-facet.md)
+  * [Pause Facet](protocol/diamond/pause-facet.md)
+
+## 📊 Subgraph
+
+* [Overview](subgraph/overview.md)
+* [Entities](subgraph/entities.md)
+* [Query Examples](subgraph/query-examples.md)
+* [Development Process](subgraph/development-process.md)
 
 ## 📜 Misc. <a href="#misc" id="misc"></a>
 
 * [BIPs](misc/bips.md)
 * [Videos](misc/videos.md)
-* [Subgraph](misc/subgraph.md)
 * [Upgrade History](misc/upgrade-history.md)
 * [Algorithm Explanations](misc/algorithm-explanations.md)
 * [FAQ](misc/faq.md)
