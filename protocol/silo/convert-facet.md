@@ -18,6 +18,12 @@ function convert(
 );
 ```
 
+| Parameter     | Type        | Description |
+|---------------|-------------|-------------|
+| `convertData` | `bytes`     | WIP         |
+| `crates`      | `uint32[]`  | WIP         |
+| `amounts`     | `uint256[]` | WIP         |
+
 ## View Functions
 
 ```solidity
