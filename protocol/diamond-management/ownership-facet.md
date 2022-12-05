@@ -4,7 +4,13 @@
 
 ```solidity
 function transferOwnership(address _newOwner) external;
+```
 
+| Parameter   | Type      | Description |
+|-------------|-----------|-------------|
+| `_newOwner` | `address` | WIP         |
+
+```solidity
 function claimOwnership() external;
 ```
 
