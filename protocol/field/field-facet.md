@@ -9,13 +9,26 @@ function sow(uint256 amount, LibTransfer.From mode)
     external
     payable
     returns (uint256);
+```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `amount`  | `uint256` | WIP         |
+| `mode`    | `From`    | WIP         |
+
+```solidity
 function sowWithMin(
     uint256 amount,
     uint256 minAmount,
     LibTransfer.From mode
 ) public payable;
 ```
+
+| Parameter   | Type      | Description |
+|-------------|-----------|-------------|
+| `amount`    | `uint256` | WIP         |
+| `minAmount` | `uint256` | WIP         |
+| `mode`      | `From`    | WIP         |
 
 ### Harvest
 
@@ -24,6 +37,11 @@ function harvest(uint256[] calldata plots, LibTransfer.To mode)
     external
     payable;
 ```
+
+| Parameter | Type        | Description |
+|-----------|-------------|-------------|
+| `plots`   | `uint256[]` | WIP         |
+| `mode`    | `To`        | WIP         |
 
 ## View Functions
 
