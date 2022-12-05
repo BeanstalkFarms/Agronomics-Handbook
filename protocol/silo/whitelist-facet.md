@@ -4,7 +4,13 @@
 
 ```solidity
 function dewhitelistToken(address token) external payable;
+```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `token`   | `address` | WIP         |
+
+```solidity
 function whitelistToken(
     address token,
     bytes4 selector,
@@ -12,6 +18,13 @@ function whitelistToken(
     uint32 seeds
 ) external payable;
 ```
+
+| Parameter  | Type      | Description |
+|------------|-----------|-------------|
+| `token`    | `address` | WIP         |
+| `selector` | `bytes4`  | WIP         |
+| `stalk`    | `uint32`  | WIP         |
+| `seeds`    | `uint32`  | WIP         |
 
 ## View Functions
 
