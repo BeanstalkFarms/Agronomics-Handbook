@@ -13,6 +13,13 @@ function chop(
 ) external payable nonReentrant returns (uint256 underlyingAmount);
 ```
 
+| Parameter     | Type      | Description |
+|---------------|-----------|-------------|
+| `unripeToken` | `address` |             |
+| `amount`      | `uint256` |             |
+| `fromMode`    | `From`    |             |
+| `toMode`      | `To`      |             |
+
 ### Pick
 
 ```solidity
@@ -24,6 +31,13 @@ function pick(
 ) external payable nonReentrant;
 ```
 
+| Parameter | Type        | Description |
+|-----------|-------------|-------------|
+| `token`   | `address`   |             |
+| `amount`  | `uint256`   |             |
+| `proof`   | `bytes32[]` |             |
+| `mode`    | `To`        |             |
+
 ### Add Unripe Token
 
 ```solidity
@@ -33,6 +47,12 @@ function addUnripeToken(
     bytes32 root
 ) external payable nonReentrant;
 ```
+
+| Parameter         | Type      | Description |
+|-------------------|-----------|-------------|
+| `unripeToken`     | `address` |             |
+| `underlyingToken` | `address` |             |
+| `root`            | `bytes32` |             |
 
 ## View Functions
 
