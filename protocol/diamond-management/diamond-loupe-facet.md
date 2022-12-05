@@ -3,6 +3,12 @@
 ## Call Functions
 
 ```solidity
+None
+```
+
+## View Functions
+
+```solidity
 function facets() external view override returns (Facet[] memory facets_);
 
 function facetFunctionSelectors(address _facet)
@@ -28,12 +34,6 @@ function supportsInterface(bytes4 _interfaceId)
     view 
     override 
     returns (bool):
-```
-
-## View Functions
-
-```solidity
-None
 ```
 
 ## Events
