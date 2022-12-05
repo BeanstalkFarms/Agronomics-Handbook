@@ -12,6 +12,12 @@ function fund(
 ) external payable nonReentrant returns (uint256);
 ```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `id`      | `uint32`  | WIP         |
+| `amount`  | `uint256` | WIP         |
+| `mode`    | `From`    | WIP         |
+
 ### Create Fundraiser
 
 ```solidity
@@ -21,6 +27,12 @@ function createFundraiser(
     uint256 amount
 ) external payable;
 ```
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `payee`   | `address` | WIP         |
+| `token`   | `address` | WIP         |
+| `amount`  | `uint256` | WIP         |
 
 ## View Functions
 
