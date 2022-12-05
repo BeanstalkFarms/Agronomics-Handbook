@@ -15,10 +15,10 @@ function chop(
 
 | Parameter     | Type      | Description |
 |---------------|-----------|-------------|
-| `unripeToken` | `address` |             |
-| `amount`      | `uint256` |             |
-| `fromMode`    | `From`    |             |
-| `toMode`      | `To`      |             |
+| `unripeToken` | `address` | WIP         |
+| `amount`      | `uint256` | WIP         |
+| `fromMode`    | `From`    | WIP         |
+| `toMode`      | `To`      | WIP         |
 
 ### Pick
 
@@ -33,10 +33,10 @@ function pick(
 
 | Parameter | Type        | Description |
 |-----------|-------------|-------------|
-| `token`   | `address`   |             |
-| `amount`  | `uint256`   |             |
-| `proof`   | `bytes32[]` |             |
-| `mode`    | `To`        |             |
+| `token`   | `address`   | WIP         |
+| `amount`  | `uint256`   | WIP         |
+| `proof`   | `bytes32[]` | WIP         |
+| `mode`    | `To`        | WIP         |
 
 ### Add Unripe Token
 
@@ -50,9 +50,9 @@ function addUnripeToken(
 
 | Parameter         | Type      | Description |
 |-------------------|-----------|-------------|
-| `unripeToken`     | `address` |             |
-| `underlyingToken` | `address` |             |
-| `root`            | `bytes32` |             |
+| `unripeToken`     | `address` | WIP         |
+| `underlyingToken` | `address` | WIP         |
+| `root`            | `bytes32` | WIP         |
 
 ## View Functions
 
