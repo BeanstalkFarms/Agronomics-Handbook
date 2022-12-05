@@ -12,8 +12,8 @@ function claimFertilized(uint256[] calldata ids, LibTransfer.To mode)
 
 | Parameter | Type        | Description |
 |-----------|-------------|-------------|
-| `ids`     | `uint256[]` |             |
-| `mode`    | `To`        |             |
+| `ids`     | `uint256[]` | WIP         |
+| `mode`    | `To`        | WIP         |
 
 ### Mint Fertilizer
 
@@ -27,9 +27,9 @@ function mintFertilizer(
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
-| `amount`  | `uint128` |             |
-| `minLP`   | `uint256` |             |
-| `mode`    | `From`    |             |
+| `amount`  | `uint128` | WIP         |
+| `minLP`   | `uint256` | WIP         |
+| `mode`    | `From`    | WIP         |
 
 ### Add Fertilizer Owner
 
@@ -43,9 +43,9 @@ function addFertilizerOwner(
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
-| `id`      | `uint128` |             |
-| `amount`  | `uint128` |             |
-| `minLP`   | `uint256` |             |
+| `id`      | `uint128` | WIP         |
+| `amount`  | `uint128` | WIP         |
+| `minLP`   | `uint256` | WIP         |
 
 ### Pay Fertilizer
 
@@ -55,8 +55,8 @@ function payFertilizer(address account, uint256 amount) external payable
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
-| `account` | `address` |             |
-| `amount`  | `uint256` |             |
+| `account` | `address` | WIP         |
+| `amount`  | `uint256` | WIP         |
 
 ## View Functions
 
