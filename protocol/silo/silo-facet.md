@@ -12,6 +12,12 @@ function deposit(
 ) external payable nonReentrant updateSilo;
 ```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `token`   | `address` | WIP         |
+| `amount`  | `uint256` | WIP         |
+| `mode`    | `From`    | WIP         |
+
 ### Withdraw
 
 ```solidity
@@ -20,13 +26,27 @@ function withdrawDeposit(
     uint32 season,
     uint256 amount
 ) external payable updateSilo;
+```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `token`   | `address` | WIP         |
+| `season`  | `uint32`  | WIP         |
+| `amount`  | `uint256` | WIP         |
+
+```solidity
 function withdrawDeposits(
     address token,
     uint32[] calldata seasons,
     uint256[] calldata amounts
 ) external payable updateSilo;
 ```
+
+| Parameter | Type        | Description |
+|-----------|-------------|-------------|
+| `token`   | `address`   | WIP         |
+| `seasons` | `uint32[]`  | WIP         |
+| `amounts` | `uint256[]` | WIP         |
 
 ### Claim
 
@@ -36,13 +56,27 @@ function claimWithdrawal(
     uint32 season,
     LibTransfer.To mode
 ) external payable nonReentrant;
+```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `token`   | `address` | WIP         |
+| `season`  | `uint32`  | WIP         |
+| `mode`    | `To`      | WIP         |
+
+```solidity
 function claimWithdrawals(
     address token,
     uint32[] calldata seasons,
     LibTransfer.To mode
 ) external payable nonReentrant;
 ```
+
+| Parameter | Type       | Description |
+|-----------|------------|-------------|
+| `token`   | `address`  | WIP         |
+| `seasons` | `uint32[]` | WIP         |
+| `mode`    | `To`       | WIP         |
 
 ### Transfer
 
@@ -54,7 +88,17 @@ function transferDeposit(
     uint32 season,
     uint256 amount
 ) external payable nonReentrant returns (uint256 bdv);
+```
 
+| Parameter   | Type      | Description |
+|-------------|-----------|-------------|
+| `sender`    | `address` | WIP         |
+| `recipient` | `address` | WIP         |
+| `token`     | `address` | WIP         |
+| `season`    | `uint32`  | WIP         |
+| `amount`    | `uint256` | WIP         |
+
+```solidity
 function transferDeposits(
     address sender,
     address recipient,
@@ -64,6 +108,14 @@ function transferDeposits(
 ) external payable nonReentrant returns (uint256[] memory bdvs);
 ```
 
+| Parameter   | Type        | Description |
+|-------------|-------------|-------------|
+| `sender`    | `address`   | WIP         |
+| `recipient` | `address`   | WIP         |
+| `token`     | `address`   | WIP         |
+| `seasons`   | `uint32[]`  | WIP         |
+| `amounts`   | `uint256[]` | WIP         |
+
 ### Approvals
 
 ```solidity
@@ -72,19 +124,41 @@ function approveDeposit(
     address token,
     uint256 amount
 ) external payable nonReentrant;
+```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `sender`  | `address` | WIP         |
+| `token`   | `address` | WIP         |
+| `amount`  | `uint256` | WIP         |
+
+```solidity
 function increaseDepositAllowance(
     address spender, 
     address token, 
     uint256 addedValue
 ) public virtual nonReentrant returns (bool);
+```
 
+| Parameter    | Type      | Description |
+|--------------|-----------|-------------|
+| `spender`    | `address` | WIP         |
+| `token`      | `address` | WIP         |
+| `addedValue` | `uint256` | WIP         |
+
+```solidity
 function decreaseDepositAllowance(
     address spender, 
     address token, 
     uint256 subtractedValue
 ) public virtual nonReentrant returns (bool);
 ```
+
+| Parameter         | Type      | Description |
+|-------------------|-----------|-------------|
+| `spender`         | `address` | WIP         |
+| `token`           | `address` | WIP         |
+| `subtractedValue` | `uint256` | WIP         |
 
 ### Permit
 
@@ -99,7 +173,20 @@ function permitDeposits(
     bytes32 r,
     bytes32 s
 ) external payable nonReentrant;
+```
 
+| Parameter  | Type        | Description |
+|------------|-------------|-------------|
+| `owner`    | `address`   | WIP         |
+| `spender`  | `address`   | WIP         |
+| `tokens`   | `address[]` | WIP         |
+| `values`   | `uint256[]` | WIP         |
+| `deadline` | `uint256`   | WIP         |
+| `v`        | `uint8`     | WIP         |
+| `r`        | `bytes32`   | WIP         |
+| `s`        | `bytes32`   | WIP         |
+
+```solidity
 function permitDeposit(
     address owner,
     address spender,
@@ -110,17 +197,28 @@ function permitDeposit(
     bytes32 r,
     bytes32 s
 ) external payable nonReentrant;
-
-function depositPermitNonces(address owner) public view virtual returns (uint256);
-
-function depositPermitDomainSeparator() external view returns (bytes32);
 ```
+
+| Parameter  | Type      | Description |
+|------------|-----------|-------------|
+| `owner`    | `address` | WIP         |
+| `spender`  | `address` | WIP         |
+| `token`    | `address` | WIP         |
+| `value`    | `uint256` | WIP         |
+| `deadline` | `uint256` | WIP         |
+| `v`        | `uint8`   | WIP         |
+| `r`        | `bytes32` | WIP         |
+| `s`        | `bytes32` | WIP         |
 
 ### Update
 
 ```solidity
 function update(address account) external payable;
 ```
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` | WIP         |
 
 ### Plant
 
@@ -142,7 +240,15 @@ function enrootDeposits(
     uint32[] calldata seasons,
     uint256[] calldata amounts
 ) external nonReentrant updateSilo;
+```
 
+| Parameter | Type        | Description |
+|-----------|-------------|-------------|
+| `token`   | `address`   | WIP         |
+| `seasons` | `uint32[]`  | WIP         |
+| `amounts` | `uint256[]` | WIP         |
+
+```solidity
 function enrootDeposit(
     address token,
     uint32 _season,
@@ -150,9 +256,23 @@ function enrootDeposit(
 ) external nonReentrant updateSilo;
 ```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `token`   | `address` | WIP         |
+| `_season` | `uint32`  | WIP         |
+| `amount`  | `uint256` | WIP         |
+
 ## View Functions
 
 ```solidity
+/**
+ * SiloFacet
+ **/
+ 
+function depositPermitNonces(address owner) public view virtual returns (uint256);
+
+function depositPermitDomainSeparator() external view returns (bytes32);
+
 /**
  * SiloExit
  **/
