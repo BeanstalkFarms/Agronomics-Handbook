@@ -10,6 +10,12 @@ function diamondCut(
 ) external override;
 ```
 
+| Parameter     | Type         | Description |
+|---------------|--------------|-------------|
+| `_diamondCut` | `FacetCut[]` | WIP         |
+| `_init`       | `address`    | WIP         |
+| `_calldata`   | `bytes`      | WIP         |
+
 ## View Functions
 
 ```
