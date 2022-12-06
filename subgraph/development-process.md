@@ -11,7 +11,7 @@ Issues related to bugs and feature requests can be submitted on the main [Beanst
 3. Once the initial validation is complete and the subgraph can successfully index to chain head, the subgraph is then deployed to the `dev` deployment. From here other engineers can utilize this endpoint to update any items as needed (such as bots, UI calls, etc.)
 4. Finally, given successful implementation on the `dev` deployment, the subgraph is published to both The Graph's decentralized network for indexing along with the `beanstalk` hosted deployment. An archive version is also created and supported on the Beanstalk hosted endpoint. For example, v2.0.3 is deployed to `beanstalk-2-0-3`.
 
-### Endpoints
+### Beanstalk Subgraph Endpoints
 
 **Beanstalk Farms Centralized Host**
 
