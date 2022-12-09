@@ -11,7 +11,7 @@ The Season Facet has [several subcontracts](https://github.com/BeanstalkFarms/Be
   * Up to 1/2 of the remaining amount to Pod holders (see [Field](../field/)); and
   * The rest to Stalkholders in the Silo (see [Silo](../silo/)).
 
-`sunrise()` does the following steps:
+`sunrise` does the following steps:
 
 1. Increments the Season number;
 2. Calls `Oracle` to get `deltaB`;

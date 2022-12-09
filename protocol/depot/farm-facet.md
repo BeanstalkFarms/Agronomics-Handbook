@@ -5,7 +5,11 @@
 ### Farm
 
 ```solidity
-function farm(bytes[] calldata data) external payable;
+function farm(bytes[] calldata data)
+    external
+    payable
+    withEth
+    returns (bytes[] memory results);
 ```
 
 Loops through the list of encoded selectors in `data` and performs a `delegateCall` on each of them.

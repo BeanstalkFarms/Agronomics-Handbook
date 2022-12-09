@@ -35,6 +35,8 @@
 * [Farm](protocol/depot/README.md)
   * [Farm Facet](protocol/depot/farm-facet.md)
   * [Token Facet](protocol/depot/token-facet.md)
+  * [Depot Facet](protocol/depot/depot-facet.md)
+  * [Token Support Facet](protocol/depot/token-support-facet.md)
   * [Curve Facet](protocol/depot/curve-facet.md)
 * [Diamond](protocol/diamond/README.md)
   * [Diamond Cut Facet](protocol/diamond/diamond-cut-facet.md)
