@@ -1,13 +1,13 @@
 # Overview
 
-Beanstalk can be broken down into 7 different Modules consisting of 17 Facets:
+Beanstalk can be broken down into 7 different Modules consisting of 19 Facets:
 
 * [Sun](sun/) (1 Facet)
 * [Silo](silo/) (4 Facets)
 * [Field](field/) (2 Facets)&#x20;
 * [Barn](barn/) (2 Facets)
 * [Market](market/) (1 Facet)
-* [Farm](depot/) (3 Facets)
+* [Farm](depot/) (5 Facets)
 * [Diamond](diamond/) (4 Facets)
 
 ### Sun
@@ -83,10 +83,12 @@ The Market consists of 1 Facet:
 
 The Farm allows Farmers to call multiple functions in a single transaction and use assets between different function in a composable manner, without those assets every leaving Beanstalk (thanks to [Internal Balances](../overview/internal-balances.md)).
 
-The Farm consists of 3 Facets:
+The Farm consists of 5 Facets:
 
 * ``[`FarmFacet`](depot/farm-facet.md) -> Contains the `farm` function, which allows Farmers to call a series of functions together within Beanstalk.
+* ``[`DepotFacet`](depot/depot-facet.md) -> WIP
 * ``[`TokenFacet`](depot/token-facet.md) -> Supports transferring assets between Internal and External Balances and between different accounts. Also, supports Wrap/Unwrap logic for ETH.
+* ``[`TokenSupportFacet`](depot/token-support-facet.md) -> WIP
 * ``[`CurveFacet`](depot/curve-facet.md) -> Provides an interface to exchange and add/remove liquidity on Curve directly through Beanstalk.
 
 ### Diamond
