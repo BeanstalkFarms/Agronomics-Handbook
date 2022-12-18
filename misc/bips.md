@@ -13,6 +13,7 @@ All BIPs and their associated pull requests can be found in [the Beanstalk Gover
 
 ### BIP-30: Generalized Pipeline and ERC-20 and ERC-721 Permit Support
 
+* [Snapshot](https://snapshot.org/#/beanstalkdao.eth/proposal/0x724bbca47b55d42ec25f76c233846bdbbae1dd833618b938c84d58f53ffe7c3d)
 * [Pull Request](https://github.com/BeanstalkFarms/Beanstalk/pull/103)
 * [Pipeline Whitepaper](https://evmpipeline.org/pipeline.pdf)
 * [Video Walkthrough](bips.md#undefined)
