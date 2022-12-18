@@ -2,7 +2,7 @@
 
 All BIPs and their associated pull requests can be found in [the Beanstalk Governance Proposals repo](https://github.com/BeanstalkFarms/Beanstalk-Governance-Proposals/blob/master/bip). The following is a log of recent BIPs that have detailed RFCs associated with them.
 
-### BIP-31: Sunrise Improvements
+### BIP-X: Sunrise Improvements
 
 * [Pull Request](https://github.com/BeanstalkFarms/Beanstalk/pull/133)
 * [Video Walkthrough](videos.md#bip-30-sunrise-improvements-walkthrough)
