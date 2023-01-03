@@ -164,10 +164,10 @@ event Unvote(address indexed account, uint32 indexed bip, uint256 roots);
 **Added**
 
 [protocol/contracts/farm/facets/ClaimFacet.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/77b115f29e7690887bfc59f9533ba68b55edd6d2#diff-ad8d54e7c9d45b374a21879a82882d4c2790a7c98f0d732f018b32bdf573e267R25)
-```solidity
-event BeanAllocation(address indexed account, uint256 beans);
-```
+
 [protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/77b115f29e7690887bfc59f9533ba68b55edd6d2#diff-91ba8e950b32cab070018cac4908b7dc6d980b3c04b6c3ad374eef3ba32252efR17)
+
+[protocol/contracts/libraries/LibMarket.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/77b115f29e7690887bfc59f9533ba68b55edd6d2#diff-7506e0b7c56720bec157294e2b64149482e5c7e95946fc38d935b6b2321dad32R19)
 ```solidity
 event BeanAllocation(address indexed account, uint256 beans);
 ```
@@ -186,10 +186,6 @@ event EtherClaim(address indexed account, uint256 ethereum);
 [protocol/contracts/libraries/LibClaim.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/77b115f29e7690887bfc59f9533ba68b55edd6d2#diff-08396fe9ce36bdb8c5916101dae589fa04feec7d84f69a9a3b0e4cbdcd7b5859R26)
 ```solidity
 event Harvest(address indexed account, uint256[] plots, uint256 beans);
-```
-[protocol/contracts/libraries/LibMarket.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/77b115f29e7690887bfc59f9533ba68b55edd6d2#diff-7506e0b7c56720bec157294e2b64149482e5c7e95946fc38d935b6b2321dad32R19)
-```solidity
-event BeanAllocation(address indexed account, uint256 beans);
 ```
 
 ### 13735230 ([BIP-4](https://arweave.net/Msk8Mbz7CPDN8vmQmMI8dtqCr4ydTZ8jN1jpPFqQ9lM))
