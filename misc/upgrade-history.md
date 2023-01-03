@@ -163,11 +163,9 @@ event Unvote(address indexed account, uint32 indexed bip, uint256 roots);
 
 **Added**
 
-[protocol/contracts/farm/facets/ClaimFacet.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/77b115f29e7690887bfc59f9533ba68b55edd6d2#diff-ad8d54e7c9d45b374a21879a82882d4c2790a7c98f0d732f018b32bdf573e267R25)
-
-[protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/77b115f29e7690887bfc59f9533ba68b55edd6d2#diff-91ba8e950b32cab070018cac4908b7dc6d980b3c04b6c3ad374eef3ba32252efR17)
-
-[protocol/contracts/libraries/LibMarket.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/77b115f29e7690887bfc59f9533ba68b55edd6d2#diff-7506e0b7c56720bec157294e2b64149482e5c7e95946fc38d935b6b2321dad32R19)
+[protocol/contracts/farm/facets/ClaimFacet.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/77b115f29e7690887bfc59f9533ba68b55edd6d2#diff-ad8d54e7c9d45b374a21879a82882d4c2790a7c98f0d732f018b32bdf573e267R25)  
+[protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/77b115f29e7690887bfc59f9533ba68b55edd6d2#diff-91ba8e950b32cab070018cac4908b7dc6d980b3c04b6c3ad374eef3ba32252efR17)  
+[protocol/contracts/libraries/LibMarket.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/77b115f29e7690887bfc59f9533ba68b55edd6d2#diff-7506e0b7c56720bec157294e2b64149482e5c7e95946fc38d935b6b2321dad32R19)  
 ```solidity
 event BeanAllocation(address indexed account, uint256 beans);
 ```
@@ -226,10 +224,7 @@ event BeanRemove(address indexed account, uint32[] crates, uint256[] crateBeans,
 
 **Added**
 
-[protocol/contracts/farm/facets/FieldFacet/BeanDibbler.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/01db99d9576378ba2bbc5486e5d82947e2b7f588#diff-b3ac2606614e807e8ce3a30cde187d28835d72efff724a4e7dbf738ebdcd2162R21)
-```solidity
-event Sow(address indexed account, uint256 index, uint256 beans, uint256 pods);
-```
+[protocol/contracts/farm/facets/FieldFacet/BeanDibbler.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/01db99d9576378ba2bbc5486e5d82947e2b7f588#diff-b3ac2606614e807e8ce3a30cde187d28835d72efff724a4e7dbf738ebdcd2162R21)  
 [protocol/contracts/farm/facets/FundraiserFacet.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/01db99d9576378ba2bbc5486e5d82947e2b7f588#diff-e5c65362a91c184f5429eb76bc1ed90eab0c9fbd263924da9a3612b7f1c1769bR24)
 ```solidity
 event Sow(address indexed account, uint256 index, uint256 beans, uint256 pods);
@@ -239,9 +234,7 @@ event Sow(address indexed account, uint256 index, uint256 beans, uint256 pods);
 event VoteList(address indexed account, uint32[] indexed bips, bool[] votes, uint256 roots);
 ```
 [protocol/contracts/farm/facets/SiloFacet/BeanSilo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/01db99d9576378ba2bbc5486e5d82947e2b7f588#diff-706e1592cb5c83940e3cf46c2cfd4984443865065378ee69c8b2f85f41cc2764R19)
-```solidity
-event BeanDeposit(address indexed account, uint256 season, uint256 beans);
-```
+
 [protocol/contracts/libraries/Silo/LibBeanSilo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/01db99d9576378ba2bbc5486e5d82947e2b7f588#diff-4b40c9d3c8f7e7ba66284a0abfd240a5980285dd3228fe91b04846629c02353fR19)
 ```solidity
 event BeanDeposit(address indexed account, uint256 season, uint256 beans);
@@ -277,7 +270,8 @@ event PodListingFilled(
     uint256 amount
 );
 ```
-[protocol/contracts/farm/facets/MarketplaceFacet/Listing.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/75a67fc94cf2637ac1d7d7c89645492e31423fed#diff-0f36710c61a8027ff271fb1dac833ba6b2426b0c6195b94ef04302c83ccc95a4R46)
+[protocol/contracts/farm/facets/MarketplaceFacet/Listing.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/75a67fc94cf2637ac1d7d7c89645492e31423fed#diff-0f36710c61a8027ff271fb1dac833ba6b2426b0c6195b94ef04302c83ccc95a4R46)  
+[protocol/contracts/libraries/LibClaim.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/75a67fc94cf2637ac1d7d7c89645492e31423fed#diff-08396fe9ce36bdb8c5916101dae589fa04feec7d84f69a9a3b0e4cbdcd7b5859R28)
 ```solidity
 event PodListingCancelled(address indexed account, uint256 index);
 ```
@@ -314,10 +308,6 @@ event PlotTransfer(address indexed from, address indexed to, uint256 indexed id,
 ```solidity
 event PodApproval(address indexed owner, address indexed spender, uint256 pods);
 ```
-[protocol/contracts/libraries/LibClaim.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/75a67fc94cf2637ac1d7d7c89645492e31423fed#diff-08396fe9ce36bdb8c5916101dae589fa04feec7d84f69a9a3b0e4cbdcd7b5859R28)
-```solidity
-event PodListingCancelled(address indexed account, uint256 indexed index);
-```
 
 ### 14218934 ([BIP-12](https://arweave.net/H7qpWcc4SynAgFPWF4qT_6E7Llsqc2a6_Xx41o0BAqM))
 
@@ -327,7 +317,8 @@ event PodListingCancelled(address indexed account, uint256 indexed index);
 ```solidity
 event BeanAllocation(address indexed account, uint256 beans);
 ```
-[protocol/contracts/farm/facets/SiloV2Facet/TokenSilo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/4a4a63b6ce31a4b80849bc0dbe943239c7627151#diff-1bcf59ceaba4c726293ebe1dbb33f599a1b60c5b3201e088e7e30719acad803dR25)
+[protocol/contracts/farm/facets/SiloV2Facet/TokenSilo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/4a4a63b6ce31a4b80849bc0dbe943239c7627151#diff-1bcf59ceaba4c726293ebe1dbb33f599a1b60c5b3201e088e7e30719acad803dR25)  
+[protocol/contracts/libraries/Silo/LibTokenSilo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/4a4a63b6ce31a4b80849bc0dbe943239c7627151#diff-a0abb2f4046ee1f0caff2716c2c0a21755aa0eac99ab5e6519fcb77d989a196cR21)
 ```solidity
 event Deposit(address indexed account, address indexed token, uint256 season, uint256 amount, uint256 bdv);
 ```
@@ -346,10 +337,6 @@ event ClaimSeasons(address indexed account, address indexed token, uint32[] seas
 [protocol/contracts/farm/facets/SiloV2Facet/TokenSilo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/4a4a63b6ce31a4b80849bc0dbe943239c7627151#diff-1bcf59ceaba4c726293ebe1dbb33f599a1b60c5b3201e088e7e30719acad803dR31)
 ```solidity
 event ClaimSeason(address indexed account, address indexed token, uint32 season, uint256 amount);
-```
-[protocol/contracts/libraries/Silo/LibTokenSilo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/4a4a63b6ce31a4b80849bc0dbe943239c7627151#diff-a0abb2f4046ee1f0caff2716c2c0a21755aa0eac99ab5e6519fcb77d989a196cR21)
-```solidity
-event Deposit(address indexed account, address indexed token, uint256 season, uint256 amount, uint256 bdv);
 ```
 
 ### 14498034-14498067 (Hotfix: Omniscia Audit Update)
