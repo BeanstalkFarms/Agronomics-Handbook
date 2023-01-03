@@ -12,13 +12,13 @@ function deposit(
 ) external payable nonReentrant updateSilo;
 ```
 
-Deposits ERC20 token into internal Farmer balances. Farmer is issued Stalk and Seeds based on token (i.e non-whitelisted tokens do not get any).
+Deposits ERC20 token into internal Farmer balances.
 
-| Parameter | Type      | Description                                                                     |
-|-----------|-----------|---------------------------------------------------------------------------------|
-| `token`   | `address` | Token address of ERC20                                                          |
-| `amount`  | `uint256` | Amount of tokens to be transfered                                               |
-| `mode`    | `From`    | Mode source of funds (INTERNAL, EXTERNAL, EXTERNAL_INTERNAL, INTERNAL_TOLERANT) |
+| Parameter | Type      | Description                                                                 |
+|-----------|-----------|-----------------------------------------------------------------------------|
+| `token`   | `address` | Address of ERC20.                                                           |
+| `amount`  | `uint256` | Amount of tokens to be transfered.                                          |
+| `mode`    | `From`    | Source of funds (INTERNAL, EXTERNAL, EXTERNAL_INTERNAL, INTERNAL_TOLERANT). |
 
 ### Withdraw
 
@@ -30,11 +30,13 @@ function withdrawDeposit(
 ) external payable updateSilo;
 ```
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `token`   | `address` | WIP         |
-| `season`  | `uint32`  | WIP         |
-| `amount`  | `uint256` | WIP         |
+Withdraws from a single Deposit.
+
+| Parameter | Type      | Description                          |
+|-----------|-----------|--------------------------------------|
+| `token`   | `address` | Address of ERC20.                    |
+| `season`  | `uint32`  | Season the Farmer wants to Withdraw. |
+| `amount`  | `uint256` | Tokens to be Withdrawn.              |
 
 ```solidity
 function withdrawDeposits(
@@ -44,11 +46,13 @@ function withdrawDeposits(
 ) external payable updateSilo;
 ```
 
-| Parameter | Type        | Description |
-|-----------|-------------|-------------|
-| `token`   | `address`   | WIP         |
-| `seasons` | `uint32[]`  | WIP         |
-| `amounts` | `uint256[]` | WIP         |
+Withdraws from multiple Deposits.
+
+| Parameter | Type        | Description                                                     |
+|-----------|-------------|-----------------------------------------------------------------|
+| `token`   | `address`   | Address of ERC20.                                               |
+| `seasons` | `uint32[]`  | Array of Seasons to Withdraw from.                              |
+| `amounts` | `uint256[]` | Array of amounts corresponding to each Season to Withdraw from. |
 
 ### Claim
 
@@ -60,11 +64,13 @@ function claimWithdrawal(
 ) external payable nonReentrant;
 ```
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `token`   | `address` | WIP         |
-| `season`  | `uint32`  | WIP         |
-| `mode`    | `To`      | WIP         |
+Claims tokens from a Withdrawal.
+
+| Parameter | Type      | Description                                                                      |
+|-----------|-----------|----------------------------------------------------------------------------------|
+| `token`   | `address` | Address of ERC20.                                                                |
+| `season`  | `uint32`  | Season to Claim.                                                                 |
+| `mode`    | `To`      | Destination of funds (INTERNAL, EXTERNAL, EXTERNAL_INTERNAL, INTERNAL_TOLERANT). |
 
 ```solidity
 function claimWithdrawals(
@@ -74,11 +80,13 @@ function claimWithdrawals(
 ) external payable nonReentrant;
 ```
 
-| Parameter | Type       | Description |
-|-----------|------------|-------------|
-| `token`   | `address`  | WIP         |
-| `seasons` | `uint32[]` | WIP         |
-| `mode`    | `To`       | WIP         |
+Claims tokens from multiple Withdrawals.
+
+| Parameter | Type       | Description                                                                      |
+|-----------|------------|----------------------------------------------------------------------------------|
+| `token`   | `address`  | Address of ERC20.                                                                |
+| `seasons` | `uint32[]` | Array of Seasons to Claim.                                                       |
+| `mode`    | `To`       | Destination of funds (INTERNAL, EXTERNAL, EXTERNAL_INTERNAL, INTERNAL_TOLERANT). |
 
 ### Transfer
 
@@ -92,13 +100,19 @@ function transferDeposit(
 ) external payable nonReentrant returns (uint256 bdv);
 ```
 
-| Parameter   | Type      | Description |
-|-------------|-----------|-------------|
-| `sender`    | `address` | WIP         |
-| `recipient` | `address` | WIP         |
-| `token`     | `address` | WIP         |
-| `season`    | `uint32`  | WIP         |
-| `amount`    | `uint256` | WIP         |
+Transfers single Farmer's Deposit.
+
+| Parameter   | Type      | Description                    |
+|-------------|-----------|--------------------------------|
+| `sender`    | `address` | Source of Deposit.             |
+| `recipient` | `address` | Destination of Deposit.        |
+| `token`     | `address` | Address of ERC20.              |
+| `season`    | `uint32`  | Season of Deposit to Transfer. |
+| `amount`    | `uint256` | Tokens to transfer.            |
+
+| Return Value | Type      | Description                         |
+|--------------|-----------|-------------------------------------|
+| `bdv`        | `uint256` | Bean Denominated Value of Transfer. |
 
 ```solidity
 function transferDeposits(
@@ -110,13 +124,19 @@ function transferDeposits(
 ) external payable nonReentrant returns (uint256[] memory bdvs);
 ```
 
-| Parameter   | Type        | Description |
-|-------------|-------------|-------------|
-| `sender`    | `address`   | WIP         |
-| `recipient` | `address`   | WIP         |
-| `token`     | `address`   | WIP         |
-| `seasons`   | `uint32[]`  | WIP         |
-| `amounts`   | `uint256[]` | WIP         |
+Transfers multiple Farmer Deposits.
+
+| Parameter   | Type        | Description                                                     |
+|-------------|-------------|-----------------------------------------------------------------|
+| `sender`    | `address`   | Source of Deposit.                                              |
+| `recipient` | `address`   | Destination of Deposit.                                         |
+| `token`     | `address`   | Address of ERC20.                                               |
+| `seasons`   | `uint32[]`  | Array of Seasons to Withdraw from.                              |
+| `amounts`   | `uint256[]` | Array of amounts corresponding to each Season to Withdraw from. |
+
+| Return Value | Type        | Description                                                                 |
+|--------------|-------------|-----------------------------------------------------------------------------|
+| `bdvs`       | `uint256[]` | Array of Bean Denominated Value of Transfer corresponding from each Season. |
 
 ### Approvals
 
@@ -128,11 +148,13 @@ function approveDeposit(
 ) external payable nonReentrant;
 ```
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `sender`  | `address` | WIP         |
-| `token`   | `address` | WIP         |
-| `amount`  | `uint256` | WIP         |
+Approves an address to access a Farmer's Deposit.
+
+| Parameter | Type      | Description                   |
+|-----------|-----------|-------------------------------|
+| `sender`  | `address` | Address to be given approval. |
+| `token`   | `address` | Address of ERC20.             |
+| `amount`  | `uint256` | Amount to be approved.        |
 
 ```solidity
 function increaseDepositAllowance(
@@ -142,11 +164,17 @@ function increaseDepositAllowance(
 ) public virtual nonReentrant returns (bool);
 ```
 
-| Parameter    | Type      | Description |
-|--------------|-----------|-------------|
-| `spender`    | `address` | WIP         |
-| `token`      | `address` | WIP         |
-| `addedValue` | `uint256` | WIP         |
+Increases allowance of Deposit.
+
+| Parameter    | Type      | Description                   |
+|--------------|-----------|-------------------------------|
+| `spender`    | `address` | Address to increase approval. |
+| `token`      | `address` | Address of ERC20.             |
+| `addedValue` | `uint256` | Additional value to be given. |
+
+| Return Value | Description |
+|--------------|-------------|
+| `bool`       | Success.    |
 
 ```solidity
 function decreaseDepositAllowance(
@@ -155,6 +183,8 @@ function decreaseDepositAllowance(
     uint256 subtractedValue
 ) public virtual nonReentrant returns (bool);
 ```
+
+Decreases allowance of Deposit.
 
 | Parameter         | Type      | Description |
 |-------------------|-----------|-------------|
