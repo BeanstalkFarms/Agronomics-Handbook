@@ -12,11 +12,13 @@ function deposit(
 ) external payable nonReentrant updateSilo;
 ```
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `token`   | `address` | WIP         |
-| `amount`  | `uint256` | WIP         |
-| `mode`    | `From`    | WIP         |
+Deposits ERC20 token into internal Farmer balances. Farmer is issued Stalk and Seeds based on token (i.e non-whitelisted tokens do not get any).
+
+| Parameter | Type      | Description                                                                     |
+|-----------|-----------|---------------------------------------------------------------------------------|
+| `token`   | `address` | Token address of ERC20                                                          |
+| `amount`  | `uint256` | Amount of tokens to be transfered                                               |
+| `mode`    | `From`    | Mode source of funds (INTERNAL, EXTERNAL, EXTERNAL_INTERNAL, INTERNAL_TOLERANT) |
 
 ### Withdraw
 
