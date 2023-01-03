@@ -18,6 +18,9 @@ These discrepancies can be resolved in a future BIP.
 | Update (w.r.t. Grown Stalk)              | Mow                 |
 | Rain                                     | Oversaturated       |
 | Season of Plenty                         | Flood               |
+| \[not explicitly referenced]             | Deposit Whitelist   |
+| \[not explicitly referenced]             | Convert Whitelist   |
+| \[not explicitly referenced]             | Oracle Whitelist    |
 
 The following discrepancies are in the [Beanstalk Subgraph](../subgraph/overview.md).
 
