@@ -233,8 +233,7 @@ event Sow(address indexed account, uint256 index, uint256 beans, uint256 pods);
 ```solidity
 event VoteList(address indexed account, uint32[] indexed bips, bool[] votes, uint256 roots);
 ```
-[protocol/contracts/farm/facets/SiloFacet/BeanSilo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/01db99d9576378ba2bbc5486e5d82947e2b7f588#diff-706e1592cb5c83940e3cf46c2cfd4984443865065378ee69c8b2f85f41cc2764R19)
-
+[protocol/contracts/farm/facets/SiloFacet/BeanSilo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/01db99d9576378ba2bbc5486e5d82947e2b7f588#diff-706e1592cb5c83940e3cf46c2cfd4984443865065378ee69c8b2f85f41cc2764R19)  
 [protocol/contracts/libraries/Silo/LibBeanSilo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/01db99d9576378ba2bbc5486e5d82947e2b7f588#diff-4b40c9d3c8f7e7ba66284a0abfd240a5980285dd3228fe91b04846629c02353fR19)
 ```solidity
 event BeanDeposit(address indexed account, uint256 season, uint256 beans);
