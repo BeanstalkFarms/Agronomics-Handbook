@@ -42,6 +42,7 @@ These Snapshot entities are not currently included in the parameter tables below
 * ``[`Fertilizer`](entities.md#fertilizer)``
 * ``[`FertilizerToken`](entities.md#fertilizertoken)``
 * ``[`FertilizerBalance`](entities.md#fertilizerbalance)``
+* &#x20; [`FertilizerYield`](entities.md#fertilizeryield)
 
 ## Beanstalk
 
@@ -191,7 +192,8 @@ Individual Silo Deposit data. Updated upon Withdrawals for the net Deposited amo
 | `amount`          | `BigInt!`    | Current token amount Deposited                  |
 | `depositedAmount` | `BigInt!`    | Originally Deposited token amount               |
 | `withdrawnAmount` | `BigInt!`    | Withdrawn token amount                          |
-| `bdv`             | `BigInt!`    | Original BDV of Deposit                         |
+| `bdv`             | `BigInt!`    | Current BDV of Deposit                          |
+| depositedBDV      | `BigInt!`    | Original BDV of a Deposit                       |
 | `withdrawnBDV`    | `BigInt!`    | Withdrawn BDV of Deposit                        |
 | `hashes`          | `[String!]!` | Transaction hashes included in original Deposit |
 | `createdAt`       | `BigInt!`    | Block timestamp of first Deposit                |
@@ -292,6 +294,7 @@ Details regarding a specific Pod Listing.
 | `pricingFunction`     | `Bytes`           | Market v2 pricing function                                                                                                                                                           |
 | `mode`                | `Int!`            | Sale Bean mode (Internal/External)                                                                                                                                                   |
 | `pricingType`         | `Int`             | Market v2 pricing type                                                                                                                                                               |
+| `creationHash`        | `String!`         | Transaction hash at time of initial entity creation.                                                                                                                                 |
 
 ## PodOrder
 
@@ -306,7 +309,7 @@ Details regarding a specific Pod Order.
 | `createdAt`        | `BigInt!`         | Block timestamp at creation                                                                                                                                                          |
 | `updatedAt`        | `BigInt!`         | Block timestamp at last update                                                                                                                                                       |
 | `status`           | `MarketStatus!`   | <p>Enum for valid status:<br><code>ACTIVE</code>, <code>FILLED</code>, <code>FILLED_PARTIAL</code>, <code>CANCELLED</code>, <code>CANCELLED_PARTIAL</code>, <code>EXPIRED</code></p> |
-| `fill`             | `PodFill`         | Any associated Fill                                                                                                                                                                  |
+| `fills`            | \[`PodFill!]!`    | Any associated `PodFill` IDs                                                                                                                                                         |
 | `podAmount`        | `BigInt!`         | V1 - Original amount of the Ordered Pods                                                                                                                                             |
 | `beanAmount`       | `BigInt!`         | V2 - Original amount of Beans used to Order Pods                                                                                                                                     |
 | `podAmountFilled`  | `BigInt!`         | Current Filled amount                                                                                                                                                                |
@@ -316,6 +319,7 @@ Details regarding a specific Pod Order.
 | `pricePerPod`      | `Int!`            | Market v1 price per Pod                                                                                                                                                              |
 | `pricingFunction`  | `Bytes`           | Market v2 pricing function                                                                                                                                                           |
 | `pricingType`      | `Int`             | Market v2 pricing type                                                                                                                                                               |
+| `creationHash`     | `String!`         | Transaction hash at time of initial entity creation.                                                                                                                                 |
 
 ## PodFill
 
@@ -370,3 +374,17 @@ Balance details by Farmer and Fertilizer token.
 | `fertilizerToken` | `FertilizerToken!` | ID of Fertilizer token            |
 | `farmer`          | `Farmer!`          | Farmer that owns the Fertilizer   |
 | `amount`          | `BigInt!`          | Current balance of the token      |
+
+## FertilizerYield
+
+| Field               | Type          | Description                                                                                                 |
+| ------------------- | ------------- | ----------------------------------------------------------------------------------------------------------- |
+| `id`                | `ID!`         | Season being calculated                                                                                     |
+| `season`            | `Int!`        | Current season                                                                                              |
+| `humidity`          | `BigDecimal!` | Current humidity for new fertilizer                                                                         |
+| `outstandingFert`   | `BigInt!`     | Current total fertilizer still outstanding                                                                  |
+| `beansPerSeasonEMA` | `BigDecimal!` | Current Bean EMA                                                                                            |
+| `deltaBpf`          | `BigDecimal!` | Current new beans per outstanding fertilizer                                                                |
+| `simpleAPY`         | `BigDecimal!` | Simplified APY adjusted for the length of time needed to return total principal and yield based on humidity |
+| `createdAt`         | `BigInt!`     | Block timestamp at creation                                                                                 |
+
