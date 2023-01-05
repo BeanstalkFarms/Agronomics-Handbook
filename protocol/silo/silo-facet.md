@@ -1,5 +1,7 @@
 # Silo Facet
 
+SiloFacet handles depositing, withdrawing and claiming whitelisted Silo tokens.
+
 ## Call Functions
 
 ### Deposit
@@ -186,13 +188,19 @@ function decreaseDepositAllowance(
 
 Decreases allowance of Deposit.
 
-| Parameter         | Type      | Description |
-|-------------------|-----------|-------------|
-| `spender`         | `address` | WIP         |
-| `token`           | `address` | WIP         |
-| `subtractedValue` | `uint256` | WIP         |
+| Parameter         | Type      | Description                   |
+|-------------------|-----------|-------------------------------|
+| `spender`         | `address` | Address to decrease approval. |
+| `token`           | `address` | Address of ERC20.             |
+| `subtractedValue` | `uint256` | Amount to be removed.         |
+
+| Return Value | Description |
+|--------------|-------------|
+| `bool`       | Success.    |
 
 ### Permit
+
+Farm balances and Silo Deposits support [EIP-2612 permits](https://eips.ethereum.org/EIPS/eip-2612), which allows Farmers to delegate use of their Farm balances through permits without the need for a separate transaction.
 
 ```solidity
 function permitDeposits(
@@ -207,16 +215,18 @@ function permitDeposits(
 ) external payable nonReentrant;
 ```
 
-| Parameter  | Type        | Description |
-|------------|-------------|-------------|
-| `owner`    | `address`   | WIP         |
-| `spender`  | `address`   | WIP         |
-| `tokens`   | `address[]` | WIP         |
-| `values`   | `uint256[]` | WIP         |
-| `deadline` | `uint256`   | WIP         |
-| `v`        | `uint8`     | WIP         |
-| `r`        | `bytes32`   | WIP         |
-| `s`        | `bytes32`   | WIP         |
+Permits multiple deposits.
+
+| Parameter  | Type        | Description                                          |
+|------------|-------------|------------------------------------------------------|
+| `owner`    | `address`   | Address to give permit.                              |
+| `spender`  | `address`   | Address to permit.                                   |
+| `tokens`   | `address[]` | Array of ERC20s to permit.                           |
+| `values`   | `uint256[]` | Array of amount (corresponding to tokens) to permit. |
+| `deadline` | `uint256`   | Expiration of signature (Unix time).                 |
+| `v`        | `uint8`     | Recovery ID.                                         |
+| `r`        | `bytes32`   | ECDSA signature output.                              |
+| `s`        | `bytes32`   | ECDSA signature output.                              |
 
 ```solidity
 function permitDeposit(
@@ -231,16 +241,18 @@ function permitDeposit(
 ) external payable nonReentrant;
 ```
 
-| Parameter  | Type      | Description |
-|------------|-----------|-------------|
-| `owner`    | `address` | WIP         |
-| `spender`  | `address` | WIP         |
-| `token`    | `address` | WIP         |
-| `value`    | `uint256` | WIP         |
-| `deadline` | `uint256` | WIP         |
-| `v`        | `uint8`   | WIP         |
-| `r`        | `bytes32` | WIP         |
-| `s`        | `bytes32` | WIP         |
+Permits deposit.
+
+| Parameter  | Type      | Description                          |
+|------------|-----------|--------------------------------------|
+| `owner`    | `address` | Address to give permit.              |
+| `spender`  | `address` | Address to permit.                   |
+| `token`    | `address` | ERC20 to permit.                     |
+| `value`    | `uint256` | Amount to permit.                    |
+| `deadline` | `uint256` | Expiration of signature (Unix time). |
+| `v`        | `uint8`   | Recovery ID.                         |
+| `r`        | `bytes32` | ECDSA signature output.              |
+| `s`        | `bytes32` | ECDSA signature output.              |
 
 ### Update
 
@@ -248,9 +260,11 @@ function permitDeposit(
 function update(address account) external payable;
 ```
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `account` | `address` | WIP         |
+Updates Farmer state.
+
+| Parameter | Type      | Description        |
+|-----------|-----------|--------------------|
+| `account` | `address` | Address to update. |
 
 ### Plant
 
@@ -258,11 +272,19 @@ function update(address account) external payable;
 function plant() external payable returns (uint256 beans);
 ```
 
+Accredits Earned Beans and Stalk to Farmer.
+
+| Return Value | Type      | Description                   |
+|--------------|-----------|-------------------------------|
+| `beans`      | `uint256` | Amount of Earned Beans given. |
+
 ### Claim Season of Plenty
 
 ```solidity
 function claimPlenty() external payable;
 ```
+
+Claims rewards from a Season Of Plenty (SOP).
 
 ### Enroot
 
@@ -274,11 +296,13 @@ function enrootDeposits(
 ) external nonReentrant updateSilo;
 ```
 
-| Parameter | Type        | Description |
-|-----------|-------------|-------------|
-| `token`   | `address`   | WIP         |
-| `seasons` | `uint32[]`  | WIP         |
-| `amounts` | `uint256[]` | WIP         |
+Adds Revitalized Stalk and Seeds to Stalk and Seed balances.
+
+| Parameter | Type        | Description                                           |
+|-----------|-------------|-------------------------------------------------------|
+| `token`   | `address`   | Address of ERC20.                                     |
+| `seasons` | `uint32[]`  | Array of Seasons to Enroot.                           |
+| `amounts` | `uint256[]` | Array of amount (corresponding to Seasons) to Enroot. |
 
 ```solidity
 function enrootDeposit(
@@ -288,11 +312,13 @@ function enrootDeposit(
 ) external nonReentrant updateSilo;
 ```
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `token`   | `address` | WIP         |
-| `_season` | `uint32`  | WIP         |
-| `amount`  | `uint256` | WIP         |
+Updates Unripe Deposit.
+
+| Parameter | Type      | Description       |
+|-----------|-----------|-------------------|
+| `token`   | `address` | Address of ERC20. |
+| `_season` | `uint32`  | Season to Enroot. |
+| `amount`  | `uint256` | Amount to Enroot. |
 
 ## View Functions
 
