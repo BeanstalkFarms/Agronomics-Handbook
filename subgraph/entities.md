@@ -193,7 +193,7 @@ Individual Silo Deposit data. Updated upon Withdrawals for the net Deposited amo
 | `depositedAmount` | `BigInt!`    | Originally Deposited token amount               |
 | `withdrawnAmount` | `BigInt!`    | Withdrawn token amount                          |
 | `bdv`             | `BigInt!`    | Current BDV of Deposit                          |
-| depositedBDV      | `BigInt!`    | Original BDV of a Deposit                       |
+| `depositedBDV`    | `BigInt!`    | Original BDV of a Deposit                       |
 | `withdrawnBDV`    | `BigInt!`    | Withdrawn BDV of Deposit                        |
 | `hashes`          | `[String!]!` | Transaction hashes included in original Deposit |
 | `createdAt`       | `BigInt!`    | Block timestamp of first Deposit                |
@@ -387,4 +387,3 @@ Balance details by Farmer and Fertilizer token.
 | `deltaBpf`          | `BigDecimal!` | Current new beans per outstanding fertilizer                                                                |
 | `simpleAPY`         | `BigDecimal!` | Simplified APY adjusted for the length of time needed to return total principal and yield based on humidity |
 | `createdAt`         | `BigInt!`     | Block timestamp at creation                                                                                 |
-
