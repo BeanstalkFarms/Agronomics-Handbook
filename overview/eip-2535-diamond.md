@@ -21,7 +21,7 @@ Understanding EIP-2535 really helps to understand Beanstalk. This page serves as
 #### Why use a Diamond?
 
 * [Ethereum's Maximum Contract Size Limit is Solved with the Diamond Standard](https://dev.to/mudgen/ethereum-s-maximum-contract-size-limit-is-solved-with-the-diamond-standard-2189)
-* [Beanstalk 🤝 EIP-2535](https://bean.money/blog/beanstalk-eip-2535)
+* [🌱 Beanstalk 🤝 EIP-2535 💎](https://publius.money/blog/2021-09-24-beanstalk-eip-2535)
 * [Ethereum Diamonds Solve These Problems](https://dev.to/mudgen/ethereum-diamonds-solve-these-problems-3fmp)
 
 #### More Information on Diamonds
