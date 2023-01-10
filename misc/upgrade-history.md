@@ -355,9 +355,9 @@ event VoteList(address indexed account, uint32[] bips, bool[] votes, uint256 roo
 
 ### 15277988-15278963 ([BIP-21](https://arweave.net/3JDxWivppLxGjApfZ8uKQZUYgzQ5NFHDjvGr8edPeXk))
 
-[Added](#added-6)
-[Removed](#removed)
-[Modified](#modified-2)
+[Added](#added-6)  
+[Removed](#removed)  
+[Modified](#modified-2)  
 
 #### Added
 
@@ -739,7 +739,7 @@ event Unpause(uint256 timestamp, uint256 timePassed);
 
 ### 15685220 ([BIP-24](https://arweave.net/388_OnMbLZt9WYodaLiPMeLmGoTsXfXl8WUcJMEDcUQ))
 
-**Added**
+#### Added
 
 [protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/9ca85613d40a3883377de0d9377623d49fff5b9c#diff-9e1826d5d2d843fe5048ff887b8d4b892c6242c1a5714db89d1d09c5fd64535dR60)  
 ```solidity
@@ -768,7 +768,7 @@ event StalkBalanceChanged(
 
 ### 15703994 ([BIP-24 Event Emissions](https://arweave.net/388_OnMbLZt9WYodaLiPMeLmGoTsXfXl8WUcJMEDcUQ))
 
-**Re-emissions**
+#### Re-emissions
 
 [protocol/contracts/farm/init/InitSiloEvents.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/9ca85613d40a3883377de0d9377623d49fff5b9c#diff-140e985985793b183874116547ffc1b30fdcfc065b4cc7b590e3a6847eba4cc6R25)  
 ```solidity
@@ -788,7 +788,10 @@ event StalkBalanceChanged(
 
 ### 15951072 ([BIP-29](https://arweave.net/OfWylBAxD5KyGJBWrQto2EyeYpzc-MqfaroXMQ1bk5w))
 
-**Added**
+[Added]
+[Modified]
+
+#### Added
 
 [protocol/contracts/farm/facets/TokenFacet.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/c20cd7d920643016b5d73eacdfd1b7179d0ea9c2#diff-3608311fd79517dc096315b15aa8f3e1a88119dd2e9fc06c01ed2a7788280cc4R36)  
 [protocol/contracts/libraries/Token/LibTokenApprove.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/c20cd7d920643016b5d73eacdfd1b7179d0ea9c2#diff-19e2e02374b71d2566709f2b3070111cd1b83ba90d8696c6881e35b23221b49bR14)  
@@ -801,7 +804,8 @@ event TokenApproval(
 );
 ```
 
-**Modified** (original event listed first, updated event second)
+#### Modified
+(original event listed first, updated event second)
 
 [protocol/contracts/farm/facets/MarketplaceFacet/Listing.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/c20cd7d920643016b5d73eacdfd1b7179d0ea9c2#diff-0f36710c61a8027ff271fb1dac833ba6b2426b0c6195b94ef04302c83ccc95a4L28)  
 ```solidity
