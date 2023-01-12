@@ -419,7 +419,7 @@ event VoteList(address indexed account, uint32[] bips, bool[] votes, uint256 roo
 
 ### 15277988-15278963 ([BIP-21](https://arweave.net/3JDxWivppLxGjApfZ8uKQZUYgzQ5NFHDjvGr8edPeXk))
 
-* [Added](broken-reference)
+* [Added](#added-bip-21)
 * [Removed](upgrade-history.md#removed)
 * [Modified](upgrade-history.md#modified-2)
 
