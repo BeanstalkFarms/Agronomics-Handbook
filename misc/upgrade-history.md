@@ -419,11 +419,11 @@ event VoteList(address indexed account, uint32[] bips, bool[] votes, uint256 roo
 
 ### 15277988-15278963 ([BIP-21](https://arweave.net/3JDxWivppLxGjApfZ8uKQZUYgzQ5NFHDjvGr8edPeXk))
 
-* [Added](upgrade-history.md#added-6)
+* [Added](broken-reference)
 * [Removed](upgrade-history.md#removed)
 * [Modified](upgrade-history.md#modified-2)
 
-#### Added
+#### Added <a href="#added-bip-21" id="added-bip-21"></a>
 
 [protocol/contracts/farm/facets/ConvertFacet.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/f0e29aae99ddca90085d8dfdc990cff88451d357#diff-7e0e6e954de271de523ec56c6efd67e5a1f4f53be49d2e5b28c35038d505bd67R24)
 
