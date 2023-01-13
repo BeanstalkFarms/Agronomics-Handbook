@@ -322,89 +322,300 @@ Updates Unripe Deposit.
 
 ## View Functions
 
-```solidity
-/**
- * SiloFacet
- **/
- 
+### SiloFacet
+
+```solidity 
 function depositPermitNonces(address owner) public view virtual returns (uint256);
+```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `owner`   | `address` | WIP         |
+
+| Return Value | Description |
+|--------------|-------------|
+| `uint256`    | WIP         |
+
+```solidity
 function depositPermitDomainSeparator() external view returns (bytes32);
+```
 
-/**
- * SiloExit
- **/
- 
+| Return Value | Description |
+|--------------|-------------|
+| `bytes32`    | WIP         |
+
+### SiloExit
+
+```solidity
 function totalStalk() public view returns (uint256);
+```
 
+| Return Value | Description |
+|--------------|-------------|
+| `uint256`    | WIP         |
+
+```solidity
 function totalRoots() public view returns (uint256);
+```
 
+| Return Value | Description |
+|--------------|-------------|
+| `uint256`    | WIP         |
+
+```solidity
 function totalSeeds() public view returns (uint256);
+```
 
+| Return Value | Description |
+|--------------|-------------|
+| `uint256`    | WIP         |
+
+```solidity
 function totalEarnedBeans() public view returns (uint256);
+```
 
+| Return Value | Description |
+|--------------|-------------|
+| `uint256`    | WIP         |
+
+```solidity
 function balanceOfSeeds(address account) public view returns (uint256);
+```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` | WIP         |
+
+| Return Value | Description |
+|--------------|-------------|
+| `uint256`    | WIP         |
+
+```solidity
 function balanceOfStalk(address account) public view returns (uint256);
+```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` | WIP         |
+
+| Return Value | Description |
+|--------------|-------------|
+| `uint256`    | WIP         |
+
+```solidity
 function balanceOfRoots(address account) public view returns (uint256);
+```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` | WIP         |
+
+| Return Value | Description |
+|--------------|-------------|
+| `uint256`    | WIP         |
+
+```solidity
 function balanceOfGrownStalk(
     address account
 ) public view returns (uint256);
-        
+```
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` | WIP         |
+
+| Return Value | Description |
+|--------------|-------------|
+| `uint256`    | WIP         |
+
+```solidity        
 function balanceOfEarnedBeans(
     address account
 ) public view returns (uint256 beans);
-       
+```
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` | WIP         |
+
+| Return Value | Type      | Description |
+|--------------|-----------|-------------|
+| `beans`      | `uint256` | WIP         |
+
+```solidity
 function balanceOfEarnedStalk(
     address account
 ) public view returns (uint256);
-        
+```
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` | WIP         |
+
+| Return Value | Description |
+|--------------|-------------|
+| `uint256`    | WIP         |
+
+```solidity
 function balanceOfEarnedSeeds(
     address account
 ) public view returns (uint256);
+```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` | WIP         |
+
+| Return Value | Description |
+|--------------|-------------|
+| `uint256`    | WIP         |
+
+```solidity
 function lastUpdate(address account) public view returns (uint32);
+```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` | WIP         |
+
+| Return Value | Description |
+|--------------|-------------|
+| `uint32`     | WIP         |
+
+```solidity
 function lastSeasonOfPlenty() public view returns (uint32);
+```
 
+| Return Value | Description |
+|--------------|-------------|
+| `uint32`     | WIP         |
+
+```solidity
 function balanceOfPlenty(
     address account
 ) public view returns (uint256 plenty);
-        
-function balanceOfRainRoots(address account) public view returns (uint256);
+```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` | WIP         |
+
+| Return Value | Type      | Description |
+|--------------|-----------|-------------|
+| `plenty`     | `uint256` | WIP         |
+
+```solidity
+function balanceOfRainRoots(address account) public view returns (uint256);
+```
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` | WIP         |
+
+| Return Value | Description |
+|--------------|-------------|
+| `uint256`    | WIP         |
+
+```solidity
 function balanceOfSop(
     address account
 ) external view returns (AccountSeasonOfPlenty memory sop);
+```
 
-/**
- * TokenSilo
- **/
- 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` | WIP         |
+
+| Return Value | Type                    | Description |
+|--------------|-------------------------|-------------|
+| `sop`        | `AccountSeasonOfPlenty` | WIP         |
+
+### TokenSilo
+
+```solidity
 function getDeposit(
     address account,
     address token,
     uint32 season
 ) external view returns (uint256, uint256);
-    
+```
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` | WIP         |
+| `token`   | `address` | WIP         |
+| `season`  | `uint32`  | WIP         |
+
+| Return Value | Description |
+|--------------|-------------|
+| `uint256`    | WIP         |
+| `uint256`    | WIP         |
+
+```solidity
 function getWithdrawal(
     address account,
     address token,
     uint32 season
 ) external view returns (uint256);
-    
+```
+
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` | WIP         |
+| `token`   | `address` | WIP         |
+| `season`  | `uint32`  | WIP         |
+
+| Return Value | Description |
+|--------------|-------------|
+| `uint256`    | WIP         |
+
+```solidity
 function getTotalDeposited(address token) external view returns (uint256);
+```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `token`   | `address` | WIP         |
+
+| Return Value | Description |
+|--------------|-------------|
+| `uint256`    | WIP         |
+
+```solidity
 function getTotalWithdrawn(address token) external view returns (uint256);
+```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `token`   | `address` | WIP         |
+
+| Return Value | Description |
+|--------------|-------------|
+| `uint256`    | WIP         |
+
+```solidity
 function tokenSettings(
     address token
 ) external view returns (Storage.SiloSettings memory);
+````
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `token`   | `address` | WIP         |
+
+| Return Value           | Description |
+|------------------------|-------------|
+| `Storage.SiloSettings` | WIP         |
+
+```solidity
 function withdrawFreeze() public view returns (uint8);
+```
 
+| Return Value | Description |
+|--------------|-------------|
+| `uint8`      | WIP         |
+
+```solidity
 function depositAllowance(
     address account,
     address spender,
@@ -412,13 +623,21 @@ function depositAllowance(
 ) public view virtual returns (uint256);
 ```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` | WIP         |
+| `spender` | `address` | WIP         |
+| `token`   | `address` | WIP         |
+
+| Return Value | Description |
+|--------------|-------------|
+| `uint256`    | WIP         |
+
 ## Events
 
-```solidity
-/**
- * TokenSilo
- **/
+### TokenSilo
 
+```solidity
 event AddDeposit(
     address indexed account,
     address indexed token,
@@ -426,7 +645,17 @@ event AddDeposit(
     uint256 amount,
     uint256 bdv
 );
+```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` | WIP         |
+| `token`   | `address` | WIP         |
+| `season`  | `uint32`  | WIP         |
+| `amount`  | `uint256` | WIP         |
+| `bdv`     | `uint256` | WIP         |
+
+```solidity
 event RemoveDeposits(
     address indexed account,
     address indexed token,
@@ -434,64 +663,144 @@ event RemoveDeposits(
     uint256[] amounts,
     uint256 amount
 );
+```
 
+| Parameter | Type        | Description |
+|-----------|-------------|-------------|
+| `account` | `address`   | WIP         |
+| `token`   | `address`   | WIP         |
+| `seasons` | `uint32[]`  | WIP         |
+| `amounts` | `uint256[]` | WIP         |
+| `amount`  | `uint256`   | WIP         |
+
+```solidity
 event RemoveDeposit(
     address indexed account,
     address indexed token,
     uint32 season,
     uint256 amount
 );
+```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` | WIP         |
+| `token`   | `address` | WIP         |
+| `season`  | `uint32`  | WIP         |
+| `amount`  | `uint256` | WIP         |
+
+```solidity
 event AddWithdrawal(
     address indexed account,
     address indexed token,
     uint32 season,
     uint256 amount
 );
+```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` | WIP         |
+| `token`   | `address` | WIP         |
+| `season`  | `uint32`  | WIP         |
+| `amount`  | `uint256` | WIP         |
+
+```solidity
 event RemoveWithdrawals(
     address indexed account,
     address indexed token,
     uint32[] seasons,
     uint256 amount
 );
+```
 
+| Parameter | Type       | Description |
+|-----------|------------|-------------|
+| `account` | `address`  | WIP         |
+| `token`   | `address`  | WIP         |
+| `seasons` | `uint32[]` | WIP         |
+| `amount`  | `uint256`  | WIP         |
+
+```solidity
 event RemoveWithdrawal(
     address indexed account,
     address indexed token,
     uint32 season,
     uint256 amount
 );
+```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` | WIP         |
+| `token`   | `address` | WIP         |
+| `season`  | `uint32`  | WIP         |
+| `amount`  | `uint256` | WIP         |
+
+```solidity
 event DepositApproval(
     address indexed owner,
     address indexed spender,
     address token,
     uint256 amount
 );
+```
 
-/**
- * Silo
- **/
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `owner`   | `address` | WIP         |
+| `spender` | `address` | WIP         |
+| `token`   | `address` | WIP         |
+| `amount`  | `uint256` | WIP         |
+
+## Silo
  
+```solidity
 event Plant(
     address indexed account,
     uint256 beans
 );
+```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` | WIP         |
+| `beans`   | `uint256` | WIP         |
+
+```solidity
 event ClaimPlenty(
     address indexed account,
     uint256 plenty
 );
+```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` | WIP         |
+| `plenty`  | `uint256` | WIP         |
+
+```solidity
 event SeedsBalanceChanged(
     address indexed account,
     int256 delta
 );
+```
 
+| Parameter | Type      | Description |
+|-----------|-----------|-------------|
+| `account` | `address` | WIP         |
+| `delta`   | `int256`  | WIP         |
+
+```solidity
 event StalkBalanceChanged(
     address indexed account,
     int256 delta,
     int256 deltaRoots
 );
 ```
+
+| Parameter    | Type      | Description |
+|--------------|-----------|-------------|
+| `account`    | `address` | WIP         |
+| `delta`      | `int256`  | WIP         |
+| `deltaRoots` | `int256`  | WIP         |
