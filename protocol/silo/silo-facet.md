@@ -753,7 +753,7 @@ event DepositApproval(
 | `token`   | `address` | WIP         |
 | `amount`  | `uint256` | WIP         |
 
-## Silo
+### Silo
  
 ```solidity
 event Plant(
