@@ -17,12 +17,21 @@ function convert(
     uint256 toBdv
 );
 ```
+[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/ConvertFacet.sol#L46)
 
 | Parameter     | Type        | Description |
 |---------------|-------------|-------------|
 | `convertData` | `bytes`     | WIP         |
 | `crates`      | `uint32[]`  | WIP         |
 | `amounts`     | `uint256[]` | WIP         |
+
+| Return Value | Type      | Description |
+|--------------|-----------|-------------|
+| `toSeason`   | `uint32`  | WIP         |
+| `fromAmount` | `uint256` | WIP         |
+| `toAmount`   | `uint256` | WIP         |
+| `fromBdv`    | `uint256` | WIP         |
+| `toBdv`      | `uint256` | WIP         |
 
 ## View Functions
 
@@ -31,13 +40,35 @@ function getMaxAmountIn(
     address tokenIn,
     address tokenOut
 ) external view returns (uint256 amountIn);
-        
+```
+[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/ConvertFacet.sol#L161)
+
+| Parameter  | Type      | Description |
+|------------|-----------|-------------|
+| `tokenIn`  | `address` | WIP         |
+| `tokenOut` | `address` | WIP         |
+
+| Return Value | Type      | Description |
+|--------------|-----------|-------------|
+| `amountIn`   | `uint256` | WIP         |
+
+```solidity
 function getAmountOut(
     address tokenIn,
     address tokenOut,
     uint256 amountIn
 ) external view returns (uint256 amountOut);
 ```
+[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/ConvertFacet.sol#L169)
+
+| Parameter  | Type      | Description |
+|------------|-----------|-------------|
+| `tokenIn`  | `address` | WIP         |
+| `tokenOut` | `address` | WIP         |
+
+| Return Value | Type      | Description |
+|--------------|-----------|-------------|
+| `amountIn`   | `uint256` | WIP         |
 
 ## Events
 
@@ -49,7 +80,18 @@ event Convert(
     uint256 fromAmount,
     uint256 toAmount
 );
+```
+[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/ConvertFacet.sol#L24)
 
+| Parameter    | Type      | Description |
+|--------------|-----------|-------------|
+| `account`    | `address` | WIP         |
+| `fromToken`  | `address` | WIP         |
+| `toToken`    | `address` | WIP         |
+| `fromAmount` | `uint256` | WIP         |
+| `toAmount`   | `uint256` | WIP         |
+
+```solidity
 event RemoveDeposits(
     address indexed account,
     address indexed token,
@@ -58,3 +100,12 @@ event RemoveDeposits(
     uint256 amount
 );
 ```
+[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/ConvertFacet.sol#L32)
+
+| Parameter | Type        | Description |
+|-----------|-------------|-------------|
+| `account` | `address`   | WIP         |
+| `token`   | `address`   | WIP         |
+| `seasons` | `uint32[]`  | WIP         |
+| `amounts` | `uint256[]` | WIP         |
+| `amount`  | `uint256`   | WIP         |
