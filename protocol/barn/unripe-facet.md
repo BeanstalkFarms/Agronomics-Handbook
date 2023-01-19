@@ -65,6 +65,8 @@ function addUnripeToken(
 
 ## View Functions
 
+### Picked
+
 ```solidity
 function picked(address account, address token)
     public
@@ -81,6 +83,8 @@ function picked(address account, address token)
 | Return Value | Description |
 |--------------|-------------|
 | `bool`       | WIP         |
+
+### Get Underlying
 
 ```solidity
 function getUnderlying(address unripeToken, uint256 amount)
@@ -99,6 +103,8 @@ function getUnderlying(address unripeToken, uint256 amount)
 |--------------|-----------|-------------|
 | `redeem`     | `uint256` | WIP         |
 
+### Get Penalty
+
 ```solidity
 function getPenalty(address unripeToken)
     external
@@ -114,6 +120,8 @@ function getPenalty(address unripeToken)
 | Return Value | Type      | Description |
 |--------------|-----------|-------------|
 | `penalty`    | `uint256` | WIP         |
+
+### Get Penalized Underlying 
 
 ```solidity
 function getPenalizedUnderlying(address unripeToken, uint256 amount)
@@ -131,6 +139,8 @@ function getPenalizedUnderlying(address unripeToken, uint256 amount)
 | Return Value | Type      | Description |
 |--------------|-----------|-------------|
 | `redeem`     | `uint256` | WIP         |
+
+### _Get Penalized Underlying
 
 ```solidity
 function _getPenalizedUnderlying(address unripeToken, uint256 amount, uint256 supply)
@@ -150,6 +160,8 @@ function _getPenalizedUnderlying(address unripeToken, uint256 amount, uint256 su
 |--------------|-----------|-------------|
 | `redeem`     | `uint256` | WIP         |
 
+### Is Unripe
+
 ```solidity
 function isUnripe(address unripeToken) public view returns (bool unripe);
 ```
@@ -162,6 +174,8 @@ function isUnripe(address unripeToken) public view returns (bool unripe);
 | Return Value | Type   | Description |
 |--------------|--------|-------------|
 | `unripe`     | `bool` | WIP         |
+
+### Balance Of Underlying
 
 ```solidity
 function balanceOfUnderlying(address unripeToken, address account)
@@ -180,6 +194,8 @@ function balanceOfUnderlying(address unripeToken, address account)
 |--------------|-----------|-------------|
 | `underlying` | `uint256` | WIP         |
 
+### Balance Of Penalized Underlying
+
 ```solidity
 function balanceOfPenalizedUnderlying(address unripeToken, address account)
     external
@@ -197,6 +213,8 @@ function balanceOfPenalizedUnderlying(address unripeToken, address account)
 |--------------|-----------|-------------|
 | `underlying` | `uint256` | WIP         |
 
+### Get Recap Funded Percent
+
 ```solidity
 function getRecapFundedPercent(address unripeToken)
     public
@@ -212,6 +230,8 @@ function getRecapFundedPercent(address unripeToken)
 | Return Value | Type      | Description |
 |--------------|-----------|-------------|
 | `percent`    | `uint256` | WIP         |
+
+### Get Percent Penalty
 
 ```solidity
 function getPercentPenalty(address unripeToken)
@@ -229,6 +249,8 @@ function getPercentPenalty(address unripeToken)
 |--------------|-----------|-------------|
 | `penalty`    | `uint256` | WIP         |
 
+### Get Recap Paid Percent
+
 ```solidity
 function getRecapPaidPercent() external view returns (uint256 penalty);
 ```
@@ -237,6 +259,8 @@ function getRecapPaidPercent() external view returns (uint256 penalty);
 | Return Value | Type      | Description |
 |--------------|-----------|-------------|
 | `penalty`    | `uint256` | WIP         |
+
+### Get Recap Paid Percent Amount
 
 ```solidity
 function getRecapPaidPercentAmount(uint256 amount)
@@ -254,6 +278,8 @@ function getRecapPaidPercentAmount(uint256 amount)
 |--------------|-----------|-------------|
 | `penalty`    | `uint256` | WIP         |
 
+### Get Underlying Per Unripe Token
+
 ```solidity
 function getUnderlyingPerUnripeToken(address unripeToken)
     external
@@ -270,6 +296,8 @@ function getUnderlyingPerUnripeToken(address unripeToken)
 |----------------------|-----------|-------------|
 | `underlyingPerToken` | `uint256` | WIP         |
 
+### Get Total Underlying
+
 ```solidity
 function getTotalUnderlying(address unripeToken)
     external
@@ -285,6 +313,8 @@ function getTotalUnderlying(address unripeToken)
 | Return Value | Type      | Description |
 |--------------|-----------|-------------|
 | `underlying` | `uint256` | WIP         |
+
+### Get Underlying Token
 
 ```solidity
 function getUnderlyingToken(address unripeToken)
@@ -304,6 +334,8 @@ function getUnderlyingToken(address unripeToken)
 
 ## Events
 
+### Add Unripe Token
+
 ```solidity
 event AddUnripeToken(
     address indexed unripeToken,
@@ -319,6 +351,8 @@ event AddUnripeToken(
 | `underlyingToken` | `address` | WIP         |
 | `merkleRoot`      | `bytes32` | WIP         |
 
+### Change Underlying
+
 ```solidity
 event ChangeUnderlying(address indexed token, int256 underlying);
 ```
@@ -328,6 +362,8 @@ event ChangeUnderlying(address indexed token, int256 underlying);
 |--------------|-----------|-------------|
 | `token`      | `address` | WIP         |
 | `underlying` | `int256`  | WIP         |
+
+### Chop
 
 ```solidity
 event Chop(
@@ -345,6 +381,8 @@ event Chop(
 | `token`      | `address` | WIP         |
 | `amount`     | `uint256` | WIP         |
 | `underlying` | `uint256` | WIP         |
+
+### Pick
 
 ```solidity
 event Pick(
