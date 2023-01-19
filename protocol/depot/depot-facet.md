@@ -1,5 +1,7 @@
 # Depot Facet
 
+DepotFacet wraps Pipeline's Pipe functions to facilitate the loading of non-Ether assets in Pipeline in the same transaction that loads Ether, Pipes calls to other protocols and unloads Pipeline.
+
 ## Call Functions
 
 ### Depot
@@ -10,6 +12,7 @@ function pipe(PipeCall calldata p)
     payable
     returns (bytes memory result);
 ```
+[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DepotFacet.sol#L28)
 
 Pipe a PipeCall through Pipeline.
 
@@ -27,6 +30,7 @@ function multiPipe(PipeCall[] calldata pipes)
     payable
     returns (bytes[] memory results);
 ```
+[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DepotFacet.sol#L42)
 
 Pipe multiple PipeCalls through Pipeline. Does not support sending Ether in the call.
 
@@ -44,6 +48,7 @@ function advancedPipe(AdvancedPipeCall[] calldata pipes, uint256 value)
     payable
     returns (bytes[] memory results);
 ```
+[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DepotFacet.sol#L55)
 
 Pipe multiple AdvancedPipeCalls through Pipeline.
 
@@ -62,6 +67,7 @@ function etherPipe(PipeCall calldata p, uint256 value)
     payable
     returns (bytes memory result);
 ```
+[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DepotFacet.sol#L70)
 
 Pipe a PipeCall through Pipeline with an Ether value.
 
@@ -80,6 +86,7 @@ function readPipe(PipeCall calldata p)
     view
     returns (bytes memory result);
 ```
+[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DepotFacet.sol#L84)
 
 Return the return value of a PipeCall without executing it.
 
@@ -102,4 +109,3 @@ None
 ```
 None
 ```
-
