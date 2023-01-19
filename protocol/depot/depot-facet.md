@@ -4,7 +4,7 @@ DepotFacet wraps Pipeline's Pipe functions to facilitate the loading of non-Ethe
 
 ## Call Functions
 
-### Depot
+### Pipe
 
 ```solidity
 function pipe(PipeCall calldata p)
@@ -24,6 +24,8 @@ Pipe a PipeCall through Pipeline.
 |--------------|---------|------------------------|
 | `result`     | `bytes` | PipeCall return value. |
 
+### Multi Pipe
+
 ```solidity
 function multiPipe(PipeCall[] calldata pipes)
     external
@@ -41,6 +43,8 @@ Pipe multiple PipeCalls through Pipeline. Does not support sending Ether in the 
 | Return Value | Type      | Description                               |
 |--------------|-----------|-------------------------------------------|
 | `results`    | `bytes[]` | List of return values from each PipeCall. |
+
+### Advanced Pipe
 
 ```solidity
 function advancedPipe(AdvancedPipeCall[] calldata pipes, uint256 value)
@@ -61,6 +65,8 @@ Pipe multiple AdvancedPipeCalls through Pipeline.
 |--------------|-----------|---------------------------------------------------|
 | `results`    | `bytes[]` | List of return values from each AdvancedPipeCall. |
 
+### Ether Pipe
+
 ```solidity
 function etherPipe(PipeCall calldata p, uint256 value)
     external
@@ -79,6 +85,8 @@ Pipe a PipeCall through Pipeline with an Ether value.
 | Return Value | Type    | Description            |
 |--------------|---------|------------------------|
 | `result`     | `bytes` | PipeCall return value. |
+
+### Read Pipe
 
 ```solidity
 function readPipe(PipeCall calldata p)
