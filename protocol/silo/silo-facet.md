@@ -23,7 +23,7 @@ Deposits ERC20 token into internal Farmer balances.
 | `amount`  | `uint256` | Amount of tokens to be transfered.                                          |
 | `mode`    | `From`    | Source of funds (INTERNAL, EXTERNAL, EXTERNAL_INTERNAL, INTERNAL_TOLERANT). |
 
-### Withdraw
+### Withdraw Deposit
 
 ```solidity
 function withdrawDeposit(
@@ -42,6 +42,8 @@ Withdraws from a single Deposit.
 | `season`  | `uint32`  | Season the Farmer wants to Withdraw. |
 | `amount`  | `uint256` | Tokens to be Withdrawn.              |
 
+### Withdraw Deposits
+
 ```solidity
 function withdrawDeposits(
     address token,
@@ -59,7 +61,7 @@ Withdraws from multiple Deposits.
 | `seasons` | `uint32[]`  | Array of Seasons to Withdraw from.                              |
 | `amounts` | `uint256[]` | Array of amounts corresponding to each Season to Withdraw from. |
 
-### Claim
+### Claim Withdrawal
 
 ```solidity
 function claimWithdrawal(
@@ -78,6 +80,8 @@ Claims tokens from a Withdrawal.
 | `season`  | `uint32`  | Season to Claim.                                                                 |
 | `mode`    | `To`      | Destination of funds (INTERNAL, EXTERNAL, EXTERNAL_INTERNAL, INTERNAL_TOLERANT). |
 
+### Claim Withdrawals
+
 ```solidity
 function claimWithdrawals(
     address token,
@@ -95,7 +99,7 @@ Claims tokens from multiple Withdrawals.
 | `seasons` | `uint32[]` | Array of Seasons to Claim.                                                       |
 | `mode`    | `To`       | Destination of funds (INTERNAL, EXTERNAL, EXTERNAL_INTERNAL, INTERNAL_TOLERANT). |
 
-### Transfer
+### Transfer Deposit
 
 ```solidity
 function transferDeposit(
@@ -122,6 +126,8 @@ Transfers single Farmer's Deposit.
 |--------------|-----------|-------------------------------------|
 | `bdv`        | `uint256` | Bean Denominated Value of Transfer. |
 
+### Transfer Deposits
+
 ```solidity
 function transferDeposits(
     address sender,
@@ -147,7 +153,7 @@ Transfers multiple Farmer Deposits.
 |--------------|-------------|-----------------------------------------------------------------------------|
 | `bdvs`       | `uint256[]` | Array of Bean Denominated Value of Transfer corresponding from each Season. |
 
-### Approvals
+### Approve Deposit
 
 ```solidity
 function approveDeposit(
@@ -165,6 +171,8 @@ Approves an address to access a Farmer's Deposit.
 | `sender`  | `address` | Address to be given approval. |
 | `token`   | `address` | Address of ERC20.             |
 | `amount`  | `uint256` | Amount to be approved.        |
+
+### Increase Deposit Allowance
 
 ```solidity
 function increaseDepositAllowance(
@@ -186,6 +194,8 @@ Increases allowance of Deposit.
 | Return Value | Description |
 |--------------|-------------|
 | `bool`       | Success.    |
+
+### Decrease Deposit Allowance
 
 ```solidity
 function decreaseDepositAllowance(
@@ -211,6 +221,8 @@ Decreases allowance of Deposit.
 ### Permit
 
 Farm balances and Silo Deposits support [EIP-2612 permits](https://eips.ethereum.org/EIPS/eip-2612), which allows Farmers to delegate use of their Farm balances through permits without the need for a separate transaction.
+
+### Permit Deposits
 
 ```solidity
 function permitDeposits(
@@ -238,6 +250,8 @@ Permits multiple deposits.
 | `v`        | `uint8`     | Recovery ID.                                         |
 | `r`        | `bytes32`   | ECDSA signature output.                              |
 | `s`        | `bytes32`   | ECDSA signature output.                              |
+
+### Permit Deposit
 
 ```solidity
 function permitDeposit(
@@ -292,7 +306,7 @@ Accredits Earned Beans and Stalk to Farmer.
 |--------------|-----------|-------------------------------|
 | `beans`      | `uint256` | Amount of Earned Beans given. |
 
-### Claim Season of Plenty
+### claim Plenty
 
 ```solidity
 function claimPlenty() external payable;
@@ -301,7 +315,7 @@ function claimPlenty() external payable;
 
 Claims rewards from a Season Of Plenty (SOP).
 
-### Enroot
+### Enroot Deposits
 
 ```solidity
 function enrootDeposits(
@@ -319,6 +333,8 @@ Adds Revitalized Stalk and Seeds to Stalk and Seed balances.
 | `token`   | `address`   | Address of ERC20.                                     |
 | `seasons` | `uint32[]`  | Array of Seasons to Enroot.                           |
 | `amounts` | `uint256[]` | Array of amount (corresponding to Seasons) to Enroot. |
+
+### Enroot Deposit
 
 ```solidity
 function enrootDeposit(
@@ -341,6 +357,8 @@ Updates Unripe Deposit.
 
 ### SiloFacet
 
+### Deposit Permit Nonces
+
 ```solidity 
 function depositPermitNonces(address owner) public view virtual returns (uint256);
 ```
@@ -354,6 +372,8 @@ function depositPermitNonces(address owner) public view virtual returns (uint256
 |--------------|-------------|
 | `uint256`    | WIP         |
 
+### Deposit Permit Domain Separator
+
 ```solidity
 function depositPermitDomainSeparator() external view returns (bytes32);
 ```
@@ -365,6 +385,8 @@ function depositPermitDomainSeparator() external view returns (bytes32);
 
 ### SiloExit
 
+### Total Stalk
+
 ```solidity
 function totalStalk() public view returns (uint256);
 ```
@@ -373,6 +395,8 @@ function totalStalk() public view returns (uint256);
 | Return Value | Description |
 |--------------|-------------|
 | `uint256`    | WIP         |
+
+### Total Roots
 
 ```solidity
 function totalRoots() public view returns (uint256);
@@ -383,6 +407,8 @@ function totalRoots() public view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
+### Total Seeds
+
 ```solidity
 function totalSeeds() public view returns (uint256);
 ```
@@ -392,6 +418,8 @@ function totalSeeds() public view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
+### Total Earned Beans
+
 ```solidity
 function totalEarnedBeans() public view returns (uint256);
 ```
@@ -400,6 +428,8 @@ function totalEarnedBeans() public view returns (uint256);
 | Return Value | Description |
 |--------------|-------------|
 | `uint256`    | WIP         |
+
+### Balance Of Seeds
 
 ```solidity
 function balanceOfSeeds(address account) public view returns (uint256);
@@ -414,6 +444,8 @@ function balanceOfSeeds(address account) public view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
+### Balance Of Stalk
+
 ```solidity
 function balanceOfStalk(address account) public view returns (uint256);
 ```
@@ -427,6 +459,8 @@ function balanceOfStalk(address account) public view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
+### Balance Of Roots
+
 ```solidity
 function balanceOfRoots(address account) public view returns (uint256);
 ```
@@ -439,6 +473,8 @@ function balanceOfRoots(address account) public view returns (uint256);
 | Return Value | Description |
 |--------------|-------------|
 | `uint256`    | WIP         |
+
+### Balance Of Grown Stalk
 
 ```solidity
 function balanceOfGrownStalk(
@@ -455,6 +491,8 @@ function balanceOfGrownStalk(
 |--------------|-------------|
 | `uint256`    | WIP         |
 
+### Balance Of Earned Beans
+
 ```solidity        
 function balanceOfEarnedBeans(
     address account
@@ -469,6 +507,8 @@ function balanceOfEarnedBeans(
 | Return Value | Type      | Description |
 |--------------|-----------|-------------|
 | `beans`      | `uint256` | WIP         |
+
+### Balance Of Earned Stalk
 
 ```solidity
 function balanceOfEarnedStalk(
@@ -485,6 +525,8 @@ function balanceOfEarnedStalk(
 |--------------|-------------|
 | `uint256`    | WIP         |
 
+### Balance Of Earned Seeds
+
 ```solidity
 function balanceOfEarnedSeeds(
     address account
@@ -500,6 +542,8 @@ function balanceOfEarnedSeeds(
 |--------------|-------------|
 | `uint256`    | WIP         |
 
+### Last Update
+
 ```solidity
 function lastUpdate(address account) public view returns (uint32);
 ```
@@ -513,6 +557,8 @@ function lastUpdate(address account) public view returns (uint32);
 |--------------|-------------|
 | `uint32`     | WIP         |
 
+### Last Season Of Plenty
+
 ```solidity
 function lastSeasonOfPlenty() public view returns (uint32);
 ```
@@ -521,6 +567,8 @@ function lastSeasonOfPlenty() public view returns (uint32);
 | Return Value | Description |
 |--------------|-------------|
 | `uint32`     | WIP         |
+
+### Balance Of Plenty
 
 ```solidity
 function balanceOfPlenty(
@@ -537,6 +585,8 @@ function balanceOfPlenty(
 |--------------|-----------|-------------|
 | `plenty`     | `uint256` | WIP         |
 
+### Balance Of Rain Roots
+
 ```solidity
 function balanceOfRainRoots(address account) public view returns (uint256);
 ```
@@ -549,6 +599,8 @@ function balanceOfRainRoots(address account) public view returns (uint256);
 | Return Value | Description |
 |--------------|-------------|
 | `uint256`    | WIP         |
+
+### Balance Of Sop
 
 ```solidity
 function balanceOfSop(
@@ -566,6 +618,8 @@ function balanceOfSop(
 | `sop`        | `AccountSeasonOfPlenty` | WIP         |
 
 ### TokenSilo
+
+### Get Deposit
 
 ```solidity
 function getDeposit(
@@ -587,6 +641,8 @@ function getDeposit(
 | `uint256`    | WIP         |
 | `uint256`    | WIP         |
 
+### Get Withdrawal
+
 ```solidity
 function getWithdrawal(
     address account,
@@ -606,6 +662,8 @@ function getWithdrawal(
 |--------------|-------------|
 | `uint256`    | WIP         |
 
+### Get Total Deposited
+
 ```solidity
 function getTotalDeposited(address token) external view returns (uint256);
 ```
@@ -619,6 +677,8 @@ function getTotalDeposited(address token) external view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
+### Get Total Withdrawn
+
 ```solidity
 function getTotalWithdrawn(address token) external view returns (uint256);
 ```
@@ -631,6 +691,8 @@ function getTotalWithdrawn(address token) external view returns (uint256);
 | Return Value | Description |
 |--------------|-------------|
 | `uint256`    | WIP         |
+
+### Token Settings
 
 ```solidity
 function tokenSettings(
@@ -647,6 +709,8 @@ function tokenSettings(
 |------------------------|-------------|
 | `Storage.SiloSettings` | WIP         |
 
+### Withdraw Freeze
+
 ```solidity
 function withdrawFreeze() public view returns (uint8);
 ```
@@ -655,6 +719,8 @@ function withdrawFreeze() public view returns (uint8);
 | Return Value | Description |
 |--------------|-------------|
 | `uint8`      | WIP         |
+
+### Deposit Allowance
 
 ```solidity
 function depositAllowance(
@@ -678,6 +744,8 @@ function depositAllowance(
 ## Events
 
 ### Silo
+
+### Plant
  
 ```solidity
 event Plant(
@@ -692,6 +760,8 @@ event Plant(
 | `account` | `address` | WIP         |
 | `beans`   | `uint256` | WIP         |
 
+### Claim Plenty
+
 ```solidity
 event ClaimPlenty(
     address indexed account,
@@ -705,6 +775,8 @@ event ClaimPlenty(
 | `account` | `address` | WIP         |
 | `plenty`  | `uint256` | WIP         |
 
+### Seeds Balance Changed
+
 ```solidity
 event SeedsBalanceChanged(
     address indexed account,
@@ -717,6 +789,8 @@ event SeedsBalanceChanged(
 |-----------|-----------|-------------|
 | `account` | `address` | WIP         |
 | `delta`   | `int256`  | WIP         |
+
+### Stalk Balance Changed
 
 ```solidity
 event StalkBalanceChanged(
@@ -734,6 +808,8 @@ event StalkBalanceChanged(
 | `deltaRoots` | `int256`  | WIP         |
 
 ### TokenSilo
+
+### Add Deposit
 
 ```solidity
 event AddDeposit(
@@ -754,6 +830,8 @@ event AddDeposit(
 | `amount`  | `uint256` | WIP         |
 | `bdv`     | `uint256` | WIP         |
 
+### Remove Deposits
+
 ```solidity
 event RemoveDeposits(
     address indexed account,
@@ -773,6 +851,8 @@ event RemoveDeposits(
 | `amounts` | `uint256[]` | WIP         |
 | `amount`  | `uint256`   | WIP         |
 
+### Remove Deposit
+
 ```solidity
 event RemoveDeposit(
     address indexed account,
@@ -789,6 +869,8 @@ event RemoveDeposit(
 | `token`   | `address` | WIP         |
 | `season`  | `uint32`  | WIP         |
 | `amount`  | `uint256` | WIP         |
+
+### Add Withdrawal
 
 ```solidity
 event AddWithdrawal(
@@ -807,6 +889,8 @@ event AddWithdrawal(
 | `season`  | `uint32`  | WIP         |
 | `amount`  | `uint256` | WIP         |
 
+### Remove Withdrawals
+
 ```solidity
 event RemoveWithdrawals(
     address indexed account,
@@ -824,6 +908,8 @@ event RemoveWithdrawals(
 | `seasons` | `uint32[]` | WIP         |
 | `amount`  | `uint256`  | WIP         |
 
+### Remove Withdrawal
+
 ```solidity
 event RemoveWithdrawal(
     address indexed account,
@@ -840,6 +926,8 @@ event RemoveWithdrawal(
 | `token`   | `address` | WIP         |
 | `season`  | `uint32`  | WIP         |
 | `amount`  | `uint256` | WIP         |
+
+### Deposit Approval
 
 ```solidity
 event DepositApproval(
