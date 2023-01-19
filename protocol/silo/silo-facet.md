@@ -306,7 +306,7 @@ Accredits Earned Beans and Stalk to Farmer.
 |--------------|-----------|-------------------------------|
 | `beans`      | `uint256` | Amount of Earned Beans given. |
 
-### claim Plenty
+### Claim Plenty
 
 ```solidity
 function claimPlenty() external payable;
