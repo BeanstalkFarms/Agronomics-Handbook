@@ -35,6 +35,8 @@ function convert(
 
 ## View Functions
 
+### Get Max Amount In
+
 ```solidity
 function getMaxAmountIn(
     address tokenIn,
@@ -51,6 +53,8 @@ function getMaxAmountIn(
 | Return Value | Type      | Description |
 |--------------|-----------|-------------|
 | `amountIn`   | `uint256` | WIP         |
+
+### Get Amount Out
 
 ```solidity
 function getAmountOut(
@@ -72,6 +76,8 @@ function getAmountOut(
 
 ## Events
 
+### Convert
+
 ```solidity
 event Convert(
     address indexed account,
@@ -90,6 +96,8 @@ event Convert(
 | `toToken`    | `address` | WIP         |
 | `fromAmount` | `uint256` | WIP         |
 | `toAmount`   | `uint256` | WIP         |
+
+### Remove Deposits
 
 ```solidity
 event RemoveDeposits(
