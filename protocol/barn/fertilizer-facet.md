@@ -66,6 +66,8 @@ function payFertilizer(address account, uint256 amount) external payable
 
 ## View Functions
 
+### Total Fertilized Beans
+
 ```solidity
 function totalFertilizedBeans() external view returns (uint256 beans);
 ```
@@ -74,6 +76,8 @@ function totalFertilizedBeans() external view returns (uint256 beans);
 | Return Value | Type      | Description |
 |--------------|-----------|-------------|
 | `beans`      | `uint256` | WIP         |
+
+### Total Unfertilized Beans
 
 ```solidity
 function totalUnfertilizedBeans() external view returns (uint256 beans);
@@ -84,6 +88,8 @@ function totalUnfertilizedBeans() external view returns (uint256 beans);
 |--------------|-----------|-------------|
 | `beans`      | `uint256` | WIP         |
 
+### Total Fertilizer Beans
+
 ```solidity
 function totalFertilizerBeans() external view returns (uint256 beans);
 ```
@@ -92,6 +98,8 @@ function totalFertilizerBeans() external view returns (uint256 beans);
 | Return Value | Type      | Description |
 |--------------|-----------|-------------|
 | `beans`      | `uint256` | WIP         |
+
+### Get Fertilizer
 
 ```solidity
 function getFertilizer(uint128 id) external view returns (uint256);
@@ -106,6 +114,8 @@ function getFertilizer(uint128 id) external view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
+### Get Next
+
 ```solidity
 function getNext(uint128 id) external view returns (uint128);
 ```
@@ -119,6 +129,8 @@ function getNext(uint128 id) external view returns (uint128);
 |--------------|-------------|
 | `uint128`    | WIP         |
 
+### Get First
+
 ```solidity
 function getFirst() external view returns (uint128);
 ```
@@ -127,6 +139,8 @@ function getFirst() external view returns (uint128);
 | Return Value | Description |
 |--------------|-------------|
 | `uint128`    | WIP         |
+
+### Get Last
 
 ```solidity
 function getLast() external view returns (uint128);
@@ -137,6 +151,8 @@ function getLast() external view returns (uint128);
 |--------------|-------------|
 | `uint128`    | WIP         |
 
+### Get Active Fertilizer
+
 ```solidity
 function getActiveFertilizer() external view returns (uint256);
 ```
@@ -145,6 +161,8 @@ function getActiveFertilizer() external view returns (uint256);
 | Return Value | Description |
 |--------------|-------------|
 | `uint256`    | WIP         |
+
+### Is Fertilizing
 
 ```solidity
 function isFertilizing() external view returns (bool);
@@ -155,6 +173,8 @@ function isFertilizing() external view returns (bool);
 |--------------|-------------|
 | `bool`       | WIP         |
 
+### Beans Per Fertilizer
+
 ```solidity
 function beansPerFertilizer() external view returns (uint128 bpf);
 ```
@@ -163,6 +183,8 @@ function beansPerFertilizer() external view returns (uint128 bpf);
 | Return Value | Type      | Description |
 |--------------|-----------|-------------|
 | `bpf`        | `uint128` | WIP         |
+
+### Get Humidity
 
 ```solidity
 function getHumidity(uint128 _s) external pure returns (uint128 humidity);
@@ -177,6 +199,8 @@ function getHumidity(uint128 _s) external pure returns (uint128 humidity);
 |--------------|-----------|-------------|
 | `humidity`   | `uint128` | WIP         |
 
+### Get Current Humidity
+
 ```solidity
 function getCurrentHumidity() external view returns (uint128 humidity);
 ```
@@ -185,6 +209,8 @@ function getCurrentHumidity() external view returns (uint128 humidity);
 | Return Value | Type      | Description |
 |--------------|-----------|-------------|
 | `humidity`   | `uint128` | WIP         |
+
+### Get End Bpf
 
 ```solidity
 function getEndBpf() external view returns (uint128 endBpf);
@@ -195,6 +221,8 @@ function getEndBpf() external view returns (uint128 endBpf);
 |--------------|-----------|-------------|
 | `endBpf`     | `uint128` | WIP         |
 
+### Remaining Recapitalization
+
 ```solidity
 function remainingRecapitalization() external view returns (uint256);
 ```
@@ -203,6 +231,8 @@ function remainingRecapitalization() external view returns (uint256);
 | Return Value | Description |
 |--------------|-------------|
 | `uint256`    | WIP         |
+
+### Balance of Unfertilized
 
 ```solidity
 function balanceOfUnfertilized(address account, uint256[] memory ids)
@@ -221,6 +251,8 @@ function balanceOfUnfertilized(address account, uint256[] memory ids)
 |--------------|-----------|-------------|
 | `beans`      | `uint256` | WIP         |
 
+### Balance of Fertilized
+
 ```solidity
 function balanceOfFertilized(address account, uint256[] memory ids)
     external
@@ -237,6 +269,8 @@ function balanceOfFertilized(address account, uint256[] memory ids)
 | Return Value | Type      | Description |
 |--------------|-----------|-------------|
 | `beans`      | `uint256` | WIP         |
+
+### Balance of Fertilizer
 
 ```solidity
 function balanceOfFertilizer(address account, uint256 id)
@@ -255,6 +289,8 @@ function balanceOfFertilizer(address account, uint256 id)
 |-----------------------|-------------|
 | `IFertilizer.Balance` | WIP         |
 
+### Balance of Batch Fertilizer
+
 ```solidity
 function balanceOfBatchFertilizer(
     address[] memory accounts,
@@ -272,6 +308,8 @@ function balanceOfBatchFertilizer(
 |-------------------------|-------------|
 | `IFertilizer.Balance[]` | WIP         |
 
+### Get Fertilizers
+
 ```solidity
 function getFertilizers()
     external
@@ -285,6 +323,8 @@ function getFertilizers()
 | `fertilizers` | `Supply[]` | WIP         |
 
 ## Events
+
+### Set Fertilizer
 
 ```solidity
 event SetFertilizer(uint128 id, uint128 bpf);
