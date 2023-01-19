@@ -1,6 +1,6 @@
 # Depot Facet
 
-DepotFacet wraps Pipeline's Pipe functions to facilitate the loading of non-Ether assets in Pipeline in the same transaction that loads Ether, Pipes calls to other protocols and unloads Pipeline.
+DepotFacet wraps Pipeline's Pipe functions to facilitate the loading of non-Ether assets in Pipeline.
 
 ## Call Functions
 
