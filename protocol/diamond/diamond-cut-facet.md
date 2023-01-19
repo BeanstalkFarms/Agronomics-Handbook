@@ -2,6 +2,8 @@
 
 ## Call Functions
 
+### Diamond Cut
+
 ```solidity
 function diamondCut(
     FacetCut[] calldata _diamondCut,
@@ -9,6 +11,7 @@ function diamondCut(
     bytes calldata _calldata
 ) external override;
 ```
+[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DiamondCutFacet.sol#L22)
 
 | Parameter     | Type         | Description |
 |---------------|--------------|-------------|
