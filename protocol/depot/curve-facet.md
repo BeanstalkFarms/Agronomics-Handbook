@@ -16,6 +16,7 @@ function exchange(
     LibTransfer.To toMode
 ) external payable nonReentrant;
 ```
+[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/CurveFacet.sol#L33)
 
 Swaps a token for another token in a Curve base, meta, plain or crypto pool. Slippage is tolerated on the amount out. It also verifies that the pool exists in the Curve Factory. This function does not support underlying tokens.
 
@@ -46,6 +47,7 @@ function exchangeUnderlying(
     LibTransfer.To toMode
 ) external payable nonReentrant;
 ```
+[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/CurveFacet.sol#L68)
 
 Swaps an underlying token for another underlying token in a Curve metapool. In a Curve metapool, one of the tokens is an LP token of another pool. Underlying tokens include the non-LP token in the pool as well as the tokens in the pool that the LP token belongs to. For example, in the [BEAN:3CRV metapool](https://curve.fi/factory/152), the underlying tokens are Bean, USDC, Tether and Dai.
 
@@ -73,6 +75,7 @@ function addLiquidity(
     LibTransfer.To toMode
 ) external payable nonReentrant;
 ```
+[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/CurveFacet.sol#L100)
 
 Adds tokens into a liquidity pool on Curve in exchange for LP tokens.
 
@@ -97,6 +100,7 @@ function removeLiquidity(
     LibTransfer.To toMode
 ) external payable nonReentrant;
 ```
+[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/CurveFacet.sol#L159)
 
 Removes liquidity from a pool on Curve in exchange for equal amounts of all  tokens in the liquidity pool. The Farmer burns their LP tokens in the process.&#x20;
 
@@ -121,6 +125,7 @@ function removeLiquidityImbalance(
     LibTransfer.To toMode
 ) external payable nonReentrant;
 ```
+[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/CurveFacet.sol#L236)
 
 Removes liquidity from a pool on Curve in exchange for an unequal amounts of tokens in the liquidity pool. The Farmer burns LP tokens in the process.
 
@@ -146,6 +151,7 @@ function removeLiquidityOneToken(
     LibTransfer.To toMode
 ) external payable nonReentrant;
 ```
+[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/CurveFacet.sol#L306)
 
 Removes liquidity from a pool on Curve in exchange for an amount of one token in the liquidity pool. The Farmer burns LP tokens in the process.
 
