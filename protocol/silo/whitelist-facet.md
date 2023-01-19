@@ -4,6 +4,8 @@ Whitelist Facet handles the whitelisting/dewhitelisting of assets.
 
 ## Call Functions
 
+### Dewhitelist Token
+
 ```solidity
 function dewhitelistToken(address token) external payable;
 ```
@@ -12,6 +14,8 @@ function dewhitelistToken(address token) external payable;
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `token`   | `address` | WIP         |
+
+### Whitelist Token
 
 ```solidity
 function whitelistToken(
@@ -38,6 +42,8 @@ None
 
 ## Events
 
+### Whitelist Token
+
 ```solidity
 event WhitelistToken(
     address indexed token,
@@ -54,6 +60,8 @@ event WhitelistToken(
 | `selector` | `bytes4`  | WIP         |
 | `seeds`    | `uint256` | WIP         |
 | `stalk`    | `uint256` | WIP         |
+
+### Dewhitelist Token
 
 ```solidity
 event DewhitelistToken(address indexed token);
