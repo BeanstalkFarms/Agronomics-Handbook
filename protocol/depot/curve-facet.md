@@ -22,8 +22,8 @@ function exchange(
 
 Swaps a token for another token in a Curve base, meta, plain or crypto pool. Slippage is tolerated on the amount out. It also verifies that the pool exists in the Curve Factory. This function does not support underlying tokens.
 
-* The stable pair Curve Factory can be found at: [`0xB9fC157394Af804a3578134A6585C0dc9cc990d4`](https://etherscan.io/address/0xB9fC157394Af804a3578134A6585C0dc9cc990d4)&#x20;
-* The non-stable Curve factory can be found at: [`0x0959158b6040D32d04c301A72CBFD6b39E21c9AE`](https://etherscan.io/address/0x0959158b6040D32d04c301A72CBFD6b39E21c9AE)``
+* The stable pair Curve Factory can be found at: [`0xB9fC157394Af804a3578134A6585C0dc9cc990d4`](https://etherscan.io/address/0xB9fC157394Af804a3578134A6585C0dc9cc990d4)
+* The non-stable Curve factory can be found at: [`0x0959158b6040D32d04c301A72CBFD6b39E21c9AE`](https://etherscan.io/address/0x0959158b6040D32d04c301A72CBFD6b39E21c9AE)
 
 | Parameter      | Type      | Description                                                                                                       |
 | -------------- | --------- | ----------------------------------------------------------------------------------------------------------------- |
