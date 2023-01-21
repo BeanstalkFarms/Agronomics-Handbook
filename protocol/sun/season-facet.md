@@ -4,6 +4,8 @@ Season Facet holds the Sunrise function and handles all logic for Season changes
 
 ## Call Functions
 
+### SeasonFacet.sol
+
 #### Sunrise
 
 ```solidity
