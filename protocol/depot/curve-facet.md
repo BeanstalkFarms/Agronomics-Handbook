@@ -115,7 +115,7 @@ Removes liquidity from a pool on Curve in exchange for equal amounts of all  tok
 | `fromMode`      | `From`      | Specifies what balance to receive the tokens from (see [Internal Balances](../../overview/internal-balances.md)). |
 | `toMode`        | `To`        | Specifies what balance to sent the tokens to (see [Internal Balances](../../overview/internal-balances.md)).      |
 
-#### Remove Liquidity Imbalance;
+#### Remove Liquidity Imbalance
 
 ```solidity
 function removeLiquidityImbalance(
