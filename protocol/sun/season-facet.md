@@ -4,7 +4,7 @@ Season Facet holds the Sunrise function and handles all logic for Season changes
 
 ## Call Functions
 
-### Sunrise
+#### Sunrise
 
 ```solidity
 function sunrise() external;
@@ -20,7 +20,7 @@ function sunrise() external;
 
 ### SeasonFacet.sol
 
-### Season
+#### Season
 
 ```solidity
 function season() public view returns (uint32);
@@ -31,7 +31,7 @@ function season() public view returns (uint32);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Paused
+#### Paused
 
 ```solidity
 function paused() public view returns (bool);
@@ -42,7 +42,7 @@ function paused() public view returns (bool);
 |--------------|-------------|
 | `bool`       | WIP         |
 
-### Time
+#### Time
 
 ```solidity
 function time() external view returns (Storage.Season memory);
@@ -53,7 +53,7 @@ function time() external view returns (Storage.Season memory);
 |--------------|-------------|
 | `Season`     | WIP         |
 
-### Season Time
+#### Season Time
 
 ```solidity
 function seasonTime() public view virtual returns (uint32);
@@ -66,7 +66,7 @@ function seasonTime() public view virtual returns (uint32);
 
 ### Weather.sol
 
-### Weather
+#### Weather
 
 ```solidity 
 function weather() public view returns (Storage.Weather memory);
@@ -77,7 +77,7 @@ function weather() public view returns (Storage.Weather memory);
 |--------------|-------------|
 | `Weather`    | WIP         |
 
-### Rain
+#### Rain
 
 ```solidity
 function rain() public view returns (Storage.Rain memory);
@@ -88,7 +88,7 @@ function rain() public view returns (Storage.Rain memory);
 |--------------|-------------|
 | `Rain`       | WIP         |
 
-### Yield
+#### Yield
 
 ```solidity
 function yield() public view returns (uint32);
@@ -99,7 +99,7 @@ function yield() public view returns (uint32);
 |--------------|-------------|
 | `uint32`     | WIP         |
 
-### Plenty Per Root
+#### Plenty Per Root
 
 ```solidity
 function plentyPerRoot(uint32 season) external view returns (uint256);
@@ -116,7 +116,7 @@ function plentyPerRoot(uint32 season) external view returns (uint256);
 
 ### Oracle.sol
 
-### Total DeltaB
+#### Total DeltaB
  
 ```solidity
 function totalDeltaB() external view returns (int256 deltaB);
@@ -127,7 +127,7 @@ function totalDeltaB() external view returns (int256 deltaB);
 |--------------|----------|-------------|
 | `deltaB`     | `int256` | WIP         |
 
-### Pool DeltaB
+#### Pool DeltaB
 
 ```solidity
 function poolDeltaB(address pool) external view returns (int256 deltaB);
@@ -146,7 +146,7 @@ function poolDeltaB(address pool) external view returns (int256 deltaB);
 
 ### SeasonFacet.sol
 
-### Sunrise
+#### Sunrise
 
 ```solidity
 event Sunrise(uint256 indexed season);
@@ -157,7 +157,7 @@ event Sunrise(uint256 indexed season);
 |-----------|-----------|-------------|
 | `season`  | `uint256` | WIP         |
 
-### Incentivization
+#### Incentivization
 
 ```solidity
 event Incentivization(address indexed account, uint256 beans);
@@ -171,7 +171,7 @@ event Incentivization(address indexed account, uint256 beans);
 
 ### Sun.sol
 
-### Reward
+#### Reward
 
 ```solidity
 event Reward(uint32 indexed season, uint256 toField, uint256 toSilo, uint256 toFertilizer);
@@ -185,7 +185,7 @@ event Reward(uint32 indexed season, uint256 toField, uint256 toSilo, uint256 toF
 | `toSilo`       | `uint256` | WIP         |
 | `toFertilizer` | `uint256` | WIP         |
 
-### Soil
+#### Soil
 
 ```solidity
 event Soil(uint32 indexed season, uint256 soil);
@@ -199,7 +199,7 @@ event Soil(uint32 indexed season, uint256 soil);
 
 ### Weather.sol
 
-### Weather Change
+#### Weather Change
 
 ```solidity
 event WeatherChange(uint256 indexed season, uint256 caseId, int8 change);
@@ -212,7 +212,7 @@ event WeatherChange(uint256 indexed season, uint256 caseId, int8 change);
 | `caseId`  | `uint256` | WIP         |
 | `change`  | `int8`    | WIP         |
 
-### Season Of Plenty
+#### Season Of Plenty
 
 ```solidity
 event SeasonOfPlenty(
@@ -231,7 +231,7 @@ event SeasonOfPlenty(
 
 ### Oracle.sol
  
-### Metapool Oracle
+#### Metapool Oracle
  
 ```solidity
 event MetapoolOracle(uint32 indexed season, int256 deltaB, uint256[2] balances);
