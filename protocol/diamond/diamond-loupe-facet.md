@@ -8,7 +8,9 @@ None
 
 ## View Functions
 
-### Facets
+### DiamondLoupeFacet.sol
+
+#### Facets
 
 ```solidity
 function facets() external view override returns (Facet[] memory facets_);
@@ -19,7 +21,7 @@ function facets() external view override returns (Facet[] memory facets_);
 |--------------|-----------|-------------|
 | `facets_`    | `Facet[]` | WIP         |
 
-### Facet Function Selectors
+#### Facet Function Selectors
 
 ```solidity
 function facetFunctionSelectors(address _facet)
@@ -38,7 +40,7 @@ function facetFunctionSelectors(address _facet)
 |---------------------------|------------|-------------|
 | `facetFunctionSelectors_` | `bytes4[]` | WIP         |
 
-### Facet Addresses
+#### Facet Addresses
 
 ```solidity
 function facetAddresses() 
@@ -53,7 +55,7 @@ function facetAddresses()
 |-------------------|-------------|-------------|
 | `facetAddresses_` | `address[]` | WIP         |
    
-### Facet Address   
+#### Facet Address   
 
 ```solidity 
 function facetAddress(bytes4 _functionSelector)
@@ -72,7 +74,7 @@ function facetAddress(bytes4 _functionSelector)
 |-----------------|-----------|-------------|
 | `facetAddress_` | `address` | WIP         |
 
-### Supports Interface
+#### Supports Interface
    
 ```solidity 
 function supportsInterface(bytes4 _interfaceId) 
