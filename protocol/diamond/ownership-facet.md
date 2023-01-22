@@ -2,7 +2,9 @@
 
 ## Call Functions
 
-### Transfer Ownership
+### OwnershipFacet.sol
+
+#### Transfer Ownership
 
 ```solidity
 function transferOwnership(address _newOwner) external;
@@ -13,7 +15,7 @@ function transferOwnership(address _newOwner) external;
 |-------------|-----------|-------------|
 | `_newOwner` | `address` | WIP         |
 
-### Claim Ownership
+#### Claim Ownership
 
 ```solidity
 function claimOwnership() external;
@@ -22,7 +24,9 @@ function claimOwnership() external;
 
 ## View Functions
 
-### Owner
+### OwnershipFacet.sol
+
+#### Owner
 
 ```solidity
 function owner() external view returns (address owner_);
@@ -33,7 +37,7 @@ function owner() external view returns (address owner_);
 |--------------|-----------|-------------|
 | `owner_`     | `address` | WIP         |
 
-### Owner Candidate
+#### Owner Candidate
 
 ```solidity
 function ownerCandidate() external view returns (address ownerCandidate_);
@@ -46,7 +50,9 @@ function ownerCandidate() external view returns (address ownerCandidate_);
 
 ## Events
 
-### Ownership Transferred
+### OwnershipFacet.sol
+
+#### Ownership Transferred
 
 ```solidity
 event OwnershipTransferred(
