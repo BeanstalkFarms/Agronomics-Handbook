@@ -4,7 +4,9 @@ Perform multiple Beanstalk functions calls in a single transaction using Farm ca
 
 ## Call Functions
 
-### Farm
+### FarmFacet.sol
+
+#### Farm
 
 ```solidity
 function farm(bytes[] calldata data)
@@ -25,7 +27,7 @@ Loops through the list of encoded selectors in `data` and performs a `delegateCa
 |--------------|-----------|-----------------------------------------|
 | `results`    | `bytes[]` | The return data from each of the calls. |
 
-### Advanced Farm
+#### Advanced Farm
 
 ```solidity
 function advancedFarm(AdvancedFarmCall[] calldata data)
