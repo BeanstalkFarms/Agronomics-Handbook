@@ -2,7 +2,9 @@
 
 ## Call Functions
 
-### Diamond Cut
+### DiamondCutFacet.sol
+
+#### Diamond Cut
 
 ```solidity
 function diamondCut(
