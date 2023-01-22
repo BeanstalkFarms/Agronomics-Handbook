@@ -2,7 +2,9 @@
 
 ## Call Functions
 
-### Approve Token
+### TokenFacet.sol
+
+#### Approve Token
 
 ```solidity
 function approveToken(
@@ -21,7 +23,7 @@ WIP
 | `token`   | `IERC20`  | WIP         |
 | `amount`  | `uint256` | WIP         |
 
-### Increase Token Allowance
+#### Increase Token Allowance
 
 ```solidity
 function increaseTokenAllowance(
@@ -44,7 +46,7 @@ WIP
 |--------------|-------------|
 | `bool`       | WIP         |
 
-### Token Allowance
+#### Token Allowance
 
 ```solidity
 function tokenAllowance(
@@ -67,7 +69,7 @@ WIP
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Decrease Token Allowance
+#### Decrease Token Allowance
 
 ```solidity
 function decreaseTokenAllowance(
@@ -90,7 +92,7 @@ WIP
 |--------------|-------------|
 | `bool`       | WIP         |
 
-### Permit Token
+#### Permit Token
 
 ```solidity
 function permitToken(
@@ -119,7 +121,7 @@ WIP
 | `r`        | `bytes32` | WIP         |
 | `s`        | `bytes32` | WIP         |
 
-### Transfer Token
+#### Transfer Token
 
 ```solidity
 function transferToken(
@@ -142,7 +144,7 @@ Transfers an asset from a Farmer's Internal and/or External Balance to a Farmer'
 | `fromMode`  | `From`    | Specifies what balance to receive the tokens from (see [Internal Balances](../../overview/internal-balances.md)). |
 | `toMode`    | `To`      | Specifies what balance to send the tokens to (see [Internal Balances](../../overview/internal-balances.md)).      |
 
-### Transfer Internal Token From
+#### Transfer Internal Token From
 
 ```solidity
 function transferInternalTokenFrom(
@@ -165,7 +167,7 @@ WIP
 | `amount`    | `uint256` | WIP         |
 | `toMode`    | `To`      | WIP         |
 
-### Wrap Ether
+#### Wrap Ether
 
 ```solidity
 function wrapEth(uint256 amount, LibTransfer.To mode) external payable;
@@ -179,7 +181,7 @@ Wraps Ether into WETH.
 | `amount`  | `uint256` | The amount of Ether to wrap into WETH. Must be `<= msg.value`.                                             |
 | `toMode`  | `To`      | Specifies what balance to send the WETH to (see [Internal Balances](../../overview/internal-balances.md)). |
 
-### Unwrap Ether
+#### Unwrap Ether
 
 ```solidity
 function unwrapEth(uint256 amount, LibTransfer.From mode) external payable;
@@ -195,7 +197,9 @@ Unwraps WETH into Ether.
 
 ## View Functions
 
-### Get Internal Balance
+### TokenFacet.sol
+
+#### Get Internal Balance
 
 ```solidity
 function getInternalBalance(address account, IERC20 token)
@@ -214,7 +218,7 @@ function getInternalBalance(address account, IERC20 token)
 |--------------|-----------|-------------|
 | `balance`    | `uint256` | WIP         |
 
-### Get Internal Balances
+#### Get Internal Balances
 
 ```solidity
 function getInternalBalances(address account, IERC20[] memory tokens)
@@ -233,7 +237,7 @@ function getInternalBalances(address account, IERC20[] memory tokens)
 |--------------|-------------|-------------|
 | `balances`   | `uint256[]` | WIP         |
    
-### Get External Balance  
+#### Get External Balance  
    
 ```solidity     
 function getExternalBalance(address account, IERC20 token)
@@ -252,7 +256,7 @@ function getExternalBalance(address account, IERC20 token)
 |--------------|-----------|-------------|
 | `balance`    | `uint256` | WIP         |
 
-### Get External Balances
+#### Get External Balances
 
 ```solidity
 function getExternalBalances(address account, IERC20[] memory tokens)
@@ -271,7 +275,7 @@ function getExternalBalances(address account, IERC20[] memory tokens)
 |--------------|-------------|-------------|
 | `balances`   | `uint256[]` | WIP         |
 
-### Get Balance
+#### Get Balance
 
 ```solidity
 function getBalance(address account, IERC20 token)
@@ -290,7 +294,7 @@ function getBalance(address account, IERC20 token)
 |--------------|-----------|-------------|
 | `balance`    | `uint256` | WIP         |
 
-### Get Balances
+#### Get Balances
 
 ```solidity
 function getBalances(address account, IERC20[] memory tokens)
@@ -309,7 +313,7 @@ function getBalances(address account, IERC20[] memory tokens)
 |--------------|-------------|-------------|
 | `balances`   | `uint256[]` | WIP         |
 
-### Get All Balance
+#### Get All Balance
    
 ```solidity     
 function getAllBalance(address account, IERC20 token)
@@ -328,7 +332,7 @@ function getAllBalance(address account, IERC20 token)
 |--------------|-----------|-------------|
 | `b`          | `Balance` | WIP         |
 
-### Get All Balances
+#### Get All Balances
 
 ```solidity
 function getAllBalances(address account, IERC20[] memory tokens)
@@ -347,7 +351,7 @@ function getAllBalances(address account, IERC20[] memory tokens)
 |--------------|-------------|-------------|
 | `balances`   | `Balance[]` | WIP         |
 
-### Token Permit Nonces
+#### Token Permit Nonces
 
 ```solidity
 function tokenPermitNonces(address owner)
@@ -366,7 +370,7 @@ function tokenPermitNonces(address owner)
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Token Permit Domain Separator
+#### Token Permit Domain Separator
 
 ```solidity
 function tokenPermitDomainSeparator() external view returns (bytes32);
@@ -379,7 +383,9 @@ function tokenPermitDomainSeparator() external view returns (bytes32);
 
 ## Events
 
-### Internal Balance Changed
+### TokenFacet.sol
+
+#### Internal Balance Changed
 
 ```solidity
 event InternalBalanceChanged(
@@ -396,7 +402,7 @@ event InternalBalanceChanged(
 | `token`   | `IERC20`  | WIP         |
 | `delta`   | `int256`  | WIP         |
 
-### Token Approval
+#### Token Approval
 
 ```solidity
 event TokenApproval(
