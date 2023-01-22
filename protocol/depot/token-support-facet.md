@@ -4,7 +4,9 @@ Permit ERC-20 and ERC-721 tokens and transfer ERC-721 and ERC-1155 tokens.
 
 ## Call Functions
 
-### ERC-20
+### TokenSupportFacet.sol
+
+#### Permit ERC-20
 
 ```solidity
 function permitERC20(
@@ -33,9 +35,7 @@ permitERC20 is wrapper function for permit of ERC20Permit token.
 | `r`        | `bytes32`      | WIP         |
 | `s`        | `bytes32`      | WIP         |
 
-### ERC-721
-
-### Transfer ERC-721
+#### Transfer ERC-721
 
 ```solidity
 function transferERC721(
@@ -54,7 +54,7 @@ Execute an ERC-721 token transfer.
 | `to`      | `address` | WIP         |
 | `id`      | `uint256` | WIP         |
 
-### Permit ERC-721
+#### Permit ERC-721
 
 ```solidity
 function permitERC721(
@@ -77,9 +77,7 @@ Execute a permit for an ERC-721 token.
 | `deadline` | `uint256`  | WIP         |
 | `sig`      | `bytes`    | WIP         |
 
-### ERC-1155
-
-### Transfer ERC-1155
+#### Transfer ERC-1155
 
 ```solidity
 function transferERC1155(
@@ -100,7 +98,7 @@ Execute an ERC-1155 token transfer of a single Id.
 | `id`      | `uint256`  | WIP         |
 | `value`   | `uint256`  | WIP         |
 
-### Batch Transfer ERC-1155
+#### Batch Transfer ERC-1155
 
 ```solidity
 function batchTransferERC1155(
