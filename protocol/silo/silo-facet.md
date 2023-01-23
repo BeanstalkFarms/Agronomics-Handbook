@@ -4,7 +4,9 @@ SiloFacet handles depositing, withdrawing and claiming whitelisted Silo tokens.
 
 ## Call Functions
 
-### Deposit
+### SiloFacet.sol
+
+#### Deposit
 
 ```solidity
 function deposit(
@@ -23,7 +25,7 @@ Deposits ERC20 token into internal Farmer balances.
 | `amount`  | `uint256` | Amount of tokens to be transfered.                                          |
 | `mode`    | `From`    | Source of funds (INTERNAL, EXTERNAL, EXTERNAL_INTERNAL, INTERNAL_TOLERANT). |
 
-### Withdraw Deposit
+#### Withdraw Deposit
 
 ```solidity
 function withdrawDeposit(
@@ -42,7 +44,7 @@ Withdraws from a single Deposit.
 | `season`  | `uint32`  | Season the Farmer wants to Withdraw. |
 | `amount`  | `uint256` | Tokens to be Withdrawn.              |
 
-### Withdraw Deposits
+#### Withdraw Deposits
 
 ```solidity
 function withdrawDeposits(
@@ -61,7 +63,7 @@ Withdraws from multiple Deposits.
 | `seasons` | `uint32[]`  | Array of Seasons to Withdraw from.                              |
 | `amounts` | `uint256[]` | Array of amounts corresponding to each Season to Withdraw from. |
 
-### Claim Withdrawal
+#### Claim Withdrawal
 
 ```solidity
 function claimWithdrawal(
@@ -80,7 +82,7 @@ Claims tokens from a Withdrawal.
 | `season`  | `uint32`  | Season to Claim.                                                                 |
 | `mode`    | `To`      | Destination of funds (INTERNAL, EXTERNAL, EXTERNAL_INTERNAL, INTERNAL_TOLERANT). |
 
-### Claim Withdrawals
+#### Claim Withdrawals
 
 ```solidity
 function claimWithdrawals(
@@ -99,7 +101,7 @@ Claims tokens from multiple Withdrawals.
 | `seasons` | `uint32[]` | Array of Seasons to Claim.                                                       |
 | `mode`    | `To`       | Destination of funds (INTERNAL, EXTERNAL, EXTERNAL_INTERNAL, INTERNAL_TOLERANT). |
 
-### Transfer Deposit
+#### Transfer Deposit
 
 ```solidity
 function transferDeposit(
@@ -126,7 +128,7 @@ Transfers single Farmer's Deposit.
 |--------------|-----------|-------------------------------------|
 | `bdv`        | `uint256` | Bean Denominated Value of Transfer. |
 
-### Transfer Deposits
+#### Transfer Deposits
 
 ```solidity
 function transferDeposits(
@@ -153,7 +155,7 @@ Transfers multiple Farmer Deposits.
 |--------------|-------------|-----------------------------------------------------------------------------|
 | `bdvs`       | `uint256[]` | Array of Bean Denominated Value of Transfer corresponding from each Season. |
 
-### Approve Deposit
+#### Approve Deposit
 
 ```solidity
 function approveDeposit(
@@ -172,7 +174,7 @@ Approves an address to access a Farmer's Deposit.
 | `token`   | `address` | Address of ERC20.             |
 | `amount`  | `uint256` | Amount to be approved.        |
 
-### Increase Deposit Allowance
+#### Increase Deposit Allowance
 
 ```solidity
 function increaseDepositAllowance(
@@ -195,7 +197,7 @@ Increases allowance of Deposit.
 |--------------|-------------|
 | `bool`       | Success.    |
 
-### Decrease Deposit Allowance
+#### Decrease Deposit Allowance
 
 ```solidity
 function decreaseDepositAllowance(
@@ -218,11 +220,11 @@ Decreases allowance of Deposit.
 |--------------|-------------|
 | `bool`       | Success.    |
 
-### Permit
+#### Permit
 
 Farm balances and Silo Deposits support [EIP-2612 permits](https://eips.ethereum.org/EIPS/eip-2612), which allows Farmers to delegate use of their Farm balances through permits without the need for a separate transaction.
 
-### Permit Deposits
+#### Permit Deposits
 
 ```solidity
 function permitDeposits(
@@ -251,7 +253,7 @@ Permits multiple deposits.
 | `r`        | `bytes32`   | ECDSA signature output.                              |
 | `s`        | `bytes32`   | ECDSA signature output.                              |
 
-### Permit Deposit
+#### Permit Deposit
 
 ```solidity
 function permitDeposit(
@@ -280,7 +282,7 @@ Permits deposit.
 | `r`        | `bytes32` | ECDSA signature output.              |
 | `s`        | `bytes32` | ECDSA signature output.              |
 
-### Update
+#### Update
 
 ```solidity
 function update(address account) external payable;
@@ -293,7 +295,7 @@ Updates Farmer state.
 |-----------|-----------|--------------------|
 | `account` | `address` | Address to update. |
 
-### Plant
+#### Plant
 
 ```solidity
 function plant() external payable returns (uint256 beans);
@@ -306,7 +308,7 @@ Accredits Earned Beans and Stalk to Farmer.
 |--------------|-----------|-------------------------------|
 | `beans`      | `uint256` | Amount of Earned Beans given. |
 
-### Claim Plenty
+#### Claim Plenty
 
 ```solidity
 function claimPlenty() external payable;
@@ -315,7 +317,7 @@ function claimPlenty() external payable;
 
 Claims rewards from a Season Of Plenty (SOP).
 
-### Enroot Deposits
+#### Enroot Deposits
 
 ```solidity
 function enrootDeposits(
@@ -334,7 +336,7 @@ Adds Revitalized Stalk and Seeds to Stalk and Seed balances.
 | `seasons` | `uint32[]`  | Array of Seasons to Enroot.                           |
 | `amounts` | `uint256[]` | Array of amount (corresponding to Seasons) to Enroot. |
 
-### Enroot Deposit
+#### Enroot Deposit
 
 ```solidity
 function enrootDeposit(
@@ -355,9 +357,9 @@ Updates Unripe Deposit.
 
 ## View Functions
 
-### SiloFacet
+### SiloFacet.sol
 
-### Deposit Permit Nonces
+#### Deposit Permit Nonces
 
 ```solidity 
 function depositPermitNonces(address owner) public view virtual returns (uint256);
@@ -372,7 +374,7 @@ function depositPermitNonces(address owner) public view virtual returns (uint256
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Deposit Permit Domain Separator
+#### Deposit Permit Domain Separator
 
 ```solidity
 function depositPermitDomainSeparator() external view returns (bytes32);
@@ -383,9 +385,9 @@ function depositPermitDomainSeparator() external view returns (bytes32);
 |--------------|-------------|
 | `bytes32`    | WIP         |
 
-### SiloExit
+### SiloExit.sol
 
-### Total Stalk
+#### Total Stalk
 
 ```solidity
 function totalStalk() public view returns (uint256);
@@ -396,7 +398,7 @@ function totalStalk() public view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Total Roots
+#### Total Roots
 
 ```solidity
 function totalRoots() public view returns (uint256);
@@ -407,7 +409,7 @@ function totalRoots() public view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Total Seeds
+#### Total Seeds
 
 ```solidity
 function totalSeeds() public view returns (uint256);
@@ -418,7 +420,7 @@ function totalSeeds() public view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Total Earned Beans
+#### Total Earned Beans
 
 ```solidity
 function totalEarnedBeans() public view returns (uint256);
@@ -429,7 +431,7 @@ function totalEarnedBeans() public view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Balance Of Seeds
+#### Balance Of Seeds
 
 ```solidity
 function balanceOfSeeds(address account) public view returns (uint256);
@@ -444,7 +446,7 @@ function balanceOfSeeds(address account) public view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Balance Of Stalk
+#### Balance Of Stalk
 
 ```solidity
 function balanceOfStalk(address account) public view returns (uint256);
@@ -459,7 +461,7 @@ function balanceOfStalk(address account) public view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Balance Of Roots
+#### Balance Of Roots
 
 ```solidity
 function balanceOfRoots(address account) public view returns (uint256);
@@ -474,7 +476,7 @@ function balanceOfRoots(address account) public view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Balance Of Grown Stalk
+#### Balance Of Grown Stalk
 
 ```solidity
 function balanceOfGrownStalk(
@@ -491,7 +493,7 @@ function balanceOfGrownStalk(
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Balance Of Earned Beans
+#### Balance Of Earned Beans
 
 ```solidity        
 function balanceOfEarnedBeans(
@@ -508,7 +510,7 @@ function balanceOfEarnedBeans(
 |--------------|-----------|-------------|
 | `beans`      | `uint256` | WIP         |
 
-### Balance Of Earned Stalk
+#### Balance Of Earned Stalk
 
 ```solidity
 function balanceOfEarnedStalk(
@@ -525,7 +527,7 @@ function balanceOfEarnedStalk(
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Balance Of Earned Seeds
+#### Balance Of Earned Seeds
 
 ```solidity
 function balanceOfEarnedSeeds(
@@ -542,7 +544,7 @@ function balanceOfEarnedSeeds(
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Last Update
+#### Last Update
 
 ```solidity
 function lastUpdate(address account) public view returns (uint32);
@@ -557,7 +559,7 @@ function lastUpdate(address account) public view returns (uint32);
 |--------------|-------------|
 | `uint32`     | WIP         |
 
-### Last Season Of Plenty
+#### Last Season Of Plenty
 
 ```solidity
 function lastSeasonOfPlenty() public view returns (uint32);
@@ -568,7 +570,7 @@ function lastSeasonOfPlenty() public view returns (uint32);
 |--------------|-------------|
 | `uint32`     | WIP         |
 
-### Balance Of Plenty
+#### Balance Of Plenty
 
 ```solidity
 function balanceOfPlenty(
@@ -585,7 +587,7 @@ function balanceOfPlenty(
 |--------------|-----------|-------------|
 | `plenty`     | `uint256` | WIP         |
 
-### Balance Of Rain Roots
+#### Balance Of Rain Roots
 
 ```solidity
 function balanceOfRainRoots(address account) public view returns (uint256);
@@ -600,7 +602,7 @@ function balanceOfRainRoots(address account) public view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Balance Of Sop
+#### Balance Of Sop
 
 ```solidity
 function balanceOfSop(
@@ -617,9 +619,9 @@ function balanceOfSop(
 |--------------|-------------------------|-------------|
 | `sop`        | `AccountSeasonOfPlenty` | WIP         |
 
-### TokenSilo
+### TokenSilo.sol
 
-### Get Deposit
+#### Get Deposit
 
 ```solidity
 function getDeposit(
@@ -641,7 +643,7 @@ function getDeposit(
 | `uint256`    | WIP         |
 | `uint256`    | WIP         |
 
-### Get Withdrawal
+#### Get Withdrawal
 
 ```solidity
 function getWithdrawal(
@@ -662,7 +664,7 @@ function getWithdrawal(
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Get Total Deposited
+#### Get Total Deposited
 
 ```solidity
 function getTotalDeposited(address token) external view returns (uint256);
@@ -677,7 +679,7 @@ function getTotalDeposited(address token) external view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Get Total Withdrawn
+#### Get Total Withdrawn
 
 ```solidity
 function getTotalWithdrawn(address token) external view returns (uint256);
@@ -692,7 +694,7 @@ function getTotalWithdrawn(address token) external view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Token Settings
+#### Token Settings
 
 ```solidity
 function tokenSettings(
@@ -709,7 +711,7 @@ function tokenSettings(
 |------------------------|-------------|
 | `Storage.SiloSettings` | WIP         |
 
-### Withdraw Freeze
+#### Withdraw Freeze
 
 ```solidity
 function withdrawFreeze() public view returns (uint8);
@@ -720,7 +722,7 @@ function withdrawFreeze() public view returns (uint8);
 |--------------|-------------|
 | `uint8`      | WIP         |
 
-### Deposit Allowance
+#### Deposit Allowance
 
 ```solidity
 function depositAllowance(
@@ -743,9 +745,9 @@ function depositAllowance(
 
 ## Events
 
-### Silo
+### Silo.sol
 
-### Plant
+#### Plant
  
 ```solidity
 event Plant(
@@ -760,7 +762,7 @@ event Plant(
 | `account` | `address` | WIP         |
 | `beans`   | `uint256` | WIP         |
 
-### Claim Plenty
+#### Claim Plenty
 
 ```solidity
 event ClaimPlenty(
@@ -775,7 +777,7 @@ event ClaimPlenty(
 | `account` | `address` | WIP         |
 | `plenty`  | `uint256` | WIP         |
 
-### Seeds Balance Changed
+#### Seeds Balance Changed
 
 ```solidity
 event SeedsBalanceChanged(
@@ -790,7 +792,7 @@ event SeedsBalanceChanged(
 | `account` | `address` | WIP         |
 | `delta`   | `int256`  | WIP         |
 
-### Stalk Balance Changed
+#### Stalk Balance Changed
 
 ```solidity
 event StalkBalanceChanged(
@@ -807,9 +809,9 @@ event StalkBalanceChanged(
 | `delta`      | `int256`  | WIP         |
 | `deltaRoots` | `int256`  | WIP         |
 
-### TokenSilo
+### TokenSilo.sol
 
-### Add Deposit
+#### Add Deposit
 
 ```solidity
 event AddDeposit(
@@ -830,7 +832,7 @@ event AddDeposit(
 | `amount`  | `uint256` | WIP         |
 | `bdv`     | `uint256` | WIP         |
 
-### Remove Deposits
+#### Remove Deposits
 
 ```solidity
 event RemoveDeposits(
@@ -851,7 +853,7 @@ event RemoveDeposits(
 | `amounts` | `uint256[]` | WIP         |
 | `amount`  | `uint256`   | WIP         |
 
-### Remove Deposit
+#### Remove Deposit
 
 ```solidity
 event RemoveDeposit(
@@ -870,7 +872,7 @@ event RemoveDeposit(
 | `season`  | `uint32`  | WIP         |
 | `amount`  | `uint256` | WIP         |
 
-### Add Withdrawal
+#### Add Withdrawal
 
 ```solidity
 event AddWithdrawal(
@@ -889,7 +891,7 @@ event AddWithdrawal(
 | `season`  | `uint32`  | WIP         |
 | `amount`  | `uint256` | WIP         |
 
-### Remove Withdrawals
+#### Remove Withdrawals
 
 ```solidity
 event RemoveWithdrawals(
@@ -908,7 +910,7 @@ event RemoveWithdrawals(
 | `seasons` | `uint32[]` | WIP         |
 | `amount`  | `uint256`  | WIP         |
 
-### Remove Withdrawal
+#### Remove Withdrawal
 
 ```solidity
 event RemoveWithdrawal(
@@ -927,7 +929,7 @@ event RemoveWithdrawal(
 | `season`  | `uint32`  | WIP         |
 | `amount`  | `uint256` | WIP         |
 
-### Deposit Approval
+#### Deposit Approval
 
 ```solidity
 event DepositApproval(
