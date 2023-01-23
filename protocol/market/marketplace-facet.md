@@ -2,7 +2,9 @@
 
 ## Call Functions
 
-### Create Pod Listing
+### MarketplaceFacet.sol
+
+#### Create Pod Listing
 
 ```solidity
 function createPodListing(
@@ -27,7 +29,7 @@ function createPodListing(
 | `minFillAmount`       | `uint256` | WIP         |
 | `mode`                | `To`      | WIP         |
 
-### Create Pod Listing V2
+#### Create Pod Listing V2
 
 ```solidity
 function createPodListingV2(
@@ -52,7 +54,7 @@ function createPodListingV2(
 | `pricingFunction`     | `bytes`   | WIP         |
 | `mode`                | `To`      | WIP         |
 
-### Fill Pod Listing
+#### Fill Pod Listing
 
 ```solidity
 function fillPodListing(
@@ -69,7 +71,7 @@ function fillPodListing(
 | `beanAmount` | `uint256`    | WIP         |
 | `mode`       | `From`       | WIP         |
 
-### Fill Pod Listing V2
+#### Fill Pod Listing V2
 
 ```solidity
 function fillPodListingV2(
@@ -88,30 +90,7 @@ function fillPodListingV2(
 | `pricingFunction` | `bytes`      | WIP         |
 | `mode`            | `From`       | WIP         |
 
-### Get Amount Pods From Fill Listing V2
-
-```solidity
-function getAmountPodsFromFillListingV2(
-    uint256 placeInLine, 
-    uint256 podListingAmount,
-    uint256 fillBeanAmount,
-    bytes calldata pricingFunction
-) public pure returns (uint256 amount);
-```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/c20cd7d920643016b5d73eacdfd1b7179d0ea9c2/protocol/contracts/farm/facets/MarketplaceFacet/Listing.sol#L258)
-
-| Parameter          | Type      | Description |
-|--------------------|-----------|-------------|
-| `placeInLine`      | `uint256` | WIP         |
-| `podListingAmount` | `uint256` | WIP         |
-| `fillBeanAmount`   | `uint256` | WIP         |
-| `pricingFunction`  | `bytes`   | WIP         |
-
-| Return Value | Type      | Description |
-|--------------|-----------|-------------|
-| `amount`     | `uint256` | WIP         |
-
-### Cancel Pod Listing
+#### Cancel Pod Listing
 
 ```solidity
 function cancelPodListing(uint256 index) external payable;
@@ -122,7 +101,7 @@ function cancelPodListing(uint256 index) external payable;
 |-----------|-----------|-------------|
 | `index`   | `uint256` | WIP         |
 
-### Create Pod Order
+#### Create Pod Order
 
 ```solidity
 function createPodOrder(
@@ -147,7 +126,7 @@ function createPodOrder(
 |--------------|-----------|-------------|
 | `id`         | `bytes32` | WIP         |
 
-### Create Pod Order V2
+#### Create Pod Order V2
 
 ```solidity
 function createPodOrderV2(
@@ -172,7 +151,7 @@ function createPodOrderV2(
 |--------------|-----------|-------------|
 | `id`         | `bytes32` | WIP         |
 
-### Fill Pod Order
+#### Fill Pod Order
 
 ```solidity
 function fillPodOrder(
@@ -193,7 +172,7 @@ function fillPodOrder(
 | `amount`  | `uint256`  | WIP         |
 | `mode`    | `To`       | WIP         |
 
-### Fill Pod Order V2
+#### Fill Pod Order V2
 
 ```solidity
 function fillPodOrderV2(
@@ -216,28 +195,7 @@ function fillPodOrderV2(
 | `pricingFunction` | `bytes`    | WIP         |
 | `mode`            | `To`       | WIP         |
 
-### Get Amount Beans To Fill Order V2
-
-```solidity
-function getAmountBeansToFillOrderV2(
-    uint256 placeInLine, 
-    uint256 amountPodsFromOrder,
-    bytes calldata pricingFunction
-) public pure returns (uint256 beanAmount);
-```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/c20cd7d920643016b5d73eacdfd1b7179d0ea9c2/protocol/contracts/farm/facets/MarketplaceFacet/Order.sol#L191)
-
-| Parameter             | Type      | Description |
-|-----------------------|-----------|-------------|
-| `placeInLine`         | `uint256` | WIP         |
-| `amountPodsFromOrder` | `uint256` | WIP         |
-| `pricingFunction`     | `bytes`   | WIP         |
-
-| Return Value | Type      | Description |
-|--------------|-----------|-------------|
-| `beanAmount` | `uint256` | WIP         |
-
-### Cancel Pod Order
+#### Cancel Pod Order
 
 ```solidity
 function cancelPodOrder(
@@ -256,7 +214,7 @@ function cancelPodOrder(
 | `minFillAmount`  | `uint256` | WIP         |
 | `mode`           | `To`      | WIP         |
 
-### Cancel Pod Order V2
+#### Cancel Pod Order V2
 
 ```solidity
 function cancelPodOrderV2(
@@ -275,7 +233,7 @@ function cancelPodOrderV2(
 | `pricingFunction` | `bytes`   | WIP         |
 | `mode`            | `To`      | WIP         |
 
-### Transfer Plot
+#### Transfer Plot
 
 ```solidity
 function transferPlot(
@@ -296,7 +254,7 @@ function transferPlot(
 | `start`     | `uint256` | WIP         |
 | `end`       | `uint256` | WIP         |
 
-### Approve Pods
+#### Approve Pods
 
 ```solidity
 function approvePods(address spender, uint256 amount)
@@ -311,11 +269,59 @@ function approvePods(address spender, uint256 amount)
 | `spender` | `address` | WIP         |
 | `amount`  | `uint256` | WIP         |
 
+### Listing.sol
+
+#### Get Amount Pods From Fill Listing V2
+
+```solidity
+function getAmountPodsFromFillListingV2(
+    uint256 placeInLine, 
+    uint256 podListingAmount,
+    uint256 fillBeanAmount,
+    bytes calldata pricingFunction
+) public pure returns (uint256 amount);
+```
+[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/c20cd7d920643016b5d73eacdfd1b7179d0ea9c2/protocol/contracts/farm/facets/MarketplaceFacet/Listing.sol#L258)
+
+| Parameter          | Type      | Description |
+|--------------------|-----------|-------------|
+| `placeInLine`      | `uint256` | WIP         |
+| `podListingAmount` | `uint256` | WIP         |
+| `fillBeanAmount`   | `uint256` | WIP         |
+| `pricingFunction`  | `bytes`   | WIP         |
+
+| Return Value | Type      | Description |
+|--------------|-----------|-------------|
+| `amount`     | `uint256` | WIP         |
+
+### Order.sol
+
+#### Get Amount Beans To Fill Order V2
+
+```solidity
+function getAmountBeansToFillOrderV2(
+    uint256 placeInLine, 
+    uint256 amountPodsFromOrder,
+    bytes calldata pricingFunction
+) public pure returns (uint256 beanAmount);
+```
+[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/c20cd7d920643016b5d73eacdfd1b7179d0ea9c2/protocol/contracts/farm/facets/MarketplaceFacet/Order.sol#L191)
+
+| Parameter             | Type      | Description |
+|-----------------------|-----------|-------------|
+| `placeInLine`         | `uint256` | WIP         |
+| `amountPodsFromOrder` | `uint256` | WIP         |
+| `pricingFunction`     | `bytes`   | WIP         |
+
+| Return Value | Type      | Description |
+|--------------|-----------|-------------|
+| `beanAmount` | `uint256` | WIP         |
+
 ## View Functions
 
-### MarketplaceFacet
+### MarketplaceFacet.sol
 
-### Pod Order
+#### Pod Order
 
 ```solidity
 function podOrder(
@@ -338,7 +344,7 @@ function podOrder(
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Pod Order V2
+#### Pod Order V2
 
 ```solidity
 function podOrderV2(
@@ -361,7 +367,7 @@ function podOrderV2(
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Pod Order By Id
+#### Pod Order By Id
 
 ```solidity
 function podOrderById(bytes32 id) external view returns (uint256);
@@ -376,7 +382,7 @@ function podOrderById(bytes32 id) external view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Pod Listing
+#### Pod Listing
 
 ```solidity
 function podListing(uint256 index) external view returns (bytes32);
@@ -391,9 +397,9 @@ function podListing(uint256 index) external view returns (bytes32);
 |--------------|-------------|
 | `bytes32`    | WIP         |
 
-### Order
+### PodTransfer.sol
 
-### Allowance Pods
+#### Allowance Pods
 
 ```solidity
 function allowancePods(address owner, address spender)
@@ -414,9 +420,9 @@ function allowancePods(address owner, address spender)
 
 ## Events
 
-### Listing
+### Listing.sol
 
-### Pod Listing Created
+#### Pod Listing Created
 
 ```solidity
 event PodListingCreated(
@@ -447,7 +453,7 @@ event PodListingCreated(
 | `mode`                | `To`        | WIP         |
 | `pricingType`         | `PriceType` | WIP         |
 
-### Pod Listing Filled
+#### Pod Listing Filled
 
 ```solidity
 event PodListingFilled(
@@ -470,7 +476,7 @@ event PodListingFilled(
 | `amount`      | `uint256` | WIP         |
 | `costInBeans` | `uint256` | WIP         |
 
-### Pod Listing Cancelled
+#### Pod Listing Cancelled
 
 ```solidity
 event PodListingCancelled(address indexed account, uint256 index);
@@ -482,9 +488,9 @@ event PodListingCancelled(address indexed account, uint256 index);
 | `account` | `address` | WIP         |
 | `index`   | `uint256` | WIP         |
 
-### Order
+### Order.sol
 
-### Pod Order Created
+#### Pod Order Created
 
 ```solidity
 event PodOrderCreated(
@@ -511,7 +517,7 @@ event PodOrderCreated(
 | `pricingFunction` | `bytes`     | WIP         |
 | `priceType`       | `PriceType` | WIP         |
 
-### Pod Order Filled
+#### Pod Order Filled
 
 ```solidity
 event PodOrderFilled(
@@ -536,7 +542,7 @@ event PodOrderFilled(
 | `amount`      | `uint256` | WIP         |
 | `costInBeans` | `uint256` | WIP         |
 
-### Pod Order Cancelled
+#### Pod Order Cancelled
 
 ```solidity
 event PodOrderCancelled(address indexed account, bytes32 id);
@@ -548,9 +554,9 @@ event PodOrderCancelled(address indexed account, bytes32 id);
 | `account` | `address` | WIP         |
 | `id`      | `bytes32` | WIP         |
 
-### PodTransfer
+### PodTransfer.sol
 
-### Plot Transfer
+#### Plot Transfer
 
 ```solidity
 event PlotTransfer(
@@ -569,7 +575,7 @@ event PlotTransfer(
 | `id`      | `uint256` | WIP         |
 | `pods`    | `uint256` | WIP         |
 
-### Pod Approval
+#### Pod Approval
 
 ```solidity
 event PodApproval(
