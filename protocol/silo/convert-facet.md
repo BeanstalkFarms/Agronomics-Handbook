@@ -2,7 +2,9 @@
 
 ## Call Functions
 
-### Convert
+### ConvertFacet.sol
+
+#### Convert
 
 ```solidity
 function convert(
@@ -35,7 +37,9 @@ function convert(
 
 ## View Functions
 
-### Get Max Amount In
+### ConvertFacet.sol
+
+#### Get Max Amount In
 
 ```solidity
 function getMaxAmountIn(
@@ -54,7 +58,7 @@ function getMaxAmountIn(
 |--------------|-----------|-------------|
 | `amountIn`   | `uint256` | WIP         |
 
-### Get Amount Out
+#### Get Amount Out
 
 ```solidity
 function getAmountOut(
@@ -76,7 +80,9 @@ function getAmountOut(
 
 ## Events
 
-### Convert
+### ConvertFacet.sol
+
+#### Convert
 
 ```solidity
 event Convert(
@@ -97,7 +103,7 @@ event Convert(
 | `fromAmount` | `uint256` | WIP         |
 | `toAmount`   | `uint256` | WIP         |
 
-### Remove Deposits
+#### Remove Deposits
 
 ```solidity
 event RemoveDeposits(
