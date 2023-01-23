@@ -10,7 +10,9 @@ None
 
 ## View Functions
 
-### Curve To BDV
+### BDVFacet.sol
+
+#### Curve To BDV
 
 ```solidity
 function curveToBDV(uint256 amount) public view returns (uint256);
@@ -25,7 +27,7 @@ function curveToBDV(uint256 amount) public view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Bean To BDV
+#### Bean To BDV
 
 ```solidity
 function beanToBDV(uint256 amount) public pure returns (uint256);
@@ -40,7 +42,7 @@ function beanToBDV(uint256 amount) public pure returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Unripe LP To BDV
+#### Unripe LP To BDV
 
 ```solidity
 function unripeLPToBDV(uint256 amount) public view returns (uint256);
@@ -55,7 +57,7 @@ function unripeLPToBDV(uint256 amount) public view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Unripe Bean To BDV
+#### Unripe Bean To BDV
 
 ```solidity
 function unripeBeanToBDV(uint256 amount) public view returns (uint256);
@@ -70,7 +72,7 @@ function unripeBeanToBDV(uint256 amount) public view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-### Bdv
+#### Bdv
 
 ```solidity
 function bdv(
