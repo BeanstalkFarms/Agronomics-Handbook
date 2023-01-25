@@ -18,6 +18,8 @@ When Beans are Sown, a Plot is created at the current `podIndex` with `beans * (
 
 When Pods become Harvestable, `harvestableIndex` is incremented by the number of newly Harvestable Pods. Plots are Harvestable if the index of a Plot is less than `harvestableIndex`. Plots can be partially Harvested, in which case Beanstalk deletes the first part of the Plot and creates a new Plot at the `harvestableIndex`. When a Plot is Harvested, the `harvestedIndex` increases by the number of Harvested Pods.
 
+<figure><img src="../../.gitbook/assets/pod-line.png" alt=""><figcaption></figcaption></figure>
+
 ## Fundraiser
 
 Fundraisers allow Beanstalk to raise non-Bean stablecoins to pay for services on behalf of the protocol, such as audits. Fundraisers can be created through the `createFundraiser()` function by Beanstalk or the owner of the contract.
