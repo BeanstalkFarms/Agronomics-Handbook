@@ -144,7 +144,7 @@ Returns the deltaB for a given pool.
 
 ## Events
 
-### [Sunrise](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/SeasonFacet.sol#L19)
+### [Sunrise](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/SeasonFacet.sol#L19) <a href="#event-sunrise" id="event-sunrise"></a>
 
 ```solidity
 event Sunrise(uint256 indexed season);
@@ -156,7 +156,7 @@ Emitted when the Season changes.
 | --------- | --------- | ---------------------- |
 | `season`  | `uint256` | The new Season number. |
 
-### [Incentivization](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/SeasonFacet.sol#L20)
+### [Incentivization](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/SeasonFacet.sol#L20) <a href="#event-incentivization" id="event-incentivization"></a>
 
 ```solidity
 event Incentivization(address indexed account, uint256 beans);
@@ -169,7 +169,7 @@ Emitted when Beanstalk pays Beans to the `sunrise` caller.
 | `account` | `address` | The address to which the reward Beans were sent. |
 | `beans`   | `uint256` | The amount of Beans paid as a reward.            |
 
-### [Reward](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Sun.sol#L23)
+### [Reward](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Sun.sol#L23) <a href="#event-reward" id="event-reward"></a>
 
 ```solidity
 event Reward(uint32 indexed season, uint256 toField, uint256 toSilo, uint256 toFertilizer);
@@ -184,7 +184,7 @@ Emitted during Sunrise when Beans are distributed to the Field, the Silo, and Fe
 | `toSilo`       | `uint256` | The number of Beans distributed to the Silo.           |
 | `toFertilizer` | `uint256` | The number of Beans distributed to Fertilizer holders. |
 
-### [Soil](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Sun.sol#L24)
+### [Soil](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Sun.sol#L24) <a href="#event-soil" id="event-soil"></a>
 
 ```solidity
 event Soil(uint32 indexed season, uint256 soil);
@@ -197,7 +197,7 @@ Emitted during Sunrise when Beanstalk adjusts the amount of available Soil.
 | `season`  | `uint32`  | The Season in which Soil was adjusted. |
 | `soil`    | `uint256` | The new amount of Soil available.      |
 
-### [Weather Change](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Weather.sol#L21)
+### [Weather Change](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Weather.sol#L21) <a href="#event-weather-change" id="event-weather-change"></a>
 
 ```solidity
 event WeatherChange(uint256 indexed season, uint256 caseId, int8 change);
@@ -211,7 +211,7 @@ Emitted when the Weather (now [Temperature](../../misc/terminology-discrepancies
 | `caseId`  | `uint256` | The "[Weather Case](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/init/InitDiamond.sol#L41)". |
 | `change`  | `int8`    | The change in Temperature from the previous value.                                                                              |
 
-### [Season of Plenty](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Weather.sol#L22)
+### [Season of Plenty](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Weather.sol#L22) <a href="#event-season-of-plenty" id="event-season-of-plenty"></a>
 
 ```solidity
 event SeasonOfPlenty(
@@ -229,7 +229,7 @@ Emitted when Beans are minted during the Season of Plenty.
 | `amount`  | `uint256` | The amount of 3CRV which was received for swapping Beans.                  |
 | `toField` | `uint256` | The amount of Beans which were distributed to remaining Pods in the Field. |
 
-### [Metapool Oracle](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Oracle.sol#L20)
+### [Metapool Oracle](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Oracle.sol#L20) <a href="#event-metapool-oracle" id="event-metapool-oracle"></a>
 
 ```solidity
 event MetapoolOracle(uint32 indexed season, int256 deltaB, uint256[2] balances);
