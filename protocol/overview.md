@@ -86,9 +86,9 @@ The Farm allows Farmers to call multiple functions in a single transaction and u
 The Farm consists of 5 Facets:
 
 * ``[`FarmFacet`](depot/farm-facet.md) -> Contains the `farm` function, which allows Farmers to call a series of functions together within Beanstalk.
-* ``[`DepotFacet`](depot/depot-facet.md) -> WIP
+* ``[`DepotFacet`](depot/depot-facet.md) -> Wraps the standalone [Pipeline](https://evmpipeline.org/) contract, providing access to Pipeline from Beanstalk through the use of the `farm` function.
 * ``[`TokenFacet`](depot/token-facet.md) -> Supports transferring assets between Internal and External Balances and between different accounts. Also, supports Wrap/Unwrap logic for ETH.
-* ``[`TokenSupportFacet`](depot/token-support-facet.md) -> WIP
+* ``[`TokenSupportFacet`](depot/token-support-facet.md) -> Handles token permits.
 * ``[`CurveFacet`](depot/curve-facet.md) -> Provides an interface to exchange and add/remove liquidity on Curve directly through Beanstalk.
 
 ### Diamond

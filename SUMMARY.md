@@ -17,6 +17,7 @@
 ## 🌾 Protocol
 
 * [Overview](protocol/overview.md)
+* [Louper](https://louper.dev/diamond/0xc1e088fc1323b20bcbee9bd1b9fc9546db5624c5)
 * [Sun](protocol/sun/README.md)
   * [Season Facet](protocol/sun/season-facet.md)
 * [Silo](protocol/silo/README.md)
@@ -53,8 +54,6 @@
 
 ## 📜 Misc. <a href="#misc" id="misc"></a>
 
-* [BIPs](misc/bips.md)
-* [Videos](misc/videos.md)
 * [Upgrade History](misc/upgrade-history.md)
 * [Algorithm Explanations](misc/algorithm-explanations.md)
 * [FAQ](misc/faq.md)

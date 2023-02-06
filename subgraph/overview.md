@@ -22,7 +22,7 @@ https://gateway.thegraph.com/api/<API_KEY>/subgraphs/id/R9rnzRuiyDybfDsZfoM7eA9w
 
 * [Beanstalk Subgraph Info](https://thegraph.com/explorer/subgraphs/R9rnzRuiyDybfDsZfoM7eA9w8WuHtZKbroGrgWwDw1d)
 * [Beanstalk Subgraph GitHub Repo](https://github.com/BeanstalkFarms/Beanstalk-Subgraph)
-* [Beanstalk UI Subgraph Usage Video Walkthrough](../misc/videos.md)
+* [Beanstalk UI Subgraph Usage Video Walkthrough](broken-reference)
 
 ### **Helpful Subgraph Resources**
 

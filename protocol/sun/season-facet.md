@@ -1,220 +1,217 @@
 # Season Facet
 
-Season Facet holds the Sunrise function and handles all logic for Season changes.
+The Season Facet contains the `sunrise` function and handles all logic for Season changes.
 
 ## Call Functions
 
-### SeasonFacet.sol
-
-#### Sunrise
+### [Sunrise](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/SeasonFacet.sol#L27)
 
 ```solidity
-function sunrise() external;
+function sunrise() external payable;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/SeasonFacet.sol#L27)
 
-`sunrise` advances Beanstalk to the next Season. It can only be called if:
-
-* Beanstalk is not Paused; and
-* The number of Seasons that have occurred is less than the number of hours that have elapsed since Beanstalk was deployed (excluding time spent Paused).
+Advances Beanstalk to the next Season.
 
 ## View Functions
 
-### SeasonFacet.sol
-
-#### Season
+### [Season](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/SeasonFacet.sol#L41)
 
 ```solidity
 function season() public view returns (uint32);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/SeasonFacet.sol#L41)
 
-| Return Value | Description |
-|--------------|-------------|
-| `uint256`    | WIP         |
+Returns the current Season number.
 
-#### Paused
+| Return Value | Description                |
+| ------------ | -------------------------- |
+| `uint256`    | The current Season number. |
+
+### [Paused](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/SeasonFacet.sol#L45)
 
 ```solidity
 function paused() public view returns (bool);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/SeasonFacet.sol#L45)
 
-| Return Value | Description |
-|--------------|-------------|
-| `bool`       | WIP         |
+Returns whether Beanstalk is Paused. When Paused, `sunrise` cannot be called.
 
-#### Time
+| Return Value | Description                  |
+| ------------ | ---------------------------- |
+| `bool`       | Whether Beanstalk is Paused. |
+
+### [Time](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/SeasonFacet.sol#L49)
 
 ```solidity
 function time() external view returns (Storage.Season memory);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/SeasonFacet.sol#L49)
 
-| Return Value | Description |
-|--------------|-------------|
-| `Season`     | WIP         |
+Returns the Season struct.
 
-#### Season Time
+| Return Value | Description                                                        |
+| ------------ | ------------------------------------------------------------------ |
+| `Season`     | The Season struct in [App Storage](../../overview/app-storage.md). |
+
+### [Season Time](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/SeasonFacet.sol#L53)
 
 ```solidity
 function seasonTime() public view virtual returns (uint32);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/SeasonFacet.sol#L53)
 
-| Return Value | Description |
-|--------------|-------------|
-| `uint32`     | WIP         |
+Returns the expected Season number given the current block timestamp. The `sunrise` function can be called when `seasonTime() > season()`.
 
-### Weather.sol
+| Return Value | Description                                                   |
+| ------------ | ------------------------------------------------------------- |
+| `uint32`     | The expected Season number given the current block timestamp. |
 
-#### Weather
+### [Weather](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Weather.sol#L32)
 
-```solidity 
+```solidity
 function weather() public view returns (Storage.Weather memory);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Weather.sol#L32)
 
-| Return Value | Description |
-|--------------|-------------|
-| `Weather`    | WIP         |
+Returns the Weather struct.
 
-#### Rain
+| Return Value | Description                                                                 |
+| ------------ | --------------------------------------------------------------------------- |
+| `Weather`    | Returns the Weather struct in [App Storage](../../overview/app-storage.md). |
+
+### [Rain](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Weather.sol#L36)
 
 ```solidity
 function rain() public view returns (Storage.Rain memory);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Weather.sol#L36)
 
-| Return Value | Description |
-|--------------|-------------|
-| `Rain`       | WIP         |
+Returns the Rain struct.
 
-#### Yield
+| Return Value | Description                                                              |
+| ------------ | ------------------------------------------------------------------------ |
+| `Rain`       | Returns the Rain struct in [App Storage](../../overview/app-storage.md). |
+
+### [Yield](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Weather.sol#L40)
 
 ```solidity
 function yield() public view returns (uint32);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Weather.sol#L40)
 
-| Return Value | Description |
-|--------------|-------------|
-| `uint32`     | WIP         |
+Returns the current Weather.
 
-#### Plenty Per Root
+| Return Value | Description          |
+| ------------ | -------------------- |
+| `uint32`     | The current Weather. |
+
+### [Plenty Per Root](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Weather.sol#L44)
 
 ```solidity
 function plentyPerRoot(uint32 season) external view returns (uint256);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Weather.sol#L44)
 
-| Parameter | Type     | Description |
-|-----------|----------|-------------|
-| `season`  | `uint32` | WIP         |
+Returns the Season of Plenty (SOP) rewards per Root for the given Season.
 
-| Return Value | Description |
-|--------------|-------------|
-| `uint256`    | WIP         |
+| Parameter | Type     | Description                                   |
+| --------- | -------- | --------------------------------------------- |
+| `season`  | `uint32` | The Season to fetch SOP rewards per Root for. |
 
-### Oracle.sol
+| Return Value | Description                           |
+| ------------ | ------------------------------------- |
+| `uint256`    | The SOP rewards for the given Season. |
 
-#### Total DeltaB
- 
+### [Total deltaB](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Oracle.sol#L22)
+
 ```solidity
 function totalDeltaB() external view returns (int256 deltaB);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Oracle.sol#L22)
 
-| Return Value | Type     | Description |
-|--------------|----------|-------------|
-| `deltaB`     | `int256` | WIP         |
+Returns the cumulative deltaB across pools.
 
-#### Pool DeltaB
+| Return Value | Type     | Description            |
+| ------------ | -------- | ---------------------- |
+| `deltaB`     | `int256` | The cumulative deltaB. |
+
+### [Pool deltaB](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Oracle.sol#L26)
 
 ```solidity
 function poolDeltaB(address pool) external view returns (int256 deltaB);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Oracle.sol#L26)
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `pool`    | `address` | WIP         |
+Returns the deltaB for a given pool.
 
-| Return Value | Type     | Description |
-|--------------|----------|-------------|
-| `deltaB`     | `int256` | WIP         |
+| Parameter | Type      | Description               |
+| --------- | --------- | ------------------------- |
+| `pool`    | `address` | The address of the pool . |
+
+| Return Value | Type     | Description                    |
+| ------------ | -------- | ------------------------------ |
+| `deltaB`     | `int256` | The deltaB for the given pool. |
 
 ## Events
 
-### SeasonFacet.sol
-
-#### Sunrise
+### [Sunrise](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/SeasonFacet.sol#L19)
 
 ```solidity
 event Sunrise(uint256 indexed season);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/SeasonFacet.sol#L19)
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `season`  | `uint256` | WIP         |
+Emitted when the Season changes.
 
-#### Incentivization
+| Parameter | Type      | Description            |
+| --------- | --------- | ---------------------- |
+| `season`  | `uint256` | The new Season number. |
+
+### [Incentivization](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/SeasonFacet.sol#L20)
 
 ```solidity
 event Incentivization(address indexed account, uint256 beans);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/SeasonFacet.sol#L20)
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `account` | `address` | WIP         |
-| `beans`   | `uint256` | WIP         |
+Emitted when Beanstalk pays Beans to the `sunrise` caller.
 
-### Sun.sol
+| Parameter | Type      | Description                                      |
+| --------- | --------- | ------------------------------------------------ |
+| `account` | `address` | The address to which the reward Beans were sent. |
+| `beans`   | `uint256` | The amount of Beans paid as a reward.            |
 
-#### Reward
+### [Reward](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Sun.sol#L23)
 
 ```solidity
 event Reward(uint32 indexed season, uint256 toField, uint256 toSilo, uint256 toFertilizer);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Sun.sol#L23)
 
-| Parameter      | Type      | Description |
-|----------------|-----------|-------------|
-| `season`       | `uint32`  | WIP         |
-| `toField`      | `uint256` | WIP         |
-| `toSilo`       | `uint256` | WIP         |
-| `toFertilizer` | `uint256` | WIP         |
+Emitted during Sunrise when Beans are distributed to the Field, the Silo, and Fertilizer.
 
-#### Soil
+| Parameter      | Type      | Description                                            |
+| -------------- | --------- | ------------------------------------------------------ |
+| `season`       | `uint32`  | The Season in which Beans were distributed.            |
+| `toField`      | `uint256` | The number of Beans distributed to the Field.          |
+| `toSilo`       | `uint256` | The number of Beans distributed to the Silo.           |
+| `toFertilizer` | `uint256` | The number of Beans distributed to Fertilizer holders. |
+
+### [Soil](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Sun.sol#L24)
 
 ```solidity
 event Soil(uint32 indexed season, uint256 soil);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Sun.sol#L24)
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `season`  | `uint32`  | WIP         |
-| `soil`    | `uint256` | WIP         |
+Emitted during Sunrise when Beanstalk adjusts the amount of available Soil.
 
-### Weather.sol
+| Parameter | Type      | Description                            |
+| --------- | --------- | -------------------------------------- |
+| `season`  | `uint32`  | The Season in which Soil was adjusted. |
+| `soil`    | `uint256` | The new amount of Soil available.      |
 
-#### Weather Change
+### [Weather Change](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Weather.sol#L21)
 
 ```solidity
 event WeatherChange(uint256 indexed season, uint256 caseId, int8 change);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Weather.sol#L21)
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `season`  | `uint256` | WIP         |
-| `caseId`  | `uint256` | WIP         |
-| `change`  | `int8`    | WIP         |
+Emitted when the Weather (now [Temperature](../../misc/terminology-discrepancies.md)) changes.
 
-#### Season Of Plenty
+| Parameter | Type      | Description                                                                                                                     |
+| --------- | --------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `season`  | `uint256` | The current Season.                                                                                                             |
+| `caseId`  | `uint256` | The "[Weather Case](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/init/InitDiamond.sol#L41)". |
+| `change`  | `int8`    | The change in Temperature from the previous value.                                                                              |
+
+### [Season of Plenty](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Weather.sol#L22)
 
 ```solidity
 event SeasonOfPlenty(
@@ -223,25 +220,25 @@ event SeasonOfPlenty(
     uint256 toField
 );
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Weather.sol#L22)
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `season`  | `uint256` | WIP         |
-| `amount`  | `uint256` | WIP         |
-| `toField` | `uint256` | WIP         |
+Emitted when Beans are minted during the Season of Plenty.
 
-### Oracle.sol
- 
-#### Metapool Oracle
- 
+| Parameter | Type      | Description                                                                |
+| --------- | --------- | -------------------------------------------------------------------------- |
+| `season`  | `uint256` | The Season in which Beans were minted for distribution.                    |
+| `amount`  | `uint256` | The amount of 3CRV which was received for swapping Beans.                  |
+| `toField` | `uint256` | The amount of Beans which were distributed to remaining Pods in the Field. |
+
+### [Metapool Oracle](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Oracle.sol#L20)
+
 ```solidity
 event MetapoolOracle(uint32 indexed season, int256 deltaB, uint256[2] balances);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/SeasonFacet/Oracle.sol#L20)
 
-| Parameter  | Type         | Description |
-|------------|--------------|-------------|
-| `season`   | `uint32`     | WIP         |
-| `deltaB`   | `int256`     | WIP         |
-| `balances` | `uint256[2]` | WIP         |
+Emitted when deltaB is calculated at `sunrise`.&#x20;
+
+| Parameter  | Type         | Description                             |
+| ---------- | ------------ | --------------------------------------- |
+| `season`   | `uint32`     | The current Season.                     |
+| `deltaB`   | `int256`     | The cumulative deltaB.                  |
+| `balances` | `uint256[2]` | An array of token balances in the pool. |

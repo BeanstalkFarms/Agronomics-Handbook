@@ -8,7 +8,7 @@ Decentralized systems will scale infinitely over time, eventually allowing users
 
 No one wants to be limited, but resource scarcity forces innovation. For example, because Ethereum does not lend itself to trading on order books, Automated Market Makers (AMMs) like [Uniswap](https://uniswap.org/) and [Bancor](https://home.bancor.network/) created liquidity pools based on a predefined pricing curve to create an efficient exchange format (instead of a high frequency order book).&#x20;
 
-AMMs are still being iterated and innovated on. Uniswap created an order book/AMM hybrid with Uniswap V3. [Curve](https://curve.fi/) implemented capital efficient pricing curves. Bancor built an omnipool, providing impermanent loss protection. Beanstalk will support a 0% fee AMM.
+AMMs are still being iterated and innovated on. Uniswap created an order book/AMM hybrid with Uniswap V3. [Curve](https://curve.fi/) implemented capital efficient pricing curves. Bancor built an omnipool, providing impermanent loss protection. [Wells](https://github.com/BeanstalkFarms/Wells) will support a 0% fee AMM.
 
 Open source protocols are a public good. More than [250](https://defillama.com/forks) protocols have forked Uniswap V2 to try to improve on its model. Some may call it competitive, but it is also collaborative. Each implementation is more advanced than its previous iteration and is made possible through increasingly efficient allocation of EVM resources.
 
