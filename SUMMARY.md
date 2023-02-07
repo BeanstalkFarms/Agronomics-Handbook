@@ -54,6 +54,7 @@
 
 ## 📜 Misc. <a href="#misc" id="misc"></a>
 
+* [Technical Recordings](https://www.youtube.com/playlist?list=PLyqLJA5Mbo9bdLxT7Cuk1PSYozWbx\_kwr)
 * [Upgrade History](misc/upgrade-history.md)
 * [Algorithm Explanations](misc/algorithm-explanations.md)
 * [FAQ](misc/faq.md)
