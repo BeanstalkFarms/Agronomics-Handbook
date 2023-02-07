@@ -235,7 +235,7 @@ Emitted when Beans are minted during the Season of Plenty.
 event MetapoolOracle(uint32 indexed season, int256 deltaB, uint256[2] balances);
 ```
 
-Emitted when deltaB is calculated at `sunrise`.&#x20;
+Emitted when deltaB is calculated at `sunrise`.
 
 | Parameter  | Type         | Description                             |
 | ---------- | ------------ | --------------------------------------- |
