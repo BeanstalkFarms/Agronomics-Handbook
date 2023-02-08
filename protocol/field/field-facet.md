@@ -196,7 +196,7 @@ Emitted when `account` claims the Beans associated with Harvestable Pods.
 | Parameter | Type        | Description                                   |
 |-----------|-------------|-----------------------------------------------|
 | `account` | `address`   | The account that owns the `plots`.            |
-| `plots`   | `uint256[]` | The indices of Plots that were harvested.     |
+| `plots`   | `uint256[]` | The indices of Plots that were Harvested.     |
 | `beans`   | `uint256`   | The amount of Beans transferred to `account`. |
 
 ### [Pod Listing Cancelled](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L27) <a href="#event-pod-listing-cancelled" id="event-pod-listing-cancelled"></a>
