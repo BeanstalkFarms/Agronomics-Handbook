@@ -1,10 +1,10 @@
 # Fundraiser Facet
 
+Handles the creation, funding, and completion of a Fundraiser.
+
 ## Call Functions
 
-### FundraiserFacet.sol
-
-#### Fund
+### [Fund](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L40)
 
 ```solidity
 function fund(
@@ -13,19 +13,20 @@ function fund(
     LibTransfer.From mode
 ) external payable nonReentrant returns (uint256);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L40)
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `id`      | `uint32`  | WIP         |
-| `amount`  | `uint256` | WIP         |
-| `mode`    | `From`    | WIP         |
+Fund a Fundraiser.
 
-| Return Value | Description |
-|--------------|-------------|
-| `uint256`    | WIP         |
+| Parameter | Type      | Description                                   |
+|-----------|-----------|-----------------------------------------------|
+| `id`      | `uint32`  | The Fundraiser ID.                            |
+| `amount`  | `uint256` | Amount of `fundraisers[id].token` to provide. |
+| `mode`    | `From`    | Balance to spend tokens from.                 |
 
-#### Create Fundraiser
+| Return Value | Description                  |
+|--------------|------------------------------|
+| `uint256`    | The number of Pods received. |
+
+### [Create Fundraiser](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L74)
 
 ```solidity
 function createFundraiser(
@@ -34,65 +35,67 @@ function createFundraiser(
     uint256 amount
 ) external payable;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L74)
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `payee`   | `address` | WIP         |
-| `token`   | `address` | WIP         |
-| `amount`  | `uint256` | WIP         |
+Create a Fundraiser.
+
+| Parameter | Type      | Description                                                                       |
+|-----------|-----------|-----------------------------------------------------------------------------------|
+| `payee`   | `address` | The address to which funds are delivered upon `completeFundraiser`.               |
+| `token`   | `address` | The address of the token that can be sent to the Fundraiser in exchange for Pods. |
+| `amount`  | `uint256` | The amount of `token` that is being raised.                                       |
 
 ## View Functions
 
-### FundraiserFacet.sol
-
-#### Remaining Funding
+### [Remaining Funding](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L95)
 
 ```solidity
 function remainingFunding(uint32 id) public view returns (uint256);
 }
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L95)
 
-| Parameter | Type     | Description |
-|-----------|----------|-------------|
-| `id`      | `uint32` | WIP         |
+Returns the remaining number of tokens to raise.
 
-| Return Value | Description |
-|--------------|-------------|
-| `uint256`    | WIP         |
+| Parameter | Type     | Description        |
+|-----------|----------|--------------------|
+| `id`      | `uint32` | The Fundraiser ID. |
 
-#### Total Funding
+| Return Value | Description                              |
+|--------------|------------------------------------------|
+| `uint256`    | The remaining number of tokens to raise. |
+
+### [Total Funding](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L99)
 
 ```solidity
 function totalFunding(uint32 id) public view returns (uint256);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L99)
 
-| Parameter | Type     | Description |
-|-----------|----------|-------------|
-| `id`      | `uint32` | WIP         |
+Returns the total amount of tokens raised.
 
-| Return Value | Description |
-|--------------|-------------|
-| `uint256`    | WIP         |
+| Parameter | Type     | Description        |
+|-----------|----------|--------------------|
+| `id`      | `uint32` | The Fundraiser ID. |
 
-#### Funding Token
+| Return Value | Description                        |
+|--------------|------------------------------------|
+| `uint256`    | The total amount of tokens raised. |
+
+### [Funding Token](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L103)
 
 ```solidity
 function fundingToken(uint32 id) public view returns (address);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L103)
 
-| Parameter | Type     | Description |
-|-----------|----------|-------------|
-| `id`      | `uint32` | WIP         |
+Returns the address of the token that can be sent to the Fundraiser.
 
-| Return Value | Description |
-|--------------|-------------|
-| `address`    | WIP         |
+| Parameter | Type     | Description        |
+|-----------|----------|--------------------|
+| `id`      | `uint32` | The Fundraiser ID. |
 
-#### Fundraiser
+| Return Value | Description                                                  |
+|--------------|--------------------------------------------------------------|
+| `address`    | The address of the token that can be sent to the Fundraiser. |
+
+### [Fundraiser](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L107)
 
 ```solidity
 function fundraiser(uint32 id)
@@ -100,32 +103,32 @@ function fundraiser(uint32 id)
     view
     returns (Storage.Fundraiser memory);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L107)
 
-| Parameter | Type     | Description |
-|-----------|----------|-------------|
-| `id`      | `uint32` | WIP         |
+Returns the Rain struct.
 
-| Return Value | Type                 | Description |
-|--------------|----------------------|-------------|
-| `memory`     | `Storage.Fundraiser` | WIP         |
+| Parameter | Type     | Description        |
+|-----------|----------|--------------------|
+| `id`      | `uint32` | The Fundraiser ID. |
 
-#### Number Of Fundraisers
+| Return Value | Description                                                                    |
+|--------------|--------------------------------------------------------------------------------|
+| `Fundraiser` | Returns the Fundraiser struct in [App Storage](../../overview/app-storage.md). |
+
+### [Number Of Fundraisers](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L115)
 
 ```solidity
 function numberOfFundraisers() public view returns (uint32);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L115)
 
-| Return Value | Description |
-|--------------|-------------|
-| `uint32`     | WIP         |
+Returns the number of Fundraisers.
+
+| Return Value | Description                |
+|--------------|----------------------------|
+| `uint32`     | The number of Fundraisers. |
 
 ## Events
 
-### FundraiserFacet.sol
-
-#### Create Fundraiser
+### [Create Fundraiser](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L23) <a href="#event-create-fundraiser" id="event-create-fundraiser"></a>
 
 ```solidity
 event CreateFundraiser(
@@ -135,16 +138,17 @@ event CreateFundraiser(
     uint256 amount
 );
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L23)
 
-| Parameter    | Type      | Description |
-|--------------|-----------|-------------|
-| `id`         | `uint32`  | WIP         |
-| `fundraiser` | `address` | WIP         |
-| `token`      | `address` | WIP         |
-| `amount`     | `uint256` | WIP         |
+Emitted when a Fundraiser is created.
 
-#### Fund Fundraiser
+| Parameter    | Type      | Description                                                                       |
+|--------------|-----------|-----------------------------------------------------------------------------------|
+| `id`         | `uint32`  | The Fundraiser ID.                                                                |
+| `fundraiser` | `address` | The address to which funds are delivered.                                         |
+| `token`      | `address` | The address of the token that can be sent to the Fundraiser in exchange for Pods. |
+| `amount`     | `uint256` | The amount of `token` that is being raised.                                       |
+
+### [Fund Fundraiser](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L29) <a href="#event-fund-fundraiser" id="event-fund-fundraiser"></a>
 
 ```solidity
 event FundFundraiser(
@@ -153,21 +157,23 @@ event FundFundraiser(
     uint256 amount
 );
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L29)
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `account` | `address` | WIP         |
-| `id`      | `uint32`  | WIP         |
-| `amount`  | `uint256` | WIP         |
+Emitted when a Farmer calls `fund`.
 
-#### Complete Fundraiser
+| Parameter | Type      | Description                                    |
+|-----------|-----------|------------------------------------------------|
+| `account` | `address` | The address of the Farmer.                     |
+| `id`      | `uint32`  | The Fundraiser ID.                             |
+| `amount`  | `uint256` | The amount of `token` that `account` provided. |
+
+### [Complete Fundraiser](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L34) <a href="#event-complete-fundraiser" id="event-complete-fundraiser"></a>
 
 ```solidity
 event CompleteFundraiser(uint32 indexed id);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L34)
 
-| Parameter | Type     | Description |
-|-----------|----------|-------------|
-| `id`      | `uint32` | WIP         |
+Emitted when a Fundraiser is fully funded.
+
+| Parameter | Type     | Description        |
+|-----------|----------|--------------------|
+| `id`      | `uint32` | The Fundraiser ID. |
