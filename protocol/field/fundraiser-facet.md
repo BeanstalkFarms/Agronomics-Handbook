@@ -104,7 +104,7 @@ function fundraiser(uint32 id)
     returns (Storage.Fundraiser memory);
 ```
 
-Returns the Rain struct.
+Returns the Fundraiser struct.
 
 | Parameter | Type     | Description        |
 |-----------|----------|--------------------|
