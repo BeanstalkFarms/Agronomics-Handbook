@@ -4,9 +4,7 @@ Field sows Beans.
 
 ## Call Functions
 
-### FieldFacet.sol
-
-#### Sow
+### [Sow](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L33)
 
 ```solidity
 function sow(uint256 amount, LibTransfer.From mode)
@@ -14,18 +12,19 @@ function sow(uint256 amount, LibTransfer.From mode)
     payable
     returns (uint256);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L33)
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `amount`  | `uint256` | WIP         |
-| `mode`    | `From`    | WIP         |
+Sow Beans in exchange for Pods.
 
-| Return Value | Description |
-|--------------|-------------|
-| `uint256`    | WIP         |
+| Parameter | Type      | Description                                                 |
+|-----------|-----------|-------------------------------------------------------------|
+| `amount`  | `uint256` | The number of Beans to Sow.                                 |
+| `mode`    | `From`    | The balance to transfer Beans from; see `LibTransfer.From`. |
 
-#### Sow With Min
+| Return Value | Description                  |
+|--------------|------------------------------|
+| `uint256`    | The number of Pods received. |
+
+### [Sow With Min](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L41)
 
 ```solidity
 function sowWithMin(
@@ -34,99 +33,105 @@ function sowWithMin(
     LibTransfer.From mode
 ) public payable;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L41)
 
-| Parameter   | Type      | Description |
-|-------------|-----------|-------------|
-| `amount`    | `uint256` | WIP         |
-| `minAmount` | `uint256` | WIP         |
-| `mode`      | `From`    | WIP         |
+Sow Beans in exchange for Pods. Use at least `minSoil`.
 
-#### Harvest
+| Parameter   | Type      | Description                                                                                               |
+|-------------|-----------|-----------------------------------------------------------------------------------------------------------|
+| `amount`    | `uint256` | The number of Beans to Sow.                                                                               |
+| `minAmount` | `uint256` | The minimum amount of Soil to use; reverts if there is less than this much Soil available upon execution. |
+| `mode`      | `From`    | The balance to transfer Beans from; see `LibTrasfer.From`.                                                |
+
+### [Harvest](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L67)
 
 ```solidity
 function harvest(uint256[] calldata plots, LibTransfer.To mode)
     external
     payable;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L67)
 
-| Parameter | Type        | Description |
-|-----------|-------------|-------------|
-| `plots`   | `uint256[]` | WIP         |
-| `mode`    | `To`        | WIP         |
+Harvest Pods from the Field.
+
+| Parameter | Type        | Description                                            |
+|-----------|-------------|--------------------------------------------------------|
+| `plots`   | `uint256[]` | List of plot IDs to Harvest.                           |
+| `mode`    | `To`        | The balance to transfer Beans to; see `LibTrasfer.To`. |
 
 ## View Functions
 
-### FieldFacet.sol
-
-#### Pod Index
+### [Pod Index](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L110)
 
 ```solidity
 function podIndex() public view returns (uint256);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L110)
 
-| Return Value | Description |
-|--------------|-------------|
-| `uint256`    | WIP         |
+Returns the total number of Pods ever minted.
 
-#### Harvestable Index
+| Return Value | Description                           |
+|--------------|---------------------------------------|
+| `uint256`    | The total number of Pods ever minted. |
+
+### [Harvestable Index](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L114)
 
 ```solidity
 function harvestableIndex() public view returns (uint256);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L114)
 
-| Return Value | Description |
-|--------------|-------------|
-| `uint256`    | WIP         |
+Returns the index below which Pods are Harvestable.
 
-#### Total Pods
+| Return Value | Description                                 |
+|--------------|---------------------------------------------|
+| `uint256`    | The index below which Pods are Harvestable. |
+
+### [Total Pods](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L118)
 
 ```solidity
 function totalPods() public view returns (uint256);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L118)
 
-| Return Value | Description |
-|--------------|-------------|
-| `uint256`    | WIP         |
+Returns the number of outstanding Pods.
 
-#### Total Harvested
+| Return Value | Description                     |
+|--------------|---------------------------------|
+| `uint256`    | The number of outstanding Pods. |
+
+### [Total Harvested](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L122)
 
 ```solidity
 function totalHarvested() public view returns (uint256);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L122)
 
-| Return Value | Description |
-|--------------|-------------|
-| `uint256`    | WIP         |
+Returns the number of Pods that have ever been Harvested.
 
-#### Total Harvestable
+| Return Value | Description                                       |
+|--------------|---------------------------------------------------|
+| `uint256`    | The number of Pods that have ever been Harvested. |
+
+### [Total Harvestable](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L126)
 
 ```solidity
 function totalHarvestable() public view returns (uint256);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L126)
 
-| Return Value | Description |
-|--------------|-------------|
-| `uint256`    | WIP         |
+Returns the number of Pods that are currently Harvestable but have not yet been Harvested.
 
-#### Total Unharvestable
+| Return Value | Description                                                                        |
+|--------------|------------------------------------------------------------------------------------|
+| `uint256`    | The number of Pods that are currently Harvestable but have not yet been Harvested. |
+
+### [Total Unharvestable](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L130)
 
 ```solidity
 function totalUnharvestable() public view returns (uint256);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L130)
 
-| Return Value | Description |
-|--------------|-------------|
-| `uint256`    | WIP         |
+Returns the number of Pods that are not yet Harvestable.
 
-#### Plot
+| Return Value | Description                                      |
+|--------------|--------------------------------------------------|
+| `uint256`    | The number of Pods that are not yet Harvestable. |
+
+### [Plot](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L134)
 
 ```solidity
 function plot(address account, uint256 plotId)
@@ -134,33 +139,33 @@ function plot(address account, uint256 plotId)
     view
     returns (uint256);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L134)
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `account` | `address` | WIP         |
-| `plotId`  | `uint256` | WIP         |
+Returns the number of Pods remaining in a Plot.
 
-| Return Value | Description |
-|--------------|-------------|
-| `uint256`    | WIP         |
+| Parameter | Type      | Description                   |
+|-----------|-----------|-------------------------------|
+| `account` | `address` | The account that owns a Plot. |
+| `plotId`  | `uint256` | The ID of a Plot.             |
 
-#### Total Soil
+| Return Value | Description                             |
+|--------------|-----------------------------------------|
+| `uint256`    | The number of Pods remaining in a Plot. |
+
+### [Total Soil](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L142)
 
 ```solidity    
 function totalSoil() public view returns (uint256);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L142)
 
-| Return Value | Description |
-|--------------|-------------|
-| `uint256`    | WIP         |
+Returns the total available Soil.
+
+| Return Value | Description               |
+|--------------|---------------------------|
+| `uint256`    | The total available Soil. |
 
 ## Events
 
-### FieldFacet.sol
-
-#### Sow
+### [Sow](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L20) <a href="#event-sow" id="event-sow"></a>
 
 ```solidity
 event Sow(
@@ -170,36 +175,39 @@ event Sow(
     uint256 pods
 );
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L20)
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `account` | `address` | WIP         |
-| `index`   | `uint256` | WIP         |
-| `beans`   | `uint256` | WIP         |
-| `pods`    | `uint256` | WIP         |
+Emitted from `LibDibbler.sowNoSoil` when an `account` creates a Plot. A Plot is a set of Pods created in from a single `sow` or `fund` call. 
 
-#### Harvest
+| Parameter | Type      | Description                                         |
+|-----------|-----------|-----------------------------------------------------|
+| `account` | `address` | The account that sowed Beans for Pods.              |
+| `index`   | `uint256` | The place in line of the Plot.                      |
+| `beans`   | `uint256` | The amount of Beans burnt to create the Plot.       |
+| `pods`    | `uint256` | The amount of Pods assocated with the created Plot. |
+
+### [Harvest](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L26) <a href="#event-harvest" id="event-harvest"></a>
 
 ```solidity
 event Harvest(address indexed account, uint256[] plots, uint256 beans);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L26)
 
-| Parameter | Type        | Description |
-|-----------|-------------|-------------|
-| `account` | `address`   | WIP         |
-| `plots`   | `uint256[]` | WIP         |
-| `beans`   | `uint256`   | WIP         |
+Emitted when `account` claims the Beans associated with Harvestable Pods.
 
-#### Pod Listing Cancelled
+| Parameter | Type        | Description                                   |
+|-----------|-------------|-----------------------------------------------|
+| `account` | `address`   | The account that owns the `plots`.            |
+| `plots`   | `uint256[]` | The indices of Plots that were harvested.     |
+| `beans`   | `uint256`   | The amount of Beans transferred to `account`. |
+
+### [Pod Listing Cancelled](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L27) <a href="#event-pod-listing-cancelled" id="event-pod-listing-cancelled"></a>
 
 ```solidity
 event PodListingCancelled(address indexed account, uint256 index);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L27)
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `account` | `address` | WIP         |
-| `index`   | `uint256` | WIP         |
+Emitted when a Pod Listing is cancelled.
+
+| Parameter | Type      | Description                               |
+|-----------|-----------|-------------------------------------------|
+| `account` | `address` | The account that created the Pod Listing. |
+| `index`   | `uint256` | The index of the Plot listed.             |
