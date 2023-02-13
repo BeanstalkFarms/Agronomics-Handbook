@@ -15,10 +15,10 @@ function sow(uint256 amount, LibTransfer.From mode)
 
 Sow Beans in exchange for Pods.
 
-| Parameter | Type      | Description                                                 |
-|-----------|-----------|-------------------------------------------------------------|
-| `amount`  | `uint256` | The number of Beans to Sow.                                 |
-| `mode`    | `From`    | The balance to transfer Beans from; see `LibTransfer.From`. |
+| Parameter | Type      | Description                                                                                        |
+|-----------|-----------|----------------------------------------------------------------------------------------------------|
+| `amount`  | `uint256` | The number of Beans to Sow.                                                                        |
+| `mode`    | `From`    | The balance to transfer Beans from; see [`LibTransfer.From`](../../overview/internal-balances.md). |
 
 | Return Value | Description                  |
 |--------------|------------------------------|
@@ -40,7 +40,7 @@ Sow Beans in exchange for Pods. Use at least `minSoil`.
 |-------------|-----------|-----------------------------------------------------------------------------------------------------------|
 | `amount`    | `uint256` | The number of Beans to Sow.                                                                               |
 | `minAmount` | `uint256` | The minimum amount of Soil to use; reverts if there is less than this much Soil available upon execution. |
-| `mode`      | `From`    | The balance to transfer Beans from; see `LibTrasfer.From`.                                                |
+| `mode`      | `From`    | The balance to transfer Beans from; see [`LibTransfer.From`](../../overview/internal-balances.md).        |
 
 ### [Harvest](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FieldFacet.sol#L67)
 
@@ -52,10 +52,10 @@ function harvest(uint256[] calldata plots, LibTransfer.To mode)
 
 Harvest Pods from the Field.
 
-| Parameter | Type        | Description                                            |
-|-----------|-------------|--------------------------------------------------------|
-| `plots`   | `uint256[]` | List of plot IDs to Harvest.                           |
-| `mode`    | `To`        | The balance to transfer Beans to; see `LibTrasfer.To`. |
+| Parameter | Type        | Description                                                                                    |
+|-----------|-------------|------------------------------------------------------------------------------------------------|
+| `plots`   | `uint256[]` | List of plot IDs to Harvest.                                                                   |
+| `mode`    | `To`        | The balance to transfer Beans to; see [`LibTransfer.To`](../../overview/internal-balances.md). |
 
 ## View Functions
 
