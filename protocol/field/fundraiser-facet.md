@@ -16,11 +16,11 @@ function fund(
 
 Fund a Fundraiser.
 
-| Parameter | Type      | Description                                   |
-|-----------|-----------|-----------------------------------------------|
-| `id`      | `uint32`  | The Fundraiser ID.                            |
-| `amount`  | `uint256` | Amount of `fundraisers[id].token` to provide. |
-| `mode`    | `From`    | Balance to spend tokens from.                 |
+| Parameter | Type      | Description                                                                                  |
+|-----------|-----------|----------------------------------------------------------------------------------------------|
+| `id`      | `uint32`  | The Fundraiser ID.                                                                           |
+| `amount`  | `uint256` | Amount of `fundraisers[id].token` to provide.                                                |
+| `mode`    | `From`    | Balance to spend tokens from; see [`LibTransfer.From`](../../overview/internal-balances.md). |
 
 | Return Value | Description                  |
 |--------------|------------------------------|
