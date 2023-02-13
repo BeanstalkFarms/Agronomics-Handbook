@@ -50,7 +50,6 @@ Create a Fundraiser.
 
 ```solidity
 function remainingFunding(uint32 id) public view returns (uint256);
-}
 ```
 
 Returns the remaining number of tokens to raise.
