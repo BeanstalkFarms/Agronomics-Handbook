@@ -22,7 +22,7 @@ Deposits ERC20 token into internal Farmer balances.
 | `amount`  | `uint256` | Amount of the token to be Deposited. |
 | `mode`    | `From`    | Source of funds ().                  |
 
-#### Withdraw Deposit
+### [Withdraw Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L43)
 
 ```solidity
 function withdrawDeposit(
@@ -32,8 +32,6 @@ function withdrawDeposit(
 ) external payable updateSilo;
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L43)
-
 Withdraws from a single Deposit.
 
 | Parameter | Type      | Description                          |
@@ -42,7 +40,7 @@ Withdraws from a single Deposit.
 | `season`  | `uint32`  | Season the Farmer wants to Withdraw. |
 | `amount`  | `uint256` | Tokens to be Withdrawn.              |
 
-#### Withdraw Deposits
+### [Withdraw Deposits](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L51)
 
 ```solidity
 function withdrawDeposits(
@@ -52,8 +50,6 @@ function withdrawDeposits(
 ) external payable updateSilo;
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L51)
-
 Withdraws from multiple Deposits.
 
 | Parameter | Type        | Description                                                     |
@@ -62,7 +58,7 @@ Withdraws from multiple Deposits.
 | `seasons` | `uint32[]`  | Array of Seasons to Withdraw from.                              |
 | `amounts` | `uint256[]` | Array of amounts corresponding to each Season to Withdraw from. |
 
-#### Claim Withdrawal
+### [Claim Withdrawal](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L63)
 
 ```solidity
 function claimWithdrawal(
@@ -72,8 +68,6 @@ function claimWithdrawal(
 ) external payable nonReentrant;
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L63)
-
 Claims tokens from a Withdrawal.
 
 | Parameter | Type      | Description                                                                        |
@@ -82,7 +76,7 @@ Claims tokens from a Withdrawal.
 | `season`  | `uint32`  | Season to Claim.                                                                   |
 | `mode`    | `To`      | Destination of funds (INTERNAL, EXTERNAL, EXTERNAL\_INTERNAL, INTERNAL\_TOLERANT). |
 
-#### Claim Withdrawals
+### [Claim Withdrawals](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L72)
 
 ```solidity
 function claimWithdrawals(
@@ -92,8 +86,6 @@ function claimWithdrawals(
 ) external payable nonReentrant;
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L72)
-
 Claims tokens from multiple Withdrawals.
 
 | Parameter | Type       | Description                                                                        |
@@ -102,7 +94,7 @@ Claims tokens from multiple Withdrawals.
 | `seasons` | `uint32[]` | Array of Seasons to Claim.                                                         |
 | `mode`    | `To`       | Destination of funds (INTERNAL, EXTERNAL, EXTERNAL\_INTERNAL, INTERNAL\_TOLERANT). |
 
-#### Transfer Deposit
+### [Transfer Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L85)
 
 ```solidity
 function transferDeposit(
@@ -113,8 +105,6 @@ function transferDeposit(
     uint256 amount
 ) external payable nonReentrant returns (uint256 bdv);
 ```
-
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L85)
 
 Transfers single Farmer's Deposit.
 
@@ -130,7 +120,7 @@ Transfers single Farmer's Deposit.
 | ------------ | --------- | ----------------------------------- |
 | `bdv`        | `uint256` | Bean Denominated Value of Transfer. |
 
-#### Transfer Deposits
+### [Transfer Deposits](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L101)
 
 ```solidity
 function transferDeposits(
@@ -141,8 +131,6 @@ function transferDeposits(
     uint256[] calldata amounts
 ) external payable nonReentrant returns (uint256[] memory bdvs);
 ```
-
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L101)
 
 Transfers multiple Farmer Deposits.
 
@@ -158,7 +146,7 @@ Transfers multiple Farmer Deposits.
 | ------------ | ----------- | --------------------------------------------------------------------------- |
 | `bdvs`       | `uint256[]` | Array of Bean Denominated Value of Transfer corresponding from each Season. |
 
-#### Approve Deposit
+### [Approve Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L126)
 
 ```solidity
 function approveDeposit(
@@ -168,8 +156,6 @@ function approveDeposit(
 ) external payable nonReentrant;
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L126)
-
 Approves an address to access a Farmer's Deposit.
 
 | Parameter | Type      | Description                   |
@@ -178,7 +164,7 @@ Approves an address to access a Farmer's Deposit.
 | `token`   | `address` | Address of ERC20.             |
 | `amount`  | `uint256` | Amount to be approved.        |
 
-#### Increase Deposit Allowance
+### [Increase Deposit Allowance](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L136)
 
 ```solidity
 function increaseDepositAllowance(
@@ -187,8 +173,6 @@ function increaseDepositAllowance(
     uint256 addedValue
 ) public virtual nonReentrant returns (bool);
 ```
-
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L136)
 
 Increases allowance of Deposit.
 
@@ -202,7 +186,7 @@ Increases allowance of Deposit.
 | ------------ | ----------- |
 | `bool`       | Success.    |
 
-#### Decrease Deposit Allowance
+### [Decrease Deposit Allowance](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L141)
 
 ```solidity
 function decreaseDepositAllowance(
@@ -211,8 +195,6 @@ function decreaseDepositAllowance(
     uint256 subtractedValue
 ) public virtual nonReentrant returns (bool);
 ```
-
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L141)
 
 Decreases allowance of Deposit.
 
@@ -226,11 +208,11 @@ Decreases allowance of Deposit.
 | ------------ | ----------- |
 | `bool`       | Success.    |
 
-#### Permit
+### Permit
 
 Farm balances and Silo Deposits support [EIP-2612 permits](https://eips.ethereum.org/EIPS/eip-2612), which allows Farmers to delegate use of their Farm balances through permits without the need for a separate transaction.
 
-#### Permit Deposits
+### [Permit Deposits](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L148)
 
 ```solidity
 function permitDeposits(
@@ -245,8 +227,6 @@ function permitDeposits(
 ) external payable nonReentrant;
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L148)
-
 Permits multiple deposits.
 
 | Parameter  | Type        | Description                                          |
@@ -260,7 +240,7 @@ Permits multiple deposits.
 | `r`        | `bytes32`   | ECDSA signature output.                              |
 | `s`        | `bytes32`   | ECDSA signature output.                              |
 
-#### Permit Deposit
+### [Permit Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L164)
 
 ```solidity
 function permitDeposit(
@@ -275,8 +255,6 @@ function permitDeposit(
 ) external payable nonReentrant;
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L164)
-
 Permits deposit.
 
 | Parameter  | Type      | Description                          |
@@ -290,13 +268,11 @@ Permits deposit.
 | `r`        | `bytes32` | ECDSA signature output.              |
 | `s`        | `bytes32` | ECDSA signature output.              |
 
-#### Update
+### [Update](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L193)
 
 ```solidity
 function update(address account) external payable;
 ```
-
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L193)
 
 Updates Farmer state.
 
@@ -304,13 +280,11 @@ Updates Farmer state.
 | --------- | --------- | ------------------ |
 | `account` | `address` | Address to update. |
 
-#### Plant
+### [Plant](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L197)
 
 ```solidity
 function plant() external payable returns (uint256 beans);
 ```
-
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L197)
 
 Accredits Earned Beans and Stalk to Farmer.
 
@@ -318,17 +292,15 @@ Accredits Earned Beans and Stalk to Farmer.
 | ------------ | --------- | ----------------------------- |
 | `beans`      | `uint256` | Amount of Earned Beans given. |
 
-#### Claim Plenty
+### [Claim Plenty](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L201)
 
 ```solidity
 function claimPlenty() external payable;
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L201)
-
 Claims rewards from a Season Of Plenty (SOP).
 
-#### Enroot Deposits
+### [Enroot Deposits](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L209)
 
 ```solidity
 function enrootDeposits(
@@ -338,8 +310,6 @@ function enrootDeposits(
 ) external nonReentrant updateSilo;
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L209)
-
 Adds Revitalized Stalk and Seeds to Stalk and Seed balances.
 
 | Parameter | Type        | Description                                           |
@@ -348,7 +318,7 @@ Adds Revitalized Stalk and Seeds to Stalk and Seed balances.
 | `seasons` | `uint32[]`  | Array of Seasons to Enroot.                           |
 | `amounts` | `uint256[]` | Array of amount (corresponding to Seasons) to Enroot. |
 
-#### Enroot Deposit
+### [Enroot Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L252)
 
 ```solidity
 function enrootDeposit(
@@ -357,8 +327,6 @@ function enrootDeposit(
     uint256 amount
 ) external nonReentrant updateSilo;
 ```
-
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L252)
 
 Updates Unripe Deposit.
 
@@ -370,15 +338,11 @@ Updates Unripe Deposit.
 
 ## View Functions
 
-### SiloFacet.sol
-
-#### Deposit Permit Nonces
+### [Deposit Permit Nonces](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L178)
 
 ```solidity
 function depositPermitNonces(address owner) public view virtual returns (uint256);
 ```
-
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L178)
 
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
@@ -388,76 +352,62 @@ function depositPermitNonces(address owner) public view virtual returns (uint256
 | ------------ | ----------- |
 | `uint256`    | WIP         |
 
-#### Deposit Permit Domain Separator
+### [Deposit Permit Domain Separator](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L186)
 
 ```solidity
 function depositPermitDomainSeparator() external view returns (bytes32);
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L186)
-
 | Return Value | Description |
 | ------------ | ----------- |
 | `bytes32`    | WIP         |
 
-### SiloExit.sol
-
-#### Total Stalk
+### [Total Stalk](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L34)
 
 ```solidity
 function totalStalk() public view returns (uint256);
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L34)
-
 | Return Value | Description |
 | ------------ | ----------- |
 | `uint256`    | WIP         |
 
-#### Total Roots
+### [Total Roots](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L38)
 
 ```solidity
 function totalRoots() public view returns (uint256);
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L38)
-
 | Return Value | Description |
 | ------------ | ----------- |
 | `uint256`    | WIP         |
 
-#### Total Seeds
+### [Total Seeds](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L42)
 
 ```solidity
 function totalSeeds() public view returns (uint256);
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L42)
-
 | Return Value | Description |
 | ------------ | ----------- |
 | `uint256`    | WIP         |
 
-#### Total Earned Beans
+### [Total Earned Beans](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L46)
 
 ```solidity
 function totalEarnedBeans() public view returns (uint256);
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L46)
-
 | Return Value | Description |
 | ------------ | ----------- |
 | `uint256`    | WIP         |
 
-#### Balance Of Seeds
+### [Balance Of Seeds](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L50)
 
 ```solidity
 function balanceOfSeeds(address account) public view returns (uint256);
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L50)
-
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
 | `account` | `address` | WIP         |
@@ -466,14 +416,12 @@ function balanceOfSeeds(address account) public view returns (uint256);
 | ------------ | ----------- |
 | `uint256`    | WIP         |
 
-#### Balance Of Stalk
+### [Balance Of Stalk](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L54)
 
 ```solidity
 function balanceOfStalk(address account) public view returns (uint256);
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L54)
-
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
 | `account` | `address` | WIP         |
@@ -482,14 +430,12 @@ function balanceOfStalk(address account) public view returns (uint256);
 | ------------ | ----------- |
 | `uint256`    | WIP         |
 
-#### Balance Of Roots
+### [Balance Of Roots](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L58)
 
 ```solidity
 function balanceOfRoots(address account) public view returns (uint256);
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L58)
-
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
 | `account` | `address` | WIP         |
@@ -498,7 +444,7 @@ function balanceOfRoots(address account) public view returns (uint256);
 | ------------ | ----------- |
 | `uint256`    | WIP         |
 
-#### Balance Of Grown Stalk
+### [Balance Of Grown Stalk](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L62)
 
 ```solidity
 function balanceOfGrownStalk(
@@ -506,8 +452,6 @@ function balanceOfGrownStalk(
 ) public view returns (uint256);
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L62)
-
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
 | `account` | `address` | WIP         |
@@ -516,15 +460,13 @@ function balanceOfGrownStalk(
 | ------------ | ----------- |
 | `uint256`    | WIP         |
 
-#### Balance Of Earned Beans
+### [Balance Of Earned Beans](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L74)
 
 ```solidity
 function balanceOfEarnedBeans(
     address account
 ) public view returns (uint256 beans);
 ```
-
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L74)
 
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
@@ -534,7 +476,7 @@ function balanceOfEarnedBeans(
 | ------------ | --------- | ----------- |
 | `beans`      | `uint256` | WIP         |
 
-#### Balance Of Earned Stalk
+### [Balance Of Earned Stalk](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L103)
 
 ```solidity
 function balanceOfEarnedStalk(
@@ -542,8 +484,6 @@ function balanceOfEarnedStalk(
 ) public view returns (uint256);
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L103)
-
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
 | `account` | `address` | WIP         |
@@ -552,7 +492,7 @@ function balanceOfEarnedStalk(
 | ------------ | ----------- |
 | `uint256`    | WIP         |
 
-#### Balance Of Earned Seeds
+### [Balance Of Earned Seeds](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L111)
 
 ```solidity
 function balanceOfEarnedSeeds(
@@ -560,8 +500,6 @@ function balanceOfEarnedSeeds(
 ) public view returns (uint256);
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L111)
-
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
 | `account` | `address` | WIP         |
@@ -570,13 +508,11 @@ function balanceOfEarnedSeeds(
 | ------------ | ----------- |
 | `uint256`    | WIP         |
 
-#### Last Update
+### [Last Update](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L119)
 
 ```solidity
 function lastUpdate(address account) public view returns (uint32);
 ```
-
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L119)
 
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
@@ -586,27 +522,23 @@ function lastUpdate(address account) public view returns (uint32);
 | ------------ | ----------- |
 | `uint32`     | WIP         |
 
-#### Last Season Of Plenty
+### [Last Season Of Plenty](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L127)
 
 ```solidity
 function lastSeasonOfPlenty() public view returns (uint32);
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L127)
-
 | Return Value | Description |
 | ------------ | ----------- |
 | `uint32`     | WIP         |
 
-#### Balance Of Plenty
+### [Balance Of Plenty](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L131)
 
 ```solidity
 function balanceOfPlenty(
     address account
 ) public view returns (uint256 plenty);
 ```
-
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L131)
 
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
@@ -616,13 +548,11 @@ function balanceOfPlenty(
 | ------------ | --------- | ----------- |
 | `plenty`     | `uint256` | WIP         |
 
-#### Balance Of Rain Roots
+### [Balance Of Rain Roots](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L173)
 
 ```solidity
 function balanceOfRainRoots(address account) public view returns (uint256);
 ```
-
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L173)
 
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
@@ -632,15 +562,13 @@ function balanceOfRainRoots(address account) public view returns (uint256);
 | ------------ | ----------- |
 | `uint256`    | WIP         |
 
-#### Balance Of Sop
+### [Balance Of Sop](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L177)
 
 ```solidity
 function balanceOfSop(
     address account
 ) external view returns (AccountSeasonOfPlenty memory sop);
 ```
-
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloExit.sol#L177)
 
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
@@ -650,9 +578,7 @@ function balanceOfSop(
 | ------------ | ----------------------- | ----------- |
 | `sop`        | `AccountSeasonOfPlenty` | WIP         |
 
-### TokenSilo.sol
-
-#### Get Deposit
+### [Get Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L78)
 
 ```solidity
 function getDeposit(
@@ -662,8 +588,6 @@ function getDeposit(
 ) external view returns (uint256, uint256);
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L78)
-
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
 | `account` | `address` | WIP         |
@@ -675,7 +599,7 @@ function getDeposit(
 | `uint256`    | WIP         |
 | `uint256`    | WIP         |
 
-#### Get Withdrawal
+### [Get Withdrawal](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L86)
 
 ```solidity
 function getWithdrawal(
@@ -685,8 +609,6 @@ function getWithdrawal(
 ) external view returns (uint256);
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L86)
-
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
 | `account` | `address` | WIP         |
@@ -697,14 +619,12 @@ function getWithdrawal(
 | ------------ | ----------- |
 | `uint256`    | WIP         |
 
-#### Get Total Deposited
+### [Get Total Deposited](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L94)
 
 ```solidity
 function getTotalDeposited(address token) external view returns (uint256);
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L94)
-
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
 | `token`   | `address` | WIP         |
@@ -713,14 +633,12 @@ function getTotalDeposited(address token) external view returns (uint256);
 | ------------ | ----------- |
 | `uint256`    | WIP         |
 
-#### Get Total Withdrawn
+### [Get Total Withdrawn](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L98)
 
 ```solidity
 function getTotalWithdrawn(address token) external view returns (uint256);
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L98)
-
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
 | `token`   | `address` | WIP         |
@@ -729,15 +647,13 @@ function getTotalWithdrawn(address token) external view returns (uint256);
 | ------------ | ----------- |
 | `uint256`    | WIP         |
 
-#### Token Settings
+### [Token Settings](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L102)
 
 ```solidity
 function tokenSettings(
     address token
 ) external view returns (Storage.SiloSettings memory);
 ```
-
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L102)
 
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
@@ -747,19 +663,17 @@ function tokenSettings(
 | ---------------------- | ----------- |
 | `Storage.SiloSettings` | WIP         |
 
-#### Withdraw Freeze
+### [Withdraw Freeze](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L110)
 
 ```solidity
 function withdrawFreeze() public view returns (uint8);
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L110)
-
 | Return Value | Description |
 | ------------ | ----------- |
 | `uint8`      | WIP         |
 
-#### Deposit Allowance
+### [Deposit Allowance](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L390)
 
 ```solidity
 function depositAllowance(
@@ -768,8 +682,6 @@ function depositAllowance(
     address token
 ) public view virtual returns (uint256);
 ```
-
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L390)
 
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
@@ -783,9 +695,7 @@ function depositAllowance(
 
 ## Events
 
-### Silo.sol
-
-#### Plant
+### [Plant](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/Silo.sol#L21) <a href="#event-plant" id="event-plant"></a>
 
 ```solidity
 event Plant(
@@ -794,14 +704,12 @@ event Plant(
 );
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/Silo.sol#L21)
-
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
 | `account` | `address` | WIP         |
 | `beans`   | `uint256` | WIP         |
 
-#### Claim Plenty
+### [Claim Plenty](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/Silo.sol#L26) <a href="#event-claim-plenty" id="event-claim-plenty"></a>
 
 ```solidity
 event ClaimPlenty(
@@ -810,14 +718,12 @@ event ClaimPlenty(
 );
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/Silo.sol#L26)
-
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
 | `account` | `address` | WIP         |
 | `plenty`  | `uint256` | WIP         |
 
-#### Seeds Balance Changed
+### [Seeds Balance Changed](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/Silo.sol#L31) <a href="#event-seeds-balance-changed" id="event-seeds-balance-changed"></a>
 
 ```solidity
 event SeedsBalanceChanged(
@@ -826,14 +732,12 @@ event SeedsBalanceChanged(
 );
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/Silo.sol#L31)
-
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
 | `account` | `address` | WIP         |
 | `delta`   | `int256`  | WIP         |
 
-#### Stalk Balance Changed
+### [Stalk Balance Changed](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/Silo.sol#L36) <a href="#event-stalk-balance-changed" id="event-stalk-balance-changed"></a>
 
 ```solidity
 event StalkBalanceChanged(
@@ -843,17 +747,13 @@ event StalkBalanceChanged(
 );
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/Silo.sol#L36)
-
 | Parameter    | Type      | Description |
 | ------------ | --------- | ----------- |
 | `account`    | `address` | WIP         |
 | `delta`      | `int256`  | WIP         |
 | `deltaRoots` | `int256`  | WIP         |
 
-### TokenSilo.sol
-
-#### Add Deposit
+### [Add Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L20) <a href="#event-add-deposit" id="event-add-deposit"></a>
 
 ```solidity
 event AddDeposit(
@@ -865,8 +765,6 @@ event AddDeposit(
 );
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L20)
-
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
 | `account` | `address` | WIP         |
@@ -875,7 +773,7 @@ event AddDeposit(
 | `amount`  | `uint256` | WIP         |
 | `bdv`     | `uint256` | WIP         |
 
-#### Remove Deposits
+### [Remove Deposits](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L27) <a href="#event-remove-deposits" id="event-remove-deposits"></a>
 
 ```solidity
 event RemoveDeposits(
@@ -887,8 +785,6 @@ event RemoveDeposits(
 );
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L27)
-
 | Parameter | Type        | Description |
 | --------- | ----------- | ----------- |
 | `account` | `address`   | WIP         |
@@ -897,7 +793,7 @@ event RemoveDeposits(
 | `amounts` | `uint256[]` | WIP         |
 | `amount`  | `uint256`   | WIP         |
 
-#### Remove Deposit
+### [Remove Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L34) <a href="#event-remove-deposit" id="event-remove-deposit"></a>
 
 ```solidity
 event RemoveDeposit(
@@ -908,8 +804,6 @@ event RemoveDeposit(
 );
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L34)
-
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
 | `account` | `address` | WIP         |
@@ -917,7 +811,7 @@ event RemoveDeposit(
 | `season`  | `uint32`  | WIP         |
 | `amount`  | `uint256` | WIP         |
 
-#### Add Withdrawal
+### [Add Withdrawal](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L41) <a href="#event-add-withdrawal" id="event-add-withdrawal"></a>
 
 ```solidity
 event AddWithdrawal(
@@ -928,8 +822,6 @@ event AddWithdrawal(
 );
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L41)
-
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
 | `account` | `address` | WIP         |
@@ -937,7 +829,7 @@ event AddWithdrawal(
 | `season`  | `uint32`  | WIP         |
 | `amount`  | `uint256` | WIP         |
 
-#### Remove Withdrawals
+### [Remove Withdrawals](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L47) <a href="#event-remove-withdrawals" id="event-remove-withdrawals"></a>
 
 ```solidity
 event RemoveWithdrawals(
@@ -948,8 +840,6 @@ event RemoveWithdrawals(
 );
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L47)
-
 | Parameter | Type       | Description |
 | --------- | ---------- | ----------- |
 | `account` | `address`  | WIP         |
@@ -957,7 +847,7 @@ event RemoveWithdrawals(
 | `seasons` | `uint32[]` | WIP         |
 | `amount`  | `uint256`  | WIP         |
 
-#### Remove Withdrawal
+### [Remove Withdrawal](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L53) <a href="#event-remove-withdrawal" id="event-remove-withdrawal"></a>
 
 ```solidity
 event RemoveWithdrawal(
@@ -968,8 +858,6 @@ event RemoveWithdrawal(
 );
 ```
 
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L53)
-
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
 | `account` | `address` | WIP         |
@@ -977,7 +865,7 @@ event RemoveWithdrawal(
 | `season`  | `uint32`  | WIP         |
 | `amount`  | `uint256` | WIP         |
 
-#### Deposit Approval
+### [Deposit Approval](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L60) <a href="#event-deposit-approval" id="event-deposit-approval"></a>
 
 ```solidity
 event DepositApproval(
@@ -987,8 +875,6 @@ event DepositApproval(
     uint256 amount
 );
 ```
-
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/TokenSilo.sol#L60)
 
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |
