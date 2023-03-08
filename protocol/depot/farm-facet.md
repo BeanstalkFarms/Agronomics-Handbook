@@ -4,9 +4,7 @@ Perform multiple Beanstalk functions calls in a single transaction using Farm ca
 
 ## Call Functions
 
-### FarmFacet.sol
-
-#### Farm
+### [Farm](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/FarmFacet.sol#L35)
 
 ```solidity
 function farm(bytes[] calldata data)
@@ -15,7 +13,6 @@ function farm(bytes[] calldata data)
     withEth
     returns (bytes[] memory results);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/FarmFacet.sol#L35)
 
 Loops through the list of encoded selectors in `data` and performs a `delegateCall` on each of them.
 
@@ -27,7 +24,7 @@ Loops through the list of encoded selectors in `data` and performs a `delegateCa
 |--------------|-----------|-----------------------------------------|
 | `results`    | `bytes[]` | The return data from each of the calls. |
 
-#### Advanced Farm
+### [Advanced Farm](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/FarmFacet.sol#L53)
 
 ```solidity
 function advancedFarm(AdvancedFarmCall[] calldata data)
@@ -36,7 +33,6 @@ function advancedFarm(AdvancedFarmCall[] calldata data)
     withEth
     returns (bytes[] memory results);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/FarmFacet.sol#L53)
 
 Execute multiple AdvancedFarmCalls.
 
