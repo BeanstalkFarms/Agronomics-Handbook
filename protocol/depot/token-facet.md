@@ -2,9 +2,7 @@
 
 ## Call Functions
 
-### TokenFacet.sol
-
-#### Approve Token
+### [Approve Token](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L90)
 
 ```solidity
 function approveToken(
@@ -13,7 +11,6 @@ function approveToken(
     uint256 amount
 ) external payable nonReentrant;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L90)
 
 WIP
 
@@ -23,7 +20,7 @@ WIP
 | `token`   | `IERC20`  | WIP         |
 | `amount`  | `uint256` | WIP         |
 
-#### Increase Token Allowance
+### [Increase Token Allowance](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L98)
 
 ```solidity
 function increaseTokenAllowance(
@@ -32,7 +29,6 @@ function increaseTokenAllowance(
     uint256 addedValue
 ) public virtual nonReentrant returns (bool);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L98)
 
 WIP
 
@@ -46,7 +42,7 @@ WIP
 |--------------|-------------|
 | `bool`       | WIP         |
 
-#### Token Allowance
+### [Token Allowance](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L112)
 
 ```solidity
 function tokenAllowance(
@@ -55,7 +51,6 @@ function tokenAllowance(
     IERC20 token
 ) public view virtual returns (uint256);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L112)
 
 WIP
 
@@ -69,7 +64,7 @@ WIP
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-#### Decrease Token Allowance
+### [Decrease Token Allowance](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L120)
 
 ```solidity
 function decreaseTokenAllowance(
@@ -78,7 +73,6 @@ function decreaseTokenAllowance(
     uint256 subtractedValue
 ) public virtual nonReentrant returns (bool);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L120)
 
 WIP
 
@@ -92,7 +86,7 @@ WIP
 |--------------|-------------|
 | `bool`       | WIP         |
 
-#### Permit Token
+### [Permit Token](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L143)
 
 ```solidity
 function permitToken(
@@ -106,7 +100,6 @@ function permitToken(
     bytes32 s
 ) external payable nonReentrant;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L143)
 
 WIP
 
@@ -121,7 +114,7 @@ WIP
 | `r`        | `bytes32` | WIP         |
 | `s`        | `bytes32` | WIP         |
 
-#### Transfer Token
+### [Transfer Token](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L48)
 
 ```solidity
 function transferToken(
@@ -132,7 +125,6 @@ function transferToken(
     LibTransfer.To toMode
 ) external payable;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L48)
 
 Transfers an asset from a Farmer's Internal and/or External Balance to a Farmer's Internal or External Balance.
 
@@ -144,7 +136,7 @@ Transfers an asset from a Farmer's Internal and/or External Balance to a Farmer'
 | `fromMode`  | `From`    | Specifies what balance to receive the tokens from (see [Internal Balances](../../overview/internal-balances.md)). |
 | `toMode`    | `To`      | Specifies what balance to send the tokens to (see [Internal Balances](../../overview/internal-balances.md)).      |
 
-#### Transfer Internal Token From
+### [Transfer Internal Token From](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L65)
 
 ```solidity
 function transferInternalTokenFrom(
@@ -155,7 +147,6 @@ function transferInternalTokenFrom(
     LibTransfer.To toMode
 ) external payable nonReentrant;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L65)
 
 WIP
 
@@ -167,12 +158,11 @@ WIP
 | `amount`    | `uint256` | WIP         |
 | `toMode`    | `To`      | WIP         |
 
-#### Wrap Ether
+### [Wrap Ether](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L178)
 
 ```solidity
 function wrapEth(uint256 amount, LibTransfer.To mode) external payable;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L178)
 
 Wraps Ether into WETH.
 
@@ -181,12 +171,11 @@ Wraps Ether into WETH.
 | `amount`  | `uint256` | The amount of Ether to wrap into WETH. Must be `<= msg.value`.                                             |
 | `toMode`  | `To`      | Specifies what balance to send the WETH to (see [Internal Balances](../../overview/internal-balances.md)). |
 
-#### Unwrap Ether
+### [Unwrap Ether](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L183)
 
 ```solidity
 function unwrapEth(uint256 amount, LibTransfer.From mode) external payable;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L183)
 
 Unwraps WETH into Ether.
 
@@ -197,9 +186,7 @@ Unwraps WETH into Ether.
 
 ## View Functions
 
-### TokenFacet.sol
-
-#### Get Internal Balance
+### [Get Internal Balance](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L193)
 
 ```solidity
 function getInternalBalance(address account, IERC20 token)
@@ -207,7 +194,6 @@ function getInternalBalance(address account, IERC20 token)
     view
     returns (uint256 balance);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L193)
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
@@ -218,7 +204,7 @@ function getInternalBalance(address account, IERC20 token)
 |--------------|-----------|-------------|
 | `balance`    | `uint256` | WIP         |
 
-#### Get Internal Balances
+### [Get Internal Balances](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L201)
 
 ```solidity
 function getInternalBalances(address account, IERC20[] memory tokens)
@@ -226,7 +212,6 @@ function getInternalBalances(address account, IERC20[] memory tokens)
     view
     returns (uint256[] memory balances);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L201)
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -237,7 +222,7 @@ function getInternalBalances(address account, IERC20[] memory tokens)
 |--------------|-------------|-------------|
 | `balances`   | `uint256[]` | WIP         |
    
-#### Get External Balance  
+### [Get External Balance](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L214)
    
 ```solidity     
 function getExternalBalance(address account, IERC20 token)
@@ -245,7 +230,6 @@ function getExternalBalance(address account, IERC20 token)
     view
     returns (uint256 balance);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L214)
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
@@ -256,7 +240,7 @@ function getExternalBalance(address account, IERC20 token)
 |--------------|-----------|-------------|
 | `balance`    | `uint256` | WIP         |
 
-#### Get External Balances
+### [Get External Balances](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L222)
 
 ```solidity
 function getExternalBalances(address account, IERC20[] memory tokens)
@@ -264,7 +248,6 @@ function getExternalBalances(address account, IERC20[] memory tokens)
     view
     returns (uint256[] memory balances);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L222)
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -275,7 +258,7 @@ function getExternalBalances(address account, IERC20[] memory tokens)
 |--------------|-------------|-------------|
 | `balances`   | `uint256[]` | WIP         |
 
-#### Get Balance
+### [Get Balance](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L235)
 
 ```solidity
 function getBalance(address account, IERC20 token)
@@ -283,7 +266,6 @@ function getBalance(address account, IERC20 token)
     view
     returns (uint256 balance);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L235)
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
@@ -294,7 +276,7 @@ function getBalance(address account, IERC20 token)
 |--------------|-----------|-------------|
 | `balance`    | `uint256` | WIP         |
 
-#### Get Balances
+### [Get Balances](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L243)
 
 ```solidity
 function getBalances(address account, IERC20[] memory tokens)
@@ -302,7 +284,6 @@ function getBalances(address account, IERC20[] memory tokens)
     view
     returns (uint256[] memory balances);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L243)
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -313,7 +294,7 @@ function getBalances(address account, IERC20[] memory tokens)
 |--------------|-------------|-------------|
 | `balances`   | `uint256[]` | WIP         |
 
-#### Get All Balance
+### [Get All Balance](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L256)
    
 ```solidity     
 function getAllBalance(address account, IERC20 token)
@@ -321,7 +302,6 @@ function getAllBalance(address account, IERC20 token)
     view
     returns (Balance memory b);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L256)
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
@@ -332,7 +312,7 @@ function getAllBalance(address account, IERC20 token)
 |--------------|-----------|-------------|
 | `b`          | `Balance` | WIP         |
 
-#### Get All Balances
+### [Get All Balances](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L266)
 
 ```solidity
 function getAllBalances(address account, IERC20[] memory tokens)
@@ -340,7 +320,6 @@ function getAllBalances(address account, IERC20[] memory tokens)
     view
     returns (Balance[] memory balances);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L266)
 
 | Parameter | Type       | Description |
 |-----------|------------|-------------|
@@ -351,7 +330,7 @@ function getAllBalances(address account, IERC20[] memory tokens)
 |--------------|-------------|-------------|
 | `balances`   | `Balance[]` | WIP         |
 
-#### Token Permit Nonces
+### [Token Permit Nonces](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L157)
 
 ```solidity
 function tokenPermitNonces(address owner)
@@ -360,7 +339,6 @@ function tokenPermitNonces(address owner)
     virtual
     returns (uint256);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L157)
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
@@ -370,12 +348,11 @@ function tokenPermitNonces(address owner)
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-#### Token Permit Domain Separator
+### [Token Permit Domain Separator](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L170)
 
 ```solidity
 function tokenPermitDomainSeparator() external view returns (bytes32);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L170)
 
 | Return Value | Description |
 |--------------|-------------|
@@ -383,9 +360,7 @@ function tokenPermitDomainSeparator() external view returns (bytes32);
 
 ## Events
 
-### TokenFacet.sol
-
-#### Internal Balance Changed
+### [Internal Balance Changed](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L31) <a href="#event-internal-balance-changed" id="event-internal-balance-changed"></a>
 
 ```solidity
 event InternalBalanceChanged(
@@ -394,7 +369,6 @@ event InternalBalanceChanged(
     int256 delta
 );
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L31)
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
@@ -402,7 +376,7 @@ event InternalBalanceChanged(
 | `token`   | `IERC20`  | WIP         |
 | `delta`   | `int256`  | WIP         |
 
-#### Token Approval
+### [Token Approval](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L37) <a href="#event-token-approval" id="event-token-approval"></a>
 
 ```solidity
 event TokenApproval(
@@ -412,7 +386,6 @@ event TokenApproval(
     uint256 amount
 );
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenFacet.sol#L37)
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
