@@ -2,47 +2,39 @@
 
 ## Call Functions
 
-### OwnershipFacet.sol
-
-#### Transfer Ownership
+### [Transfer Ownership](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/OwnershipFacet.sol#L15)
 
 ```solidity
 function transferOwnership(address _newOwner) external;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/OwnershipFacet.sol#L15)
 
 | Parameter   | Type      | Description |
 |-------------|-----------|-------------|
 | `_newOwner` | `address` | WIP         |
 
-#### Claim Ownership
+### [Claim Ownership](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/OwnershipFacet.sol#L20)
 
 ```solidity
 function claimOwnership() external;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/OwnershipFacet.sol#L20)
 
 ## View Functions
 
-### OwnershipFacet.sol
-
-#### Owner
+### [Owner](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/OwnershipFacet.sol#L26)
 
 ```solidity
 function owner() external view returns (address owner_);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/OwnershipFacet.sol#L26)
 
 | Return Value | Type      | Description |
 |--------------|-----------|-------------|
 | `owner_`     | `address` | WIP         |
 
-#### Owner Candidate
+### [Owner Candidate](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/OwnershipFacet.sol#L30)
 
 ```solidity
 function ownerCandidate() external view returns (address ownerCandidate_);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/OwnershipFacet.sol#L30)
 
 | Return Value      | Type      | Description |
 |-------------------|-----------|-------------|
@@ -50,9 +42,7 @@ function ownerCandidate() external view returns (address ownerCandidate_);
 
 ## Events
 
-### OwnershipFacet.sol
-
-#### Ownership Transferred
+### [Ownership Transferred](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/OwnershipFacet.sol#L13) <a href="#event-ownership-transferred" id="event-ownership-transferred"></a>
 
 ```solidity
 event OwnershipTransferred(
@@ -60,7 +50,6 @@ event OwnershipTransferred(
     address indexed newOwner
 );
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/OwnershipFacet.sol#L13)
 
 | Parameter       | Type      | Description |
 |-----------------|-----------|-------------|
