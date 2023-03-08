@@ -2,9 +2,7 @@
 
 ## Call Functions
 
-### CurveFacet.sol
-
-#### Exchange
+### [Exchange](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/CurveFacet.sol#L33)
 
 ```solidity
 function exchange(
@@ -18,7 +16,6 @@ function exchange(
     LibTransfer.To toMode
 ) external payable nonReentrant;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/CurveFacet.sol#L33)
 
 Swaps a token for another token in a Curve base, meta, plain or crypto pool. Slippage is tolerated on the amount out. It also verifies that the pool exists in the Curve Factory. This function does not support underlying tokens.
 
@@ -36,7 +33,7 @@ Swaps a token for another token in a Curve base, meta, plain or crypto pool. Sli
 | `fromMode`     | `From`    | Specifies what balance to receive the tokens from (see [Internal Balances](../../overview/internal-balances.md)). |
 | `toMode`       | `To`      | Specifies what balance to send the tokens to (see [Internal Balances](../../overview/internal-balances.md)).      |
 
-#### Exchange Underlying
+### [Exchange Underlying](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/CurveFacet.sol#L68)
 
 ```solidity
 function exchangeUnderlying(
@@ -49,7 +46,6 @@ function exchangeUnderlying(
     LibTransfer.To toMode
 ) external payable nonReentrant;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/CurveFacet.sol#L68)
 
 Swaps an underlying token for another underlying token in a Curve metapool. In a Curve metapool, one of the tokens is an LP token of another pool. Underlying tokens include the non-LP token in the pool as well as the tokens in the pool that the LP token belongs to. For example, in the [BEAN:3CRV metapool](https://curve.fi/factory/152), the underlying tokens are Bean, USDC, Tether and Dai.
 
@@ -65,7 +61,7 @@ Slippage is tolerated on the amount out. This function verifies that the pool ex
 | `fromMode`     | `From`    | Specifies what balance to receive the tokens from (see [Internal Balances](../../overview/internal-balances.md)). |
 | `toMode`       | `To`      | Specifies what balance to send the tokens to (see [Internal Balances](../../overview/internal-balances.md)).      |
 
-#### Add Liquidity
+### [Add Liquidity](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/CurveFacet.sol#L100)
 
 ```solidity
 function addLiquidity(
@@ -77,7 +73,6 @@ function addLiquidity(
     LibTransfer.To toMode
 ) external payable nonReentrant;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/CurveFacet.sol#L100)
 
 Adds tokens into a liquidity pool on Curve in exchange for LP tokens.
 
@@ -90,7 +85,7 @@ Adds tokens into a liquidity pool on Curve in exchange for LP tokens.
 | `fromMode`     | `From`      | Specifies what balance to receive the tokens from (see [Internal Balances](../../overview/internal-balances.md)). |
 | `toMode`       | `To`        | Specifies what balance to send the tokens to (see [Internal Balances](../../overview/internal-balances.md)).      |
 
-#### Remove Liquidity
+### [Remove Liquidity](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/CurveFacet.sol#L159)
 
 ```solidity
 function removeLiquidity(
@@ -102,7 +97,6 @@ function removeLiquidity(
     LibTransfer.To toMode
 ) external payable nonReentrant;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/CurveFacet.sol#L159)
 
 Removes liquidity from a pool on Curve in exchange for equal amounts of all  tokens in the liquidity pool. The Farmer burns their LP tokens in the process.&#x20;
 
@@ -115,7 +109,7 @@ Removes liquidity from a pool on Curve in exchange for equal amounts of all  tok
 | `fromMode`      | `From`      | Specifies what balance to receive the tokens from (see [Internal Balances](../../overview/internal-balances.md)). |
 | `toMode`        | `To`        | Specifies what balance to sent the tokens to (see [Internal Balances](../../overview/internal-balances.md)).      |
 
-#### Remove Liquidity Imbalance
+### [Remove Liquidity Imbalance](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/CurveFacet.sol#L236)
 
 ```solidity
 function removeLiquidityImbalance(
@@ -127,7 +121,6 @@ function removeLiquidityImbalance(
     LibTransfer.To toMode
 ) external payable nonReentrant;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/CurveFacet.sol#L236)
 
 Removes liquidity from a pool on Curve in exchange for an unequal amounts of tokens in the liquidity pool. The Farmer burns LP tokens in the process.
 
@@ -140,7 +133,7 @@ Removes liquidity from a pool on Curve in exchange for an unequal amounts of tok
 | `fromMode`    | `From`      | Specifies what balance to receive the tokens from (see [Internal Balances](../../overview/internal-balances.md)). |
 | `toMode`      | `To`        | Specifies what balance to send the tokens to (see [Internal Balances](../../overview/internal-balances.md)).      |
 
-#### Remove Liquidity One Token
+### [Remove Liquidity One Token](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/CurveFacet.sol#L306)
 
 ```solidity
 function removeLiquidityOneToken(
@@ -153,7 +146,6 @@ function removeLiquidityOneToken(
     LibTransfer.To toMode
 ) external payable nonReentrant;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/CurveFacet.sol#L306)
 
 Removes liquidity from a pool on Curve in exchange for an amount of one token in the liquidity pool. The Farmer burns LP tokens in the process.
 
