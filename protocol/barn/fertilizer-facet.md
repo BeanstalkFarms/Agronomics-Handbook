@@ -4,23 +4,20 @@ Handles Sprouting Beans from Sprout Tokens.
 
 ## Call Functions
 
-### FertilizerFacet.sol
-
-#### Claim Fertilized Beans
+### [Claim Fertilized Beans](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L32)
 
 ```solidity
 function claimFertilized(uint256[] calldata ids, LibTransfer.To mode)
     external
     payable;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L32)
 
 | Parameter | Type        | Description |
 |-----------|-------------|-------------|
 | `ids`     | `uint256[]` | WIP         |
 | `mode`    | `To`        | WIP         |
 
-#### Mint Fertilizer
+### [Mint Fertilizer](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L40)
 
 ```solidity
 function mintFertilizer(
@@ -29,7 +26,6 @@ function mintFertilizer(
     LibTransfer.From mode
 ) external payable;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L40)
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
@@ -37,7 +33,7 @@ function mintFertilizer(
 | `minLP`   | `uint256` | WIP         |
 | `mode`    | `From`    | WIP         |
 
-#### Add Fertilizer Owner
+### [Add Fertilizer Owner](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L61)
 
 ```solidity
 function addFertilizerOwner(
@@ -46,7 +42,6 @@ function addFertilizerOwner(
     uint256 minLP
 ) external payable;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L61)
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
@@ -54,12 +49,11 @@ function addFertilizerOwner(
 | `amount`  | `uint128` | WIP         |
 | `minLP`   | `uint256` | WIP         |
 
-#### Pay Fertilizer
+### [Pay Fertilizer](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L75)
 
 ```solidity
 function payFertilizer(address account, uint256 amount) external payable
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L75)
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
@@ -68,47 +62,41 @@ function payFertilizer(address account, uint256 amount) external payable
 
 ## View Functions
 
-### FertilizerFacet.sol
-
-#### Total Fertilized Beans
+### [Total Fertilized Beans](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L85)
 
 ```solidity
 function totalFertilizedBeans() external view returns (uint256 beans);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L85)
 
 | Return Value | Type      | Description |
 |--------------|-----------|-------------|
 | `beans`      | `uint256` | WIP         |
 
-#### Total Unfertilized Beans
+### [Total Unfertilized Beans](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L89)
 
 ```solidity
 function totalUnfertilizedBeans() external view returns (uint256 beans);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L89)
 
 | Return Value | Type      | Description |
 |--------------|-----------|-------------|
 | `beans`      | `uint256` | WIP         |
 
-#### Total Fertilizer Beans
+### [Total Fertilizer Beans](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L93)
 
 ```solidity
 function totalFertilizerBeans() external view returns (uint256 beans);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L93)
 
 | Return Value | Type      | Description |
 |--------------|-----------|-------------|
 | `beans`      | `uint256` | WIP         |
 
-#### Get Fertilizer
+### [Get Fertilizer](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L97)
 
 ```solidity
 function getFertilizer(uint128 id) external view returns (uint256);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L97)
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
@@ -118,12 +106,11 @@ function getFertilizer(uint128 id) external view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-#### Get Next
+### [Get Next](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L101)
 
 ```solidity
 function getNext(uint128 id) external view returns (uint128);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L101)
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
@@ -133,67 +120,61 @@ function getNext(uint128 id) external view returns (uint128);
 |--------------|-------------|
 | `uint128`    | WIP         |
 
-#### Get First
+### [Get First](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L105)
 
 ```solidity
 function getFirst() external view returns (uint128);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L105)
 
 | Return Value | Description |
 |--------------|-------------|
 | `uint128`    | WIP         |
 
-#### Get Last
+### [Get Last](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L109)
 
 ```solidity
 function getLast() external view returns (uint128);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L109)
 
 | Return Value | Description |
 |--------------|-------------|
 | `uint128`    | WIP         |
 
-#### Get Active Fertilizer
+### [Get Active Fertilizer](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L113)
 
 ```solidity
 function getActiveFertilizer() external view returns (uint256);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L113)
 
 | Return Value | Description |
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-#### Is Fertilizing
+### [Is Fertilizing](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L117)
 
 ```solidity
 function isFertilizing() external view returns (bool);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L117)
 
 | Return Value | Description |
 |--------------|-------------|
 | `bool`       | WIP         |
 
-#### Beans Per Fertilizer
+### [Beans Per Fertilizer](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L121)
 
 ```solidity
 function beansPerFertilizer() external view returns (uint128 bpf);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L121)
 
 | Return Value | Type      | Description |
 |--------------|-----------|-------------|
 | `bpf`        | `uint128` | WIP         |
 
-#### Get Humidity
+### [Get Humidity](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L125)
 
 ```solidity
 function getHumidity(uint128 _s) external pure returns (uint128 humidity);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L125)
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
@@ -203,40 +184,37 @@ function getHumidity(uint128 _s) external pure returns (uint128 humidity);
 |--------------|-----------|-------------|
 | `humidity`   | `uint128` | WIP         |
 
-#### Get Current Humidity
+### [Get Current Humidity](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L129)
 
 ```solidity
 function getCurrentHumidity() external view returns (uint128 humidity);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L129)
 
 | Return Value | Type      | Description |
 |--------------|-----------|-------------|
 | `humidity`   | `uint128` | WIP         |
 
-#### Get End Bpf
+### [Get End Bpf](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L133)
 
 ```solidity
 function getEndBpf() external view returns (uint128 endBpf);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L133)
 
 | Return Value | Type      | Description |
 |--------------|-----------|-------------|
 | `endBpf`     | `uint128` | WIP         |
 
-#### Remaining Recapitalization
+### [Remaining Recapitalization](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L137)
 
 ```solidity
 function remainingRecapitalization() external view returns (uint256);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L137)
 
 | Return Value | Description |
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-#### Balance of Unfertilized
+### [Balance of Unfertilized](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L141)
 
 ```solidity
 function balanceOfUnfertilized(address account, uint256[] memory ids)
@@ -244,7 +222,6 @@ function balanceOfUnfertilized(address account, uint256[] memory ids)
     view
     returns (uint256 beans);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L141)
 
 | Parameter | Type        | Description |
 |-----------|-------------|-------------|
@@ -255,7 +232,7 @@ function balanceOfUnfertilized(address account, uint256[] memory ids)
 |--------------|-----------|-------------|
 | `beans`      | `uint256` | WIP         |
 
-#### Balance of Fertilized
+### [Balance of Fertilized](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L149)
 
 ```solidity
 function balanceOfFertilized(address account, uint256[] memory ids)
@@ -263,7 +240,6 @@ function balanceOfFertilized(address account, uint256[] memory ids)
     view
     returns (uint256 beans);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L149)
 
 | Parameter | Type        | Description |
 |-----------|-------------|-------------|
@@ -274,7 +250,7 @@ function balanceOfFertilized(address account, uint256[] memory ids)
 |--------------|-----------|-------------|
 | `beans`      | `uint256` | WIP         |
 
-#### Balance of Fertilizer
+### [Balance of Fertilizer](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L157)
 
 ```solidity
 function balanceOfFertilizer(address account, uint256 id)
@@ -282,7 +258,6 @@ function balanceOfFertilizer(address account, uint256 id)
     view
     returns (IFertilizer.Balance memory);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L157)
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
@@ -293,7 +268,7 @@ function balanceOfFertilizer(address account, uint256 id)
 |-----------------------|-------------|
 | `IFertilizer.Balance` | WIP         |
 
-#### Balance of Batch Fertilizer
+### [Balance of Batch Fertilizer](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L165)
 
 ```solidity
 function balanceOfBatchFertilizer(
@@ -301,7 +276,6 @@ function balanceOfBatchFertilizer(
     uint256[] memory ids
 ) external view returns (IFertilizer.Balance[] memory);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L165)
 
 | Parameter  | Type        | Description |
 |------------|-------------|-------------|
@@ -312,7 +286,7 @@ function balanceOfBatchFertilizer(
 |-------------------------|-------------|
 | `IFertilizer.Balance[]` | WIP         |
 
-#### Get Fertilizers
+### [Get Fertilizers](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L172)
 
 ```solidity
 function getFertilizers()
@@ -320,7 +294,6 @@ function getFertilizers()
     view
     returns (Supply[] memory fertilizers);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L172)
 
 | Return Value  | Type       | Description |
 |---------------|------------|-------------|
@@ -328,14 +301,11 @@ function getFertilizers()
 
 ## Events
 
-### FertilizerFacet.sol
-
-#### Set Fertilizer
+### [Set Fertilizer](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L23) <a href="#event-set-fertilizer" id="event-set-fertilizer"></a>
 
 ```solidity
 event SetFertilizer(uint128 id, uint128 bpf);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FertilizerFacet.sol#L23)
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
