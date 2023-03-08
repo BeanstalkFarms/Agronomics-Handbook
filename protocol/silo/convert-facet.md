@@ -2,9 +2,7 @@
 
 ## Call Functions
 
-### ConvertFacet.sol
-
-#### Convert
+### [Convert](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/ConvertFacet.sol#L46)
 
 ```solidity
 function convert(
@@ -19,7 +17,6 @@ function convert(
     uint256 toBdv
 );
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/ConvertFacet.sol#L46)
 
 | Parameter     | Type        | Description |
 |---------------|-------------|-------------|
@@ -37,9 +34,7 @@ function convert(
 
 ## View Functions
 
-### ConvertFacet.sol
-
-#### Get Max Amount In
+### [Get Max Amount In](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/ConvertFacet.sol#L161)
 
 ```solidity
 function getMaxAmountIn(
@@ -47,7 +42,6 @@ function getMaxAmountIn(
     address tokenOut
 ) external view returns (uint256 amountIn);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/ConvertFacet.sol#L161)
 
 | Parameter  | Type      | Description |
 |------------|-----------|-------------|
@@ -58,7 +52,7 @@ function getMaxAmountIn(
 |--------------|-----------|-------------|
 | `amountIn`   | `uint256` | WIP         |
 
-#### Get Amount Out
+### [Get Amount Out](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/ConvertFacet.sol#L169)
 
 ```solidity
 function getAmountOut(
@@ -67,7 +61,6 @@ function getAmountOut(
     uint256 amountIn
 ) external view returns (uint256 amountOut);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/ConvertFacet.sol#L169)
 
 | Parameter  | Type      | Description |
 |------------|-----------|-------------|
@@ -80,9 +73,7 @@ function getAmountOut(
 
 ## Events
 
-### ConvertFacet.sol
-
-#### Convert
+### [Convert](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/ConvertFacet.sol#L24) <a href="#event-convert" id="event-convert"></a>
 
 ```solidity
 event Convert(
@@ -93,7 +84,6 @@ event Convert(
     uint256 toAmount
 );
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/ConvertFacet.sol#L24)
 
 | Parameter    | Type      | Description |
 |--------------|-----------|-------------|
@@ -103,7 +93,7 @@ event Convert(
 | `fromAmount` | `uint256` | WIP         |
 | `toAmount`   | `uint256` | WIP         |
 
-#### Remove Deposits
+### [Remove Deposits](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/ConvertFacet.sol#L32) <a href="#event-remove-deposits" id="event-remove-deposits"></a>
 
 ```solidity
 event RemoveDeposits(
@@ -114,7 +104,6 @@ event RemoveDeposits(
     uint256 amount
 );
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/ConvertFacet.sol#L32)
 
 | Parameter | Type        | Description |
 |-----------|-------------|-------------|
