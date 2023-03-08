@@ -8,20 +8,17 @@ None
 
 ## View Functions
 
-### DiamondLoupeFacet.sol
-
-#### Facets
+### [Facets](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DiamondLoupeFacet.sol#L28)
 
 ```solidity
 function facets() external view override returns (Facet[] memory facets_);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DiamondLoupeFacet.sol#L28)
 
 | Return Value | Type      | Description |
 |--------------|-----------|-------------|
 | `facets_`    | `Facet[]` | WIP         |
 
-#### Facet Function Selectors
+### [Facet Function Selectors](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DiamondLoupeFacet.sol#L42)
 
 ```solidity
 function facetFunctionSelectors(address _facet)
@@ -30,7 +27,6 @@ function facetFunctionSelectors(address _facet)
     override
     returns (bytes4[] memory facetFunctionSelectors_);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DiamondLoupeFacet.sol#L42)
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
@@ -40,7 +36,7 @@ function facetFunctionSelectors(address _facet)
 |---------------------------|------------|-------------|
 | `facetFunctionSelectors_` | `bytes4[]` | WIP         |
 
-#### Facet Addresses
+### [Facet Addresses](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DiamondLoupeFacet.sol#L54)
 
 ```solidity
 function facetAddresses() 
@@ -49,13 +45,12 @@ function facetAddresses()
     override 
     returns (address[] memory facetAddresses_);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DiamondLoupeFacet.sol#L54)
 
 | Return Value      | Type        | Description |
 |-------------------|-------------|-------------|
 | `facetAddresses_` | `address[]` | WIP         |
    
-#### Facet Address   
+### [Facet Address](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DiamondLoupeFacet.sol#L63)
 
 ```solidity 
 function facetAddress(bytes4 _functionSelector)
@@ -64,7 +59,6 @@ function facetAddress(bytes4 _functionSelector)
     override
     returns (address facetAddress_);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DiamondLoupeFacet.sol#L63)
 
 | Parameter           | Type     | Description |
 |---------------------|----------|-------------|
@@ -74,7 +68,7 @@ function facetAddress(bytes4 _functionSelector)
 |-----------------|-----------|-------------|
 | `facetAddress_` | `address` | WIP         |
 
-#### Supports Interface
+### [Supports Interface](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DiamondLoupeFacet.sol#L74)
    
 ```solidity 
 function supportsInterface(bytes4 _interfaceId) 
@@ -83,7 +77,6 @@ function supportsInterface(bytes4 _interfaceId)
     override 
     returns (bool);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DiamondLoupeFacet.sol#L74)
 
 | Parameter      | Type     | Description |
 |----------------|----------|-------------|
