@@ -4,20 +4,17 @@ Whitelist Facet handles the whitelisting/dewhitelisting of assets.
 
 ## Call Functions
 
-### WhitelistFacet.sol
-
-#### Dewhitelist Token
+### [Dewhitelist Token](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/WhitelistFacet.sol#L26)
 
 ```solidity
 function dewhitelistToken(address token) external payable;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/WhitelistFacet.sol#L26)
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
 | `token`   | `address` | WIP         |
 
-#### Whitelist Token
+### [Whitelist Token](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/WhitelistFacet.sol#L31)
 
 ```solidity
 function whitelistToken(
@@ -27,7 +24,6 @@ function whitelistToken(
     uint32 seeds
 ) external payable;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/WhitelistFacet.sol#L31)
 
 | Parameter  | Type      | Description |
 |------------|-----------|-------------|
@@ -44,9 +40,7 @@ None
 
 ## Events
 
-### WhitelistFacet.sol
-
-#### Whitelist Token
+### [Whitelist Token](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/WhitelistFacet.sol#L17) <a href="#event-whitelist-token" id="event-whitelist-token"></a>
 
 ```solidity
 event WhitelistToken(
@@ -56,7 +50,6 @@ event WhitelistToken(
     uint256 stalk
 );
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/WhitelistFacet.sol#L17)
 
 | Parameter  | Type      | Description |
 |------------|-----------|-------------|
@@ -65,12 +58,11 @@ event WhitelistToken(
 | `seeds`    | `uint256` | WIP         |
 | `stalk`    | `uint256` | WIP         |
 
-#### Dewhitelist Token
+### [Dewhitelist Token](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/WhitelistFacet.sol#L24) <a href="#event-dewhitelist-token" id="event-dewhitelist-token"></a>
 
 ```solidity
 event DewhitelistToken(address indexed token);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/WhitelistFacet.sol#L24)
 
 | Parameter  | Type      | Description |
 |------------|-----------|-------------|
