@@ -10,14 +10,11 @@ None
 
 ## View Functions
 
-### BDVFacet.sol
-
-#### Curve To BDV
+### [Curve To BDV](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/BDVFacet.sol#L19)
 
 ```solidity
 function curveToBDV(uint256 amount) public view returns (uint256);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/BDVFacet.sol#L19)
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
@@ -27,12 +24,11 @@ function curveToBDV(uint256 amount) public view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-#### Bean To BDV
+### [Bean To BDV](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/BDVFacet.sol#L23)
 
 ```solidity
 function beanToBDV(uint256 amount) public pure returns (uint256);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/BDVFacet.sol#L23)
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
@@ -42,12 +38,11 @@ function beanToBDV(uint256 amount) public pure returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-#### Unripe LP To BDV
+### [Unripe LP To BDV](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/BDVFacet.sol#L27)
 
 ```solidity
 function unripeLPToBDV(uint256 amount) public view returns (uint256);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/BDVFacet.sol#L27)
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
@@ -57,12 +52,11 @@ function unripeLPToBDV(uint256 amount) public view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-#### Unripe Bean To BDV
+### [Unripe Bean To BDV](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/BDVFacet.sol#L33)
 
 ```solidity
 function unripeBeanToBDV(uint256 amount) public view returns (uint256);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/BDVFacet.sol#L33)
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
@@ -72,7 +66,7 @@ function unripeBeanToBDV(uint256 amount) public view returns (uint256);
 |--------------|-------------|
 | `uint256`    | WIP         |
 
-#### Bdv
+### [Bdv](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/BDVFacet.sol#L37)
 
 ```solidity
 function bdv(
@@ -80,7 +74,6 @@ function bdv(
     uint256 amount
 ) external view returns (uint256);
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/BDVFacet.sol#L37)
 
 | Parameter | Type      | Description |
 |-----------|-----------|-------------|
