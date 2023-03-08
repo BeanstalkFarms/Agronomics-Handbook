@@ -4,9 +4,7 @@ Permit ERC-20 and ERC-721 tokens and transfer ERC-721 and ERC-1155 tokens.
 
 ## Call Functions
 
-### TokenSupportFacet.sol
-
-#### Permit ERC-20
+### [Permit ERC-20](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenSupportFacet.sol#L30)
 
 ```solidity
 function permitERC20(
@@ -20,7 +18,6 @@ function permitERC20(
     bytes32 s
 ) public payable;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenSupportFacet.sol#L30)
 
 permitERC20 is wrapper function for permit of ERC20Permit token.
 
@@ -35,7 +32,7 @@ permitERC20 is wrapper function for permit of ERC20Permit token.
 | `r`        | `bytes32`      | WIP         |
 | `s`        | `bytes32`      | WIP         |
 
-#### Transfer ERC-721
+### [Transfer ERC-721](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenSupportFacet.sol#L53)
 
 ```solidity
 function transferERC721(
@@ -44,7 +41,6 @@ function transferERC721(
     uint256 id
 ) external payable;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenSupportFacet.sol#L53)
 
 Execute an ERC-721 token transfer.
 
@@ -54,7 +50,7 @@ Execute an ERC-721 token transfer.
 | `to`      | `address` | WIP         |
 | `id`      | `uint256` | WIP         |
 
-#### Permit ERC-721
+### [Permit ERC-721](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenSupportFacet.sol#L65)
 
 ```solidity
 function permitERC721(
@@ -65,7 +61,6 @@ function permitERC721(
     bytes memory sig
 ) external payable;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenSupportFacet.sol#L65)
 
 Execute a permit for an ERC-721 token.
 
@@ -77,7 +72,7 @@ Execute a permit for an ERC-721 token.
 | `deadline` | `uint256`  | WIP         |
 | `sig`      | `bytes`    | WIP         |
 
-#### Transfer ERC-1155
+### [Transfer ERC-1155](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenSupportFacet.sol#L85)
 
 ```solidity
 function transferERC1155(
@@ -87,7 +82,6 @@ function transferERC1155(
     uint256 value
 ) external payable;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenSupportFacet.sol#L85)
 
 Execute an ERC-1155 token transfer of a single Id.
 
@@ -98,7 +92,7 @@ Execute an ERC-1155 token transfer of a single Id.
 | `id`      | `uint256`  | WIP         |
 | `value`   | `uint256`  | WIP         |
 
-#### Batch Transfer ERC-1155
+### [Batch Transfer ERC-1155](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenSupportFacet.sol#L98)
 
 ```solidity
 function batchTransferERC1155(
@@ -108,7 +102,6 @@ function batchTransferERC1155(
     uint256[] calldata values
 ) external payable;
 ```
-[GitHub](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenSupportFacet.sol#L98)
 
 Execute an ERC-1155 token transfer of multiple Ids.
 
