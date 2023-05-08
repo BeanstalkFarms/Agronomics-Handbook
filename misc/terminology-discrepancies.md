@@ -8,7 +8,6 @@ These discrepancies can be resolved in a future BIP.
 | ---------------------------------------- | ------------------- |
 | Internal Balance                         | Farm Balance        |
 | External Balance                         | Circulating Balance |
-| Weather                                  | Temperature         |
 | Marketplace                              | Pod Market          |
 | Unfertilized Beans                       | Sprouts             |
 | Fertilized Beans                         | Rinsable Sprouts    |

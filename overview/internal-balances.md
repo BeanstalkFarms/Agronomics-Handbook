@@ -12,7 +12,7 @@ In the Beanstalk ecosystem, **Internal Balances** are referred to as **Farm Bala
 
 ### Relevant Contracts <a href="#associated-contracts" id="associated-contracts"></a>
 
-* [`LibTransfer.sol`](https://github.com/BeanstalkFarms/Beanstalk-Replanted/blob/master/protocol/contracts/libraries/Token/LibTransfer.sol)
+* [`LibTransfer.sol`](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/libraries/Token/LibTransfer.sol)
 * [`LibBalance.sol`](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/libraries/Token/LibBalance.sol)
 
 ### To / From
@@ -59,9 +59,9 @@ function transferToken(
 
 ### Sending Internal / External Balances <a href="#sending-internal-external-balances" id="sending-internal-external-balances"></a>
 
-A function that sends ERC-20 tokens to users can implement Internal Balances by adding the `To` enum in [`LibTransfer`](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/libraries/Token/LibTransfer.sol) to a function's signature.
+A function that sends ERC-20 tokens to users can implement Internal Balances by adding the `To` enum in `LibTransfer` to a function's signature.
 
-Then call `sendToken` in [`LibTransfer`](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/libraries/Token/LibTransfer.sol) instead of directly calling the ERC-20 function `transferFrom`.
+Then call `sendToken` in `LibTransfer` instead of directly calling the ERC-20 function `transferFrom`.
 
 ```solidity
 function sendToken(
@@ -74,9 +74,9 @@ function sendToken(
 
 ### Receiving Internal / External Balances <a href="#receiving-internal-external-balances" id="receiving-internal-external-balances"></a>
 
-A function that receives ERC-20 tokens from users can implement Internal Balances by adding the `From` enum in [`LibTransfer`](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/libraries/Token/LibTransfer.sol) to a function's signature.
+A function that receives ERC-20 tokens from users can implement Internal Balances by adding the `From` enum in `LibTransfer` to a function's signature.
 
-Then call `receiveToken` in [`LibTransfer`](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/libraries/Token/LibTransfer.sol) instead of directly calling the ERC-20 function `transfer`.
+Then call `receiveToken` in `LibTransfer` instead of directly calling the ERC-20 function `transfer`.
 
 ```solidity
 function receiveToken(
@@ -87,4 +87,4 @@ function receiveToken(
 ) internal;
 ```
 
-For protocols that are building on top of Beanstalk and want to interact with Internal Balances, they can utilize the functions given in [`TokenFacet`](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/TokenFacet.sol), rather than the library itself.
+For protocols that are building on top of Beanstalk and want to interact with Internal Balances, they can utilize the functions given in [`TokenFacet`](../protocol/depot/token-facet.md), rather than the library itself.
