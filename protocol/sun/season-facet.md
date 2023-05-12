@@ -1,5 +1,9 @@
 # Season Facet
 
+{% hint style="info" %}
+This page has not been updated yet for BIP-34
+{% endhint %}
+
 The Season Facet contains the `sunrise` function and handles all logic for Season changes.
 
 ## Call Functions
