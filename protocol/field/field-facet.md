@@ -14,7 +14,7 @@ function sow(
 )
     external
     payable
-    returns (uint256 pods)
+    returns (uint256 pods);
 ```
 
 Sow Beans in exchange for Pods.
@@ -37,7 +37,7 @@ Sow Beans in exchange for Pods.
         uint256 minTemperature,
         uint256 minSoil,
         LibTransfer.From mode
-    ) public payable returns (uint256 pods)
+    ) public payable returns (uint256 pods);
 ```
 
 Sow Beans in exchange for Pods. Use at least `minSoil`.
