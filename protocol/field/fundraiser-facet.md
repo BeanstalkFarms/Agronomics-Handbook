@@ -1,14 +1,10 @@
 # Fundraiser Facet
 
-{% hint style="info" %}
-This page has not been updated yet for BIP-34
-{% endhint %}
-
 Handles the creation, funding, and completion of a Fundraiser.
 
 ## Call Functions
 
-### [Fund](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L40)
+### [Fund](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/field/FundraiserFacet.sol#L105)
 
 ```solidity
 function fund(
@@ -30,7 +26,7 @@ Fund a Fundraiser.
 | ------------ | ---------------------------- |
 | `uint256`    | The number of Pods received. |
 
-### [Create Fundraiser](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L74)
+### [Create Fundraiser](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/field/FundraiserFacet.sol#L66)
 
 ```solidity
 function createFundraiser(
@@ -50,7 +46,7 @@ Create a Fundraiser.
 
 ## View Functions
 
-### [Remaining Funding](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L95)
+### [Remaining Funding](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/field/FundraiserFacet.sol#L169)
 
 ```solidity
 function remainingFunding(uint32 id) public view returns (uint256);
@@ -66,7 +62,7 @@ Returns the remaining number of tokens to raise.
 | ------------ | ---------------------------------------- |
 | `uint256`    | The remaining number of tokens to raise. |
 
-### [Total Funding](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L99)
+### [Total Funding](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/field/FundraiserFacet.sol#L173)
 
 ```solidity
 function totalFunding(uint32 id) public view returns (uint256);
@@ -82,7 +78,7 @@ Returns the total amount of tokens raised.
 | ------------ | ---------------------------------- |
 | `uint256`    | The total amount of tokens raised. |
 
-### [Funding Token](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L103)
+### [Funding Token](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/field/FundraiserFacet.sol#L177)
 
 ```solidity
 function fundingToken(uint32 id) public view returns (address);
@@ -98,7 +94,7 @@ Returns the address of the token that can be sent to the Fundraiser.
 | ------------ | ------------------------------------------------------------ |
 | `address`    | The address of the token that can be sent to the Fundraiser. |
 
-### [Fundraiser](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L107)
+### [Fundraiser](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/field/FundraiserFacet.sol#L181)
 
 ```solidity
 function fundraiser(uint32 id)
@@ -117,7 +113,7 @@ Returns the Fundraiser struct.
 | ------------ | ------------------------------------------------------------------------------ |
 | `Fundraiser` | Returns the Fundraiser struct in [App Storage](../../overview/app-storage.md). |
 
-### [Number Of Fundraisers](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L115)
+### [Number Of Fundraisers](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/field/FundraiserFacet.sol#L189)
 
 ```solidity
 function numberOfFundraisers() public view returns (uint32);
@@ -131,7 +127,7 @@ Returns the number of Fundraisers.
 
 ## Events
 
-### [Create Fundraiser](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L23) <a href="#event-create-fundraiser" id="event-create-fundraiser"></a>
+### [Create Fundraiser](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/field/FundraiserFacet.sol#L33) <a href="#event-create-fundraiser" id="event-create-fundraiser"></a>
 
 ```solidity
 event CreateFundraiser(
@@ -151,7 +147,7 @@ Emitted when a Fundraiser is created.
 | `token`      | `address` | The address of the token that can be sent to the Fundraiser in exchange for Pods. |
 | `amount`     | `uint256` | The amount of `token` that is being raised.                                       |
 
-### [Fund Fundraiser](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L29) <a href="#event-fund-fundraiser" id="event-fund-fundraiser"></a>
+### [Fund Fundraiser](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/field/FundraiserFacet.sol#L46) <a href="#event-fund-fundraiser" id="event-fund-fundraiser"></a>
 
 ```solidity
 event FundFundraiser(
@@ -169,7 +165,7 @@ Emitted when a Farmer calls `fund`.
 | `id`      | `uint32`  | The Fundraiser ID.                             |
 | `amount`  | `uint256` | The amount of `token` that `account` provided. |
 
-### [Complete Fundraiser](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/FundraiserFacet.sol#L34) <a href="#event-complete-fundraiser" id="event-complete-fundraiser"></a>
+### [Complete Fundraiser](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/field/FundraiserFacet.sol#L56) <a href="#event-complete-fundraiser" id="event-complete-fundraiser"></a>
 
 ```solidity
 event CompleteFundraiser(uint32 indexed id);
