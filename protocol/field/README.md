@@ -1,5 +1,9 @@
 # Field
 
+{% hint style="info" %}
+This page has not been updated yet for [BIP-34](https://arweave.net/R_tBcwBU09nKXdfgHXJSKO7uM4xmWdI_B8522JsVI5I).
+{% endhint %}
+
 The Field is Beanstalk's credit facility. Beanstalk relies on a decentralized set of creditors to maintain Bean price stability.
 
 Anytime Beanstalk is willing to issue debt, there is Soil in the Field. Soil represents the number of Beans that Beanstalk is currently willing to borrow.
