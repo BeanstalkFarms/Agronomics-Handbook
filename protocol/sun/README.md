@@ -1,5 +1,9 @@
 # Sun
 
+{% hint style="info" %}
+This page has not been updated yet for [BIP-34](https://arweave.net/R_tBcwBU09nKXdfgHXJSKO7uM4xmWdI_B8522JsVI5I).
+{% endhint %}
+
 The Sun advances Beanstalk to the next Season through the `sunrise` function in the [`SeasonFacet`](season-facet.md). Every time an hour passes, `sunrise` can be called 1 more time.
 
 The Season Facet has [several subcontracts](https://github.com/BeanstalkFarms/Beanstalk/tree/master/protocol/contracts/beanstalk/sun/SeasonFacet):
