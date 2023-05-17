@@ -4,7 +4,7 @@ The Silo Facet handles Depositing, Withdrawing, Transferring and Claiming whitel
 
 ## Call Functions
 
-### [Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L25)
+### [Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloFacet.sol#L32)
 
 ```solidity
 function deposit(
@@ -22,7 +22,7 @@ Deposits ERC20 token into internal Farmer balances.
 | `amount`  | `uint256` | Amount of the token to be Deposited. |
 | `mode`    | `From`    | Source of funds ().                  |
 
-### [Withdraw Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L43)
+### [Withdraw Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloFacet.sol#L60)
 
 ```solidity
 function withdrawDeposit(
@@ -40,7 +40,7 @@ Withdraws from a single Deposit.
 | `season`  | `uint32`  | Season the Farmer wants to Withdraw. |
 | `amount`  | `uint256` | Tokens to be Withdrawn.              |
 
-### [Withdraw Deposits](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L51)
+### [Withdraw Deposits](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloFacet.sol#L78)
 
 ```solidity
 function withdrawDeposits(
@@ -58,7 +58,7 @@ Withdraws from multiple Deposits.
 | `seasons` | `uint32[]`  | Array of Seasons to Withdraw from.                              |
 | `amounts` | `uint256[]` | Array of amounts corresponding to each Season to Withdraw from. |
 
-### [Claim Withdrawal](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L63)
+### [Claim Withdrawal](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloFacet.sol#L96)
 
 ```solidity
 function claimWithdrawal(
@@ -76,7 +76,7 @@ Claims tokens from a Withdrawal.
 | `season`  | `uint32`  | Season to Claim.                                                                   |
 | `mode`    | `To`      | Destination of funds (INTERNAL, EXTERNAL, EXTERNAL\_INTERNAL, INTERNAL\_TOLERANT). |
 
-### [Claim Withdrawals](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L72)
+### [Claim Withdrawals](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloFacet.sol#L111)
 
 ```solidity
 function claimWithdrawals(
@@ -94,7 +94,7 @@ Claims tokens from multiple Withdrawals.
 | `seasons` | `uint32[]` | Array of Seasons to Claim.                                                         |
 | `mode`    | `To`       | Destination of funds (INTERNAL, EXTERNAL, EXTERNAL\_INTERNAL, INTERNAL\_TOLERANT). |
 
-### [Transfer Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L85)
+### [Transfer Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloFacet.sol#L133)
 
 ```solidity
 function transferDeposit(
@@ -120,7 +120,7 @@ Transfers single Farmer's Deposit.
 | ------------ | --------- | ----------------------------------- |
 | `bdv`        | `uint256` | Bean Denominated Value of Transfer. |
 
-### [Transfer Deposits](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L101)
+### [Transfer Deposits](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloFacet.sol#L158)
 
 ```solidity
 function transferDeposits(
@@ -146,7 +146,7 @@ Transfers multiple Farmer Deposits.
 | ------------ | ----------- | --------------------------------------------------------------------------- |
 | `bdvs`       | `uint256[]` | Array of Bean Denominated Value of Transfer corresponding from each Season. |
 
-### [Approve Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L126)
+### [Approve Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloFacet.sol#L189)
 
 ```solidity
 function approveDeposit(
@@ -164,7 +164,7 @@ Approves an address to access a Farmer's Deposit.
 | `token`   | `address` | Address of ERC20.             |
 | `amount`  | `uint256` | Amount to be approved.        |
 
-### [Increase Deposit Allowance](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L136)
+### [Increase Deposit Allowance](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloFacet.sol#L206)
 
 ```solidity
 function increaseDepositAllowance(
@@ -186,7 +186,7 @@ Increases allowance of Deposit.
 | ------------ | ----------- |
 | `bool`       | Success.    |
 
-### [Decrease Deposit Allowance](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L141)
+### [Decrease Deposit Allowance](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloFacet.sol#L218)
 
 ```solidity
 function decreaseDepositAllowance(
@@ -212,7 +212,7 @@ Decreases allowance of Deposit.
 
 Farm balances and Silo Deposits support [EIP-2612 permits](https://eips.ethereum.org/EIPS/eip-2612), which allows Farmers to delegate use of their Farm balances through permits without the need for a separate transaction.
 
-### [Permit Deposits](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L148)
+### [Permit Deposits](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloFacet.sol#L244)
 
 ```solidity
 function permitDeposits(
@@ -240,7 +240,7 @@ Permits multiple deposits.
 | `r`        | `bytes32`   | ECDSA signature output.                              |
 | `s`        | `bytes32`   | ECDSA signature output.                              |
 
-### [Permit Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L164)
+### [Permit Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloFacet.sol#L271)
 
 ```solidity
 function permitDeposit(
@@ -268,7 +268,7 @@ Permits deposit.
 | `r`        | `bytes32` | ECDSA signature output.              |
 | `s`        | `bytes32` | ECDSA signature output.              |
 
-### [Update](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L193)
+### [Update](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloFacet.sol#L308)
 
 ```solidity
 function update(address account) external payable;
@@ -280,7 +280,7 @@ Updates Farmer state.
 | --------- | --------- | ------------------ |
 | `account` | `address` | Address to update. |
 
-### [Plant](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L197)
+### [Plant](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloFacet.sol#L319)
 
 ```solidity
 function plant() external payable returns (uint256 beans);
@@ -292,7 +292,7 @@ Accredits Earned Beans and Stalk to Farmer.
 | ------------ | --------- | ----------------------------- |
 | `beans`      | `uint256` | Amount of Earned Beans given. |
 
-### [Claim Plenty](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L201)
+### [Claim Plenty](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloFacet.sol#L326)
 
 ```solidity
 function claimPlenty() external payable;
@@ -300,45 +300,45 @@ function claimPlenty() external payable;
 
 Claims rewards from a Season Of Plenty (SOP).
 
-### [Enroot Deposits](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L209)
+### [Enroot Deposits](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloFacet.sol#L340)
 
 ```solidity
 function enrootDeposits(
     address token,
     uint32[] calldata seasons,
     uint256[] calldata amounts
-) external nonReentrant updateSilo;
+) external payable nonReentrant updateSilo;
 ```
 
-Adds Revitalized Stalk and Seeds to Stalk and Seed balances.
+Claims oustanding Revitalized Stalk and Seeds and updates BDV of specified Unripe Deposits.
 
 | Parameter | Type        | Description                                           |
 | --------- | ----------- | ----------------------------------------------------- |
-| `token`   | `address`   | Address of ERC20.                                     |
+| `token`   | `address`   | Address of Whitelisted Unripe ERC20.                                     |
 | `seasons` | `uint32[]`  | Array of Seasons to Enroot.                           |
 | `amounts` | `uint256[]` | Array of amount (corresponding to Seasons) to Enroot. |
 
-### [Enroot Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L252)
+### [Enroot Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloFacet.sol#L391)
 
 ```solidity
 function enrootDeposit(
     address token,
     uint32 _season,
     uint256 amount
-) external nonReentrant updateSilo;
+) external payable nonReentrant updateSilo;
 ```
 
-Updates Unripe Deposit.
+Claims oustanding Revitalized Stalk and Seeds and updates BDV of a single Unripe Deposit.
 
 | Parameter | Type      | Description       |
 | --------- | --------- | ----------------- |
-| `token`   | `address` | Address of ERC20. |
+| `token`   | `address` | Address of Whitelisted Unripe ERC20. |
 | `_season` | `uint32`  | Season to Enroot. |
 | `amount`  | `uint256` | Amount to Enroot. |
 
 ## View Functions
 
-### [Deposit Permit Nonces](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L178)
+### [Deposit Permit Nonces](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloFacet.sol#L288)
 
 ```solidity
 function depositPermitNonces(address owner) public view virtual returns (uint256);
@@ -352,7 +352,7 @@ function depositPermitNonces(address owner) public view virtual returns (uint256
 | ------------ | ----------- |
 | `uint256`    | WIP         |
 
-### [Deposit Permit Domain Separator](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/SiloFacet/SiloFacet.sol#L186)
+### [Deposit Permit Domain Separator](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloFacet.sol#L296)
 
 ```solidity
 function depositPermitDomainSeparator() external view returns (bytes32);
