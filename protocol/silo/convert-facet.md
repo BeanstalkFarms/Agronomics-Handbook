@@ -2,7 +2,7 @@
 
 ## Call Functions
 
-### [Convert](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/ConvertFacet.sol#L46)
+### [Convert](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/ConvertFacet.sol#L46)
 
 ```solidity
 function convert(
@@ -34,7 +34,7 @@ function convert(
 
 ## View Functions
 
-### [Get Max Amount In](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/ConvertFacet.sol#L161)
+### [Get Max Amount In](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/ConvertFacet.sol#L161)
 
 ```solidity
 function getMaxAmountIn(
@@ -52,7 +52,7 @@ function getMaxAmountIn(
 |--------------|-----------|-------------|
 | `amountIn`   | `uint256` | WIP         |
 
-### [Get Amount Out](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/ConvertFacet.sol#L169)
+### [Get Amount Out](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/ConvertFacet.sol#L169)
 
 ```solidity
 function getAmountOut(
@@ -73,7 +73,7 @@ function getAmountOut(
 
 ## Events
 
-### [Convert](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/ConvertFacet.sol#L24) <a href="#event-convert" id="event-convert"></a>
+### [Convert](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/ConvertFacet.sol#L24) <a href="#event-convert" id="event-convert"></a>
 
 ```solidity
 event Convert(
@@ -93,7 +93,7 @@ event Convert(
 | `fromAmount` | `uint256` | WIP         |
 | `toAmount`   | `uint256` | WIP         |
 
-### [Remove Deposits](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/ConvertFacet.sol#L32) <a href="#event-remove-deposits" id="event-remove-deposits"></a>
+### [Remove Deposits](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/ConvertFacet.sol#L32) <a href="#event-remove-deposits" id="event-remove-deposits"></a>
 
 ```solidity
 event RemoveDeposits(
