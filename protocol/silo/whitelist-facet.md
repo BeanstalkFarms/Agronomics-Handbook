@@ -4,7 +4,7 @@ Whitelist Facet handles the whitelisting/dewhitelisting of assets.
 
 ## Call Functions
 
-### [Dewhitelist Token](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/WhitelistFacet.sol#L26)
+### [Dewhitelist Token](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/WhitelistFacet.sol#L26)
 
 ```solidity
 function dewhitelistToken(address token) external payable;
@@ -14,7 +14,7 @@ function dewhitelistToken(address token) external payable;
 |-----------|-----------|-------------|
 | `token`   | `address` | WIP         |
 
-### [Whitelist Token](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/WhitelistFacet.sol#L31)
+### [Whitelist Token](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/WhitelistFacet.sol#L31)
 
 ```solidity
 function whitelistToken(
@@ -40,7 +40,7 @@ None
 
 ## Events
 
-### [Whitelist Token](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/WhitelistFacet.sol#L17) <a href="#event-whitelist-token" id="event-whitelist-token"></a>
+### [Whitelist Token](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/WhitelistFacet.sol#L17) <a href="#event-whitelist-token" id="event-whitelist-token"></a>
 
 ```solidity
 event WhitelistToken(
@@ -58,7 +58,7 @@ event WhitelistToken(
 | `seeds`    | `uint256` | WIP         |
 | `stalk`    | `uint256` | WIP         |
 
-### [Dewhitelist Token](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/WhitelistFacet.sol#L24) <a href="#event-dewhitelist-token" id="event-dewhitelist-token"></a>
+### [Dewhitelist Token](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/WhitelistFacet.sol#L24) <a href="#event-dewhitelist-token" id="event-dewhitelist-token"></a>
 
 ```solidity
 event DewhitelistToken(address indexed token);
