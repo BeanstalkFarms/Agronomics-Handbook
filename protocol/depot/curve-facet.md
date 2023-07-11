@@ -1,5 +1,7 @@
 # Curve Facet
 
+The Curve Facet handles swapping in, adding liquidity to, and removing liquidity from Curve pools without assets leaving Beanstalk.
+
 ## Call Functions
 
 ### [Exchange](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/CurveFacet.sol#L33)
@@ -98,7 +100,7 @@ function removeLiquidity(
 ) external payable nonReentrant;
 ```
 
-Removes liquidity from a pool on Curve in exchange for equal amounts of all  tokens in the liquidity pool. The Farmer burns their LP tokens in the process.&#x20;
+Removes liquidity from a pool on Curve in exchange for equal amounts of all tokens in the liquidity pool. The Farmer burns their LP tokens in the process.
 
 | Parameter       | Type        | Description                                                                                                       |
 | --------------- | ----------- | ----------------------------------------------------------------------------------------------------------------- |
@@ -161,12 +163,8 @@ Removes liquidity from a pool on Curve in exchange for an amount of one token in
 
 ## View Functions
 
-```
-None
-```
+None.
 
 ## Events
 
-```
-None
-```
+None.

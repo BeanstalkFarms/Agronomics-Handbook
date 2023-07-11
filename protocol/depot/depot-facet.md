@@ -1,6 +1,6 @@
 # Depot Facet
 
-DepotFacet wraps Pipeline's Pipe functions to facilitate the loading of non-Ether assets in Pipeline.
+The Depot Facet wraps Pipeline's `pipe` functions to facilitate the loading of non-Ether assets in [Pipeline](https://evmpipeline.org/).
 
 ## Call Functions
 
@@ -13,15 +13,15 @@ function pipe(PipeCall calldata p)
     returns (bytes memory result);
 ```
 
-Pipe a PipeCall through Pipeline.
+Pipe a `PipeCall` through Pipeline.
 
-| Parameter | Type       | Description                        |
-|-----------|------------|------------------------------------|
-| `p`       | `PipeCall` | PipeCall to pipe through Pipeline. |
+| Parameter | Type       | Description                          |
+| --------- | ---------- | ------------------------------------ |
+| `p`       | `PipeCall` | `PipeCall` to pipe through Pipeline. |
 
-| Return Value | Type    | Description            |
-|--------------|---------|------------------------|
-| `result`     | `bytes` | PipeCall return value. |
+| Return Value | Type    | Description              |
+| ------------ | ------- | ------------------------ |
+| `result`     | `bytes` | `PipeCall` return value. |
 
 ### [Multi Pipe](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DepotFacet.sol#L42)
 
@@ -32,15 +32,15 @@ function multiPipe(PipeCall[] calldata pipes)
     returns (bytes[] memory results);
 ```
 
-Pipe multiple PipeCalls through Pipeline. Does not support sending Ether in the call.
+Pipe multiple `PipeCalls` through Pipeline. Does not support sending Ether in the call.
 
-| Parameter | Type         | Description                                 |
-|-----------|--------------|---------------------------------------------|
-| `pipes`   | `PipeCall[]` | List of PipeCalls to pipe through Pipeline. |
+| Parameter | Type         | Description                                   |
+| --------- | ------------ | --------------------------------------------- |
+| `pipes`   | `PipeCall[]` | List of `PipeCalls` to pipe through Pipeline. |
 
-| Return Value | Type      | Description                               |
-|--------------|-----------|-------------------------------------------|
-| `results`    | `bytes[]` | List of return values from each PipeCall. |
+| Return Value | Type      | Description                                 |
+| ------------ | --------- | ------------------------------------------- |
+| `results`    | `bytes[]` | List of return values from each `PipeCall`. |
 
 ### [Advanced Pipe](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DepotFacet.sol#L55)
 
@@ -51,16 +51,16 @@ function advancedPipe(AdvancedPipeCall[] calldata pipes, uint256 value)
     returns (bytes[] memory results);
 ```
 
-Pipe multiple AdvancedPipeCalls through Pipeline.
+Pipe multiple `AdvancedPipeCalls` through Pipeline.
 
-| Parameter | Type                 | Description                                         |
-|-----------|----------------------|-----------------------------------------------------|
-| `pipes`   | `AdvancedPipeCall[]` | List of AdvancedPipeCalls to pipe through Pipeline. |
-| `value`   | `uint256`            |                                                     |
+| Parameter | Type                 | Description                                           |
+| --------- | -------------------- | ----------------------------------------------------- |
+| `pipes`   | `AdvancedPipeCall[]` | List of `AdvancedPipeCalls` to pipe through Pipeline. |
+| `value`   | `uint256`            |                                                       |
 
-| Return Value | Type      | Description                                       |
-|--------------|-----------|---------------------------------------------------|
-| `results`    | `bytes[]` | List of return values from each AdvancedPipeCall. |
+| Return Value | Type      | Description                                         |
+| ------------ | --------- | --------------------------------------------------- |
+| `results`    | `bytes[]` | List of return values from each `AdvancedPipeCall`. |
 
 ### [Ether Pipe](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DepotFacet.sol#L70)
 
@@ -71,16 +71,18 @@ function etherPipe(PipeCall calldata p, uint256 value)
     returns (bytes memory result);
 ```
 
-Pipe a PipeCall through Pipeline with an Ether value.
+Pipe a `PipeCall` through Pipeline with an Ether value.
 
-| Parameter | Type       | Description                        |
-|-----------|------------|------------------------------------|
-| `p`       | `PipeCall` | PipeCall to pipe through Pipeline. |
-| `value`   | `uint256`  | Ether value to send in Pipecall.   |
+| Parameter | Type       | Description                          |
+| --------- | ---------- | ------------------------------------ |
+| `p`       | `PipeCall` | `PipeCall` to pipe through Pipeline. |
+| `value`   | `uint256`  | Ether value to send in `Pipecall`.   |
 
-| Return Value | Type    | Description            |
-|--------------|---------|------------------------|
-| `result`     | `bytes` | PipeCall return value. |
+| Return Value | Type    | Description              |
+| ------------ | ------- | ------------------------ |
+| `result`     | `bytes` | `PipeCall` return value. |
+
+## View Functions
 
 ### [Read Pipe](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DepotFacet.sol#L84)
 
@@ -91,24 +93,16 @@ function readPipe(PipeCall calldata p)
     returns (bytes memory result);
 ```
 
-Return the return value of a PipeCall without executing it.
+Return the return value of a `PipeCall` without executing it.
 
-| Parameter | Type       | Description                            |
-|-----------|------------|----------------------------------------|
-| `p`       | `PipeCall` | PipeCall to execute with a staticcall. |
+| Parameter | Type       | Description                              |
+| --------- | ---------- | ---------------------------------------- |
+| `p`       | `PipeCall` | `PipeCall` to execute with a staticcall. |
 
-| Return Value | Type    | Description            |
-|--------------|---------|------------------------|
-| `result`     | `bytes` | PipeCall return value. |
-
-## View Functions
-
-```
-None
-```
+| Return Value | Type    | Description              |
+| ------------ | ------- | ------------------------ |
+| `result`     | `bytes` | `PipeCall` return value. |
 
 ## Events
 
-```
-None
-```
+None.

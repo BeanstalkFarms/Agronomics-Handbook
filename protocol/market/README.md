@@ -1,5 +1,9 @@
 # Market
 
+{% hint style="info" %}
+This page has not been updated yet for [BIP-29](https://bean.money/bip-29), which introduced dynamic pricing functions on the Pod Market. The [Marketplace Facet](marketplace-facet.md) page is up to date.
+{% endhint %}
+
 The Market will house various DEXs for zero fee trading. For now, there is only the Pod Market, but in the future there may be a zero fee AMM, a zero fee NFT marketplace, etc.
 
 The Pod Market allows Farmers to create, Fill and Cancel Pod Listings and Pod Orders.&#x20;

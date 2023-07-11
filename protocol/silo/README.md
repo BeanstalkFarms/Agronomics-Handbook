@@ -1,5 +1,9 @@
 # Silo
 
+{% hint style="info" %}
+This page has not been updated yet for [BIP-36](https://bean.money/bip-36), which changed the accounting system for Deposits and removed the Withdrawal Freeze from the Silo. The individual Silo facet pages are up to date.
+{% endhint %}
+
 Farmers can Deposit assets on the [Deposit Whitelist](https://docs.bean.money/farm/silo#deposit-whitelist) into the Silo in exchange for Stalk and Seeds. The number of Stalk and Seeds received is dependent on the BDV at the time of Deposit, the Stalk per BDV and the Seeds per BDV. Stalk entitles Farmers to a pro-rata portion of Bean seignorage distributed to the Silo and Seeds grown into 0.0001 Stalk each Season.
 
 A Farmer can Withdraw at any time, but must forfeit all Stalk and Seeds associated with the Deposit. All Withdrawals are subject to an unlock period (currently set to the remainder of the current Season). Once a Withdraw is complete, it can be Claimed at any time.

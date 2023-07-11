@@ -6,6 +6,11 @@ Upon exploit, Beanstalk was Paused and the on-chain governance mechanism was rem
 
 The Barn is the Beanstalk recapitalization facility used to Replant Beanstalk. The Barn Raise started on June 6, 2022 while the protocol was offline and continues until the recapitalization target has been reached.
 
+The Barn is consists of 2 Facets:
+
+* [Fertilizer Facet](fertilizer-facet.md)
+* [Unripe Facet](unripe-facet.md)
+
 ### Fertilizer
 
 Fertilizer is a semi-fungible limited debt issuance to recapitalize $77M in stolen liquidity.
@@ -30,7 +35,7 @@ Before Beanstalk was Replanted, Fertilizer was deployed as `FertilizerPreMint.so
 
 When Beanstalk was Replanted, the BCM called the `addFertilizerOwner` function that handled the process of adding liquidity to the BEAN:3CRV pool and minting new Beans for all of the Fertilizer minted prior to Replant.
 
-At the same time, the Fertilizer contract was upgraded to [`Fertilizer.sol`](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/facets/FertilizerFacet.sol). This moved the `mintFertilizer()` functionality from the Fertilizer contract to Beanstalk itself. From this point forward, Beanstalk automatically adds new liquidity for Unripe LP holders and new Beans for Unripe Bean holders in the same transaction that Fertilizer is minted in.
+At the same time, the Fertilizer contract was upgraded to [`Fertilizer.sol`](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/tokens/Fertilizer/Fertilizer.sol). This moved the `mintFertilizer()` functionality from the Fertilizer contract to Beanstalk itself. From this point forward, Beanstalk automatically adds new liquidity for Unripe LP holders and new Beans for Unripe Bean holders in the same transaction that Fertilizer is minted in.
 
 ### **Unripe Assets**
 

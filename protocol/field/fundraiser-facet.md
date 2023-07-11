@@ -1,6 +1,6 @@
 # Fundraiser Facet
 
-Handles the creation, funding, and completion of a Fundraiser.
+The Fundraiser Facet dandles the creation, funding, and completion of [Fundraisers](https://docs.bean.money/almanac/protocol/fundraiser).
 
 ## Call Functions
 
@@ -14,7 +14,7 @@ function fund(
 ) external payable nonReentrant returns (uint256);
 ```
 
-Fund a Fundraiser.
+Fund a Fundraiser in exchange for Pods.
 
 | Parameter | Type      | Description                                                                                  |
 | --------- | --------- | -------------------------------------------------------------------------------------------- |
@@ -22,9 +22,9 @@ Fund a Fundraiser.
 | `amount`  | `uint256` | Amount of `fundraisers[id].token` to provide.                                                |
 | `mode`    | `From`    | Balance to spend tokens from; see [`LibTransfer.From`](../../overview/internal-balances.md). |
 
-| Return Value | Description                  |
-| ------------ | ---------------------------- |
-| `uint256`    | The number of Pods received. |
+| Return Type | Description                  |
+| ----------- | ---------------------------- |
+| `uint256`   | The number of Pods received. |
 
 ### [Create Fundraiser](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/field/FundraiserFacet.sol#L66)
 
@@ -36,11 +36,11 @@ function createFundraiser(
 ) external payable;
 ```
 
-Create a Fundraiser.
+Creates a Fundraiser. Can only be called by the owner of Beanstalk.
 
 | Parameter | Type      | Description                                                                       |
 | --------- | --------- | --------------------------------------------------------------------------------- |
-| `payee`   | `address` | The address to which funds are delivered upon `completeFundraiser`.               |
+| `payee`   | `address` | The address to which funds are delivered at the end of the Fundraiser.            |
 | `token`   | `address` | The address of the token that can be sent to the Fundraiser in exchange for Pods. |
 | `amount`  | `uint256` | The amount of `token` that is being raised.                                       |
 
@@ -58,9 +58,9 @@ Returns the remaining number of tokens to raise.
 | --------- | -------- | ------------------ |
 | `id`      | `uint32` | The Fundraiser ID. |
 
-| Return Value | Description                              |
-| ------------ | ---------------------------------------- |
-| `uint256`    | The remaining number of tokens to raise. |
+| Return Type | Description                              |
+| ----------- | ---------------------------------------- |
+| `uint256`   | The remaining number of tokens to raise. |
 
 ### [Total Funding](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/field/FundraiserFacet.sol#L173)
 
@@ -68,15 +68,15 @@ Returns the remaining number of tokens to raise.
 function totalFunding(uint32 id) public view returns (uint256);
 ```
 
-Returns the total amount of tokens raised.
+Returns the total amount of tokens raised so far.
 
 | Parameter | Type     | Description        |
 | --------- | -------- | ------------------ |
 | `id`      | `uint32` | The Fundraiser ID. |
 
-| Return Value | Description                        |
-| ------------ | ---------------------------------- |
-| `uint256`    | The total amount of tokens raised. |
+| Return Type | Description                               |
+| ----------- | ----------------------------------------- |
+| `uint256`   | The total amount of tokens raised so far. |
 
 ### [Funding Token](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/field/FundraiserFacet.sol#L177)
 
@@ -90,9 +90,9 @@ Returns the address of the token that can be sent to the Fundraiser.
 | --------- | -------- | ------------------ |
 | `id`      | `uint32` | The Fundraiser ID. |
 
-| Return Value | Description                                                  |
-| ------------ | ------------------------------------------------------------ |
-| `address`    | The address of the token that can be sent to the Fundraiser. |
+| Return Type | Description                                                  |
+| ----------- | ------------------------------------------------------------ |
+| `address`   | The address of the token that can be sent to the Fundraiser. |
 
 ### [Fundraiser](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/field/FundraiserFacet.sol#L181)
 
@@ -109,7 +109,7 @@ Returns the Fundraiser struct.
 | --------- | -------- | ------------------ |
 | `id`      | `uint32` | The Fundraiser ID. |
 
-| Return Value | Description                                                                    |
+| Return Type  | Description                                                                    |
 | ------------ | ------------------------------------------------------------------------------ |
 | `Fundraiser` | Returns the Fundraiser struct in [App Storage](../../overview/app-storage.md). |
 
@@ -121,9 +121,9 @@ function numberOfFundraisers() public view returns (uint32);
 
 Returns the number of Fundraisers.
 
-| Return Value | Description                |
-| ------------ | -------------------------- |
-| `uint32`     | The number of Fundraisers. |
+| Return Type | Description                |
+| ----------- | -------------------------- |
+| `uint32`    | The number of Fundraisers. |
 
 ## Events
 

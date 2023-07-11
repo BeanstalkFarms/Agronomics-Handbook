@@ -1,72 +1,78 @@
 # BDV Facet
 
-BDVFacet holds the Curve MetaPool BDV function.
+The BDV Facet holds functions to get the BDV for each whitelisted Silo asset.
 
 ## Call Functions
 
-```
-None
-```
+None.
 
 ## View Functions
 
-### [Curve To BDV](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/BDVFacet.sol#L19)
+### [Curve to BDV](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/BDVFacet.sol#L20)
 
 ```solidity
 function curveToBDV(uint256 amount) public view returns (uint256);
 ```
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `amount`  | `uint256` | WIP         |
+Returns the BDV of a number of BEAN:3CRV LP tokens.
 
-| Return Value | Description |
-|--------------|-------------|
-| `uint256`    | WIP         |
+| Parameter | Type      | Description                          |
+| --------- | --------- | ------------------------------------ |
+| `amount`  | `uint256` | Number of tokens to get the BDV for. |
 
-### [Bean To BDV](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/BDVFacet.sol#L23)
+| Return Value | Description                                              |
+| ------------ | -------------------------------------------------------- |
+| `uint256`    | The total BDV of `amount` number of BEAN:3CRV LP tokens. |
+
+### [Bean to BDV](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/BDVFacet.sol#L24)
 
 ```solidity
 function beanToBDV(uint256 amount) public pure returns (uint256);
 ```
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `amount`  | `uint256` | WIP         |
+Returns the BDV of a number of Beans (1 Bean = 1 BDV).
 
-| Return Value | Description |
-|--------------|-------------|
-| `uint256`    | WIP         |
+| Parameter | Type      | Description                          |
+| --------- | --------- | ------------------------------------ |
+| `amount`  | `uint256` | Number of tokens to get the BDV for. |
 
-### [Unripe LP To BDV](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/BDVFacet.sol#L27)
+| Return Value | Description                                |
+| ------------ | ------------------------------------------ |
+| `uint256`    | The total BDV of `amount` number of Beans. |
+
+### [Unripe LP to BDV](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/BDVFacet.sol#L28)
 
 ```solidity
 function unripeLPToBDV(uint256 amount) public view returns (uint256);
 ```
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `amount`  | `uint256` | WIP         |
+Returns the total BDV of a number of Unripe BEAN:3CRV LP tokens.
 
-| Return Value | Description |
-|--------------|-------------|
-| `uint256`    | WIP         |
+| Parameter | Type      | Description                          |
+| --------- | --------- | ------------------------------------ |
+| `amount`  | `uint256` | Number of tokens to get the BDV for. |
 
-### [Unripe Bean To BDV](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/BDVFacet.sol#L33)
+| Return Value | Description                                                     |
+| ------------ | --------------------------------------------------------------- |
+| `uint256`    | The total BDV of `amount` number of Unripe BEAN:3CRV LP tokens. |
+
+### [Unripe Bean to BDV](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/BDVFacet.sol#L34)
 
 ```solidity
 function unripeBeanToBDV(uint256 amount) public view returns (uint256);
 ```
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `amount`  | `uint256` | WIP         |
+Returns the total BDV of a number of Unripe Beans.
 
-| Return Value | Description |
-|--------------|-------------|
-| `uint256`    | WIP         |
+| Parameter | Type      | Description                          |
+| --------- | --------- | ------------------------------------ |
+| `amount`  | `uint256` | Number of tokens to get the BDV for. |
 
-### [Bdv](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/BDVFacet.sol#L37)
+| Return Value | Description                                       |
+| ------------ | ------------------------------------------------- |
+| `uint256`    | The total BDV of `amount` number of Unripe Beans. |
+
+### [BDV](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/BDVFacet.sol#L38)
 
 ```solidity
 function bdv(
@@ -75,17 +81,17 @@ function bdv(
 ) external view returns (uint256);
 ```
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `token`   | `address` | WIP         |
-| `amount`  | `uint256` | WIP         |
+Returns the total BDV of a number of tokens on the Deposit Whitelist.
 
-| Return Value | Description |
-|--------------|-------------|
-| `uint256`    | WIP         |
+| Parameter | Type      | Description                    |
+| --------- | --------- | ------------------------------ |
+| `token`   | `address` | The whitelisted token address. |
+| `amount`  | `uint256` | The number of tokens.          |
+
+| Return Value | Description                                  |
+| ------------ | -------------------------------------------- |
+| `uint256`    | The total BDV of `amount` number of `token`. |
 
 ## Events
 
-```solidity
-None
-```
+None.

@@ -1,10 +1,10 @@
 # Sun
 
 {% hint style="info" %}
-This page has not been updated yet for [BIP-34](https://arweave.net/R_tBcwBU09nKXdfgHXJSKO7uM4xmWdI_B8522JsVI5I).
+This page has not been updated yet for [BIP-34](https://arweave.net/R\_tBcwBU09nKXdfgHXJSKO7uM4xmWdI\_B8522JsVI5I), which made significant changes to the `gm` incentive mechanism. The [Season Facet](season-facet.md) page is up to date.
 {% endhint %}
 
-The Sun advances Beanstalk to the next Season through the `sunrise` function in the [`SeasonFacet`](season-facet.md). Every time an hour passes, `sunrise` can be called 1 more time.
+The Sun advances Beanstalk to the next Season through the `sunrise` function in the Season Facet. Every time an hour passes, `sunrise` can be called 1 more time.
 
 The Season Facet has [several subcontracts](https://github.com/BeanstalkFarms/Beanstalk/tree/master/protocol/contracts/beanstalk/sun/SeasonFacet):
 
@@ -24,10 +24,10 @@ The Season Facet has [several subcontracts](https://github.com/BeanstalkFarms/Be
 5. Pays `msg.sender` Beans for paying the transaction fee associated with calling the function.
 
 {% hint style="warning" %}
-In the Beanstalk ecosystem,&#x20;
+In the Beanstalk ecosystem,
 
 * **Rain** is referred to as **Oversaturation**; and
-* **Season of Plenty** is referred to as **Flood**.&#x20;
+* **Season of Plenty** is referred to as **Flood**.
 
 See [Terminology Discrepancies](../../misc/terminology-discrepancies.md).
 {% endhint %}

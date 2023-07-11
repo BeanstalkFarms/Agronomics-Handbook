@@ -1,8 +1,8 @@
 # FAQ
 
-### Who calls the `sunrise` function? <a href="#who-calls-sunrise" id="who-calls-sunrise"></a>
+### Who calls the `gm` function? <a href="#who-calls-sunrise" id="who-calls-sunrise"></a>
 
-In theory, anyone is able to call the `sunrise` function. In practice, MEV bots will front run your transaction by calling the function themselves as they can determine that they will get the Beans instead of you. As there are a number of bots playing the Sunrise game, the chances of getting a successful `sunrise` call from clicking the Sunrise button on the UI are essentially zero.
+In theory, anyone is able to call the `gm` function. In practice, MEV bots will front run your transaction by calling the function themselves as they can determine that they will get the Beans instead of you. As there are a number of bots playing the Sunrise game, the chances of getting a successful `gm` call from clicking the Sunrise button on the UI are essentially zero.
 
 ### Where can I call functions directly on Beanstalk? <a href="#call-beanstalk-functions-with-louper" id="call-beanstalk-functions-with-louper"></a>
 

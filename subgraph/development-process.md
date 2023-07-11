@@ -1,10 +1,10 @@
 # Development Process
 
 {% hint style="warning" %}
-All subgraph documentation is under active development. This page is
+All subgraph documentation is in development and not necessarily up to date.
 {% endhint %}
 
-Issues related to bugs and feature requests can be submitted on the main [Beanstalk Subgraph Repo](https://github.com/BeanstalkFarms/Beanstalk-Subgraph). Note that this is the development process for the _Beanstalk_ subgraph, which is deployed to The Graph Network. The _Bean_ subgraph is a WIP.
+Issues related to bugs and feature requests can be submitted on the [Beanstalk monorepo](https://github.com/BeanstalkFarms/Beanstalk) with a Subgraph tag.
 
 1. Currently, a new branch is created for each release version. Any pending changes are made and commited to the new branch.
 2. For initial development and testing, the subgraph is built and deployed to the `testing` deployment hosted by Beanstalk Farms.

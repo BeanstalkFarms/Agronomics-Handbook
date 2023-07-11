@@ -1,5 +1,7 @@
 # Ownership Facet
 
+The Ownership Facet handles the ownership of Beanstalk.
+
 ## Call Functions
 
 ### [Transfer Ownership](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/OwnershipFacet.sol#L15)
@@ -8,15 +10,19 @@
 function transferOwnership(address _newOwner) external;
 ```
 
-| Parameter   | Type      | Description |
-|-------------|-----------|-------------|
-| `_newOwner` | `address` | WIP         |
+Transfers ownership of Beanstalk to a new address. Can only be called by the owner of Beanstalk.
+
+| Parameter   | Type      | Description                           |
+| ----------- | --------- | ------------------------------------- |
+| `_newOwner` | `address` | The address to transfer ownership to. |
 
 ### [Claim Ownership](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/OwnershipFacet.sol#L20)
 
 ```solidity
 function claimOwnership() external;
 ```
+
+Callable by candidate for ownership after a successful `transferOwnership` function call.
 
 ## View Functions
 
@@ -26,9 +32,11 @@ function claimOwnership() external;
 function owner() external view returns (address owner_);
 ```
 
-| Return Value | Type      | Description |
-|--------------|-----------|-------------|
-| `owner_`     | `address` | WIP         |
+Returns the address of the owner of Beanstalk.
+
+| Return Value | Type      | Description                            |
+| ------------ | --------- | -------------------------------------- |
+| `owner_`     | `address` | The address of the owner of Beanstalk. |
 
 ### [Owner Candidate](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/OwnershipFacet.sol#L30)
 
@@ -36,9 +44,11 @@ function owner() external view returns (address owner_);
 function ownerCandidate() external view returns (address ownerCandidate_);
 ```
 
-| Return Value      | Type      | Description |
-|-------------------|-----------|-------------|
-| `ownerCandidate_` | `address` | WIP         |
+Returns the owner candidate of Beanstalk.
+
+| Return Value      | Type      | Description                       |
+| ----------------- | --------- | --------------------------------- |
+| `ownerCandidate_` | `address` | The owner candidate of Beanstalk. |
 
 ## Events
 
@@ -51,7 +61,9 @@ event OwnershipTransferred(
 );
 ```
 
-| Parameter       | Type      | Description |
-|-----------------|-----------|-------------|
-| `previousOwner` | `address` | WIP         |
-| `newOwner`      | `address` | WIP         |
+Emitted when ownership of Beanstalk is transferred.
+
+| Parameter       | Type      | Description                      |
+| --------------- | --------- | -------------------------------- |
+| `previousOwner` | `address` | The previous owner of Beanstalk. |
+| `newOwner`      | `address` | The new owner of Beanstalk.      |

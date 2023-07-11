@@ -1,6 +1,6 @@
 # Unripe Facet
 
-Manage the logic of the vesting process for the Barnraised Funds.
+The Unripe Facet handles logic for the vesting of Unripe assets.
 
 ## Call Functions
 
@@ -15,15 +15,17 @@ function chop(
 ) external payable nonReentrant returns (uint256 underlyingAmount);
 ```
 
+WIP
+
 | Parameter     | Type      | Description |
-|---------------|-----------|-------------|
+| ------------- | --------- | ----------- |
 | `unripeToken` | `address` | WIP         |
 | `amount`      | `uint256` | WIP         |
 | `fromMode`    | `From`    | WIP         |
 | `toMode`      | `To`      | WIP         |
 
 | Return Value       | Type      | Description |
-|--------------------|-----------|-------------|
+| ------------------ | --------- | ----------- |
 | `underlyingAmount` | `uint256` | WIP         |
 
 ### [Pick](https://github.com/BeanstalkFarms/Beanstalk/blob/9ca85613d40a3883377de0d9377623d49fff5b9c/protocol/contracts/farm/facets/UnripeFacet.sol#L72)
@@ -37,8 +39,10 @@ function pick(
 ) external payable nonReentrant;
 ```
 
+WIP
+
 | Parameter | Type        | Description |
-|-----------|-------------|-------------|
+| --------- | ----------- | ----------- |
 | `token`   | `address`   | WIP         |
 | `amount`  | `uint256`   | WIP         |
 | `proof`   | `bytes32[]` | WIP         |
@@ -54,8 +58,10 @@ function addUnripeToken(
 ) external payable nonReentrant;
 ```
 
+WIP
+
 | Parameter         | Type      | Description |
-|-------------------|-----------|-------------|
+| ----------------- | --------- | ----------- |
 | `unripeToken`     | `address` | WIP         |
 | `underlyingToken` | `address` | WIP         |
 | `root`            | `bytes32` | WIP         |
@@ -71,14 +77,16 @@ function picked(address account, address token)
     returns (bool);
 ```
 
+WIP
+
 | Parameter | Type      | Description |
-|-----------|-----------|-------------|
+| --------- | --------- | ----------- |
 | `account` | `address` | WIP         |
 | `token`   | `address` | WIP         |
 
-| Return Value | Description |
-|--------------|-------------|
-| `bool`       | WIP         |
+| Return Type | Description |
+| ----------- | ----------- |
+| `bool`      | WIP         |
 
 ### [Get Underlying](https://github.com/BeanstalkFarms/Beanstalk/blob/9ca85613d40a3883377de0d9377623d49fff5b9c/protocol/contracts/farm/facets/UnripeFacet.sol#L105)
 
@@ -89,13 +97,15 @@ function getUnderlying(address unripeToken, uint256 amount)
     returns (uint256 redeem);
 ```
 
+WIP
+
 | Parameter     | Type      | Description |
-|---------------|-----------|-------------|
+| ------------- | --------- | ----------- |
 | `unripeToken` | `address` | WIP         |
 | `amount`      | `uint256` | WIP         |
 
 | Return Value | Type      | Description |
-|--------------|-----------|-------------|
+| ------------ | --------- | ----------- |
 | `redeem`     | `uint256` | WIP         |
 
 ### [Get Penalty](https://github.com/BeanstalkFarms/Beanstalk/blob/9ca85613d40a3883377de0d9377623d49fff5b9c/protocol/contracts/farm/facets/UnripeFacet.sol#L123)
@@ -107,12 +117,14 @@ function getPenalty(address unripeToken)
     returns (uint256 penalty);
 ```
 
+WIP
+
 | Parameter     | Type      | Description |
-|---------------|-----------|-------------|
+| ------------- | --------- | ----------- |
 | `unripeToken` | `address` | WIP         |
 
 | Return Value | Type      | Description |
-|--------------|-----------|-------------|
+| ------------ | --------- | ----------- |
 | `penalty`    | `uint256` | WIP         |
 
 ### [Get Penalized Underlying](https://github.com/BeanstalkFarms/Beanstalk/blob/9ca85613d40a3883377de0d9377623d49fff5b9c/protocol/contracts/farm/facets/UnripeFacet.sol#L131)
@@ -124,16 +136,18 @@ function getPenalizedUnderlying(address unripeToken, uint256 amount)
     returns (uint256 redeem);
 ```
 
+WIP
+
 | Parameter     | Type      | Description |
-|---------------|-----------|-------------|
+| ------------- | --------- | ----------- |
 | `unripeToken` | `address` | WIP         |
 | `amount`      | `uint256` | WIP         |
 
 | Return Value | Type      | Description |
-|--------------|-----------|-------------|
+| ------------ | --------- | ----------- |
 | `redeem`     | `uint256` | WIP         |
 
-### [_Get Penalized Underlying](https://github.com/BeanstalkFarms/Beanstalk/blob/9ca85613d40a3883377de0d9377623d49fff5b9c/protocol/contracts/farm/facets/UnripeFacet.sol#L139)
+### [\_Get Penalized Underlying](https://github.com/BeanstalkFarms/Beanstalk/blob/9ca85613d40a3883377de0d9377623d49fff5b9c/protocol/contracts/farm/facets/UnripeFacet.sol#L139)
 
 ```solidity
 function _getPenalizedUnderlying(address unripeToken, uint256 amount, uint256 supply)
@@ -142,14 +156,16 @@ function _getPenalizedUnderlying(address unripeToken, uint256 amount, uint256 su
     returns (uint256 redeem);
 ```
 
+WIP
+
 | Parameter     | Type      | Description |
-|---------------|-----------|-------------|
+| ------------- | --------- | ----------- |
 | `unripeToken` | `address` | WIP         |
 | `amount`      | `uint256` | WIP         |
 | `supply`      | `uint256` | WIP         |
 
 | Return Value | Type      | Description |
-|--------------|-----------|-------------|
+| ------------ | --------- | ----------- |
 | `redeem`     | `uint256` | WIP         |
 
 ### [Is Unripe](https://github.com/BeanstalkFarms/Beanstalk/blob/9ca85613d40a3883377de0d9377623d49fff5b9c/protocol/contracts/farm/facets/UnripeFacet.sol#L149)
@@ -158,12 +174,14 @@ function _getPenalizedUnderlying(address unripeToken, uint256 amount, uint256 su
 function isUnripe(address unripeToken) public view returns (bool unripe);
 ```
 
+WIP
+
 | Parameter     | Type      | Description |
-|---------------|-----------|-------------|
+| ------------- | --------- | ----------- |
 | `unripeToken` | `address` | WIP         |
 
 | Return Value | Type   | Description |
-|--------------|--------|-------------|
+| ------------ | ------ | ----------- |
 | `unripe`     | `bool` | WIP         |
 
 ### [Balance Of Underlying](https://github.com/BeanstalkFarms/Beanstalk/blob/9ca85613d40a3883377de0d9377623d49fff5b9c/protocol/contracts/farm/facets/UnripeFacet.sol#L153)
@@ -175,13 +193,15 @@ function balanceOfUnderlying(address unripeToken, address account)
     returns (uint256 underlying);
 ```
 
+WIP
+
 | Parameter     | Type      | Description |
-|---------------|-----------|-------------|
+| ------------- | --------- | ----------- |
 | `unripeToken` | `address` | WIP         |
 | `account`     | `address` | WIP         |
 
 | Return Value | Type      | Description |
-|--------------|-----------|-------------|
+| ------------ | --------- | ----------- |
 | `underlying` | `uint256` | WIP         |
 
 ### [Balance Of Penalized Underlying](https://github.com/BeanstalkFarms/Beanstalk/blob/9ca85613d40a3883377de0d9377623d49fff5b9c/protocol/contracts/farm/facets/UnripeFacet.sol#L162)
@@ -193,13 +213,15 @@ function balanceOfPenalizedUnderlying(address unripeToken, address account)
     returns (uint256 underlying);
 ```
 
+WIP
+
 | Parameter     | Type      | Description |
-|---------------|-----------|-------------|
+| ------------- | --------- | ----------- |
 | `unripeToken` | `address` | WIP         |
 | `account`     | `address` | WIP         |
 
 | Return Value | Type      | Description |
-|--------------|-----------|-------------|
+| ------------ | --------- | ----------- |
 | `underlying` | `uint256` | WIP         |
 
 ### [Get Recap Funded Percent](https://github.com/BeanstalkFarms/Beanstalk/blob/9ca85613d40a3883377de0d9377623d49fff5b9c/protocol/contracts/farm/facets/UnripeFacet.sol#L174)
@@ -211,12 +233,14 @@ function getRecapFundedPercent(address unripeToken)
     returns (uint256 percent);
 ```
 
+WIP
+
 | Parameter     | Type      | Description |
-|---------------|-----------|-------------|
+| ------------- | --------- | ----------- |
 | `unripeToken` | `address` | WIP         |
 
 | Return Value | Type      | Description |
-|--------------|-----------|-------------|
+| ------------ | --------- | ----------- |
 | `percent`    | `uint256` | WIP         |
 
 ### [Get Percent Penalty](https://github.com/BeanstalkFarms/Beanstalk/blob/9ca85613d40a3883377de0d9377623d49fff5b9c/protocol/contracts/farm/facets/UnripeFacet.sol#L187)
@@ -228,12 +252,14 @@ function getPercentPenalty(address unripeToken)
     returns (uint256 penalty);
 ```
 
+WIP
+
 | Parameter     | Type      | Description |
-|---------------|-----------|-------------|
+| ------------- | --------- | ----------- |
 | `unripeToken` | `address` | WIP         |
 
 | Return Value | Type      | Description |
-|--------------|-----------|-------------|
+| ------------ | --------- | ----------- |
 | `penalty`    | `uint256` | WIP         |
 
 ### [Get Recap Paid Percent](https://github.com/BeanstalkFarms/Beanstalk/blob/9ca85613d40a3883377de0d9377623d49fff5b9c/protocol/contracts/farm/facets/UnripeFacet.sol#L195)
@@ -242,8 +268,10 @@ function getPercentPenalty(address unripeToken)
 function getRecapPaidPercent() external view returns (uint256 penalty);
 ```
 
+WIP
+
 | Return Value | Type      | Description |
-|--------------|-----------|-------------|
+| ------------ | --------- | ----------- |
 | `penalty`    | `uint256` | WIP         |
 
 ### [Get Recap Paid Percent Amount](https://github.com/BeanstalkFarms/Beanstalk/blob/9ca85613d40a3883377de0d9377623d49fff5b9c/protocol/contracts/farm/facets/UnripeFacet.sol#L199)
@@ -255,12 +283,14 @@ function getRecapPaidPercentAmount(uint256 amount)
     returns (uint256 penalty);
 ```
 
+WIP
+
 | Parameter | Type      | Description |
-|-----------|-----------|-------------|
+| --------- | --------- | ----------- |
 | `amount`  | `uint256` | WIP         |
 
 | Return Value | Type      | Description |
-|--------------|-----------|-------------|
+| ------------ | --------- | ----------- |
 | `penalty`    | `uint256` | WIP         |
 
 ### [Get Underlying Per Unripe Token](https://github.com/BeanstalkFarms/Beanstalk/blob/9ca85613d40a3883377de0d9377623d49fff5b9c/protocol/contracts/farm/facets/UnripeFacet.sol#L207)
@@ -272,12 +302,14 @@ function getUnderlyingPerUnripeToken(address unripeToken)
     returns (uint256 underlyingPerToken);
 ```
 
+WIP
+
 | Parameter     | Type      | Description |
-|---------------|-----------|-------------|
+| ------------- | --------- | ----------- |
 | `unripeToken` | `address` | WIP         |
 
 | Return Value         | Type      | Description |
-|----------------------|-----------|-------------|
+| -------------------- | --------- | ----------- |
 | `underlyingPerToken` | `uint256` | WIP         |
 
 ### [Get Total Underlying](https://github.com/BeanstalkFarms/Beanstalk/blob/9ca85613d40a3883377de0d9377623d49fff5b9c/protocol/contracts/farm/facets/UnripeFacet.sol#L219)
@@ -289,12 +321,14 @@ function getTotalUnderlying(address unripeToken)
     returns (uint256 underlying);
 ```
 
+WIP
+
 | Parameter     | Type      | Description |
-|---------------|-----------|-------------|
+| ------------- | --------- | ----------- |
 | `unripeToken` | `address` | WIP         |
 
 | Return Value | Type      | Description |
-|--------------|-----------|-------------|
+| ------------ | --------- | ----------- |
 | `underlying` | `uint256` | WIP         |
 
 ### [Get Underlying Token](https://github.com/BeanstalkFarms/Beanstalk/blob/9ca85613d40a3883377de0d9377623d49fff5b9c/protocol/contracts/farm/facets/UnripeFacet.sol#L238)
@@ -306,12 +340,14 @@ function getUnderlyingToken(address unripeToken)
     returns (address underlyingToken)
 ```
 
+WIP
+
 | Parameter     | Type      | Description |
-|---------------|-----------|-------------|
+| ------------- | --------- | ----------- |
 | `unripeToken` | `address` | WIP         |
 
 | Return Value      | Type      | Description |
-|-------------------|-----------|-------------|
+| ----------------- | --------- | ----------- |
 | `underlyingToken` | `address` | WIP         |
 
 ## Events
@@ -326,8 +362,10 @@ event AddUnripeToken(
 );
 ```
 
+WIP
+
 | Parameter         | Type      | Description |
-|-------------------|-----------|-------------|
+| ----------------- | --------- | ----------- |
 | `unripeToken`     | `address` | WIP         |
 | `underlyingToken` | `address` | WIP         |
 | `merkleRoot`      | `bytes32` | WIP         |
@@ -338,8 +376,10 @@ event AddUnripeToken(
 event ChangeUnderlying(address indexed token, int256 underlying);
 ```
 
+WIP
+
 | Parameter    | Type      | Description |
-|--------------|-----------|-------------|
+| ------------ | --------- | ----------- |
 | `token`      | `address` | WIP         |
 | `underlying` | `int256`  | WIP         |
 
@@ -354,8 +394,10 @@ event Chop(
 );
 ```
 
+WIP
+
 | Parameter    | Type      | Description |
-|--------------|-----------|-------------|
+| ------------ | --------- | ----------- |
 | `account`    | `address` | WIP         |
 | `token`      | `address` | WIP         |
 | `amount`     | `uint256` | WIP         |
@@ -371,8 +413,10 @@ event Pick(
 );
 ```
 
-| Parameter    | Type      | Description |
-|--------------|-----------|-------------|
-| `account`    | `address` | WIP         |
-| `token`      | `address` | WIP         |
-| `amount`     | `uint256` | WIP         |
+WIP
+
+| Parameter | Type      | Description |
+| --------- | --------- | ----------- |
+| `account` | `address` | WIP         |
+| `token`   | `address` | WIP         |
+| `amount`  | `uint256` | WIP         |

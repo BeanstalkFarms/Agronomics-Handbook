@@ -1,14 +1,14 @@
 # Field
 
 {% hint style="info" %}
-This page has not been updated yet for [BIP-34](https://arweave.net/R_tBcwBU09nKXdfgHXJSKO7uM4xmWdI_B8522JsVI5I).
+This page has not been updated yet for [BIP-34](https://arweave.net/R\_tBcwBU09nKXdfgHXJSKO7uM4xmWdI\_B8522JsVI5I), which introduced the [Morning](https://docs.bean.money/almanac/peg-maintenance/temperature#morning), or Dutch auction for Temperature in the Field. The [Field Facet](./) page is up to date.
 {% endhint %}
 
 The Field is Beanstalk's credit facility. Beanstalk relies on a decentralized set of creditors to maintain Bean price stability.
 
 Anytime Beanstalk is willing to issue debt, there is Soil in the Field. Soil represents the number of Beans that Beanstalk is currently willing to borrow.
 
-Anytime there is Soil in the Field, Farmers can Sow Beans in exchange for Pods. Pods are stored in Plots and placed at the end of the Pod Line.&#x20;
+Anytime there is Soil in the Field, Farmers can Sow Beans in exchange for Pods. Pods are stored in Plots and placed at the end of the Pod Line.
 
 Pods become Harvestable on a First In, First Out (FIFO) basis when `deltaB > 0` over the course of a Season. Assuming there are Unharvestable Pods and Unfertilized Beans, 1/3 of Bean mints turn Pods into Harvestable Pods, which can be Harvested (redeemed) for Beans via the `harvest()` function. When a Plot is Harvested, it is deleted from storage.
 

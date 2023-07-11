@@ -1,8 +1,10 @@
 # Diamond Cut Facet
 
+The Diamond Cut Facet is used by the owner to upgrade Beanstalk.
+
 ## Call Functions
 
-### [Diamond Cut](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DiamondCutFacet.sol#L22)
+### [Diamond Cut](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/diamond/DiamondCutFacet.sol#L22)
 
 ```solidity
 function diamondCut(
@@ -12,20 +14,18 @@ function diamondCut(
 ) external override;
 ```
 
-| Parameter     | Type         | Description |
-|---------------|--------------|-------------|
-| `_diamondCut` | `FacetCut[]` | WIP         |
-| `_init`       | `address`    | WIP         |
-| `_calldata`   | `bytes`      | WIP         |
+Add, replace, and/or remove any number of functions and optionally execute a function with `delegatecall`. Can only be called by the owner of Beanstalk.
+
+| Parameter     | Type         | Description                                                                                                          |
+| ------------- | ------------ | -------------------------------------------------------------------------------------------------------------------- |
+| `_diamondCut` | `FacetCut[]` | Contains the facet addresses and function selectors.                                                                 |
+| `_init`       | `address`    | The address of the contract or facet to execute `_calldata`.                                                         |
+| `_calldata`   | `bytes`      | A function call, including function selector and arguments (`_calldata` is executed with `delegatecall` on `_init`). |
 
 ## View Functions
 
-```
-None
-```
+None.
 
 ## Events
 
-```solidity
-None
-```
+None.

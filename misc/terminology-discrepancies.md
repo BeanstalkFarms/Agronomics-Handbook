@@ -14,8 +14,6 @@ These discrepancies can be resolved in a future BIP.
 | Claim Fertilized                         | Rinse               |
 | Underlying assets (w.r.t. Unripe assets) | Ripe assets         |
 | Earned Seeds                             | Plantable Seeds     |
-| Update (w.r.t. Grown Stalk)              | Mow                 |
-| Rain                                     | Oversaturated       |
 | Season of Plenty                         | Flood               |
 | \[not explicitly referenced]             | Deposit Whitelist   |
 | \[not explicitly referenced]             | Convert Whitelist   |

@@ -3,7 +3,7 @@
 The Beanstalk Subgraph is used throughout the Beanstalk ecosystem for indexing and querying on-chain data about Beanstalk.
 
 {% hint style="warning" %}
-All subgraph documentation is under active development.
+All subgraph documentation is in development and not necessarily up to date.
 {% endhint %}
 
 ### Default Endpoints

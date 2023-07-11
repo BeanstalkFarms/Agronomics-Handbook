@@ -1,7 +1,7 @@
 # Query Examples
 
 {% hint style="warning" %}
-All subgraph documentation is under active development.
+All subgraph documentation is in development and not necessarily up to date.
 {% endhint %}
 
 Below are some sample queries you can use to gather information from the Beanstalk contracts.

@@ -1,6 +1,6 @@
 # Token Support Facet
 
-Permit ERC-20 and ERC-721 tokens and transfer ERC-721 and ERC-1155 tokens.
+The Token Support Facet handles permits for ERC-20 and ERC-721 tokens and transfers for ERC-721 and ERC-1155 tokens.
 
 ## Call Functions
 
@@ -19,18 +19,18 @@ function permitERC20(
 ) public payable;
 ```
 
-permitERC20 is wrapper function for permit of ERC20Permit token.
+`permitERC20` is a wrapper function for permit of [ERC20Permit](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#ERC20Permit-permit-address-address-uint256-uint256-uint8-bytes32-bytes32-) token.
 
-| Parameter  | Type           | Description |
-|------------|----------------|-------------|
-| `token`    | `IERC20Permit` | WIP         |
-| `owner`    | `address`      | WIP         |
-| `spender`  | `address`      | WIP         |
-| `value`    | `uint256`      | WIP         |
-| `deadline` | `uint256`      | WIP         |
-| `v`        | `uint8`        | WIP         |
-| `r`        | `bytes32`      | WIP         |
-| `s`        | `bytes32`      | WIP         |
+| Parameter  | Type           | Description                           |
+| ---------- | -------------- | ------------------------------------- |
+| `token`    | `IERC20Permit` | Token to permit.                      |
+| `owner`    | `address`      | Owner of the token.                   |
+| `spender`  | `address`      | Address to permit to spend the token. |
+| `value`    | `uint256`      | Token amount to permit.               |
+| `deadline` | `uint256`      | Expiration of signature (Unix time)   |
+| `v`        | `uint8`        | Recovery ID.                          |
+| `r`        | `bytes32`      | ECDSA signature output.               |
+| `s`        | `bytes32`      | ECDSA signature output.               |
 
 ### [Transfer ERC-721](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenSupportFacet.sol#L53)
 
@@ -44,11 +44,11 @@ function transferERC721(
 
 Execute an ERC-721 token transfer.
 
-| Parameter | Type      | Description |
-|-----------|-----------|-------------|
-| `token`   | `IERC721` | WIP         |
-| `to`      | `address` | WIP         |
-| `id`      | `uint256` | WIP         |
+| Parameter | Type      | Description                      |
+| --------- | --------- | -------------------------------- |
+| `token`   | `IERC721` | Token address of the ERC-721.    |
+| `to`      | `address` | Address being transferred to.    |
+| `id`      | `uint256` | ID of ERC-721 token to transfer. |
 
 ### [Permit ERC-721](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenSupportFacet.sol#L65)
 
@@ -64,13 +64,13 @@ function permitERC721(
 
 Execute a permit for an ERC-721 token.
 
-| Parameter  | Type       | Description |
-|------------|------------|-------------|
-| `token`    | `IERC4494` | WIP         |
-| `spender`  | `address`  | WIP         |
-| `tokenId`  | `uint256`  | WIP         |
-| `deadline` | `uint256`  | WIP         |
-| `sig`      | `bytes`    | WIP         |
+| Parameter  | Type       | Description                                                                                                       |
+| ---------- | ---------- | ----------------------------------------------------------------------------------------------------------------- |
+| `token`    | `IERC4494` | Token address to permit.                                                                                          |
+| `spender`  | `address`  | Address to permit to spend the token.                                                                             |
+| `tokenId`  | `uint256`  | ID of `token` to permit.                                                                                          |
+| `deadline` | `uint256`  | Expiration of signature (Unix time).                                                                              |
+| `sig`      | `bytes`    | A valid `secp256k1` or [EIP-2098](https://eips.ethereum.org/EIPS/eip-2098) signature from owner of the `tokenId`. |
 
 ### [Transfer ERC-1155](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenSupportFacet.sol#L85)
 
@@ -83,14 +83,14 @@ function transferERC1155(
 ) external payable;
 ```
 
-Execute an ERC-1155 token transfer of a single Id.
+Execute an ERC-1155 token transfer of a single ID.
 
-| Parameter | Type       | Description |
-|-----------|------------|-------------|
-| `token`   | `IERC1155` | WIP         |
-| `to`      | `address`  | WIP         |
-| `id`      | `uint256`  | WIP         |
-| `value`   | `uint256`  | WIP         |
+| Parameter | Type       | Description                                        |
+| --------- | ---------- | -------------------------------------------------- |
+| `token`   | `IERC1155` | Token address of the ERC-1155.                     |
+| `to`      | `address`  | Address being transferred to.                      |
+| `id`      | `uint256`  | ID of the ERC-1155 token.                          |
+| `value`   | `uint256`  | Number of the ERC-1155 tokens at `id` to transfer. |
 
 ### [Batch Transfer ERC-1155](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/TokenSupportFacet.sol#L98)
 
@@ -103,23 +103,19 @@ function batchTransferERC1155(
 ) external payable;
 ```
 
-Execute an ERC-1155 token transfer of multiple Ids.
+Execute an ERC-1155 token transfer of multiple IDs.
 
-| Parameter | Type        | Description |
-|-----------|-------------|-------------|
-| `token`   | `IERC1155`  | WIP         |
-| `to`      | `address`   | WIP         |
-| `ids`     | `uint256[]` | WIP         |
-| `values`  | `uint256[]` | WIP         |
+| Parameter | Type        | Description                                        |
+| --------- | ----------- | -------------------------------------------------- |
+| `token`   | `IERC1155`  | Token address of the ERC-1155.                     |
+| `to`      | `address`   | Address being transferred to.                      |
+| `ids`     | `uint256[]` | Array of IDs of the ERC-155 token.                 |
+| `values`  | `uint256[]` | Array of amounts of ERC-1155s at `id` to transfer. |
 
 ## View Functions
 
-```
-None
-```
+None.
 
 ## Events
 
-```
-None
-```
+None.

@@ -12,7 +12,6 @@
 * [EIP-2535 Diamond](overview/eip-2535-diamond.md)
 * [App Storage](overview/app-storage.md)
 * [Internal Balances](overview/internal-balances.md)
-* [Permits and Approvals](overview/permits-and-approvals.md)
 
 ## 🌾 Protocol
 
@@ -25,6 +24,10 @@
   * [BDV Facet](protocol/silo/bdv-facet.md)
   * [Whitelist Facet](protocol/silo/whitelist-facet.md)
   * [Convert Facet](protocol/silo/convert-facet.md)
+  * [Approval Facet](protocol/silo/approval-facet.md)
+  * [Metadata Facet](protocol/silo/metadata-facet.md)
+  * [Migration Facet](protocol/silo/migration-facet.md)
+  * [Legacy Claim Withdrawal Facet](protocol/silo/legacy-claim-withdrawal-facet.md)
 * [Field](protocol/field/README.md)
   * [Field Facet](protocol/field/field-facet.md)
   * [Fundraiser Facet](protocol/field/fundraiser-facet.md)

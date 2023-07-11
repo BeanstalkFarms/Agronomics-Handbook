@@ -1,6 +1,6 @@
 # Season Facet
 
-The Season Facet contains the `sunrise` function and handles all logic for Season changes.
+The Season Facet contains the `gm` function and handles all logic for Season changes.
 
 ## Call Functions
 
@@ -10,11 +10,11 @@ The Season Facet contains the `sunrise` function and handles all logic for Seaso
 function sunrise() external payable returns (uint256);
 ```
 
-Advances Beanstalk to the next Season, sending reward Beans to the caller's circulating balance.
+Advances Beanstalk to the next Season, sending reward Beans to the caller's Circulating balance.
 
-| Return Value | Description                               |
-|--------------|-------------------------------------------|
-| `uint256`    | The number of beans minted to the caller. |
+| Return Type | Description                               |
+| ----------- | ----------------------------------------- |
+| `uint256`   | The number of Beans minted to the caller. |
 
 ### [GM](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/sun/SeasonFacet/SeasonFacet.sol#L47)
 
@@ -28,13 +28,13 @@ function gm(
 Advances Beanstalk to the next Season, sending reward Beans to a specified address and balance.
 
 | Parameter | Type      | Description                                                                                    |
-|-----------|-----------|------------------------------------------------------------------------------------------------|
+| --------- | --------- | ---------------------------------------------------------------------------------------------- |
 | `account` | `address` | Indicates to which address reward Beans should be sent.                                        |
 | `mode`    | `To`      | The balance to transfer Beans to; see [`LibTransfer.To`](../../overview/internal-balances.md). |
 
-| Return Value | Description                               |
-|--------------|-------------------------------------------|
-| `uint256`    | The number of Beans minted to the caller. |
+| Return Type | Description                               |
+| ----------- | ----------------------------------------- |
+| `uint256`   | The number of Beans minted to the caller. |
 
 ## View Functions
 
@@ -46,9 +46,9 @@ function season() public view returns (uint32);
 
 Returns the current Season number.
 
-| Return Value | Description                |
-|--------------|----------------------------|
-| `uint32`     | The current Season number. |
+| Return Type | Description                |
+| ----------- | -------------------------- |
+| `uint32`    | The current Season number. |
 
 ### [Paused](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/sun/SeasonFacet/SeasonFacet.sol#L76)
 
@@ -58,9 +58,9 @@ function paused() public view returns (bool);
 
 Returns whether Beanstalk is Paused. When Paused, `sunrise` cannot be called.
 
-| Return Value | Description                  |
-|--------------|------------------------------|
-| `bool`       | Whether Beanstalk is Paused. |
+| Return Type | Description                  |
+| ----------- | ---------------------------- |
+| `bool`      | Whether Beanstalk is Paused. |
 
 ### [Time](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/sun/SeasonFacet/SeasonFacet.sol#L83)
 
@@ -70,9 +70,9 @@ function time() external view returns (Storage.Season memory);
 
 Returns the Season struct.
 
-| Return Value | Description                                                        |
-|--------------|--------------------------------------------------------------------|
-| `Season`     | The Season struct in [App Storage](../../overview/app-storage.md). |
+| Return Type | Description                                                        |
+| ----------- | ------------------------------------------------------------------ |
+| `Season`    | The Season struct in [App Storage](../../overview/app-storage.md). |
 
 ### [Above Peg](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/sun/SeasonFacet/SeasonFacet.sol#L90)
 
@@ -82,9 +82,9 @@ function abovePeg() external view returns (bool);
 
 Returns whether Beanstalk started this Season above or below peg.
 
-| Return Value | Description                                               |
-|--------------|-----------------------------------------------------------|
-| `bool`       | Whether Beanstalk started this Season above or below peg. |
+| Return Type | Description                                               |
+| ----------- | --------------------------------------------------------- |
+| `bool`      | Whether Beanstalk started this Season above or below peg. |
 
 ### [Sunrise Block](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/sun/SeasonFacet/SeasonFacet.sol#L97)
 
@@ -94,9 +94,9 @@ function sunriseBlock() external view returns (uint32);
 
 Returns the block during which the current Season started.
 
-| Return Value | Description                                        |
-|--------------|----------------------------------------------------|
-| `uint32`     | The block during which the current Season started. |
+| Return Type | Description                                        |
+| ----------- | -------------------------------------------------- |
+| `uint32`    | The block during which the current Season started. |
 
 ### [Season Time](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/sun/SeasonFacet/SeasonFacet.sol#L105)
 
@@ -106,9 +106,9 @@ function seasonTime() public view virtual returns (uint32);
 
 Returns the expected Season number given the current block timestamp. The `sunrise` function can be called when `seasonTime() > season()`.
 
-| Return Value | Description                                                   |
-|--------------|---------------------------------------------------------------|
-| `uint32`     | The expected Season number given the current block timestamp. |
+| Return Type | Description                                                   |
+| ----------- | ------------------------------------------------------------- |
+| `uint32`    | The expected Season number given the current block timestamp. |
 
 ### [Weather](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/sun/SeasonFacet/Weather.sol#L75)
 
@@ -118,9 +118,9 @@ function weather() public view returns (Storage.Weather memory);
 
 Returns the Weather struct.
 
-| Return Value | Description                                                                 |
-|--------------|-----------------------------------------------------------------------------|
-| `Weather`    | Returns the Weather struct in [App Storage](../../overview/app-storage.md). |
+| Return Type | Description                                                                 |
+| ----------- | --------------------------------------------------------------------------- |
+| `Weather`   | Returns the Weather struct in [App Storage](../../overview/app-storage.md). |
 
 ### [Rain](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/sun/SeasonFacet/Weather.sol#L82)
 
@@ -130,9 +130,9 @@ function rain() public view returns (Storage.Rain memory);
 
 Returns the Rain struct.
 
-| Return Value | Description                                                              |
-|--------------|--------------------------------------------------------------------------|
-| `Rain`       | Returns the Rain struct in [App Storage](../../overview/app-storage.md). |
+| Return Type | Description                                                              |
+| ----------- | ------------------------------------------------------------------------ |
+| `Rain`      | Returns the Rain struct in [App Storage](../../overview/app-storage.md). |
 
 ### [Plenty Per Root](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/sun/SeasonFacet/Weather.sol#L89)
 
@@ -143,12 +143,12 @@ function plentyPerRoot(uint32 season) external view returns (uint256);
 Returns the Season of Plenty (SOP) rewards per Root for the given Season.
 
 | Parameter | Type     | Description                                   |
-|-----------|----------|-----------------------------------------------|
+| --------- | -------- | --------------------------------------------- |
 | `season`  | `uint32` | The Season to fetch SOP rewards per Root for. |
 
-| Return Value | Description                           |
-|--------------|---------------------------------------|
-| `uint256`    | The SOP rewards for the given Season. |
+| Return Type | Description                           |
+| ----------- | ------------------------------------- |
+| `uint256`   | The SOP rewards for the given Season. |
 
 ### [Total deltaB](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/sun/SeasonFacet/Oracle.sol#L21)
 
@@ -159,7 +159,7 @@ function totalDeltaB() external view returns (int256 deltaB);
 Returns the cumulative deltaB across pools.
 
 | Return Value | Type     | Description            |
-|--------------|----------|------------------------|
+| ------------ | -------- | ---------------------- |
 | `deltaB`     | `int256` | The cumulative deltaB. |
 
 ### [Pool deltaB](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/sun/SeasonFacet/Oracle.sol#L28)
@@ -171,11 +171,11 @@ function poolDeltaB(address pool) external view returns (int256);
 Returns the deltaB for a given pool.
 
 | Parameter | Type      | Description               |
-|-----------|-----------|---------------------------|
+| --------- | --------- | ------------------------- |
 | `pool`    | `address` | The address of the pool . |
 
 | Return Value | Description                    |
-|--------------|--------------------------------|
+| ------------ | ------------------------------ |
 | `int256`     | The deltaB for the given pool. |
 
 ## Events
@@ -189,7 +189,7 @@ event Sunrise(uint256 indexed season);
 Emitted when the Season changes.
 
 | Parameter | Type      | Description            |
-|-----------|-----------|------------------------|
+| --------- | --------- | ---------------------- |
 | `season`  | `uint256` | The new Season number. |
 
 ### [Incentivization](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/sun/SeasonFacet/SeasonFacet.sol#L29) <a href="#event-incentivization" id="event-incentivization"></a>
@@ -201,7 +201,7 @@ event Incentivization(address indexed account, uint256 beans);
 Emitted when Beanstalk pays Beans to the `sunrise` caller.
 
 | Parameter | Type      | Description                                      |
-|-----------|-----------|--------------------------------------------------|
+| --------- | --------- | ------------------------------------------------ |
 | `account` | `address` | The address to which the reward Beans were sent. |
 | `beans`   | `uint256` | The amount of Beans paid as a reward.            |
 
@@ -214,7 +214,7 @@ event Reward(uint32 indexed season, uint256 toField, uint256 toSilo, uint256 toF
 Emitted during Sunrise when Beans are distributed to the Field, the Silo, and Fertilizer.
 
 | Parameter      | Type      | Description                                            |
-|----------------|-----------|--------------------------------------------------------|
+| -------------- | --------- | ------------------------------------------------------ |
 | `season`       | `uint32`  | The Season in which Beans were distributed.            |
 | `toField`      | `uint256` | The number of Beans distributed to the Field.          |
 | `toSilo`       | `uint256` | The number of Beans distributed to the Silo.           |
@@ -229,7 +229,7 @@ event Soil(uint32 indexed season, uint256 soil);
 Emitted during Sunrise when Beanstalk adjusts the amount of available Soil.
 
 | Parameter | Type      | Description                            |
-|-----------|-----------|----------------------------------------|
+| --------- | --------- | -------------------------------------- |
 | `season`  | `uint32`  | The Season in which Soil was adjusted. |
 | `soil`    | `uint256` | The new amount of Soil available.      |
 
@@ -242,7 +242,7 @@ event WeatherChange(uint256 indexed season, uint256 caseId, int8 change);
 Emitted when the Weather (now [Temperature](../../misc/terminology-discrepancies.md)) changes.
 
 | Parameter | Type      | Description                                                                                                                     |
-|-----------|-----------|---------------------------------------------------------------------------------------------------------------------------------|
+| --------- | --------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | `season`  | `uint256` | The current Season.                                                                                                             |
 | `caseId`  | `uint256` | The "[Weather Case](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/farm/init/InitDiamond.sol#L41)". |
 | `change`  | `int8`    | The change in Temperature from the previous value.                                                                              |
@@ -260,7 +260,7 @@ event SeasonOfPlenty(
 Emitted when Beans are minted during the Season of Plenty.
 
 | Parameter | Type      | Description                                                                |
-|-----------|-----------|----------------------------------------------------------------------------|
+| --------- | --------- | -------------------------------------------------------------------------- |
 | `season`  | `uint256` | The Season in which Beans were minted for distribution.                    |
 | `amount`  | `uint256` | The amount of 3CRV which was received for swapping Beans.                  |
 | `toField` | `uint256` | The amount of Beans which were distributed to remaining Pods in the Field. |

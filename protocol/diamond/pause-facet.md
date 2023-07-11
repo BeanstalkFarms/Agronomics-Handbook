@@ -1,6 +1,6 @@
 # Pause Facet
 
-Pause Facet handles the pausing/unpausing of Beanstalk.
+The Pause Facet handles the Pausing and Unpausing of Beanstalk.
 
 ## Call Functions
 
@@ -10,17 +10,19 @@ Pause Facet handles the pausing/unpausing of Beanstalk.
 function pause() external payable;
 ```
 
+Pause Beanstalk, which makes it such that the `gm` function cannot be successfully called. Only callable by the owner of Beanstalk.
+
 ### [Unpause](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/PauseFacet.sol#L37)
 
 ```solidity
 function unpause() external payable;
 ```
 
+Unpause Beanstalk, which allows the `gm` function to be successfully called at the top of the 2nd hour. The TWAP oracle and Season timer are reset as well.
+
 ## View Functions
 
-```
-None
-```
+None.
 
 ## Events
 
@@ -30,9 +32,11 @@ None
 event Pause(uint256 timestamp);
 ```
 
-| Parameter   | Type      | Description |
-|-------------|-----------|-------------|
-| `timestamp` | `uint256` | WIP         |
+Emitted when Beanstalk is Paused.
+
+| Parameter   | Type      | Description                                              |
+| ----------- | --------- | -------------------------------------------------------- |
+| `timestamp` | `uint256` | Timestamp of the current block when Beanstalk is Paused. |
 
 ### [Unpause](https://github.com/BeanstalkFarms/Beanstalk/blob/f0e29aae99ddca90085d8dfdc990cff88451d357/protocol/contracts/farm/facets/PauseFacet.sol#L22) <a href="#event-unpause" id="event-unpause"></a>
 
@@ -40,7 +44,9 @@ event Pause(uint256 timestamp);
 event Unpause(uint256 timestamp, uint256 timePassed);
 ```
 
-| Parameter    | Type      | Description |
-|--------------|-----------|-------------|
-| `timestamp`  | `uint256` | WIP         |
-| `timePassed` | `uint256` | WIP         |
+Emitted when Beanstalk is Unpaused.
+
+| Parameter    | Type      | Description                                                |
+| ------------ | --------- | ---------------------------------------------------------- |
+| `timestamp`  | `uint256` | Timestamp of the current block when Beanstalk is Unpaused. |
+| `timePassed` | `uint256` | How much time passed while Beanstalk was Paused.           |
