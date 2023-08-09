@@ -1224,7 +1224,7 @@ event RemoveDeposits(
 );
 ```
 
-```
+```solidity
 event RemoveDeposits(
     address indexed account,
     address indexed token,
