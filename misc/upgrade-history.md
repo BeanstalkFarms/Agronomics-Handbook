@@ -10,7 +10,7 @@ A catalog of each Beanstalk upgrade, pause/unpause and event change.
 Select a block to view event changes:
 
 | Date       | Block                                                                         | Version | Transaction                                                                                                        | Description                                                                                                                                                                                             | Commit                                                                                                          | Event Added                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Event Modified                                                               | Event Removed                                                                                                                                                                                                                                                                 | Re-emissions                                 |
-| ---------- | ----------------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+|------------|-------------------------------------------------------------------------------|---------|--------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
 | 8/6/2021   | 12974075                                                                      | 1.0.0   | [Etherscan](https://etherscan.io/tx/0x40b23cea3aa6e1a7dd89bbcd24c67f6fa1f6d663d7609f14046cd6cf50b6ce86) (`0x40b2`) | Contract Creation                                                                                                                                                                                       | [Commit](https://github.com/BeanstalkFarms/Beanstalk/commit/ccce0fa18a83cc09f6a889c302b6e509230a486f) (`ccce0`) | n/a                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | n/a                                                                          | n/a                                                                                                                                                                                                                                                                           | n/a                                          |
 | 8/6/2021   | 12974077                                                                      | 1.0.0   | [Etherscan](https://etherscan.io/tx/0xec462c02a2e4442db62179b70a7c07f812b237e127a5b24ba192f796f8013db6) (`0xec46`) | `init` Call                                                                                                                                                                                             | [Commit](https://github.com/BeanstalkFarms/Beanstalk/commit/ccce0fa18a83cc09f6a889c302b6e509230a486f) (`ccce0`) | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | -                                                                            | -                                                                                                                                                                                                                                                                             | -                                            |
 | 8/9/2021   | 12991967                                                                      | 1.0.1   | [Etherscan](https://etherscan.io/tx/0xb4ba1b324b53fe5e5bbfeadcd735dc9c20bcea4ff08ac75eb46961ea026aae81) (`0xb4ba`) | Accounting Hotfix                                                                                                                                                                                       | [Commit](https://github.com/BeanstalkFarms/Beanstalk/commit/a70db847fdc4f6f74da237160b6ea8237b201df8) (`a70db`) | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | -                                                                            | -                                                                                                                                                                                                                                                                             | -                                            |
@@ -143,7 +143,7 @@ Select a block to view event changes:
 | 05/04/2023 | [17188356](upgrade-history.md#17188356-bip-34)                                | 2.4.0   | [Etherscan](https://etherscan.io/tx/0x7f6fb3d9134fa08c274121614db549ad4303d9df95ac6e4747c1f7d7ded66403) (`0x7f6f`) | [BIP-34](https://arweave.net/7M\_RRIDWnWo0MwfyA8pjs1leOGrQlEzEvKTcil4xDIs)                                                                                                                              | [Commit](https://github.com/BeanstalkFarms/Beanstalk/commit/a03b8d875ed965f0647de8fb8f02d3f240ee3d6c) (`a03b8`) | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | -                                                                            | `MetapoolOracle`                                                                                                                                                                                                                                                              | -                                            |
 | -          | -                                                                             | 2.4.0   | -                                                                                                                  | [BIP-35](https://arweave.net/6io\_TThM36tFXmaM-AW52xygYKQ2oxUbGA8jydtanMc)                                                                                                                              | -                                                                                                               | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | -                                                                            | -                                                                                                                                                                                                                                                                             | -                                            |
 | 05/13/2023 | 17251905                                                                      | 2.4.1   | [Etherscan](https://etherscan.io/tx/0x22e529e7f7a4f9b530586d02befd70ff471d925e5f7e373d2395f8b81c061bc4) (`0x22e5`) | [EBIP-8](https://arweave.net/bnLvAXT1eM2vVh76iPXU-k71PPJ4KxGIz-StF5KqY-c)                                                                                                                               | [Commit](https://github.com/BeanstalkFarms/Beanstalk/commit/75ad38f5ff1c298fd6e14b3b8a6c73c992b69d7b) (`75ad3`) | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | -                                                                            | -                                                                                                                                                                                                                                                                             | -                                            |
-| 07/11/2023 | TBD                                                                           | 2.5.0   | TBD                                                                                                                | BIP-36 (TBD)                                                                                                                                                                                            | TBD                                                                                                             | TBD                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | TBD                                                                          | TBD                                                                                                                                                                                                                                                                           | TBD                                          |
+| 07/11/2023 | [17671557](upgrade-history.md#17671557-bip-36)                                | 2.5.0   | [Etherscan](https://etherscan.io/tx/0x17ca3482479f4a0f13f0337a9288b8569e531e71e1e932813d04e6ed1224e95c) (`0x17ca`) | [BIP-36](https://arweave.net/Zj-OCFwtOxRewDN1RK3tELz_0xyjjBKisL1arwJ3klk)                                                                                                                               | [Commit](https://github.com/BeanstalkFarms/Beanstalk/commit/36d3cbdfecbfb5a9afb46c7b2ee7965f1288e4e2) (`36d3c`) | `TransferBatch`, `TransferSingle`, `ApprovalForAll`, `RemoveDeposit`, `UpdatedStalkPerBdvPerSeason`                                                                                                                                                                                                                                                                                                                                                                                                             | `AddDeposit`, `RemoveDeposit`, `RemoveDeposits`, `WhitelistToken`            | `AddWithdrawal`, `SeedsBalanceChanged`                                                                                                                                                                                                                                        | -                                            |
 
 ## Event Changes by Block
 
@@ -1103,4 +1103,176 @@ event PodOrderFilled(
 
 ```solidity
 event MetapoolOracle(uint32 indexed season, int256 deltaB, uint256[2] balances);
+```
+
+### 17671557 ([BIP-36](https://arweave.net/Zj-OCFwtOxRewDN1RK3tELz_0xyjjBKisL1arwJ3klk))
+
+* [Added](upgrade-history.md#added-bip-36)
+* [Modified](upgrade-history.md#modified-bip-36)
+* [Removed](upgrade-history.md#removed-bip-36)
+
+#### Added <a href="#added-bip-36" id="added-bip-36"></a>
+
+[protocol/contracts/beanstalk/silo/SiloFacet/TokenSilo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/36d3cbdfecbfb5a9afb46c7b2ee7965f1288e4e2#diff-1133daa7cab8c89b53a1fc34e51195e138f499112abfdf198b280fc03eb77ecfR120)
+
+```solidity
+event TransferBatch(
+    address indexed operator,
+    address indexed from,
+    address indexed to,
+    uint256[] ids,
+    uint256[] values
+);
+```
+
+[protocol/contracts/beanstalk/silo/SiloFacet/TokenSilo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/36d3cbdfecbfb5a9afb46c7b2ee7965f1288e4e2#diff-1133daa7cab8c89b53a1fc34e51195e138f499112abfdf198b280fc03eb77ecfR101)
+
+```solidity
+event TransferSingle(
+    address indexed operator,
+    address indexed from,
+    address indexed to,
+    uint256 id,
+    uint256 value
+);
+```
+
+[protocol/contracts/beanstalk/silo/ApprovalFacet.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/36d3cbdfecbfb5a9afb46c7b2ee7965f1288e4e2#diff-04c2616e132fc7d48e65e371a90235aaac3413a52cee89061c74ea3fe53f4a32R32)
+
+```solidity
+event ApprovalForAll(address indexed account, address indexed operator, bool approved);
+```
+
+[protocol/contracts/beanstalk/silo/ConvertFacet.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/36d3cbdfecbfb5a9afb46c7b2ee7965f1288e4e2#diff-80dee2bf35b86cb246d17e5c125566d999c1c76f695851906d62df8db8930950R36)
+
+```solidity
+event RemoveDeposit(
+    address indexed account,
+    address indexed token,
+    int96 stem,
+    uint256 amount,
+    uint256 bdv
+);
+```
+
+[protocol/contracts/beanstalk/silo/WhitelistFacet.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/36d3cbdfecbfb5a9afb46c7b2ee7965f1288e4e2#diff-127caaf5da0ab33176050074aab5c35de48c2f3b24f7a841745577e72870b1f7R24)
+
+```solidity
+event UpdatedStalkPerBdvPerSeason(
+    address indexed token,
+    uint32 stalkEarnedPerSeason,
+    uint32 season
+);
+```
+
+#### Modified <a href="#modified-bip-36" id="modified-bip-36"></a>
+
+(original event listed first, updated event second)
+
+[protocol/contracts/beanstalk/silo/SiloFacet/TokenSilo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/36d3cbdfecbfb5a9afb46c7b2ee7965f1288e4e2#diff-1133daa7cab8c89b53a1fc34e51195e138f499112abfdf198b280fc03eb77ecfL20)
+
+```solidity
+event AddDeposit(
+    address indexed account,
+    address indexed token,
+    uint32 season,
+    uint256 amount,
+    uint256 bdv
+);
+```
+
+```solidity
+event AddDeposit(
+    address indexed account,
+    address indexed token,
+    int96 stem,
+    uint256 amount,
+    uint256 bdv
+);
+```
+
+[protocol/contracts/beanstalk/silo/SiloFacet/TokenSilo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/36d3cbdfecbfb5a9afb46c7b2ee7965f1288e4e2#diff-1133daa7cab8c89b53a1fc34e51195e138f499112abfdf198b280fc03eb77ecfL34)
+
+```solidity
+event RemoveDeposit(
+    address indexed account,
+    address indexed token,
+    uint32 season,
+    uint256 amount
+);
+```
+
+```solidity
+event RemoveDeposit(
+    address indexed account,
+    address indexed token,
+    int96 stem,
+    uint256 amount,
+    uint256 bdv
+);
+```
+
+[protocol/contracts/beanstalk/silo/SiloFacet/TokenSilo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/36d3cbdfecbfb5a9afb46c7b2ee7965f1288e4e2#diff-1133daa7cab8c89b53a1fc34e51195e138f499112abfdf198b280fc03eb77ecfL27)
+
+```solidity
+event RemoveDeposits(
+    address indexed account,
+    address indexed token,
+    uint32[] seasons,
+    uint256[] amounts,
+    uint256 amount
+);
+```
+
+```
+event RemoveDeposits(
+    address indexed account,
+    address indexed token,
+    int96[] stems,
+    uint256[] amounts,
+    uint256 amount,
+    uint256[] bdvs
+);
+```
+
+[protocol/contracts/beanstalk/silo/WhitelistFacet.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/36d3cbdfecbfb5a9afb46c7b2ee7965f1288e4e2#diff-127caaf5da0ab33176050074aab5c35de48c2f3b24f7a841745577e72870b1f7L17)
+
+```solidity
+event WhitelistToken(
+    address indexed token,
+    bytes4 selector,
+    uint256 seeds,
+    uint256 stalk
+);
+```
+
+```solidity
+event WhitelistToken(
+    address indexed token,
+    bytes4 selector,
+    uint32 stalkEarnedPerSeason,
+    uint256 stalk
+);
+```
+
+#### Removed <a href="#removed-bip-36" id="removed-bip-36"></a>
+
+[protocol/contracts/beanstalk/silo/SiloFacet/TokenSilo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/36d3cbdfecbfb5a9afb46c7b2ee7965f1288e4e2#diff-1133daa7cab8c89b53a1fc34e51195e138f499112abfdf198b280fc03eb77ecfL41)
+
+```solidity
+event AddWithdrawal(
+    address indexed account,
+    address indexed token,
+    uint32 season,
+    uint256 amount
+);
+```
+
+[protocol/contracts/beanstalk/silo/SiloFacet/Silo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/36d3cbdfecbfb5a9afb46c7b2ee7965f1288e4e2#diff-b5792ffe99c22ee9f1165318fc8a01a7e7ccfa672273a0ecf126bcaa9aa52c67L31)
+
+```solidity
+event SeedsBalanceChanged(
+    address indexed account,
+    int256 delta
+);
 ```
