@@ -1212,7 +1212,8 @@ event RemoveDeposit(
 );
 ```
 
-[protocol/contracts/beanstalk/silo/SiloFacet/TokenSilo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/36d3cbdfecbfb5a9afb46c7b2ee7965f1288e4e2#diff-1133daa7cab8c89b53a1fc34e51195e138f499112abfdf198b280fc03eb77ecfL27)
+[protocol/contracts/beanstalk/silo/SiloFacet/TokenSilo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/36d3cbdfecbfb5a9afb46c7b2ee7965f1288e4e2#diff-1133daa7cab8c89b53a1fc34e51195e138f499112abfdf198b280fc03eb77ecfL27)  
+[protocol/contracts/beanstalk/silo/ConvertFacet.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/36d3cbdfecbfb5a9afb46c7b2ee7965f1288e4e2#diff-80dee2bf35b86cb246d17e5c125566d999c1c76f695851906d62df8db8930950L32)
 
 ```solidity
 event RemoveDeposits(
