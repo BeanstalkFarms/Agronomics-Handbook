@@ -4,7 +4,7 @@ The Convert Facet handles Conversions between assets in the Silo and Enrooting U
 
 ## Call Functions
 
-### [Convert](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/ConvertFacet.sol#L73)
+### [Convert](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/ConvertFacet.sol#L67)
 
 ```solidity
 function convert(
@@ -34,84 +34,9 @@ Convert allows a user to Convert from one Deposited asset to another, given that
 | `fromBdv`    | `uint256` | The BDV of the Deposits Converted from. |
 | `toBdv`      | `uint256` | The BDV of the Deposits Converted to.   |
 
-### [Enroot Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/ConvertFacet.sol#L124)
-
-```solidity
-function enrootDeposit(
-    address token,
-    int96 stem,
-    uint256 amount
-) external payable nonReentrant mowSender(token);
-```
-
-Claims outstanding Revitalized Stalk and Seeds and updates BDV of a single Unripe Deposit.
-
-| Parameter | Type      | Description                        |
-| --------- | --------- | ---------------------------------- |
-| `token`   | `address` | Address of whitelist Unripe ERC20. |
-| `stem`    | `int96`   | Stem of Deposit to Enroot.         |
-| `amount`  | `uint256` | Amount to Enroot.                  |
-
-### [Enroot Deposits](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/ConvertFacet.sol#L183)
-
-```solidity
-function enrootDeposits(
-    address token,
-    int96[] calldata stems,
-    uint256[] calldata amounts
-) external payable nonReentrant mowSender(token);
-```
-
-Claims outstanding Revitalized Stalk and Seeds and updates BDV of multiple Unripe Deposits.
-
-| Parameter | Type        | Description                                          |
-| --------- | ----------- | ---------------------------------------------------- |
-| `token`   | `address`   | Address of whitelist Unripe ERC20.                   |
-| `stems`   | `int96[]`   | Array of Stems of Deposits to Enroot.                |
-| `amounts` | `uint256[]` | Array of amounts (corresponding to Stems) to Enroot. |
-
 ## View Functions
 
-### [Get Max Amount In](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/ConvertFacet.sol#L377)
-
-```solidity
-function getMaxAmountIn(address tokenIn, address tokenOut)
-    external
-    view
-    returns (uint256 amountIn);
-```
-
-Estimate the maximum number of tokens that can currently be Converted from `tokenIn` to `tokenOut`.&#x20;
-
-| Parameter  | Type      | Description                                        |
-| ---------- | --------- | -------------------------------------------------- |
-| `tokenIn`  | `address` | The whitelisted token to estimate Converting from. |
-| `tokenOut` | `address` | The whitelisted token to estimate Converting to.   |
-
-| Return Value | Type      | Description                                                                                 |
-| ------------ | --------- | ------------------------------------------------------------------------------------------- |
-| `amountIn`   | `uint256` | The maximum number of tokens that can currently be Converted from `tokenIn` to `tokenOut`.  |
-
-### [Get Amount Out](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/ConvertFacet.sol#L385)
-
-```solidity
-function getAmountOut(
-    address tokenIn,
-    address tokenOut,
-    uint256 amountIn
-) external view returns (uint256 amountOut);
-```
-
-Estimate the amount of tokens received from Converting `tokenIn` to `tokenOut` given an amount of `tokenIn`.
-
-| Parameter  | Type      | Description                                        |
-| ---------- | --------- | -------------------------------------------------- |
-| `tokenIn`  | `address` | The whitelisted token to estimate Converting from. |
-| `tokenOut` | `address` | The whitelisted token to estimate Converting to.   |
-
-| Return Value | Type      | Description                                                                       |
-| ------------ | --------- | --------------------------------------------------------------------------------- |
-| `amountOut`  | `uint256` | The amount of `tokenOut` received from a Conversion from `tokenIn` to `tokenOut`. |
+None.
 
 ## Events
 
@@ -137,7 +62,7 @@ Emitted upon each Conversion.
 | `fromAmount` | `uint256` | Amount of `fromToken` Converted.           |
 | `toAmount`   | `uint256` | Amount of `toAmount` Converted to.         |
 
-### [Remove Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master9f286e1f1b1e67bc40d35aaf4b16e5c6d83ebdd9/protocol/contracts/beanstalk/silo/ConvertFacet.sol#L36) <a href="#event-remove-deposits" id="event-remove-deposits"></a>
+### [Remove Deposit](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/ConvertFacet.sol#L36) <a href="#event-remove-deposits" id="event-remove-deposits"></a>
 
 ```solidity
 event RemoveDeposit(

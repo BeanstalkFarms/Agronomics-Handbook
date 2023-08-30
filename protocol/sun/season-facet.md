@@ -150,19 +150,19 @@ Returns the Season of Plenty (SOP) rewards per Root for the given Season.
 | ----------- | ------------------------------------- |
 | `uint256`   | The SOP rewards for the given Season. |
 
-### [Total deltaB](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/sun/SeasonFacet/Oracle.sol#L21)
+### [Total deltaB](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/sun/SeasonFacet/Oracle.sol#L28)
 
 ```solidity
 function totalDeltaB() external view returns (int256 deltaB);
 ```
 
-Returns the cumulative deltaB across pools.
+Returns the cumulative deltaB across all pools on the Oracle Whitelist.
 
 | Return Value | Type     | Description            |
 | ------------ | -------- | ---------------------- |
 | `deltaB`     | `int256` | The cumulative deltaB. |
 
-### [Pool deltaB](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/sun/SeasonFacet/Oracle.sol#L28)
+### [Pool deltaB](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/sun/SeasonFacet/Oracle.sol#L35)
 
 ```solidity
 function poolDeltaB(address pool) external view returns (int256);
@@ -177,6 +177,30 @@ Returns the deltaB for a given pool.
 | Return Value | Description                    |
 | ------------ | ------------------------------ |
 | `int256`     | The deltaB for the given pool. |
+
+### [Well Oracle Snapshot](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/sun/SeasonFacet/Oracle.sol#L55)
+
+```solidity
+function wellOracleSnapshot(address well) external view returns (bytes memory snapshot);
+```
+
+Returns the last Well oracle snapshot for a given Well.
+
+| Parameter | Type      | Description                                      |
+| --------- | --------- | ------------------------------------------------ |
+| `well`    | `address` | The address of the pool to get the snapshot for. |
+
+<table><thead><tr><th>Type</th><th data-hidden>Description</th><th data-hidden>Return Value</th></tr></thead><tbody><tr><td><code>int256</code></td><td>The last Curve oracle snapshot for <code>well</code>.</td><td><code>snapshot</code></td></tr></tbody></table>
+
+### [Curve Oracle](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/sun/SeasonFacet/Oracle.sol#L63)
+
+```solidity
+function curveOracle() external view returns (Storage.CurveMetapoolOracle memory co);
+```
+
+Returns the last Curve oracle data snapshot for the BEAN:3CRV pool.
+
+<table><thead><tr><th>Return Value</th><th>Type</th><th>Description</th><th data-hidden>Description</th><th data-hidden>Return Value</th></tr></thead><tbody><tr><td><code>co</code></td><td><code>Storage.CurveMetapoolOracle</code></td><td>Last Curve oracle data snapshot.</td><td>The deltaB for the given pool.</td><td><code>co</code></td></tr></tbody></table>
 
 ## Events
 

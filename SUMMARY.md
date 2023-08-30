@@ -24,6 +24,8 @@
   * [BDV Facet](protocol/silo/bdv-facet.md)
   * [Whitelist Facet](protocol/silo/whitelist-facet.md)
   * [Convert Facet](protocol/silo/convert-facet.md)
+  * [Convert Getters Facet](protocol/silo/convert-facet-1.md)
+  * [Enroot Facet](protocol/silo/convert-facet-2.md)
   * [Approval Facet](protocol/silo/approval-facet.md)
   * [Metadata Facet](protocol/silo/metadata-facet.md)
   * [Migration Facet](protocol/silo/migration-facet.md)

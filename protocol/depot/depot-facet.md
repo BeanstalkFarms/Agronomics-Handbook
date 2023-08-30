@@ -4,7 +4,7 @@ The Depot Facet wraps Pipeline's `pipe` functions to facilitate the loading of n
 
 ## Call Functions
 
-### [Pipe](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DepotFacet.sol#L28)
+### [Pipe](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/farm/DepotFacet.sol#L30)
 
 ```solidity
 function pipe(PipeCall calldata p)
@@ -23,7 +23,7 @@ Pipe a `PipeCall` through Pipeline.
 | ------------ | ------- | ------------------------ |
 | `result`     | `bytes` | `PipeCall` return value. |
 
-### [Multi Pipe](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DepotFacet.sol#L42)
+### [Multi Pipe](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/farm/DepotFacet.sol#L44)
 
 ```solidity
 function multiPipe(PipeCall[] calldata pipes)
@@ -42,7 +42,7 @@ Pipe multiple `PipeCalls` through Pipeline. Does not support sending Ether in th
 | ------------ | --------- | ------------------------------------------- |
 | `results`    | `bytes[]` | List of return values from each `PipeCall`. |
 
-### [Advanced Pipe](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DepotFacet.sol#L55)
+### [Advanced Pipe](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/farm/DepotFacet.sol#L57)
 
 ```solidity
 function advancedPipe(AdvancedPipeCall[] calldata pipes, uint256 value)
@@ -62,7 +62,7 @@ Pipe multiple `AdvancedPipeCalls` through Pipeline.
 | ------------ | --------- | --------------------------------------------------- |
 | `results`    | `bytes[]` | List of return values from each `AdvancedPipeCall`. |
 
-### [Ether Pipe](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DepotFacet.sol#L70)
+### [Ether Pipe](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/farm/DepotFacet.sol#L72)
 
 ```solidity
 function etherPipe(PipeCall calldata p, uint256 value)
@@ -84,7 +84,7 @@ Pipe a `PipeCall` through Pipeline with an Ether value.
 
 ## View Functions
 
-### [Read Pipe](https://github.com/BeanstalkFarms/Beanstalk/blob/fd132ae4eda02e502441c3d28d04ad2c21b4e339/protocol/contracts/farm/facets/DepotFacet.sol#L84)
+### [Read Pipe](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/farm/DepotFacet.sol#L86)
 
 ```solidity
 function readPipe(PipeCall calldata p)

@@ -389,9 +389,65 @@ Return the `account` balance of Earned Stalk, the Stalk associated with Earned B
 | ----------- | ---------------------------------- |
 | `uint256`   | Earned Stalk balance of `account`. |
 
+### [Balance Of Deposited BDV](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L228)
+
+```solidity
+function balanceOfDepositedBdv(address account, address token)
+    external
+    view
+    returns (uint256 depositedBdv);
+```
+
+Return the balance of Deposited BDV of a whitelisted asset for a given Farmer.
+
+| Parameter | Type      | Description                                                |
+| --------- | --------- | ---------------------------------------------------------- |
+| `account` | `address` | Farmer to get the Deposited BDV balance for.               |
+| `token`   | `address` | Whitelisted asset to get the balance of Deposited BDV for. |
+
+<table><thead><tr><th>Return Value</th><th>Type</th><th>Description</th><th data-hidden>Description</th><th data-hidden>Return Value</th></tr></thead><tbody><tr><td><code>depositedBdv</code></td><td><code>uint256</code></td><td>Balance of Deposited BDV given <code>account</code> and <code>token</code>.</td><td>Earned Stalk balance of <code>account</code>.</td><td><code>depositedBdv</code></td></tr></tbody></table>
+
+### [Get Last Mowed Stem](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L239)
+
+```solidity
+function getLastMowedStem(address account, address token)
+    external
+    view
+    returns (int96 lastStem);
+```
+
+Return the Stem at the time that a Farmer last Mowed a particular whitelisted asset.
+
+| Parameter | Type      | Description                                       |
+| --------- | --------- | ------------------------------------------------- |
+| `account` | `address` | Farmer to get the last Mowed Stem for.            |
+| `token`   | `address` | Whitelisted asset to get the last Mowed Stem for. |
+
+| Return Value |         | Description                                  |
+| ------------ | ------- | -------------------------------------------- |
+| `lastStem`   | `int96` | Last Mowed Stem for `token` given `account`. |
+
+### [Get Mow Status](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L252)
+
+```solidity
+function getMowStatus(address account, address token)
+    external
+    view
+    returns (Account.MowStatus memory mowStatus);
+```
+
+Return the Mow Status struct of `token` for a given `account`.
+
+| Parameter | Type      | Description                                   |
+| --------- | --------- | --------------------------------------------- |
+| `account` | `address` | Farmer to get the Mow Status of.              |
+| `token`   | `address` | Token to get the Mow Status of `account` for. |
+
+<table><thead><tr><th width="214">Type</th><th data-hidden>Description</th><th data-hidden>Return Value</th></tr></thead><tbody><tr><td><code>Account.MowStatus</code></td><td>Mow Status struct of <code>token</code> for <code>account</code>.</td><td><code>mowStatus</code></td></tr></tbody></table>
+
 ### Season of Plenty (Flood)
 
-### [Last Season Of Plenty](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L231)
+### [Last Season Of Plenty](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L266)
 
 ```solidity
 function lastSeasonOfPlenty() public view returns (uint32);
@@ -403,7 +459,7 @@ Returns the last Season that a Season of Plenty started.
 | ------------ | ------------------------------------ |
 | `uint32`     | The last Season it started Flooding. |
 
-### [Balance Of Plenty](https://github.com/BeanstalkFarms/Beanstalk/blob/9f286e1f1b1e67bc40d35aaf4b16e5c6d83ebdd9/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L239)
+### [Balance Of Plenty](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L274)
 
 ```solidity
 function balanceOfPlenty(address account)
@@ -422,7 +478,7 @@ Returns the Farmer's balance of unclaimed 3CRV earned from the Season of Plenty.
 | ------------ | --------- | ------------------------------------ |
 | `plenty`     | `uint256` | Unclaimed 3CRV balance of `account`. |
 
-### [Balance Of Rain Roots](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L251)
+### [Balance Of Rain Roots](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L286)
 
 ```solidity
 function balanceOfRainRoots(address account) public view returns (uint256);
@@ -438,7 +494,7 @@ Returns the `account` balance of Roots the last time it was Raining during a Sil
 | ------------ | ---------------------------------------------------- |
 | `uint256`    | Root balance last time it was Raining for `account`. |
 
-### [Balance of SOP](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L259)
+### [Balance of SOP](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L294)
 
 ```solidity
 function balanceOfSop(address account)
@@ -459,7 +515,7 @@ Returns the `account` Season of Plenty related state variables.
 
 ### Stems
 
-### [Stem Tip for Token](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L285)
+### [Stem Tip for Token](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L320)
 
 ```solidity
 function stemTipForToken(address token)
@@ -478,7 +534,7 @@ Returns the "stemTip", or cumulative Grown Stalk Per BDV of a given Deposited as
 | ------------ | ------- | --------------------------------- |
 | `_stemTip`   | `int96` | Returns the Stem tip for `token`. |
 
-### [Season to Stem](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L299)
+### [Season to Stem](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L334)
 
 ```solidity
 function seasonToStem(address token, uint32 season)
@@ -498,7 +554,7 @@ Get the Stem associated with a particular Deposit (via its token and Season). Ke
 | ------------ | ------- | -------------------- |
 | `stem`       | `int96` | Stem of the Deposit. |
 
-### [Get Seeds per Token](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L314)
+### [Get Seeds per Token](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L349)
 
 ```solidity
 function getSeedsPerToken(address token) public view virtual returns (uint256);
@@ -514,7 +570,7 @@ Gets the Seeds per token for legacy whitelisted assets. Calling with an non-lega
 | ----------- | --------------------------- |
 | `uint256`   | Seeds for the legacy token. |
 
-### [Stem Start Season](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L321)
+### [Stem Start Season](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L356)
 
 ```solidity
 function stemStartSeason() public view virtual returns (uint16);
@@ -526,7 +582,7 @@ Returns the Season in which Beanstalk initialized [Silo V3](https://bean.money/b
 | ----------- | --------------------------------------- |
 | `uint16`    | Season in which Stems were initialized. |
 
-### [Migration Needed](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L328)
+### [Migration Needed](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L363)
 
 ```solidity
 function migrationNeeded(address account) public view returns (bool);
@@ -542,7 +598,7 @@ Returns whether or not a Farmer needs to migrate to [Silo V3](https://bean.money
 | ----------- | ----------------------------------------------------- |
 | `bool`      | Whether or not `account` needs to migrate to Silo V3. |
 
-### [In Vesting Period](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L340)
+### [In Vesting Period](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloExit.sol#L375)
 
 ```solidity
 function inVestingPeriod() public view returns (bool);
@@ -629,6 +685,24 @@ Get the `Storage.SiloSettings` for a whitelisted token.
 | Return Type            | Description                             |
 | ---------------------- | --------------------------------------- |
 | `Storage.SiloSettings` | Struct with Silo variables for `token`. |
+
+### [BDV](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/silo/SiloFacet/SiloFacet.sol#L308)
+
+```solidity
+function bdv(address token, uint256 amount)
+    external
+    view
+    returns (uint256 _bdv);
+```
+
+Returns the total BDV of a number of tokens on the Deposit Whitelist.
+
+| Parameter | Type      | Description                    |
+| --------- | --------- | ------------------------------ |
+| `token`   | `address` | The whitelisted token address. |
+| `amount`  | `uint256` | The number of tokens.          |
+
+<table><thead><tr><th>Type</th><th data-hidden>Description</th><th data-hidden>Return Value</th></tr></thead><tbody><tr><td><code>uint256</code></td><td>The total BDV of <code>amount</code> number of <code>token</code>.</td><td><code>_bdv</code></td></tr></tbody></table>
 
 ### ERC-1155
 

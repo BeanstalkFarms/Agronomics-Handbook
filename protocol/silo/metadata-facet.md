@@ -8,7 +8,7 @@ None.
 
 ## View Functions
 
-### [URI](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/metadata/MetadataFacet.sol#L30)
+### [URI](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/metadata/MetadataFacet.sol#L34)
 
 ```solidity
 function uri(uint256 depositId) external view returns (string memory);
@@ -20,11 +20,35 @@ Returns the URI for a given Deposit ID.
 | ----------- | --------- | ------------------------------ |
 | `depositId` | `uint256` | Deposit ID to get the URI for. |
 
-| Return Value | Description                      |
-| ------------ | -------------------------------- |
-| `string`     | URI of Deposit with `depositId`. |
+| Return Type | Description                      |
+| ----------- | -------------------------------- |
+| `string`    | URI of Deposit with `depositId`. |
 
-### [Image URI](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/metadata/MetadataImage.sol#L31)
+### [Name](https://github.com/BeanstalkFarms/Beanstalk/blob/893c99d21a2d87c96280f66601a6db8900e5b7d1/protocol/contracts/beanstalk/metadata/MetadataFacet.sol#L58)
+
+```solidity
+function name() external pure returns (string memory);
+```
+
+Returns the name of the collection for OpenSea compatibility.
+
+| Return Type | Description                     |
+| ----------- | ------------------------------- |
+| `string`    | Name of the OpenSea collection. |
+
+### [Symbol](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/metadata/MetadataFacet.sol#L62)
+
+```solidity
+function symbol() external pure returns (string memory);
+```
+
+Returns the ticker of the collection for OpenSea compatibility.
+
+| Return Type | Description                       |
+| ----------- | --------------------------------- |
+| `string`    | Ticker of the OpenSea collection. |
+
+### [Image URI](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/metadata/MetadataImage.sol#L30)
 
 ```solidity
 function imageURI(uint256 depositId) public view returns (string memory);
@@ -36,10 +60,21 @@ Returns the image URI for a given Deposit ID.
 | ----------- | --------- | ------------------------------------ |
 | `depositId` | `uint256` | Deposit ID to get the image URI for. |
 
-| Return Value | Description                            |
-| ------------ | -------------------------------------- |
-| `string`     | Image URI of Deposit with `depositId`. |
+| Return Type | Description                            |
+| ----------- | -------------------------------------- |
+| `string`    | Image URI of Deposit with `depositId`. |
 
 ## Events
 
-None.
+### [URI](https://github.com/BeanstalkFarms/Beanstalk/blob/master/protocol/contracts/beanstalk/metadata/MetadataFacet.sol#L25C5-L25C49)
+
+```solidity
+event URI(string _uri, uint256 indexed _id);
+```
+
+Not currently emitted.
+
+| Parameter | Type      | Description |
+| --------- | --------- | ----------- |
+| `_uri`    | `string`  | URI.        |
+| `_id`     | `uint256` | Deposit ID. |

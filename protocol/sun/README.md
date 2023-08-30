@@ -1,7 +1,7 @@
 # Sun
 
 {% hint style="info" %}
-This page has not been updated yet for [BIP-34](https://arweave.net/R\_tBcwBU09nKXdfgHXJSKO7uM4xmWdI\_B8522JsVI5I), which made significant changes to the `gm` incentive mechanism. The [Season Facet](season-facet.md) page is up to date.
+This page has not been updated yet for [BIP-34](https://arweave.net/R\_tBcwBU09nKXdfgHXJSKO7uM4xmWdI\_B8522JsVI5I), which made significant changes to the `gm` incentive mechanism, or [BIP-37](https://bean.money/bip-37), which updated the Beanstalk oracle. The [Season Facet](season-facet.md) page is up to date.
 {% endhint %}
 
 The Sun advances Beanstalk to the next Season through the `sunrise` function in the Season Facet. Every time an hour passes, `sunrise` can be called 1 more time.

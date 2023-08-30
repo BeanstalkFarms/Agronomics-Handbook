@@ -1,9 +1,9 @@
 # Overview
 
-Beanstalk can be broken down into 7 different Modules consisting of 23 Facets:
+Beanstalk can be broken down into 7 different Modules consisting of 25 Facets:
 
 * [Sun](sun/) (1 Facet)
-* [Silo](silo/) (8 Facets)
+* [Silo](silo/) (10 Facets)
 * [Field](field/) (2 Facets)&#x20;
 * [Barn](barn/) (2 Facets)
 * [Market](market/) (1 Facet)
@@ -22,12 +22,14 @@ The Sun consists of 1 Facet:
 
 The Silo offers a passive yield opportunity in the form of Bean seigniorage to Farmers who Deposit Beans and other whitelisted assets. Upon Deposit in the Silo, Farmers receive Stalk and Seeds based on the Bean Denominated Value (BDV) Deposited and the asset Deposited.
 
-The Silo consists of 8 Facets:
+The Silo consists of 10 Facets:
 
 * [`SiloFacet`](silo/silo-facet.md) -> Where Farmers Deposit, Withdraw, Claim and Transfer assets in/from the Silo.
 * [`BDVFacet`](silo/bdv-facet.md) -> Handles logic for retrieving the BDV of some amount of a whitelisted asset.
 * [`WhitelistFacet`](silo/whitelist-facet.md) -> Handles the addition and removal of tokens from the [Deposit Whitelist](https://docs.bean.money/almanac/farm/silo#deposit-whitelist).
 * [`ConvertFacet`](silo/convert-facet.md) -> Where Farmers Convert a Deposit of a whitelisted asset to a Deposit of another whitelisted asset.
+* [`ConvertGettersFacet`](silo/convert-facet-1.md) -> Contains view functions for Convert data.
+* [`EnrootFacet`](silo/convert-facet-2.md) -> Where Farmers Enroot their Unripe Deposits.
 * [`ApprovalFacet`](silo/approval-facet.md) -> Contains logic for Deposit approvals and permits.
 * [`MetadataFacet`](silo/metadata-facet.md) -> Contains on-chain metadata for the Deposit ERC-1155 tokens.
 * [`MigrationFacet`](silo/migration-facet.md) -> Where Farmers migrate to the latest Silo accounting system.
