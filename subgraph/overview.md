@@ -16,7 +16,8 @@ https://gateway.thegraph.com/api/<API_KEY>/subgraphs/id/R9rnzRuiyDybfDsZfoM7eA9w
 ```
 
 * Bean
-  * [https://graph.node.bean.money/subgraphs/name/bean](https://graph.node.bean.money/subgraphs/name/bean)
+
+[https://graph.node.bean.money/subgraphs/name/bean](https://graph.node.bean.money/subgraphs/name/bean)
 
 ### Beanstalk Subgraph Links
 
