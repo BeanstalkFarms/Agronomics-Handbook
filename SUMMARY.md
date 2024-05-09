@@ -50,17 +50,9 @@
   * [Ownership Facet](protocol/diamond/ownership-facet.md)
   * [Pause Facet](protocol/diamond/pause-facet.md)
 
-## 📊 Subgraph
-
-* [Overview](subgraph/overview.md)
-* [Entities](subgraph/entities.md)
-* [Query Examples](subgraph/query-examples.md)
-* [Development Process](subgraph/development-process.md)
-
 ## 📜 Misc. <a href="#misc" id="misc"></a>
 
 * [Technical Recordings](https://www.youtube.com/playlist?list=PLyqLJA5Mbo9bdLxT7Cuk1PSYozWbx\_kwr)
 * [Upgrade History](misc/upgrade-history.md)
-* [Algorithm Explanations](misc/algorithm-explanations.md)
 * [FAQ](misc/faq.md)
 * [Terminology Discrepancies](misc/terminology-discrepancies.md)

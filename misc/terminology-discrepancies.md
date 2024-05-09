@@ -19,7 +19,7 @@ These discrepancies can be resolved in a future BIP.
 | \[not explicitly referenced]             | Convert Whitelist   |
 | \[not explicitly referenced]             | Oracle Whitelist    |
 
-The following discrepancies are in the [Beanstalk Subgraph](../subgraph/overview.md).
+The following discrepancies are in the [Beanstalk Subgraph](broken-reference).
 
 | Beanstalk Subgraph | Beanstalk term |
 | ------------------ | -------------- |
