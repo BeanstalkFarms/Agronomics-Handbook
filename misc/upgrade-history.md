@@ -151,9 +151,15 @@ Select a block to view event changes:
 | 10/30/2023 | 18465853                                                                      | 2.7.3   | [Etherscan](https://etherscan.io/tx/0x6157f2797bc7b5c4bc93213fce33c5f96c34451a07de239997655681d5069098) (`0x6157`) | [EBIP-11](https://arweave.net/ZAP4uFxDhwv-Kz9jUA2-pDTsJvkaT-CyiOQWAVL02d4)                                                                                                                              | [Commit](https://github.com/BeanstalkFarms/Beanstalk/commit/2fb32eb2cfd91f4154ff7117fedbefb4d500b9d0) (`2fb32`) | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | -                                                                            | -                                                                                                                                                                                                                                                                             | -                                            |
 | 11/08/2023 | 18528816                                                                      | 2.7.4   | [Etherscan](https://etherscan.io/tx/0xf534d56d7ceb59d6c6b808a7b0f94959e4a27021925cad6fd263808ae76e1f84) (`0xf534`) | [EBIP-12](https://arweave.net/zAtoxAMBSIVvJTPz45nXPT0lUbgU5Krw5MJ-SWwEmSI)                                                                                                                              | -                                                                                                               | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | -                                                                            | -                                                                                                                                                                                                                                                                             | -                                            |
 | 11/09/2023 | 18537472                                                                      | 2.7.5   | [Etherscan](https://etherscan.io/tx/0xc77cdf9771cd5b81866adf120f39f3cb3a15b6735882053a2ed0e2d3986d6b3d) (`0xc77c`) | [EBIP-13](https://arweave.net/zKpHhC4c8NhJecrEGHQ8F_vhrLVVEqdGKrQODSoIKbg)                                                                                                                              | [Commit](https://github.com/BeanstalkFarms/Beanstalk/commit/1c6f5567cdcff616095c7182ea2ff9fb792a8a1f) (`1c6f5`) | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | -                                                                            | -                                                                                                                                                                                                                                                                             | -                                            |
+| -          | -                                                                             | 2.7.5   | -                                                                                                                  | [BIP-39](https://arweave.net/9DZrP_OJEDM_a-GH_8AFxTaiUz91ya8lK6KhELO5Ekc) (Failed)                                                                                                                      | -                                                                                                               | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | -                                                                            | -                                                                                                                                                                                                                                                                             | -                                            |
 | 02/05/2024 | 19159869                                                                      | 2.7.6   | [Etherscan](https://etherscan.io/tx/0x4b7e79cc9d02c8f75f250182d86ecf87b1c1afd5072d7fe05db187c8f5258e59) (`0x4b7e`) | [EBIP-14](https://arweave.net/cOjwMRebYst6VrqXI-7h7S5-DrkuiT7cWRC4gBUak9s)                                                                                                                              | [Commit](https://github.com/BeanstalkFarms/Beanstalk/commit/d7769f8d9ccfa618586cdc632f7dd442116563c8) (`d7769`) | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | -                                                                            | -                                                                                                                                                                                                                                                                             | -                                            |
 | 02/26/2024 | 19308933                                                                      | 2.7.6   | [Etherscan](https://etherscan.io/tx/0x2b117225d9992d5ad66788c96575be5392e12d5cea5d05ff82065975cdc99961) (`0x2b11`) | [BIP-40](https://arweave.net/fubHcxE_P_z-xBwapMUMLiT29m6_sifDtAKimQ05Nz8)                                                                                                                               | [Commit](https://github.com/BeanstalkFarms/Beanstalk/commit/ef38a639ddc99394c7d2884a4279d764d942bead) (`ef38a`) | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | -                                                                            | -                                                                                                                                                                                                                                                                             | -                                            |
 | 02/26/2024 | 19308941                                                                      | 2.7.6   | [Etherscan](https://etherscan.io/tx/0x1378720d39d75f9d3593849be756fdf7a3aaabda88bc9491cdac1b14525b9f7c) (`0x1378`) | [BIP-41](https://arweave.net/uI_aXutcoWvZajzcSoJOfJNeKCpJ8DcLuPPhR-8NOKk)                                                                                                                               | [Commit](https://github.com/BeanstalkFarms/Beanstalk/commit/9460ecef09c4ddc9091060302a45ccdb2e6e311b) (`9460e`) | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | -                                                                            | -                                                                                                                                                                                                                                                                             | -                                            |
+| -          | -                                                                             | 2.7.6   | -                                                                                                                  | [BIP-42](https://arweave.net/8QGAmvWyhTLZVXvzKYHj_Z8grGU-4QJbYIOLE_MvSCE) (Cancelled)                                                                                                                   | -                                                                                                               | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | -                                                                            | -                                                                                                                                                                                                                                                                             | -                                            |
+| -          | -                                                                             | 2.7.6   | -                                                                                                                  | [BIP-43](https://arweave.net/PZqW1I2XdEBBHqqoOzz3ZGHdxmxtoFD_DhqN2TgkfYA) (Failed)                                                                                                                      | -                                                                                                               | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | -                                                                            | -                                                                                                                                                                                                                                                                             | -                                            |
+| -          | -                                                                             | 2.7.6   | -                                                                                                                  | [BIP-44](https://arweave.net/zYTWn7E74vRLSeRrqGrE7TbPVEYqQAiCpIF2uvvzyA0) (Failed)                                                                                                                      | -                                                                                                               | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | -                                                                            | -                                                                                                                                                                                                                                                                             | -                                            |
+| 05/22/2024 | [19927634](upgrade-history.md#19927634-bip-45)                                | 2.8.0   | [Etherscan](https://etherscan.io/tx/0x299a4b93b8d19f8587b648ce04e3f5e618ea461426bb2b2337993b5d6677f6a7) (`0x299a`) | [BIP-45](https://arweave.net/uI_aXutcoWvZajzcSoJOfJNeKCpJ8DcLuPPhR-8NOKk)                                                                                                                               | [Commit](https://github.com/BeanstalkFarms/Beanstalk/commit/2cd4c47f3790b49ca3edbf704d7ce7f33f7c5f07) (`2cd4c`) | `TemperatureChange`, `UpdateAverageStalkPerBdvPerSeason`, `GaugePointChange`, `BeanToMaxLpGpPerBdvRatioChange`, `FarmerGerminatingStalkBalanceChanged`, `TotalGerminatingBalanceChanged`, `TotalGerminatingStalkChanged`, `TotalStalkChangedFromGermination`, `UpdateGaugeSettings`, `AddWhitelistStatus`, `RemoveWhitelistStatus`, `UpdateWhitelistStatus`                                                                                                                                                     | `WhitelistToken`, `SeasonOfPlenty`, `ClaimPlenty`                            | `WeatherChange`                                                                                                                                                                                                                                                               | -                                            |
+| 05/22/2024 | 19927634                                                                      | 2.8.0   | [Etherscan](https://etherscan.io/tx/0x299a4b93b8d19f8587b648ce04e3f5e618ea461426bb2b2337993b5d6677f6a7) (`0x299a`) | [BIP-46](https://arweave.net/2enPPzc5mkN18bXnApmCJNRkxwYc-CiCsU71XPualj4)                                                                                                                               | [Commit](https://github.com/BeanstalkFarms/Beanstalk/commit/2f8968007c60696a7b86aa8a8daa455b987e2d42) (`2f896`) | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | -                                                                            | -                                                                                                                                                                                                                                                                             | -                                            |
 
 ## Event Changes by Block
 
@@ -1367,4 +1373,186 @@ emit RemoveDeposit(msg.sender, token, stem, amount, ogBDV);
 
 ```solidity
 event SwitchUnderlyingToken(address indexed token, address indexed underlyingToken);
+```
+
+### 19927634 ([BIP-45](https://arweave.net/ZNzggcbRHS1vlX9zxtmXiX_wyb4Cj1v3uXHNcyvo8l4))
+
+* [Added](upgrade-history.md#added-bip-45)
+* [Modified](upgrade-history.md#modified-bip-45)
+* [Removed](upgrade-history.md#removed-bip-45)
+
+#### Added <a href="#added-bip-45" id="added-bip-45"></a>
+
+[protocol/contracts/beanstalk/sun/SeasonFacet/Weather.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/2cd4c47f3790b49ca3edbf704d7ce7f33f7c5f07#diff-c836ca6b0a2b8f2c6d87748e16f004d492d616b177d79d34e21128fd1088e37bR36)
+
+```solidity
+event TemperatureChange(uint256 indexed season, uint256 caseId, int8 absChange);
+```
+
+[protocol/contracts/libraries/LibGauge.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/2cd4c47f3790b49ca3edbf704d7ce7f33f7c5f07#diff-97d9949ac918455ac65172f9eff7253fce6941c5745f6e264f499c7610364521R46)
+
+```solidity
+event UpdateAverageStalkPerBdvPerSeason(uint256 newStalkPerBdvPerSeason);
+```
+
+[protocol/contracts/libraries/LibGauge.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/2cd4c47f3790b49ca3edbf704d7ce7f33f7c5f07#diff-97d9949ac918455ac65172f9eff7253fce6941c5745f6e264f499c7610364521R58)
+
+```solidity
+event GaugePointChange(uint256 indexed season, address indexed token, uint256 gaugePoints);
+```
+
+[protocol/contracts/beanstalk/sun/SeasonFacet/Weather.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/2cd4c47f3790b49ca3edbf704d7ce7f33f7c5f07#diff-c836ca6b0a2b8f2c6d87748e16f004d492d616b177d79d34e21128fd1088e37bR45)
+
+```solidity
+event BeanToMaxLpGpPerBdvRatioChange(uint256 indexed season, uint256 caseId, int80 absChange);
+```
+
+[protocol/contracts/libraries/Silo/LibGerminate.sol](https://github.com/BeanstalkFarms/Beanstalk/blob/c6b875b61e606dcf6863712cb606e4a8878169e3/protocol/contracts/libraries/Silo/LibGerminate.sol#L40)
+
+```solidity
+event FarmerGerminatingStalkBalanceChanged(
+    address indexed account,
+    int256 deltaGerminatingStalk,
+    Germinate germinationState
+);
+```
+
+[protocol/contracts/libraries/Silo/LibGerminate.sol](https://github.com/BeanstalkFarms/Beanstalk/blob/c6b875b61e606dcf6863712cb606e4a8878169e3/protocol/contracts/libraries/Silo/LibGerminate.sol#L54)
+
+```solidity
+event TotalGerminatingBalanceChanged(
+    uint256 germinationSeason,
+    address indexed token,
+    int256 deltaAmount,
+    int256 deltaBdv
+);
+```
+
+[protocol/contracts/libraries/Silo/LibGerminate.sol](https://github.com/BeanstalkFarms/Beanstalk/blob/c6b875b61e606dcf6863712cb606e4a8878169e3/protocol/contracts/libraries/Silo/LibGerminate.sol#L67)
+
+```solidity
+event TotalGerminatingStalkChanged(uint256 germinationSeason, int256 deltaGerminatingStalk);
+```
+
+[protocol/contracts/libraries/Silo/LibGerminate.sol](https://github.com/BeanstalkFarms/Beanstalk/blob/c6b875b61e606dcf6863712cb606e4a8878169e3/protocol/contracts/libraries/Silo/LibGerminate.sol#L74)
+
+```solidity
+event TotalStalkChangedFromGermination(int256 deltaStalk, int256 deltaRoots);
+```
+
+[protocol/contracts/libraries/Silo/LibWhitelist.sol](https://github.com/BeanstalkFarms/Beanstalk/blob/c6b875b61e606dcf6863712cb606e4a8878169e3/protocol/contracts/libraries/Silo/LibWhitelist.sol#L55)
+
+```solidity
+event UpdateGaugeSettings(
+    address indexed token,
+    bytes4 gpSelector,
+    bytes4 lwSelector,
+    uint64 optimalPercentDepositedBdv
+);
+```
+
+[protocol/contracts/libraries/Silo/LibWhitelistedTokens.sol](https://github.com/BeanstalkFarms/Beanstalk/blob/c6b875b61e606dcf6863712cb606e4a8878169e3/protocol/contracts/libraries/Silo/LibWhitelistedTokens.sol#L26)
+
+```solidity
+event AddWhitelistStatus(
+    address token,
+    uint256 index,
+    bool isWhitelisted,
+    bool isWhitelistedLp,
+    bool isWhitelistedWell
+);
+```
+
+[protocol/contracts/libraries/Silo/LibWhitelistedTokens.sol](https://github.com/BeanstalkFarms/Beanstalk/blob/c6b875b61e606dcf6863712cb606e4a8878169e3/protocol/contracts/libraries/Silo/LibWhitelistedTokens.sol#L37)
+
+```solidity
+event RemoveWhitelistStatus(
+    address token,
+    uint256 index
+);
+```
+
+[protocol/contracts/libraries/Silo/LibWhitelistedTokens.sol](https://github.com/BeanstalkFarms/Beanstalk/blob/c6b875b61e606dcf6863712cb606e4a8878169e3/protocol/contracts/libraries/Silo/LibWhitelistedTokens.sol#L45)
+
+```solidity
+event UpdateWhitelistStatus(
+    address token,
+    uint256 index,
+    bool isWhitelisted,
+    bool isWhitelistedLp,
+    bool isWhitelistedWell
+);
+```
+
+#### Modified <a href="#modified-bip-45" id="modified-bip-45"></a>
+
+[protocol/contracts/beanstalk/silo/WhitelistFacet/WhitelistFacet.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/2cd4c47f3790b49ca3edbf704d7ce7f33f7c5f07#diff-e7c659838319dc70e40e929885fc65d44e594bd25c6bfe5ec8bfb69ad9ecd30aL27)
+
+(original event listed first, updated event second)
+
+```solidity
+event WhitelistToken(
+    address indexed token,
+    bytes4 selector,
+    uint32 stalkEarnedPerSeason,
+    uint256 stalkIssuedPerBdv
+);
+```
+
+[protocol/contracts/libraries/Silo/LibWhitelist.sol](https://github.com/BeanstalkFarms/Beanstalk/blob/c6b875b61e606dcf6863712cb606e4a8878169e3/protocol/contracts/libraries/Silo/LibWhitelist.sol#L37C5-L46C7)
+
+```solidity
+event WhitelistToken(
+    address indexed token,
+    bytes4 selector,
+    uint32 stalkEarnedPerSeason,
+    uint256 stalkIssuedPerBdv,
+    bytes4 gpSelector,
+    bytes4 lwSelector,
+    uint128 gaugePoints,
+    uint64 optimalPercentDepositedBdv
+);
+```
+
+[protocol/contracts/beanstalk/sun/SeasonFacet/Weather.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/2cd4c47f3790b49ca3edbf704d7ce7f33f7c5f07#diff-c836ca6b0a2b8f2c6d87748e16f004d492d616b177d79d34e21128fd1088e37bL63)
+
+```solidity
+event SeasonOfPlenty(
+    uint256 indexed season,
+    uint256 amount,
+    uint256 toField
+);
+```
+
+```solidity
+event SeasonOfPlenty(uint256 indexed season, address well, address token, uint256 amount, uint256 toField);
+```
+
+[protocol/contracts/beanstalk/silo/SiloFacet/Silo.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/2cd4c47f3790b49ca3edbf704d7ce7f33f7c5f07#diff-b5792ffe99c22ee9f1165318fc8a01a7e7ccfa672273a0ecf126bcaa9aa52c67L52)
+
+```solidity
+event ClaimPlenty(
+    address indexed account,
+    uint256 plenty
+);
+```
+
+```solidity
+event ClaimPlenty(
+    address indexed account,
+    address token,
+    uint256 plenty
+);
+```
+
+#### Removed <a href="#removed-bip-45" id="removed-bip-45"></a>
+
+[protocol/contracts/beanstalk/sun/SeasonFacet/Weather.sol](https://github.com/BeanstalkFarms/Beanstalk/commit/2cd4c47f3790b49ca3edbf704d7ce7f33f7c5f07#diff-c836ca6b0a2b8f2c6d87748e16f004d492d616b177d79d34e21128fd1088e37bL51)
+
+```solidity
+event WeatherChange(
+    uint256 indexed season,
+    uint256 caseId,
+    int8 change
+);
 ```
