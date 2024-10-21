@@ -1,7 +1,7 @@
 # Field
 
-{% hint style="info" %}
-This page has not been updated yet for [BIP-34](https://arweave.net/R\_tBcwBU09nKXdfgHXJSKO7uM4xmWdI\_B8522JsVI5I), which introduced the [Morning](https://docs.bean.money/almanac/peg-maintenance/temperature#morning), or Dutch auction for Temperature in the Field. The [Field Facet](./) page is up to date.
+{% hint style="warning" %}
+Note that this page has not been updated to reflect the current state of Beanstalk, but is left here as a reference.
 {% endhint %}
 
 The Field is Beanstalk's credit facility. Beanstalk relies on a decentralized set of creditors to maintain Bean price stability.

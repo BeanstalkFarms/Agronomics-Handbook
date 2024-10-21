@@ -1,7 +1,7 @@
 # Market
 
-{% hint style="info" %}
-This page has not been updated yet for [BIP-29](https://bean.money/bip-29), which introduced dynamic pricing functions on the Pod Market. The [Marketplace Facet](marketplace-facet.md) page is up to date.
+{% hint style="warning" %}
+Note that this page has not been updated to reflect the current state of Beanstalk, but is left here as a reference.
 {% endhint %}
 
 The Market will house various DEXs for zero fee trading. For now, there is only the Pod Market, but in the future there may be a zero fee AMM, a zero fee NFT marketplace, etc.

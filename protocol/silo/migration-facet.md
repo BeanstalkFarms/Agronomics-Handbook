@@ -1,5 +1,9 @@
 # Migration Facet
 
+{% hint style="warning" %}
+Note that this page has not been updated to reflect the current state of Beanstalk, but is left here as a reference.
+{% endhint %}
+
 The Migration Facet contains functions related to [Silo V3](https://bean.money/bip-36). Farmers are required to migrate to the new accounting system created by the Silo V3 upgrade.
 
 ## Call Functions

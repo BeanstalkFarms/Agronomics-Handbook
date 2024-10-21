@@ -1,5 +1,9 @@
 # Convert Facet
 
+{% hint style="warning" %}
+Note that this page has not been updated to reflect the current state of Beanstalk, but is left here as a reference.
+{% endhint %}
+
 The Convert Facet handles Conversions between assets in the Silo and Enrooting Unripe Deposits.
 
 ## Call Functions

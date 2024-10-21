@@ -1,5 +1,9 @@
 # Token Facet
 
+{% hint style="warning" %}
+Note that this page has not been updated to reflect the current state of Beanstalk, but is left here as a reference.
+{% endhint %}
+
 The Token Facet handles the transfers of assets outside the Silo.
 
 ## Call Functions

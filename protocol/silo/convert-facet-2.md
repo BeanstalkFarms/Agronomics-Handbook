@@ -1,5 +1,9 @@
 # Enroot Facet
 
+{% hint style="warning" %}
+Note that this page has not been updated to reflect the current state of Beanstalk, but is left here as a reference.
+{% endhint %}
+
 The Enroot Facet handles logic for Enrooting Unripe Deposits.
 
 ## Call Functions

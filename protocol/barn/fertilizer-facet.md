@@ -1,5 +1,9 @@
 # Fertilizer Facet
 
+{% hint style="warning" %}
+Note that this page has not been updated to reflect the current state of Beanstalk, but is left here as a reference.
+{% endhint %}
+
 The Fertilizer Facet handles the minting of Fertilizer and Beans paid to Fertilizer holders.
 
 ## Call Functions

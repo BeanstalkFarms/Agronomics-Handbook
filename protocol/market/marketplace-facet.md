@@ -1,5 +1,9 @@
 # Marketplace Facet
 
+{% hint style="warning" %}
+Note that this page has not been updated to reflect the current state of Beanstalk, but is left here as a reference.
+{% endhint %}
+
 The Marketplace Facet handles logic for buying and selling Pods on the [Pod Market](https://docs.bean.money/almanac/farm/market#pods).
 
 ## Call Functions

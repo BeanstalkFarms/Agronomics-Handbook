@@ -1,5 +1,9 @@
 # Approval Facet
 
+{% hint style="warning" %}
+Note that this page has not been updated to reflect the current state of Beanstalk, but is left here as a reference.
+{% endhint %}
+
 The Approval Facet handles all approval and permit related functions for the Silo.
 
 ## Call Functions

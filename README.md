@@ -7,13 +7,13 @@ coverY: 61.02156640181602
 
 The **Agronomics Handbook** is a collection of technical documentation about Beanstalk.
 
-Beanstalk forms the monetary basis of an Ethereum-native, rent-free economy facilitated by the seigniorage of its native fiat currency, a stablecoin called Bean.
+Beanstalk forms the monetary basis of an Arbitrum-native, rent-free economy facilitated by the seigniorage of its native fiat currency, a stablecoin called Bean.
 
 Beanstalk strives to create product market fit on both a technical and economic level.
 
-Beanstalk pioneers a path forward for devising more efficient and complex systems. Beanstalk is implemented in [Solidity v0.7.6](https://docs.soliditylang.org/) for intended use in the [EVM](https://ethereum.org/en/developers/docs/evm/). Beanstalk leverages [EIP-2535](https://eips.ethereum.org/EIPS/eip-2535) to minimize gas costs and complexity.
+Beanstalk pioneers a path forward for devising more efficient and complex systems. Beanstalk is implemented in [Solidity v0.8.20](https://docs.soliditylang.org/en/v0.8.20/) for intended use in the [EVM](https://ethereum.org/en/developers/docs/evm/). Beanstalk leverages [EIP-2535](https://eips.ethereum.org/EIPS/eip-2535) to minimize gas costs and complexity.
 
-The contract code can be found below. Beanstalk is deployed at [`0xC1E088fC1323b20BCBee9bd1B9fC9546db5624C5`](https://etherscan.io/address/0xc1e088fc1323b20bcbee9bd1b9fc9546db5624c5).
+The contract code can be found below. Beanstalk is deployed at [`0xD1A0060ba708BC4BCD3DA6C37EFa8deDF015FB70`](https://arbiscan.io/address/0xD1A0060ba708BC4BCD3DA6C37EFa8deDF015FB70).
 
 {% embed url="https://github.com/BeanstalkFarms/Beanstalk" %}
 

@@ -1,5 +1,9 @@
 # Diamond Cut Facet
 
+{% hint style="warning" %}
+Note that this page has not been updated to reflect the current state of Beanstalk, but is left here as a reference.
+{% endhint %}
+
 The Diamond Cut Facet is used by the owner to upgrade Beanstalk.
 
 ## Call Functions

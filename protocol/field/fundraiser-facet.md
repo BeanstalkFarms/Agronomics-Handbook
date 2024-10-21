@@ -1,5 +1,9 @@
 # Fundraiser Facet
 
+{% hint style="warning" %}
+Note that this page has not been updated to reflect the current state of Beanstalk, but is left here as a reference.
+{% endhint %}
+
 The Fundraiser Facet dandles the creation, funding, and completion of [Fundraisers](https://docs.bean.money/almanac/protocol/fundraiser).
 
 ## Call Functions

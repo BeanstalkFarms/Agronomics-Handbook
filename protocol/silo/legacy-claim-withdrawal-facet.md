@@ -1,5 +1,9 @@
 # Legacy Claim Withdrawal Facet
 
+{% hint style="warning" %}
+Note that this page has not been updated to reflect the current state of Beanstalk, but is left here as a reference.
+{% endhint %}
+
 The Legacy Claim Withdrawal Facet allows anyone to Claim and read Withdrawals. [Silo V3](https://bean.money/bip-36) removed the Withdrawal Freeze from the Silo. Withdrawing now directly sends ERC-20 tokens to the Farmer's Farm or Circulating balances instead of creating a Withdrawal.
 
 Although new Withdrawals cannot be created, the claim Withdrawal functionality has been preserved in this facet to allow pre-existing unclaimed Withdrawals to still be claimed.

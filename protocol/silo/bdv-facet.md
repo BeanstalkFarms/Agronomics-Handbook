@@ -1,5 +1,9 @@
 # BDV Facet
 
+{% hint style="warning" %}
+Note that this page has not been updated to reflect the current state of Beanstalk, but is left here as a reference.
+{% endhint %}
+
 The BDV Facet holds functions to get the BDV for each whitelisted Silo asset.
 
 ## Call Functions

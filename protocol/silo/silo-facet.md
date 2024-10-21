@@ -1,5 +1,9 @@
 # Silo Facet
 
+{% hint style="warning" %}
+Note that this page has not been updated to reflect the current state of Beanstalk, but is left here as a reference.
+{% endhint %}
+
 The Silo Facet handles Depositing, Withdrawing, and transferring Deposits (whitelisted assets in the Silo).
 
 Stems keep track of when the Deposit was created. When the Deposit was created determines how much Grown Stalk per BDV the Deposit has.

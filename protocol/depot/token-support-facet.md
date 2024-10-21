@@ -1,5 +1,9 @@
 # Token Support Facet
 
+{% hint style="warning" %}
+Note that this page has not been updated to reflect the current state of Beanstalk, but is left here as a reference.
+{% endhint %}
+
 The Token Support Facet handles permits for ERC-20 and ERC-721 tokens and transfers for ERC-721 and ERC-1155 tokens.
 
 ## Call Functions

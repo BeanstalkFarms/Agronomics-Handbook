@@ -1,7 +1,7 @@
 # Silo
 
-{% hint style="info" %}
-This page has not been updated yet for [BIP-36](https://bean.money/bip-36), which changed the accounting system for Deposits and removed the Withdrawal Freeze from the Silo, or [BIP-37](https://bean.money/bip-37), which updated the Whitelist Facet. The individual Silo facet pages are up to date.
+{% hint style="warning" %}
+Note that this page has not been updated to reflect the current state of Beanstalk, but is left here as a reference.
 {% endhint %}
 
 Farmers can Deposit assets on the [Deposit Whitelist](https://docs.bean.money/farm/silo#deposit-whitelist) into the Silo in exchange for Stalk and Seeds. The number of Stalk and Seeds received is dependent on the BDV at the time of Deposit, the Stalk per BDV and the Seeds per BDV. Stalk entitles Farmers to a pro-rata portion of Bean seignorage distributed to the Silo and Seeds grown into 0.0001 Stalk each Season.

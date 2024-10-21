@@ -1,5 +1,9 @@
 # Farm Facet
 
+{% hint style="warning" %}
+Note that this page has not been updated to reflect the current state of Beanstalk, but is left here as a reference.
+{% endhint %}
+
 The Farm Facet allows Farmers to perform multiple Beanstalk functions calls in a single transaction using `farm` calls.
 
 ## Call Functions

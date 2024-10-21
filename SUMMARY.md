@@ -16,7 +16,7 @@
 ## 🌾 Protocol
 
 * [Overview](protocol/overview.md)
-* [Louper](https://louper.dev/diamond/0xc1e088fc1323b20bcbee9bd1b9fc9546db5624c5)
+* [Louper](https://louper.dev/diamond/0xD1A0060ba708BC4BCD3DA6C37EFa8deDF015FB70?network=arbitrum)
 * [Sun](protocol/sun/README.md)
   * [Season Facet](protocol/sun/season-facet.md)
 * [Silo](protocol/silo/README.md)

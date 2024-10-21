@@ -1,5 +1,9 @@
 # Diamond
 
+{% hint style="warning" %}
+Note that this page has not been updated to reflect the current state of Beanstalk, but is left here as a reference.
+{% endhint %}
+
 The Diamond module contains various functions that require ownership of Beanstalk to execute in Beanstalk. This includes Pausing and Unpausing Beanstalk and upgrading Beanstalk via Diamond Cuts.
 
 See [EIP-2535 Diamond](../../overview/eip-2535-diamond.md) to read more about Beanstalk's upgradable proxy implementation.

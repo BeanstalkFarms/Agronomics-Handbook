@@ -1,5 +1,9 @@
 # Farm
 
+{% hint style="warning" %}
+Note that this page has not been updated to reflect the current state of Beanstalk, but is left here as a reference.
+{% endhint %}
+
 The Farm allows Farmers to call multiple functions in a single transaction and use assets between different functions in a composable manner, without those assets every leaving Beanstalk (thanks to [Internal Balances](../../overview/internal-balances.md)). Internal Balances allow the `farm` function to use the output of a function in the next function call.
 
 The Farm also provides composable Beanstalk-native interfaces for other DeFi protocols. This allows Farmers to call supported external protocols through the `farm` function and leverage Internal Balances. The current protocols that the Farm supports are:
